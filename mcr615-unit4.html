@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Version: 1.0 - Complete Unit 4 Notes -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,25 +94,169 @@
             margin-bottom: 10px;
         }
         
-        .coming-soon {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-            padding: 40px;
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .topic {
             margin: 30px 0;
-            border-radius: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .topic-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .hindi {
+            color: #e74c3c;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .content-box {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .definition {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .important {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .example {
+            background: #cce5ff;
+            border-left: 5px solid #004085;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .diagram {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
             text-align: center;
         }
         
-        .coming-soon h2 {
-            color: #856404;
-            font-size: 2em;
-            margin-bottom: 20px;
+        .diagram-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
         
-        .coming-soon p {
-            color: #856404;
-            font-size: 1.2em;
-            line-height: 1.8;
+        .flow-box {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 80%;
+            font-weight: bold;
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 5px 0;
+        }
+        
+        .sub-heading {
+            color: #2c3e50;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .practice {
+            background: #fff5f5;
+            border: 3px solid #e74c3c;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .practice h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .btn-download {
+            background: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .btn-download:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
         }
         
         .unit-nav {
@@ -153,6 +298,20 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .btn-download, .nav-bar, .unit-nav {
+                display: none;
+            }
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -168,6 +327,15 @@
                 justify-content: center;
             }
             
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .topic-title {
+                font-size: 18px;
+                padding: 12px 15px;
+            }
+            
             .unit-nav {
                 flex-direction: column;
             }
@@ -175,6 +343,14 @@
             .unit-nav a {
                 width: 100%;
                 text-align: center;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
             }
         }
     </style>
@@ -186,7 +362,7 @@
             <a href="mcr615-unit1.html">Unit I</a>
             <a href="mcr615-unit2.html">Unit II</a>
             <a href="mcr615-unit3.html">Unit III</a>
-            <a href="mcr615-unit4.html" class="active">Unit IV</a>
+            <a href="mcr615-unit4.html" style="background: rgba(255,255,255,0.4);">Unit IV</a>
             <a href="mcr615-unit5.html">Unit V</a>
         </div>
     </div>
@@ -194,8 +370,8 @@
     <div class="container">
         <div class="header">
             <h1>MCR-615 Applied and Environmental Microbiology</h1>
-            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT IV - Microbial Activities & Bioremediation</h2>
-            <p>Simple English + Hindi | Coming Soon</p>
+            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT IV - Complete Study Notes</h2>
+            <p>Simple English + Hindi | With Diagrams & Practice Questions</p>
         </div>
 
         <div class="unit-nav">
@@ -204,19 +380,641 @@
             <a href="mcr615-unit5.html" class="next">Next: Unit V →</a>
         </div>
 
-        <div class="coming-soon">
-            <h2>📚 Content Coming Soon!</h2>
-            <p>
-                This unit will cover:<br>
-                • Significance of microbial activities in the environment<br>
-                • Role of microorganisms in cycling of bio-elements (carbon, nitrogen, phosphorus, sulphur)<br>
-                • Bioremediation<br>
-                • Microbial degradation of pesticides and other recalcitrant chemicals (xenobiotics)<br>
-                • Global warming and possible control measures
-            </p>
-            <p style="margin-top: 20px; font-weight: bold;">
-                <span style="color: #e74c3c;">हिंदी अनुवाद के साथ विस्तृत नोट्स जल्द ही उपलब्ध होंगे!</span>
-            </p>
+        <button class="btn-download" onclick="window.print()">📥 Download / Print as PDF</button>
+
+        <!-- Topic 1: Significance of Microbial Activities -->
+        <div class="topic">
+            <div class="topic-title">1. Significance of Microbial Activities in the Environment<br><span class="hindi">(पर्यावरण में सूक्ष्मजीवीय गतिविधियों का महत्व)</span></div>
+            
+            <div class="definition">
+                <strong>Why are Microbes Important? (सूक्ष्मजीव क्यों महत्वपूर्ण हैं?)</strong><br>
+                Microorganisms are essential for life on Earth. They perform critical functions that maintain ecosystem balance and support all living organisms.<br>
+                <span class="hindi">सूक्ष्मजीव पृथ्वी पर जीवन के लिए आवश्यक हैं। वे महत्वपूर्ण कार्य करते हैं जो पारिस्थितिकी तंत्र संतुलन बनाए रखते हैं और सभी जीवित जीवों का समर्थन करते हैं।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Key Roles of Microbes (सूक्ष्मजीवों की मुख्य भूमिकाएं)</div>
+                <ul>
+                    <li><strong>Nutrient Cycling:</strong> Recycle carbon, nitrogen, phosphorus, sulfur<br>
+                    <span class="hindi">(पोषक तत्व चक्रण: कार्बन, नाइट्रोजन, फास्फोरस, सल्फर को पुनर्चक्रित करना)</span></li>
+                    <li><strong>Decomposition:</strong> Break down dead organic matter into simple compounds<br>
+                    <span class="hindi">(अपघटन: मृत कार्बनिक पदार्थ को सरल यौगिकों में तोड़ना)</span></li>
+                    <li><strong>Food Production:</strong> Fermentation, cheese, yogurt, bread<br>
+                    <span class="hindi">(खाद्य उत्पादन: किण्वन, पनीर, दही, रोटी)</span></li>
+                    <li><strong>Bioremediation:</strong> Clean up pollutants and toxic substances<br>
+                    <span class="hindi">(जैवउपचार: प्रदूषकों और विषैले पदार्थों की सफाई)</span></li>
+                    <li><strong>Oxygen Production:</strong> Cyanobacteria and algae produce 50% of Earth's oxygen<br>
+                    <span class="hindi">(ऑक्सीजन उत्पादन: साइनोबैक्टीरिया और शैवाल पृथ्वी की 50% ऑक्सीजन उत्पादन करते हैं)</span></li>
+                    <li><strong>Nitrogen Fixation:</strong> Convert atmospheric N₂ to usable forms<br>
+                    <span class="hindi">(नाइट्रोजन स्थिरीकरण: वायुमंडलीय N₂ को उपयोगी रूपों में बदलना)</span></li>
+                    <li><strong>Disease Control:</strong> Some microbes control harmful organisms<br>
+                    <span class="hindi">(रोग नियंत्रण: कुछ सूक्ष्मजीव हानिकारक जीवों को नियंत्रित करते हैं)</span></li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Microbial Activities in Environment (पर्यावरण में सूक्ष्मजीवीय गतिविधियां)</div>
+                <div class="flow-box" style="background: #2ecc71;">NUTRIENT CYCLING<br>पोषक तत्व चक्रण<br>C, N, P, S cycles</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #3498db;">DECOMPOSITION<br>अपघटन<br>Break down organic matter</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #9b59b6;">BIOREMEDIATION<br>जैवउपचार<br>Clean pollutants</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #27ae60;">ECOSYSTEM BALANCE<br>पारिस्थितिकी तंत्र संतुलन<br>Maintain life on Earth</div>
+            </div>
+
+            <div class="important">
+                <strong>✅ Impact Without Microbes (सूक्ष्मजीवों के बिना प्रभाव):</strong>
+                <ul>
+                    <li>No decomposition - dead matter would accumulate (कोई अपघटन नहीं - मृत पदार्थ जमा हो जाएगा)</li>
+                    <li>No nutrient recycling - plants would die (कोई पोषक तत्व पुनर्चक्रण नहीं - पौधे मर जाएंगे)</li>
+                    <li>No oxygen production - life would end (कोई ऑक्सीजन उत्पादन नहीं - जीवन समाप्त हो जाएगा)</li>
+                    <li>Waste accumulation - environment would be polluted (अपशिष्ट जमाव - पर्यावरण प्रदूषित हो जाएगा)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 2: Biogeochemical Cycles -->
+        <div class="topic">
+            <div class="topic-title">2. Role of Microorganisms in Cycling of Bio-elements<br><span class="hindi">(जैव-तत्वों के चक्रण में सूक्ष्मजीवों की भूमिका)</span></div>
+            
+            <div class="definition">
+                <strong>What are Biogeochemical Cycles? (जैव-भू-रासायनिक चक्र क्या हैं?)</strong><br>
+                Biogeochemical cycles are pathways by which essential elements (carbon, nitrogen, phosphorus, sulfur) move through living organisms, atmosphere, water, and soil.<br>
+                <span class="hindi">जैव-भू-रासायनिक चक्र वे मार्ग हैं जिनके द्वारा आवश्यक तत्व (कार्बन, नाइट्रोजन, फास्फोरस, सल्फर) जीवित जीवों, वायुमंडल, जल और मिट्टी के माध्यम से चलते हैं।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">A. Carbon Cycle (कार्बन चक्र)</div>
+                <div class="definition">
+                    <strong>What is Carbon Cycle? (कार्बन चक्र क्या है?)</strong><br>
+                    The carbon cycle is the process by which carbon moves between living organisms, atmosphere, oceans, and Earth's crust.<br>
+                    <span class="hindi">कार्बन चक्र वह प्रक्रिया है जिसके द्वारा कार्बन जीवित जीवों, वायुमंडल, महासागरों और पृथ्वी की पपड़ी के बीच चलता है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Carbon Cycle (कार्बन चक्र)</div>
+                    <div class="flow-box" style="background: #2ecc71;">CO₂ in Atmosphere<br>वायुमंडल में CO₂</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">Photosynthesis<br>प्रकाश संश्लेषण<br>Plants & Algae<br>पौधे और शैवाल</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">Organic Carbon<br>कार्बनिक कार्बन<br>(Glucose, Cellulose)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">Respiration / Decomposition<br>श्वसन / अपघटन<br>Microbes break down<br>सूक्ष्मजीव तोड़ते हैं</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">CO₂ Released<br>CO₂ मुक्त होता है</div>
+                </div>
+
+                <div class="important">
+                    <strong>✅ Microbial Role in Carbon Cycle (कार्बन चक्र में सूक्ष्मजीवीय भूमिका):</strong>
+                    <ul>
+                        <li><strong>Decomposition:</strong> Bacteria and fungi break down dead organic matter<br>
+                        <span class="hindi">(अपघटन: बैक्टीरिया और कवक मृत कार्बनिक पदार्थ को तोड़ते हैं)</span></li>
+                        <li><strong>Respiration:</strong> Release CO₂ back to atmosphere<br>
+                        <span class="hindi">(श्वसन: CO₂ को वायुमंडल में वापस छोड़ते हैं)</span></li>
+                        <li><strong>Methanogenesis:</strong> Some bacteria produce methane (CH₄)<br>
+                        <span class="hindi">(मीथेनोजेनेसिस: कुछ बैक्टीरिया मीथेन उत्पादन करते हैं)</span></li>
+                        <li><strong>Photosynthesis:</strong> Cyanobacteria and algae fix CO₂<br>
+                        <span class="hindi">(प्रकाश संश्लेषण: साइनोबैक्टीरिया और शैवाल CO₂ को स्थिर करते हैं)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">B. Nitrogen Cycle (नाइट्रोजन चक्र)</div>
+                <div class="definition">
+                    <strong>What is Nitrogen Cycle? (नाइट्रोजन चक्र क्या है?)</strong><br>
+                    The nitrogen cycle converts atmospheric nitrogen (N₂) into forms usable by plants and animals, and returns it to the atmosphere.<br>
+                    <span class="hindi">नाइट्रोजन चक्र वायुमंडलीय नाइट्रोजन (N₂) को पौधों और जानवरों द्वारा उपयोगी रूपों में बदलता है, और इसे वायुमंडल में वापस लौटाता है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Nitrogen Cycle (नाइट्रोजन चक्र)</div>
+                    <div class="flow-box" style="background: #34495e;">N₂ in Atmosphere<br>वायुमंडल में N₂<br>(78% of air)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">NITROGEN FIXATION<br>नाइट्रोजन स्थिरीकरण<br>Rhizobium, Azotobacter<br>N₂ → NH₃</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">AMMONIFICATION<br>अमोनीकरण<br>Organic N → NH₄⁺<br>Decomposers</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">NITRIFICATION<br>नाइट्रीकरण<br>NH₄⁺ → NO₂⁻ → NO₃⁻<br>Nitrosomonas, Nitrobacter</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">DENITRIFICATION<br>विनाइट्रीकरण<br>NO₃⁻ → N₂<br>Pseudomonas</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #34495e;">N₂ Returns to Atmosphere<br>N₂ वायुमंडल में वापस</div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Process (प्रक्रिया)</th>
+                        <th>Microorganism (सूक्ष्मजीव)</th>
+                        <th>What Happens (क्या होता है)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Nitrogen Fixation</strong><br>नाइट्रोजन स्थिरीकरण</td>
+                        <td>Rhizobium, Azotobacter<br>राइज़ोबियम, एज़ोटोबैक्टर</td>
+                        <td>N₂ → NH₃ (ammonia)<br>वायुमंडलीय N₂ को अमोनिया में बदलना</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nitrification</strong><br>नाइट्रीकरण</td>
+                        <td>Nitrosomonas, Nitrobacter<br>नाइट्रोसोमोनास, नाइट्रोबैक्टर</td>
+                        <td>NH₄⁺ → NO₂⁻ → NO₃⁻<br>अमोनिया को नाइट्रेट में बदलना</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Denitrification</strong><br>विनाइट्रीकरण</td>
+                        <td>Pseudomonas, Bacillus<br>सूडोमोनास, बैसिलस</td>
+                        <td>NO₃⁻ → N₂<br>नाइट्रेट को वायुमंडलीय N₂ में बदलना</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ammonification</strong><br>अमोनीकरण</td>
+                        <td>Decomposers<br>अपघटक</td>
+                        <td>Organic N → NH₄⁺<br>कार्बनिक नाइट्रोजन को अमोनियम में बदलना</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">C. Phosphorus Cycle (फास्फोरस चक्र)</div>
+                <div class="definition">
+                    <strong>What is Phosphorus Cycle? (फास्फोरस चक्र क्या है?)</strong><br>
+                    Phosphorus cycle moves phosphorus through rocks, water, soil, and living organisms. Unlike carbon and nitrogen, phosphorus doesn't have a gaseous phase.<br>
+                    <span class="hindi">फास्फोरस चक्र फास्फोरस को चट्टानों, जल, मिट्टी और जीवित जीवों के माध्यम से चलाता है। कार्बन और नाइट्रोजन के विपरीत, फास्फोरस का कोई गैसीय चरण नहीं है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Phosphorus Cycle (फास्फोरस चक्र)</div>
+                    <div class="flow-box" style="background: #34495e;">Rocks & Minerals<br>चट्टानें और खनिज<br>(Apatite, Phosphate rocks)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">Weathering & Erosion<br>अपक्षय और कटाव<br>Release PO₄³⁻</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">Soil & Water<br>मिट्टी और पानी<br>Phosphate available</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">Uptake by Plants<br>पौधों द्वारा अवशोषण<br>PSB (Phosphate Solubilizing Bacteria)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">Animals Eat Plants<br>जानवर पौधे खाते हैं</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #f39c12;">Decomposition<br>अपघटन<br>Microbes release PO₄³⁻</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #34495e;">Return to Soil / Sediment<br>मिट्टी / तलछट में वापस</div>
+                </div>
+
+                <div class="important">
+                    <strong>✅ Microbial Role in Phosphorus Cycle (फास्फोरस चक्र में सूक्ष्मजीवीय भूमिका):</strong>
+                    <ul>
+                        <li><strong>Phosphate Solubilization:</strong> PSB (Bacillus, Pseudomonas) convert insoluble phosphate to soluble form<br>
+                        <span class="hindi">(फॉस्फेट घुलनशीलता: PSB अघुलनशील फॉस्फेट को घुलनशील रूप में बदलते हैं)</span></li>
+                        <li><strong>Mineralization:</strong> Convert organic phosphorus to inorganic phosphate<br>
+                        <span class="hindi">(खनिजीकरण: कार्बनिक फास्फोरस को अकार्बनिक फॉस्फेट में बदलना)</span></li>
+                        <li><strong>Immobilization:</strong> Convert inorganic phosphate to organic forms<br>
+                        <span class="hindi">(अचलन: अकार्बनिक फॉस्फेट को कार्बनिक रूपों में बदलना)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">D. Sulfur Cycle (सल्फर चक्र)</div>
+                <div class="definition">
+                    <strong>What is Sulfur Cycle? (सल्फर चक्र क्या है?)</strong><br>
+                    The sulfur cycle moves sulfur through rocks, water, soil, atmosphere, and living organisms. Microbes play crucial role in sulfur transformations.<br>
+                    <span class="hindi">सल्फर चक्र सल्फर को चट्टानों, जल, मिट्टी, वायुमंडल और जीवित जीवों के माध्यम से चलाता है। सल्फर रूपांतरण में सूक्ष्मजीव महत्वपूर्ण भूमिका निभाते हैं।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Sulfur Cycle (सल्फर चक्र)</div>
+                    <div class="flow-box" style="background: #34495e;">Rocks & Minerals<br>चट्टानें और खनिज<br>(Pyrite, Gypsum)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">Weathering<br>अपक्षय<br>Release SO₄²⁻</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">Assimilation<br>अनुकरण<br>Plants & Microbes<br>SO₄²⁻ → Organic S</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">Decomposition<br>अपघटन<br>Organic S → H₂S</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">Oxidation<br>ऑक्सीकरण<br>Thiobacillus<br>H₂S → SO₄²⁻</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #f39c12;">Reduction<br>कमी<br>Desulfovibrio<br>SO₄²⁻ → H₂S</div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Process (प्रक्रिया)</th>
+                        <th>Microorganism (सूक्ष्मजीव)</th>
+                        <th>Reaction (अभिक्रिया)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Sulfur Oxidation</strong><br>सल्फर ऑक्सीकरण</td>
+                        <td>Thiobacillus, Beggiatoa<br>थायोबैसिलस, बेगियाटोआ</td>
+                        <td>H₂S → S → SO₄²⁻<br>हाइड्रोजन सल्फाइड को सल्फेट में बदलना</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sulfur Reduction</strong><br>सल्फर कमी</td>
+                        <td>Desulfovibrio, Desulfotomaculum<br>डिसल्फोविब्रियो</td>
+                        <td>SO₄²⁻ → H₂S<br>सल्फेट को हाइड्रोजन सल्फाइड में बदलना</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mineralization</strong><br>खनिजीकरण</td>
+                        <td>Decomposers<br>अपघटक</td>
+                        <td>Organic S → H₂S<br>कार्बनिक सल्फर को H₂S में बदलना</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Topic 3: Bioremediation -->
+        <div class="topic">
+            <div class="topic-title">3. Bioremediation<br><span class="hindi">(जैवउपचार)</span></div>
+            
+            <div class="definition">
+                <strong>What is Bioremediation? (जैवउपचार क्या है?)</strong><br>
+                Bioremediation is the use of microorganisms to clean up contaminated environments by breaking down pollutants into harmless substances.<br>
+                <span class="hindi">जैवउपचार प्रदूषित वातावरण को साफ करने के लिए सूक्ष्मजीवों का उपयोग है जो प्रदूषकों को हानिरहित पदार्थों में तोड़ते हैं।</span>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Bioremediation Process (जैवउपचार प्रक्रिया)</div>
+                <div class="flow-box" style="background: #e74c3c;">Contaminated Site<br>प्रदूषित स्थल<br>(Oil, Pesticides, Heavy metals)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #3498db;">Add Microbes / Nutrients<br>सूक्ष्मजीव / पोषक तत्व मिलाएं<br>(Bioaugmentation / Biostimulation)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #2ecc71;">Microbes Degrade Pollutants<br>सूक्ष्मजीव प्रदूषकों को तोड़ते हैं<br>Enzymes break down toxins</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #27ae60;">Clean Environment<br>साफ वातावरण<br>CO₂ + H₂O + Biomass</div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Types of Bioremediation (जैवउपचार के प्रकार)</div>
+                
+                <strong>A. In Situ Bioremediation (स्थानीय जैवउपचार):</strong>
+                <ul>
+                    <li><strong>Definition:</strong> Treatment at the contamination site<br>
+                    <span class="hindi">(परिभाषा: प्रदूषण स्थल पर उपचार)</span></li>
+                    <li><strong>Advantages:</strong> Less expensive, no excavation needed<br>
+                    <span class="hindi">(लाभ: कम खर्चीला, खुदाई की जरूरत नहीं)</span></li>
+                    <li><strong>Methods:</strong>
+                        <ul>
+                            <li>Bioventing (बायोवेंटिंग) - Add air to soil</li>
+                            <li>Biosparging (बायोस्पार्जिंग) - Inject air into groundwater</li>
+                            <li>Bioaugmentation (बायोऑगमेंटेशन) - Add specific microbes</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <strong>B. Ex Situ Bioremediation (स्थान से बाहर जैवउपचार):</strong>
+                <ul>
+                    <li><strong>Definition:</strong> Remove contaminated material and treat elsewhere<br>
+                    <span class="hindi">(परिभाषा: प्रदूषित सामग्री को हटाकर कहीं और उपचार)</span></li>
+                    <li><strong>Methods:</strong>
+                        <ul>
+                            <li>Bioreactors (बायोरिएक्टर) - Controlled environment</li>
+                            <li>Composting (कम्पोस्टिंग) - Pile contaminated soil</li>
+                            <li>Landfarming (लैंडफार्मिंग) - Spread on land surface</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Microorganisms Used in Bioremediation (जैवउपचार में उपयोग किए जाने वाले सूक्ष्मजीव)</div>
+                <table>
+                    <tr>
+                        <th>Microorganism (सूक्ष्मजीव)</th>
+                        <th>Pollutant (प्रदूषक)</th>
+                        <th>Application (अनुप्रयोग)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudomonas</strong><br>सूडोमोनास</td>
+                        <td>Oil, PAHs, Pesticides<br>तेल, PAH, कीटनाशक</td>
+                        <td>Oil spills, contaminated soil<br>तेल फैलाव, प्रदूषित मिट्टी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alcanivorax</strong><br>अल्कानिवोरैक्स</td>
+                        <td>Petroleum hydrocarbons<br>पेट्रोलियम हाइड्रोकार्बन</td>
+                        <td>Marine oil spills<br>समुद्री तेल फैलाव</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dehalococcoides</strong><br>डिहालोकोकॉइड्स</td>
+                        <td>Chlorinated compounds<br>क्लोरीन युक्त यौगिक</td>
+                        <td>Groundwater cleanup<br>भूजल सफाई</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aspergillus</strong><br>एस्परगिलस</td>
+                        <td>Heavy metals, Dyes<br>भारी धातु, रंग</td>
+                        <td>Industrial waste<br>औद्योगिक अपशिष्ट</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phanerochaete</strong><br>फैनरोचेट</td>
+                        <td>Lignin, PAHs<br>लिग्निन, PAH</td>
+                        <td>Wood waste, contaminated soil<br>लकड़ी अपशिष्ट, प्रदूषित मिट्टी</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="important">
+                <strong>✅ Factors Affecting Bioremediation (जैवउपचार को प्रभावित करने वाले कारक):</strong>
+                <ul>
+                    <li><strong>Temperature:</strong> Optimal 20-30°C (तापमान: 20-30°C इष्टतम)</li>
+                    <li><strong>pH:</strong> Neutral to slightly alkaline (pH: तटस्थ से थोड़ा क्षारीय)</li>
+                    <li><strong>Oxygen:</strong> Aerobic conditions preferred (ऑक्सीजन: वायुजीवी स्थितियां पसंदीदा)</li>
+                    <li><strong>Nutrients:</strong> N, P needed for growth (पोषक तत्व: वृद्धि के लिए N, P की जरूरत)</li>
+                    <li><strong>Moisture:</strong> Adequate water content (नमी: पर्याप्त जल सामग्री)</li>
+                    <li><strong>Pollutant Concentration:</strong> Too high can be toxic (प्रदूषक एकाग्रता: बहुत अधिक विषैला हो सकता है)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Real-World Applications (वास्तविक दुनिया के अनुप्रयोग):</strong>
+                <ul>
+                    <li><strong>Exxon Valdez Oil Spill (1989):</strong> Used bioremediation to clean Alaska coast<br>
+                    <span class="hindi">(एक्सॉन वाल्डेज़ तेल फैलाव: अलास्का तट की सफाई के लिए जैवउपचार का उपयोग)</span></li>
+                    <li><strong>Deepwater Horizon (2010):</strong> Natural microbes degraded oil in Gulf of Mexico<br>
+                    <span class="hindi">(डीपवाटर होराइजन: मैक्सिको की खाड़ी में प्राकृतिक सूक्ष्मजीवों ने तेल को तोड़ा)</span></li>
+                    <li><strong>Soil Remediation:</strong> Clean pesticide-contaminated agricultural land<br>
+                    <span class="hindi">(मिट्टी उपचार: कीटनाशक-दूषित कृषि भूमि की सफाई)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 4: Degradation of Pesticides and Xenobiotics -->
+        <div class="topic">
+            <div class="topic-title">4. Microbial Degradation of Pesticides & Xenobiotics<br><span class="hindi">(कीटनाशकों और ज़ेनोबायोटिक्स का सूक्ष्मजीवीय अपघटन)</span></div>
+            
+            <div class="definition">
+                <strong>What are Xenobiotics? (ज़ेनोबायोटिक्स क्या हैं?)</strong><br>
+                Xenobiotics are synthetic chemicals foreign to living organisms, such as pesticides, plastics, and industrial chemicals. They are often recalcitrant (hard to degrade).<br>
+                <span class="hindi">ज़ेनोबायोटिक्स जीवित जीवों के लिए विदेशी सिंथेटिक रसायन हैं, जैसे कीटनाशक, प्लास्टिक और औद्योगिक रसायन। वे अक्सर प्रतिरोधी (तोड़ना मुश्किल) होते हैं।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Why are Xenobiotics Hard to Degrade? (ज़ेनोबायोटिक्स को तोड़ना क्यों मुश्किल है?)</div>
+                <ul>
+                    <li><strong>Novel Structure:</strong> Not found in nature, microbes haven't evolved enzymes for them<br>
+                    <span class="hindi">(नया संरचना: प्रकृति में नहीं मिलता, सूक्ष्मजीवों ने उनके लिए एंजाइम विकसित नहीं किए हैं)</span></li>
+                    <li><strong>Complex Molecules:</strong> Many rings, branches, unusual bonds<br>
+                    <span class="hindi">(जटिल अणु: कई रिंग, शाखाएं, असामान्य बंधन)</span></li>
+                    <li><strong>Toxicity:</strong> Kill microbes before they can degrade<br>
+                    <span class="hindi">(विषाक्तता: तोड़ने से पहले सूक्ष्मजीवों को मारते हैं)</span></li>
+                    <li><strong>Low Solubility:</strong> Hard to access by microbes<br>
+                    <span class="hindi">(कम घुलनशीलता: सूक्ष्मजीवों द्वारा पहुंचना मुश्किल)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">A. Pesticide Degradation (कीटनाशक अपघटन)</div>
+                
+                <strong>Types of Pesticides (कीटनाशकों के प्रकार):</strong>
+                <ul>
+                    <li><strong>Organochlorines:</strong> DDT, Lindane, Endosulfan (very persistent)<br>
+                    <span class="hindi">(ऑर्गेनोक्लोरीन: DDT, लिंडेन, एंडोसल्फान - बहुत लगातार)</span></li>
+                    <li><strong>Organophosphates:</strong> Malathion, Parathion (less persistent)<br>
+                    <span class="hindi">(ऑर्गेनोफॉस्फेट: मैलाथियोन, पैराथियोन - कम लगातार)</span></li>
+                    <li><strong>Carbamates:</strong> Carbaryl, Aldicarb<br>
+                    <span class="hindi">(कार्बामेट: कार्बरिल, एल्डिकार्ब)</span></li>
+                    <li><strong>Herbicides:</strong> 2,4-D, Atrazine, Glyphosate<br>
+                    <span class="hindi">(हर्बिसाइड: 2,4-D, एट्राज़ीन, ग्लाइफोसेट)</span></li>
+                </ul>
+
+                <div class="diagram">
+                    <div class="diagram-title">Pesticide Degradation Process (कीटनाशक अपघटन प्रक्रिया)</div>
+                    <div class="flow-box" style="background: #e74c3c;">Pesticide in Environment<br>पर्यावरण में कीटनाशक<br>(DDT, Organophosphates)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">Microbes Produce Enzymes<br>सूक्ष्मजीव एंजाइम उत्पादन करते हैं<br>(Hydrolases, Dehalogenases)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">Break Chemical Bonds<br>रासायनिक बंधन तोड़ना<br>Cl, P, C-C bonds</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">Intermediate Products<br>मध्यवर्ती उत्पाद<br>(Less toxic)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #27ae60;">Complete Mineralization<br>पूर्ण खनिजीकरण<br>CO₂ + H₂O + Nutrients</div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Pesticide (कीटनाशक)</th>
+                        <th>Degrading Microbe (अपघटन करने वाला सूक्ष्मजीव)</th>
+                        <th>Mechanism (तंत्र)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>DDT</strong></td>
+                        <td>Pseudomonas, Alcaligenes<br>सूडोमोनास, अल्कालिजेन्स</td>
+                        <td>Dehalogenation, ring cleavage<br>डिहैलोजेनेशन, रिंग क्लीवेज</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Malathion</strong></td>
+                        <td>Pseudomonas, Bacillus<br>सूडोमोनास, बैसिलस</td>
+                        <td>Hydrolysis of ester bonds<br>एस्टर बंधन का जल अपघटन</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Atrazine</strong></td>
+                        <td>Pseudomonas, Nocardia<br>सूडोमोनास, नोकार्डिया</td>
+                        <td>Dealkylation, deamination<br>डीअल्काइलेशन, डीअमाइनेशन</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2,4-D</strong></td>
+                        <td>Alcaligenes, Arthrobacter<br>अल्कालिजेन्स, आर्थ्रोबैक्टर</td>
+                        <td>Ring cleavage, oxidation<br>रिंग क्लीवेज, ऑक्सीकरण</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">B. Degradation of Other Recalcitrant Chemicals (अन्य प्रतिरोधी रसायनों का अपघटन)</div>
+                
+                <strong>Examples of Recalcitrant Compounds (प्रतिरोधी यौगिकों के उदाहरण):</strong>
+                <ul>
+                    <li><strong>PCBs (Polychlorinated Biphenyls):</strong> Used in electrical equipment<br>
+                    <span class="hindi">(PCBs: विद्युत उपकरणों में उपयोग)</span>
+                        <ul>
+                            <li>Degrading microbes: Pseudomonas, Alcaligenes<br>
+                            <span class="hindi">(अपघटन करने वाले सूक्ष्मजीव: सूडोमोनास, अल्कालिजेन्स)</span></li>
+                            <li>Mechanism: Dehalogenation, ring cleavage<br>
+                            <span class="hindi">(तंत्र: डिहैलोजेनेशन, रिंग क्लीवेज)</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>PAHs (Polycyclic Aromatic Hydrocarbons):</strong> From incomplete combustion<br>
+                    <span class="hindi">(PAHs: अपूर्ण दहन से)</span>
+                        <ul>
+                            <li>Degrading microbes: Pseudomonas, Sphingomonas<br>
+                            <span class="hindi">(अपघटन करने वाले सूक्ष्मजीव: सूडोमोनास, स्फिंगोमोनास)</span></li>
+                            <li>Mechanism: Dioxygenase enzymes, ring opening<br>
+                            <span class="hindi">(तंत्र: डाइऑक्सीजनेज एंजाइम, रिंग खोलना)</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>Plastics:</strong> Polyethylene, PET, PVC<br>
+                    <span class="hindi">(प्लास्टिक: पॉलीइथाइलीन, PET, PVC)</span>
+                        <ul>
+                            <li>Degrading microbes: Ideonella, Pseudomonas<br>
+                            <span class="hindi">(अपघटन करने वाले सूक्ष्मजीव: आइडियोनेला, सूडोमोनास)</span></li>
+                            <li>Mechanism: Esterase, hydrolase enzymes<br>
+                            <span class="hindi">(तंत्र: एस्टरेज़, हाइड्रोलेज़ एंजाइम)</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>✅ Strategies to Enhance Degradation (अपघटन बढ़ाने की रणनीतियां):</strong>
+                <ul>
+                    <li><strong>Bioaugmentation:</strong> Add specific degrading microbes<br>
+                    <span class="hindi">(बायोऑगमेंटेशन: विशिष्ट अपघटन करने वाले सूक्ष्मजीव मिलाएं)</span></li>
+                    <li><strong>Biostimulation:</strong> Add nutrients (N, P) to support growth<br>
+                    <span class="hindi">(बायोस्टिमुलेशन: वृद्धि का समर्थन करने के लिए पोषक तत्व मिलाएं)</span></li>
+                    <li><strong>Cometabolism:</strong> Use one compound to degrade another<br>
+                    <span class="hindi">(कोमेटाबोलिज्म: एक यौगिक का उपयोग दूसरे को तोड़ने के लिए)</span></li>
+                    <li><strong>Genetic Engineering:</strong> Create superbugs with multiple degradation genes<br>
+                    <span class="hindi">(आनुवंशिक इंजीनियरिंग: कई अपघटन जीन वाले सुपरबग बनाएं)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 5: Global Warming and Control Measures -->
+        <div class="topic">
+            <div class="topic-title">5. Global Warming & Possible Control Measures<br><span class="hindi">(ग्लोबल वार्मिंग और संभावित नियंत्रण उपाय)</span></div>
+            
+            <div class="definition">
+                <strong>What is Global Warming? (ग्लोबल वार्मिंग क्या है?)</strong><br>
+                Global warming is the long-term increase in Earth's average surface temperature due to greenhouse gases (CO₂, CH₄, N₂O) trapping heat in the atmosphere.<br>
+                <span class="hindi">ग्लोबल वार्मिंग ग्रीनहाउस गैसों (CO₂, CH₄, N₂O) के कारण वायुमंडल में गर्मी फंसने के कारण पृथ्वी के औसत सतह तापमान में दीर्घकालिक वृद्धि है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Greenhouse Gases & Their Sources (ग्रीनहाउस गैसें और उनके स्रोत)</div>
+                <table>
+                    <tr>
+                        <th>Gas (गैस)</th>
+                        <th>Source (स्रोत)</th>
+                        <th>Global Warming Potential (ग्लोबल वार्मिंग क्षमता)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>CO₂ (Carbon Dioxide)</strong><br>कार्बन डाइऑक्साइड</td>
+                        <td>Burning fossil fuels, deforestation<br>जीवाश्म ईंधन जलाना, वनों की कटाई</td>
+                        <td>1 (baseline)<br>1 (आधार रेखा)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CH₄ (Methane)</strong><br>मीथेन</td>
+                        <td>Cattle, rice paddies, landfills, natural gas<br>मवेशी, धान के खेत, लैंडफिल, प्राकृतिक गैस</td>
+                        <td>25-30x more than CO₂<br>CO₂ से 25-30 गुना अधिक</td>
+                    </tr>
+                    <tr>
+                        <td><strong>N₂O (Nitrous Oxide)</strong><br>नाइट्रस ऑक्साइड</td>
+                        <td>Fertilizers, industrial processes<br>उर्वरक, औद्योगिक प्रक्रियाएं</td>
+                        <td>300x more than CO₂<br>CO₂ से 300 गुना अधिक</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CFCs (Chlorofluorocarbons)</strong><br>क्लोरोफ्लोरोकार्बन</td>
+                        <td>Refrigerants, aerosols<br>रेफ्रिजरेंट, एरोसोल</td>
+                        <td>1000-10000x more than CO₂<br>CO₂ से 1000-10000 गुना अधिक</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Greenhouse Effect (ग्रीनहाउस प्रभाव)</div>
+                <div class="flow-box" style="background: #f39c12;">Sunlight Enters<br>सूर्य का प्रकाश प्रवेश करता है<br>(Shortwave radiation)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #2ecc71;">Earth Absorbs & Heats<br>पृथ्वी अवशोषित करती है और गर्म होती है</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #e74c3c;">Infrared Radiation Emitted<br>अवरक्त विकिरण उत्सर्जित<br>(Longwave, heat)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #34495e;">Greenhouse Gases Trap Heat<br>ग्रीनहाउस गैसें गर्मी फंसाती हैं<br>(CO₂, CH₄, N₂O)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #e74c3c;">Temperature Rises<br>तापमान बढ़ता है<br>(Global Warming)</div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Microbial Role in Global Warming (ग्लोबल वार्मिंग में सूक्ष्मजीवीय भूमिका)</div>
+                
+                <strong>A. Microbes Produce Greenhouse Gases (सूक्ष्मजीव ग्रीनहाउस गैसें उत्पादन करते हैं):</strong>
+                <ul>
+                    <li><strong>Methanogens:</strong> Produce CH₄ in:
+                        <ul>
+                            <li>Ruminant guts (cattle, sheep) - मवेशियों की आंतें</li>
+                            <li>Rice paddies - धान के खेत</li>
+                            <li>Landfills - लैंडफिल</li>
+                            <li>Wetlands - आर्द्रभूमि</li>
+                        </ul>
+                    </li>
+                    <li><strong>Denitrifiers:</strong> Produce N₂O from nitrates<br>
+                    <span class="hindi">(विनाइट्रीकरण करने वाले: नाइट्रेट से N₂O उत्पादन करते हैं)</span>
+                        <ul>
+                            <li>Pseudomonas, Bacillus in soil - मिट्टी में सूडोमोनास, बैसिलस</li>
+                            <li>Fertilized agricultural fields - उर्वरित कृषि क्षेत्र</li>
+                        </ul>
+                    </li>
+                    <li><strong>Decomposers:</strong> Release CO₂ during respiration<br>
+                    <span class="hindi">(अपघटक: श्वसन के दौरान CO₂ छोड़ते हैं)</span></li>
+                </ul>
+
+                <strong>B. Microbes Can Help Reduce Greenhouse Gases (सूक्ष्मजीव ग्रीनहाउस गैसों को कम करने में मदद कर सकते हैं):</strong>
+                <ul>
+                    <li><strong>Methanotrophs:</strong> Consume CH₄ and convert to CO₂ (less potent)<br>
+                    <span class="hindi">(मीथेनोट्रॉफ्स: CH₄ का उपभोग करते हैं और CO₂ में बदलते हैं)</span></li>
+                    <li><strong>Carbon Sequestration:</strong> Store carbon in soil biomass<br>
+                    <span class="hindi">(कार्बन अलगाव: मिट्टी बायोमास में कार्बन संग्रहीत करना)</span></li>
+                    <li><strong>Photosynthesis:</strong> Cyanobacteria and algae fix CO₂<br>
+                    <span class="hindi">(प्रकाश संश्लेषण: साइनोबैक्टीरिया और शैवाल CO₂ को स्थिर करते हैं)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Control Measures for Global Warming (ग्लोबल वार्मिंग के लिए नियंत्रण उपाय)</div>
+                
+                <strong>A. Reduce Greenhouse Gas Emissions (ग्रीनहाउस गैस उत्सर्जन कम करना):</strong>
+                <ul>
+                    <li><strong>Renewable Energy:</strong> Solar, wind, hydroelectric instead of fossil fuels<br>
+                    <span class="hindi">(नवीकरणीय ऊर्जा: जीवाश्म ईंधन के बजाय सौर, पवन, जलविद्युत)</span></li>
+                    <li><strong>Energy Efficiency:</strong> Use less energy, better technology<br>
+                    <span class="hindi">(ऊर्जा दक्षता: कम ऊर्जा उपयोग, बेहतर प्रौद्योगिकी)</span></li>
+                    <li><strong>Reduce Deforestation:</strong> Plant more trees (carbon sinks)<br>
+                    <span class="hindi">(वनों की कटाई कम करना: अधिक पेड़ लगाना - कार्बन सिंक)</span></li>
+                    <li><strong>Waste Management:</strong> Reduce, reuse, recycle<br>
+                    <span class="hindi">(अपशिष्ट प्रबंधन: कम करना, पुन: उपयोग, पुनर्चक्रण)</span></li>
+                </ul>
+
+                <strong>B. Microbial Solutions (सूक्ष्मजीवीय समाधान):</strong>
+                <ul>
+                    <li><strong>Methanotrophs:</strong> Use methane-consuming bacteria in landfills<br>
+                    <span class="hindi">(मीथेनोट्रॉफ्स: लैंडफिल में मीथेन-उपभोग करने वाले बैक्टीरिया का उपयोग)</span></li>
+                    <li><strong>Biochar:</strong> Charcoal from organic waste, stores carbon<br>
+                    <span class="hindi">(बायोचार: कार्बनिक अपशिष्ट से चारकोल, कार्बन संग्रहीत करता है)</span></li>
+                    <li><strong>Carbon Capture:</strong> Use algae to capture CO₂ from industries<br>
+                    <span class="hindi">(कार्बन कैप्चर: उद्योगों से CO₂ कैप्चर करने के लिए शैवाल का उपयोग)</span></li>
+                    <li><strong>Improved Agriculture:</strong> Reduce fertilizer use, manage rice paddies better<br>
+                    <span class="hindi">(सुधारित कृषि: उर्वरक उपयोग कम करना, धान के खेतों का बेहतर प्रबंधन)</span></li>
+                </ul>
+
+                <strong>C. Policy & International Measures (नीति और अंतर्राष्ट्रीय उपाय):</strong>
+                <ul>
+                    <li><strong>Paris Agreement (2015):</strong> Limit temperature rise to 1.5-2°C<br>
+                    <span class="hindi">(पेरिस समझौता: तापमान वृद्धि को 1.5-2°C तक सीमित करना)</span></li>
+                    <li><strong>Carbon Trading:</strong> Cap and trade systems<br>
+                    <span class="hindi">(कार्बन ट्रेडिंग: कैप और ट्रेड सिस्टम)</span></li>
+                    <li><strong>Research:</strong> Develop new technologies for carbon capture<br>
+                    <span class="hindi">(अनुसंधान: कार्बन कैप्चर के लिए नई प्रौद्योगिकियां विकसित करना)</span></li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>✅ Individual Actions to Reduce Global Warming (ग्लोबल वार्मिंग कम करने के लिए व्यक्तिगत कार्य):</strong>
+                <ul>
+                    <li>Use public transport or cycle (सार्वजनिक परिवहन या साइकिल का उपयोग)</li>
+                    <li>Reduce energy consumption (ऊर्जा खपत कम करना)</li>
+                    <li>Plant trees (पेड़ लगाना)</li>
+                    <li>Reduce, reuse, recycle (कम करना, पुन: उपयोग, पुनर्चक्रण)</li>
+                    <li>Eat less meat (reduce methane from cattle) (कम मांस खाना - मवेशियों से मीथेन कम करना)</li>
+                    <li>Use renewable energy (नवीकरणीय ऊर्जा का उपयोग)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Impact of Global Warming (ग्लोबल वार्मिंग का प्रभाव):</strong>
+                <ul>
+                    <li><strong>Rising Sea Levels:</strong> Melting ice caps, thermal expansion<br>
+                    <span class="hindi">(समुद्र स्तर बढ़ना: बर्फ की टोपियां पिघलना, थर्मल विस्तार)</span></li>
+                    <li><strong>Extreme Weather:</strong> More frequent hurricanes, droughts, floods<br>
+                    <span class="hindi">(चरम मौसम: अधिक बार तूफान, सूखा, बाढ़)</span></li>
+                    <li><strong>Ecosystem Changes:</strong> Species migration, extinction<br>
+                    <span class="hindi">(पारिस्थितिकी तंत्र परिवर्तन: प्रजाति प्रवास, विलुप्ति)</span></li>
+                    <li><strong>Agriculture Impact:</strong> Crop failures, food security issues<br>
+                    <span class="hindi">(कृषि प्रभाव: फसल विफलता, खाद्य सुरक्षा मुद्दे)</span></li>
+                </ul>
+            </div>
         </div>
 
         <div class="unit-nav">
@@ -224,7 +1022,57 @@
             <a href="index.html" class="home">🏠 All Units</a>
             <a href="mcr615-unit5.html" class="next">Next: Unit V →</a>
         </div>
+
+        <div class="practice">
+            <h2>📝 Practice Questions (अभ्यास प्रश्न)</h2>
+            
+            <div class="question">
+                <strong>Q1.</strong> Explain the significance of microbial activities in maintaining ecosystem balance.<br>
+                <span class="hindi">पारिस्थितिकी तंत्र संतुलन बनाए रखने में सूक्ष्मजीवीय गतिविधियों के महत्व की व्याख्या करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q2.</strong> Describe the nitrogen cycle with emphasis on microbial roles.<br>
+                <span class="hindi">सूक्ष्मजीवीय भूमिकाओं पर जोर देते हुए नाइट्रोजन चक्र का वर्णन करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q3.</strong> What is bioremediation? Explain in situ and ex situ methods.<br>
+                <span class="hindi">जैवउपचार क्या है? स्थानीय और स्थान से बाहर विधियों की व्याख्या करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q4.</strong> Why are xenobiotics difficult to degrade? Explain microbial strategies for their degradation.<br>
+                <span class="hindi">ज़ेनोबायोटिक्स को तोड़ना क्यों मुश्किल है? उनके अपघटन के लिए सूक्ष्मजीवीय रणनीतियों की व्याख्या करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q5.</strong> Explain the carbon cycle and microbial involvement.<br>
+                <span class="hindi">कार्बन चक्र और सूक्ष्मजीवीय भागीदारी की व्याख्या करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q6.</strong> How do microorganisms contribute to global warming? How can they help reduce it?<br>
+                <span class="hindi">सूक्ष्मजीव ग्लोबल वार्मिंग में कैसे योगदान करते हैं? वे इसे कम करने में कैसे मदद कर सकते हैं?</span>
+            </div>
+
+            <div class="question">
+                <strong>Q7.</strong> Describe the phosphorus and sulfur cycles with microbial roles.<br>
+                <span class="hindi">सूक्ष्मजीवीय भूमिकाओं के साथ फास्फोरस और सल्फर चक्र का वर्णन करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q8.</strong> What are the control measures for global warming? Explain microbial solutions.<br>
+                <span class="hindi">ग्लोबल वार्मिंग के लिए नियंत्रण उपाय क्या हैं? सूक्ष्मजीवीय समाधानों की व्याख्या करें।</span>
+            </div>
+        </div>
+
+        <button class="btn-download" onclick="window.print()" style="margin-top: 20px;">📥 Download / Print as PDF</button>
     </div>
+
+    <script>
+        console.log("To download as PDF: Click the download button or use Ctrl+P");
+        console.log("Make sure to select 'Save as PDF' in the print dialog");
+    </script>
 </body>
 </html>
-
