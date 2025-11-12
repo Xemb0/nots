@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-615 Unit 5 - Applied Environmental Microbiology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .topic {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .topic-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .hindi {
+            color: #e74c3c;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .content-box {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .definition {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .important {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .example {
+            background: #cce5ff;
+            border-left: 5px solid #004085;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .diagram {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .diagram-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .flow-box {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 80%;
+            font-weight: bold;
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 5px 0;
+        }
+        
+        .sub-heading {
+            color: #2c3e50;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .practice {
+            background: #fff5f5;
+            border: 3px solid #e74c3c;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .practice h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .btn-download {
+            background: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .btn-download:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .btn-download {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MCR-615 Applied and Environmental Microbiology</h1>
+            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT 5 - Complete Study Notes</h2>
+            <p>Simple English + Hindi | With Diagrams & Practice Questions</p>
+        </div>
+
+        <button class="btn-download" onclick="window.print()">📥 Download / Print as PDF</button>
+
+        <!-- Topic 1: Mineral Leaching -->
+        <div class="topic">
+            <div class="topic-title">1. Microorganism in Mineral Leaching and Recovery<br><span class="hindi">(खनिज निक्षालन और पुनर्प्राप्ति में सूक्ष्मजीव)</span></div>
+            
+            <div class="definition">
+                <strong>What is Bioleaching? (बायोलीचिंग क्या है?)</strong><br>
+                Bioleaching is the process of using microorganisms to extract metals from ores.<br>
+                <span class="hindi">बायोलीचिंग वह प्रक्रिया है जिसमें सूक्ष्मजीवों का उपयोग करके अयस्कों से धातु निकाली जाती है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🔬 Important Microorganisms (महत्वपूर्ण सूक्ष्मजीव)</div>
+                <ul>
+                    <li><strong>Thiobacillus ferrooxidans</strong> - Most important bacteria for copper and uranium extraction<br>
+                    <span class="hindi">(तांबा और यूरेनियम निकालने के लिए सबसे महत्वपूर्ण जीवाणु)</span></li>
+                    <li><strong>Acidithiobacillus thiooxidans</strong> - Oxidizes sulfur compounds<br>
+                    <span class="hindi">(सल्फर यौगिकों का ऑक्सीकरण करता है)</span></li>
+                    <li><strong>Leptospirillum ferrooxidans</strong> - Works in very acidic conditions<br>
+                    <span class="hindi">(बहुत अम्लीय परिस्थितियों में काम करता है)</span></li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Bioleaching Process Flow (बायोलीचिंग प्रक्रिया प्रवाह)</div>
+                <div class="flow-box">Low-grade Ore (निम्न श्रेणी का अयस्क)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Add Bacteria + Acid Solution<br>(जीवाणु + अम्लीय घोल मिलाएं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Bacteria Oxidize Metal Sulfides<br>(जीवाणु धातु सल्फाइड का ऑक्सीकरण करते हैं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Metal Dissolves in Solution<br>(धातु घोल में घुल जाती है)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Metal Recovery by Precipitation<br>(अवक्षेपण द्वारा धातु पुनर्प्राप्ति)</div>
+            </div>
+
+            <div class="important">
+                <strong>✅ Advantages of Bioleaching (लाभ):</strong>
+                <ul>
+                    <li>Works with low-grade ores (निम्न श्रेणी के अयस्कों के साथ काम करता है)</li>
+                    <li>Environmentally friendly (पर्यावरण के अनुकूल)</li>
+                    <li>Low cost compared to traditional methods (पारंपरिक विधियों की तुलना में कम लागत)</li>
+                    <li>Less energy required (कम ऊर्जा की आवश्यकता)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Real Applications (वास्तविक अनुप्रयोग):</strong>
+                <ul>
+                    <li><strong>Copper Mining:</strong> 25% of world's copper produced by bioleaching<br>
+                    <span class="hindi">(विश्व के 25% तांबे का उत्पादन बायोलीचिंग द्वारा)</span></li>
+                    <li><strong>Gold Recovery:</strong> Extraction from sulfide ores<br>
+                    <span class="hindi">(सल्फाइड अयस्कों से सोने की निकासी)</span></li>
+                    <li><strong>Uranium:</strong> Used in Canada and Australia<br>
+                    <span class="hindi">(कनाडा और ऑस्ट्रेलिया में उपयोग)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 2: Petroleum Degradation -->
+        <div class="topic">
+            <div class="topic-title">2. Microbial Degradation of Petroleum and Hydrocarbons<br><span class="hindi">(पेट्रोलियम और हाइड्रोकार्बन का सूक्ष्मजीवीय अपघटन)</span></div>
+            
+            <div class="definition">
+                <strong>What is Petroleum Degradation? (पेट्रोलियम अपघटन क्या है?)</strong><br>
+                It is the breakdown of petroleum products (oil, petrol, diesel) by microorganisms into simpler, non-toxic compounds.<br>
+                <span class="hindi">यह सूक्ष्मजीवों द्वारा पेट्रोलियम उत्पादों (तेल, पेट्रोल, डीजल) को सरल, गैर-विषैले यौगिकों में तोड़ने की प्रक्रिया है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🦠 Microorganisms Involved (शामिल सूक्ष्मजीव)</div>
+                <table>
+                    <tr>
+                        <th>Type (प्रकार)</th>
+                        <th>Examples (उदाहरण)</th>
+                        <th>Role (भूमिका)</th>
+                    </tr>
+                    <tr>
+                        <td>Bacteria (जीवाणु)</td>
+                        <td>Pseudomonas, Alcanivorax</td>
+                        <td>Degrade alkanes (अल्केन को तोड़ते हैं)</td>
+                    </tr>
+                    <tr>
+                        <td>Fungi (कवक)</td>
+                        <td>Aspergillus, Penicillium</td>
+                        <td>Break complex compounds (जटिल यौगिक तोड़ते हैं)</td>
+                    </tr>
+                    <tr>
+                        <td>Yeast (यीस्ट)</td>
+                        <td>Candida, Yarrowia</td>
+                        <td>Degrade aromatic compounds (सुगंधित यौगिक तोड़ते हैं)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Oil Degradation Process (तेल अपघटन प्रक्रिया)</div>
+                <div class="flow-box">Oil Spill / Pollution<br>(तेल फैलना / प्रदूषण)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Microbes Attach to Oil<br>(सूक्ष्मजीव तेल से चिपकते हैं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Enzyme Production<br>(एंजाइम उत्पादन)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Breaking of C-C Bonds<br>(C-C बंध टूटना)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Formation of CO₂ + H₂O<br>(CO₂ + H₂O का निर्माण)</div>
+            </div>
+
+            <div class="important">
+                <strong>✅ Factors Affecting Degradation (अपघटन को प्रभावित करने वाले कारक):</strong>
+                <ul>
+                    <li><strong>Temperature (तापमान):</strong> Optimal 20-30°C</li>
+                    <li><strong>Oxygen (ऑक्सीजन):</strong> Aerobic conditions better (वायुजीवी स्थितियां बेहतर)</li>
+                    <li><strong>Nutrients (पोषक तत्व):</strong> Nitrogen and Phosphorus needed (नाइट्रोजन और फास्फोरस की जरूरत)</li>
+                    <li><strong>pH:</strong> Neutral pH 6-8 is best (तटस्थ pH 6-8 सर्वोत्तम है)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Applications (अनुप्रयोग):</strong>
+                <ul>
+                    <li><strong>Oil Spill Cleanup:</strong> Cleaning ocean oil spills using bacteria<br>
+                    <span class="hindi">(जीवाणुओं का उपयोग करके समुद्री तेल फैलाव की सफाई)</span></li>
+                    <li><strong>Soil Remediation:</strong> Cleaning contaminated soil near petrol pumps<br>
+                    <span class="hindi">(पेट्रोल पंपों के पास दूषित मिट्टी की सफाई)</span></li>
+                    <li><strong>Wastewater Treatment:</strong> Oil refineries use bioremediation<br>
+                    <span class="hindi">(तेल रिफाइनरियां जैवउपचार का उपयोग करती हैं)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 3: Bio-deterioration -->
+        <div class="topic">
+            <div class="topic-title">3. Bio-deterioration of Materials<br><span class="hindi">(पदार्थों का जैव-अवक्षयण)</span></div>
+            
+            <div class="definition">
+                <strong>What is Bio-deterioration? (जैव-अवक्षयण क्या है?)</strong><br>
+                It is the unwanted breakdown and damage of materials by microorganisms.<br>
+                <span class="hindi">यह सूक्ष्मजीवों द्वारा पदार्थों का अवांछित टूटना और क्षति है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">📄 A. Paper Deterioration (कागज का क्षरण)</div>
+                <ul>
+                    <li><strong>Causes (कारण):</strong> Fungi (Aspergillus, Penicillium), Bacteria (Cellulomonas)<br>
+                    <span class="hindi">कवक और जीवाणु</span></li>
+                    <li><strong>Effects (प्रभाव):</strong>
+                        <ul>
+                            <li>Yellowing and staining (पीला होना और दाग)</li>
+                            <li>Loss of strength (मजबूती खोना)</li>
+                            <li>Holes formation (छेद बनना)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Prevention (रोकथाम):</strong>
+                        <ul>
+                            <li>Keep dry (सूखा रखें) - Humidity below 65%</li>
+                            <li>Good ventilation (अच्छा वेंटिलेशन)</li>
+                            <li>Fungicides treatment (फफूंदनाशक उपचार)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">👞 B. Leather Deterioration (चमड़े का क्षरण)</div>
+                <ul>
+                    <li><strong>Microorganisms (सूक्ष्मजीव):</strong> Bacteria (Bacillus), Fungi (Aspergillus niger)</li>
+                    <li><strong>Damage (क्षति):</strong>
+                        <ul>
+                            <li>Color change (रंग बदलना)</li>
+                            <li>Softening (नरम होना)</li>
+                            <li>Bad smell (बदबू)</li>
+                            <li>Cracks (दरारें)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Control (नियंत्रण):</strong>
+                        <ul>
+                            <li>Low moisture storage (कम नमी में रखें)</li>
+                            <li>Antifungal treatment (फफूंदरोधी उपचार)</li>
+                            <li>Regular cleaning (नियमित सफाई)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🪵 C. Wood Deterioration (लकड़ी का क्षरण)</div>
+                <ul>
+                    <li><strong>Agents (कारक):</strong>
+                        <ul>
+                            <li>White-rot fungi (सफेद सड़न कवक) - Degrade lignin</li>
+                            <li>Brown-rot fungi (भूरी सड़न कवक) - Degrade cellulose</li>
+                            <li>Soft-rot fungi (मुलायम सड़न कवक) - Surface damage</li>
+                        </ul>
+                    </li>
+                    <li><strong>Signs (संकेत):</strong>
+                        <ul>
+                            <li>Discoloration (विवर्णन)</li>
+                            <li>Weight loss (वजन कम होना)</li>
+                            <li>Soft and crumbly (नरम और भुरभुरा)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Prevention (रोकथाम):</strong>
+                        <ul>
+                            <li>Chemical treatment (रासायनिक उपचार) - Creosote, CCA</li>
+                            <li>Keep dry (सूखा रखें)</li>
+                            <li>Paint coating (पेंट की परत)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">👕 D. Textile Deterioration (कपड़े का क्षरण)</div>
+                <ul>
+                    <li><strong>Microorganisms (सूक्ष्मजीव):</strong> Bacteria, Fungi (Aspergillus, Chaetomium)</li>
+                    <li><strong>Effects (प्रभाव):</strong>
+                        <ul>
+                            <li>Staining (दाग)</li>
+                            <li>Weakening of fibers (रेशे कमजोर होना)</li>
+                            <li>Color fading (रंग फीका पड़ना)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Control (नियंत्रण):</strong>
+                        <ul>
+                            <li>Proper storage (उचित भंडारण)</li>
+                            <li>Antimicrobial finishing (रोगाणुरोधी फिनिशिंग)</li>
+                            <li>Avoid moisture (नमी से बचें)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">💄 E. Cosmetics Deterioration (सौंदर्य प्रसाधन का क्षरण)</div>
+                <ul>
+                    <li><strong>Microorganisms (सूक्ष्मजीव):</strong> Bacteria (Pseudomonas), Fungi, Yeast</li>
+                    <li><strong>Problems (समस्याएं):</strong>
+                        <ul>
+                            <li>Color change (रंग बदलना)</li>
+                            <li>Bad odor (बदबू)</li>
+                            <li>Separation of phases (अलग होना)</li>
+                            <li>Gas production (गैस बनना)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Prevention (रोकथाम):</strong>
+                        <ul>
+                            <li>Add preservatives (संरक्षक मिलाएं) - Parabens</li>
+                            <li>Sterile production (बाँझ उत्पादन)</li>
+                            <li>Sealed containers (सीलबंद कंटेनर)</li>
+                            <li>Low pH formulation (कम pH सूत्रीकरण)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 4: Metal Corrosion -->
+        <div class="topic">
+            <div class="topic-title">4. Metal Corrosion and Control<br><span class="hindi">(धातु संक्षारण और नियंत्रण)</span></div>
+            
+            <div class="definition">
+                <strong>What is Microbial Corrosion? (सूक्ष्मजीवीय संक्षारण क्या है?)</strong><br>
+                It is the damage and deterioration of metals caused by microorganisms. Also called MIC (Microbially Influenced Corrosion).<br>
+                <span class="hindi">यह सूक्ष्मजीवों के कारण होने वाली धातुओं की क्षति और खराबी है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🦠 Microorganisms Causing Corrosion (संक्षारण करने वाले सूक्ष्मजीव)</div>
+                <table>
+                    <tr>
+                        <th>Microorganism (सूक्ष्मजीव)</th>
+                        <th>Type (प्रकार)</th>
+                        <th>How it Corrodes (कैसे जंग लगाता है)</th>
+                    </tr>
+                    <tr>
+                        <td>Desulfovibrio</td>
+                        <td>Sulfate-reducing bacteria<br>(सल्फेट कम करने वाले)</td>
+                        <td>Produces H₂S (hydrogen sulfide)<br>(हाइड्रोजन सल्फाइड बनाता है)</td>
+                    </tr>
+                    <tr>
+                        <td>Thiobacillus</td>
+                        <td>Sulfur-oxidizing bacteria<br>(सल्फर ऑक्सीकारी)</td>
+                        <td>Produces sulfuric acid<br>(सल्फ्यूरिक अम्ल बनाता है)</td>
+                    </tr>
+                    <tr>
+                        <td>Iron bacteria</td>
+                        <td>Gallionella, Leptothrix</td>
+                        <td>Oxidize Fe²⁺ to Fe³⁺<br>(आयरन को ऑक्सीकृत करते हैं)</td>
+                    </tr>
+                    <tr>
+                        <td>Slime-forming bacteria</td>
+                        <td>Pseudomonas</td>
+                        <td>Form biofilm, trap corrosive agents<br>(बायोफिल्म बनाते हैं)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Mechanism of Microbial Corrosion (सूक्ष्मजीवीय संक्षारण की प्रक्रिया)</div>
+                <div class="flow-box">Bacteria Attach to Metal Surface<br>(जीवाणु धातु की सतह से चिपकते हैं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Form Biofilm (जैवपरत बनाते हैं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Create Anaerobic Conditions<br>(ऑक्सीजन रहित वातावरण बनाते हैं)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Produce Corrosive Substances<br>(संक्षारक पदार्थ बनाते हैं)<br>H₂S, Organic Acids, H₂SO₄</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Metal Dissolves / Pitting Occurs<br>(धातु घुलती है / गड्ढे बनते हैं)</div>
+            </div>
+
+            <div class="important">
+                <strong>⚠️ Where MIC Happens (MIC कहाँ होता है):</strong>
+                <ul>
+                    <li>Pipelines (पाइपलाइन) - Oil, gas, water pipes</li>
+                    <li>Ships and boats (जहाज और नाव) - Underwater parts</li>
+                    <li>Cooling systems (शीतलन प्रणाली) - Power plants</li>
+                    <li>Storage tanks (भंडारण टैंक) - Petroleum storage</li>
+                    <li>Underground cables (भूमिगत केबल)</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🛡️ Control Methods (नियंत्रण विधियां)</div>
+                
+                <strong>A. Physical Methods (भौतिक विधियां):</strong>
+                <ul>
+                    <li><strong>Cleaning:</strong> Regular mechanical cleaning of surfaces<br>
+                    <span class="hindi">(सतहों की नियमित सफाई)</span></li>
+                    <li><strong>Coatings:</strong> Protective paint, epoxy coating<br>
+                    <span class="hindi">(सुरक्षात्मक पेंट, एपॉक्सी कोटिंग)</span></li>
+                    <li><strong>Cathodic Protection:</strong> Use sacrificial anodes<br>
+                    <span class="hindi">(बलि एनोड का उपयोग)</span></li>
+                </ul>
+                
+                <strong>B. Chemical Methods (रासायनिक विधियां):</strong>
+                <ul>
+                    <li><strong>Biocides:</strong> Add chemicals to kill microbes<br>
+                    <span class="hindi">(सूक्ष्मजीवों को मारने के लिए रसायन)</span>
+                        <ul>
+                            <li>Chlorine (क्लोरीन)</li>
+                            <li>Glutaraldehyde (ग्लूटाराल्डिहाइड)</li>
+                            <li>Quaternary ammonium compounds (क्वाटरनरी अमोनियम यौगिक)</li>
+                        </ul>
+                    </li>
+                    <li><strong>pH Control:</strong> Maintain unfavorable pH for microbes<br>
+                    <span class="hindi">(सूक्ष्मजीवों के लिए प्रतिकूल pH बनाए रखें)</span></li>
+                    <li><strong>Corrosion Inhibitors:</strong> Chemicals that form protective film<br>
+                    <span class="hindi">(सुरक्षात्मक परत बनाने वाले रसायन)</span></li>
+                </ul>
+                
+                <strong>C. Biological Methods (जैविक विधियां):</strong>
+                <ul>
+                    <li><strong>Use of Probiotics:</strong> Add beneficial bacteria to compete with corrosive ones<br>
+                    <span class="hindi">(लाभकारी जीवाणु मिलाएं जो संक्षारक जीवाणुओं से प्रतिस्पर्धा करें)</span></li>
+                    <li><strong>Biofilm Management:</strong> Prevent harmful biofilm formation<br>
+                    <span class="hindi">(हानिकारक बायोफिल्म बनने से रोकें)</span></li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Real-life Impact (वास्तविक प्रभाव):</strong>
+                <ul>
+                    <li>MIC causes billions of dollars in damage yearly (MIC से हर साल अरबों डॉलर का नुकसान)</li>
+                    <li>Alaska Pipeline: Major MIC problem (अलास्का पाइपलाइन: बड़ी MIC समस्या)</li>
+                    <li>Ship hulls need regular cleaning (जहाजों के पेंदे को नियमित सफाई चाहिए)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 5: GMO in Agriculture -->
+        <div class="topic">
+            <div class="topic-title">5. Microbial Inoculants in Agriculture & GMO<br><span class="hindi">(कृषि में सूक्ष्मजीवीय टीके और GMO)</span></div>
+            
+            <div class="definition">
+                <strong>What are Microbial Inoculants? (सूक्ष्मजीवीय टीके क्या हैं?)</strong><br>
+                These are beneficial microorganisms added to soil or seeds to improve plant growth and health.<br>
+                <span class="hindi">ये लाभकारी सूक्ष्मजीव हैं जो पौधों की वृद्धि और स्वास्थ्य में सुधार के लिए मिट्टी या बीज में मिलाए जाते हैं।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🌱 Types of Microbial Inoculants (सूक्ष्मजीवीय टीकों के प्रकार)</div>
+                
+                <table>
+                    <tr>
+                        <th>Type (प्रकार)</th>
+                        <th>Microorganism (सूक्ष्मजीव)</th>
+                        <th>Function (कार्य)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Rhizobium</strong></td>
+                        <td>Rhizobium leguminosarum</td>
+                        <td>Nitrogen fixation in legumes<br>(फलीदार पौधों में नाइट्रोजन स्थिरीकरण)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azotobacter</strong></td>
+                        <td>Azotobacter chroococcum</td>
+                        <td>Free-living nitrogen fixer<br>(स्वतंत्र नाइट्रोजन स्थिरीकारक)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azospirillum</strong></td>
+                        <td>Azospirillum brasilense</td>
+                        <td>Nitrogen fixation + growth hormones<br>(नाइट्रोजन + वृद्धि हार्मोन)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PSB</strong></td>
+                        <td>Bacillus megaterium</td>
+                        <td>Phosphate solubilization<br>(फॉस्फेट घुलनशील बनाना)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mycorrhizae</strong></td>
+                        <td>VAM fungi</td>
+                        <td>Nutrient uptake, drought resistance<br>(पोषक तत्व लेना, सूखा प्रतिरोध)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">How Rhizobium Works (राइज़ोबियम कैसे काम करता है)</div>
+                <div class="flow-box">Rhizobium in Soil<br>(मिट्टी में राइज़ोबियम)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Infects Legume Root<br>(फलीदार जड़ को संक्रमित करता है)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Forms Root Nodules<br>(जड़ गांठें बनाता है)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Converts N₂ → NH₃<br>(नाइट्रोजन को अमोनिया में बदलता है)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Plant Gets Nitrogen<br>(पौधे को नाइट्रोजन मिलता है)</div>
+            </div>
+
+            <div class="important">
+                <strong>✅ Benefits of Microbial Inoculants (लाभ):</strong>
+                <ul>
+                    <li>Reduce chemical fertilizer use by 20-30% (रासायनिक उर्वरक का उपयोग 20-30% कम)</li>
+                    <li>Improve soil health (मिट्टी का स्वास्थ्य सुधारना)</li>
+                    <li>Increase crop yield by 10-40% (फसल उपज में 10-40% वृद्धि)</li>
+                    <li>Environmentally friendly (पर्यावरण के अनुकूल)</li>
+                    <li>Cost-effective (किफायती)</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🧬 GMO (Genetically Modified Organisms) in Agriculture</div>
+                <div class="sub-heading" style="font-size: 16px;"><span class="hindi">(आनुवंशिक रूप से संशोधित जीव)</span></div>
+                
+                <strong>What is GMO? (GMO क्या है?)</strong><br>
+                Organisms whose DNA has been modified using genetic engineering to have desired traits.<br>
+                <span class="hindi">वे जीव जिनके DNA को आनुवंशिक इंजीनियरिंग से वांछित गुणों के लिए बदला गया है।</span>
+                <br><br>
+                
+                <strong>Examples of GMO Crops (GMO फसलों के उदाहरण):</strong>
+                <ul>
+                    <li><strong>Bt Cotton:</strong> Contains Bacillus thuringiensis gene for pest resistance<br>
+                    <span class="hindi">(कीट प्रतिरोधी बीटी कपास)</span></li>
+                    <li><strong>Bt Brinjal:</strong> Insect-resistant eggplant<br>
+                    <span class="hindi">(कीट प्रतिरोधी बैंगन)</span></li>
+                    <li><strong>Golden Rice:</strong> Enriched with Vitamin A<br>
+                    <span class="hindi">(विटामिन A युक्त सुनहरा चावल)</span></li>
+                    <li><strong>Herbicide-resistant Soybeans:</strong> Can tolerate weed killers<br>
+                    <span class="hindi">(खरपतवार नाशक सहनशील सोयाबीन)</span></li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>✅ Advantages of GMO (GMO के लाभ):</strong>
+                <ul>
+                    <li>Pest resistance - Less pesticide needed (कीट प्रतिरोध - कम कीटनाशक की जरूरत)</li>
+                    <li>Higher yield (अधिक उपज)</li>
+                    <li>Drought tolerance (सूखा सहनशीलता)</li>
+                    <li>Better nutritional value (बेहतर पोषण मूल्य)</li>
+                    <li>Longer shelf life (लंबी शेल्फ लाइफ)</li>
+                </ul>
+            </div>
+
+            <div class="content-box" style="background: #ffe0e0; border-left-color: #dc3545;">
+                <strong>⚠️ Concerns about GMO (GMO के बारे में चिंताएं):</strong>
+                <ul>
+                    <li>Environmental impact uncertain (पर्यावरण पर प्रभाव अनिश्चित)</li>
+                    <li>May harm beneficial insects (लाभकारी कीटों को नुकसान)</li>
+                    <li>Gene transfer to wild plants (जंगली पौधों में जीन स्थानांतरण)</li>
+                    <li>Long-term health effects unknown (दीर्घकालिक स्वास्थ्य प्रभाव अज्ञात)</li>
+                    <li>Corporate control of seeds (बीजों पर कॉर्पोरेट नियंत्रण)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 GMO Status in India (भारत में GMO की स्थिति):</strong>
+                <ul>
+                    <li>Bt Cotton approved and widely grown (बीटी कपास स्वीकृत और व्यापक रूप से उगाई गई)</li>
+                    <li>Bt Brinjal banned for commercial use (बीटी बैंगन वाणिज्यिक उपयोग के लिए प्रतिबंधित)</li>
+                    <li>Ongoing debate on GMO food crops (GMO खाद्य फसलों पर चल रही बहस)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 6: Microbial Plastics -->
+        <div class="topic">
+            <div class="topic-title">6. Microbial Plastics (Bioplastics)<br><span class="hindi">(सूक्ष्मजीवीय प्लास्टिक - जैव प्लास्टिक)</span></div>
+            
+            <div class="definition">
+                <strong>What are Microbial Plastics? (सूक्ष्मजीवीय प्लास्टिक क्या हैं?)</strong><br>
+                Plastics produced by microorganisms or made from biological materials. They are biodegradable and eco-friendly.<br>
+                <span class="hindi">सूक्ष्मजीवों द्वारा उत्पादित या जैविक सामग्री से बने प्लास्टिक। ये बायोडिग्रेडेबल और पर्यावरण के अनुकूल हैं।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🧪 Types of Bioplastics (जैव प्लास्टिक के प्रकार)</div>
+                
+                <strong>A. PHAs (Polyhydroxyalkanoates)</strong><br>
+                <span class="hindi">(पॉलीहाइड्रॉक्सीअल्केनोएट्स)</span>
+                <ul>
+                    <li><strong>Produced by:</strong> Cupriavidus necator, Pseudomonas, Alcaligenes</li>
+                    <li><strong>Types:</strong>
+                        <ul>
+                            <li>PHB (Polyhydroxybutyrate) - Most common</li>
+                            <li>PHBV (Poly-3-hydroxybutyrate-co-3-hydroxyvalerate)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Properties (गुण):</strong>
+                        <ul>
+                            <li>100% biodegradable (100% बायोडिग्रेडेबल)</li>
+                            <li>Similar to conventional plastic (पारंपरिक प्लास्टिक जैसा)</li>
+                            <li>Decomposes in 2-3 months (2-3 महीने में विघटित)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                
+                <strong>B. PLA (Polylactic Acid)</strong><br>
+                <span class="hindi">(पॉलीलैक्टिक अम्ल)</span>
+                <ul>
+                    <li><strong>Source:</strong> Made from corn starch, sugarcane<br>
+                    <span class="hindi">(मकई के स्टार्च, गन्ने से बनाया जाता है)</span></li>
+                    <li><strong>Process:</strong> Lactic acid bacteria ferment sugars → Polymerization<br>
+                    <span class="hindi">(लैक्टिक अम्ल जीवाणु शर्करा को किण्वित करते हैं)</span></li>
+                    <li><strong>Uses:</strong> Packaging, bottles, medical implants<br>
+                    <span class="hindi">(पैकेजिंग, बोतलें, चिकित्सा प्रत्यारोपण)</span></li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">PHB Production Process (PHB उत्पादन प्रक्रिया)</div>
+                <div class="flow-box">Bacteria Culture<br>(जीवाणु संवर्धन)<br>Cupriavidus necator</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Feed Carbon Source<br>(कार्बन स्रोत दें)<br>Glucose, Waste materials</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Bacteria Store PHB<br>(जीवाणु PHB जमा करते हैं)<br>Up to 80% of cell weight</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Cell Harvesting<br>(कोशिका कटाई)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">PHB Extraction<br>(PHB निष्कर्षण)<br>Using solvents</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Bioplastic Products<br>(जैव प्लास्टिक उत्पाद)</div>
+            </div>
+
+            <div class="important">
+                <strong>✅ Advantages of Bioplastics (जैव प्लास्टिक के लाभ):</strong>
+                <ul>
+                    <li><strong>Biodegradable:</strong> Decompose naturally in 3-6 months<br>
+                    <span class="hindi">(3-6 महीने में प्राकृतिक रूप से विघटित)</span></li>
+                    <li><strong>Renewable:</strong> Made from plant/microbial sources<br>
+                    <span class="hindi">(पौधे/सूक्ष्मजीव स्रोतों से बना)</span></li>
+                    <li><strong>Less pollution:</strong> Reduces plastic waste<br>
+                    <span class="hindi">(प्लास्टिक कचरा कम)</span></li>
+                    <li><strong>Carbon neutral:</strong> No net CO₂ increase<br>
+                    <span class="hindi">(शुद्ध CO₂ वृद्धि नहीं)</span></li>
+                    <li><strong>Non-toxic:</strong> Safe for environment<br>
+                    <span class="hindi">(पर्यावरण के लिए सुरक्षित)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box" style="background: #fff3cd; border-left-color: #ffc107;">
+                <strong>⚠️ Limitations (सीमाएं):</strong>
+                <ul>
+                    <li>High production cost (उच्च उत्पादन लागत) - 2-3 times more expensive</li>
+                    <li>Lower mechanical strength (कम यांत्रिक शक्ति)</li>
+                    <li>Limited heat resistance (सीमित गर्मी प्रतिरोध)</li>
+                    <li>Requires industrial composting (औद्योगिक खाद बनाने की आवश्यकता)</li>
+                    <li>Competition with food crops for land (भूमि के लिए खाद्य फसलों से प्रतिस्पर्धा)</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <strong>📌 Applications of Bioplastics (जैव प्लास्टिक के अनुप्रयोग):</strong>
+                <ul>
+                    <li><strong>Packaging:</strong> Food containers, bags, wrapping films<br>
+                    <span class="hindi">(खाद्य कंटेनर, थैले, रैपिंग फिल्में)</span></li>
+                    <li><strong>Medical:</strong> Sutures, implants, drug delivery<br>
+                    <span class="hindi">(टांके, प्रत्यारोपण, दवा वितरण)</span></li>
+                    <li><strong>Agriculture:</strong> Mulch films, seedling pots<br>
+                    <span class="hindi">(मल्च फिल्में, पौध के गमले)</span></li>
+                    <li><strong>Consumer goods:</strong> Disposable cutlery, bottles<br>
+                    <span class="hindi">(डिस्पोजेबल बर्तन, बोतलें)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">🔬 Future of Bioplastics (जैव प्लास्टिक का भविष्य)</div>
+                <ul>
+                    <li>Research to reduce production costs (उत्पादन लागत कम करने के लिए शोध)</li>
+                    <li>Using waste materials as feedstock (अपशिष्ट पदार्थों को कच्चे माल के रूप में उपयोग)</li>
+                    <li>Improving mechanical properties (यांत्रिक गुणों में सुधार)</li>
+                    <li>Global bioplastic market growing 15-20% yearly<br>
+                    <span class="hindi">(वैश्विक जैव प्लास्टिक बाजार में 15-20% वार्षिक वृद्धि)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Practice Questions -->
+        <div class="practice">
+            <h2>🎯 PRACTICE QUESTIONS FOR EXAM</h2>
+            <p style="text-align: center; margin-bottom: 20px;"><span class="hindi">(परीक्षा के लिए अभ्यास प्रश्न)</span></p>
+
+            <div class="sub-heading">📝 Short Answer Questions (2-3 Marks)</div>
+            
+            <div class="question">
+                <strong>Q1.</strong> What is bioleaching? Name two bacteria involved.<br>
+                <span class="hindi">बायोलीचिंग क्या है? दो जीवाणुओं के नाम बताइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q2.</strong> List four factors affecting petroleum degradation.<br>
+                <span class="hindi">पेट्रोलियम अपघटन को प्रभावित करने वाले चार कारक बताइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q3.</strong> How do fungi damage paper? Give prevention methods.<br>
+                <span class="hindi">कवक कागज को कैसे नुकसान पहुंचाते हैं? रोकथाम के तरीके बताइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q4.</strong> What is MIC? Name one bacterium causing metal corrosion.<br>
+                <span class="hindi">MIC क्या है? धातु संक्षारण करने वाले एक जीवाणु का नाम बताइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q5.</strong> Define microbial inoculants. Give two examples.<br>
+                <span class="hindi">सूक्ष्मजीवीय टीके को परिभाषित करें। दो उदाहरण दें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q6.</strong> What is PHB? Which bacteria produce it?<br>
+                <span class="hindi">PHB क्या है? कौन से जीवाणु इसे उत्पन्न करते हैं?</span>
+            </div>
+
+            <div class="question">
+                <strong>Q7.</strong> Write advantages of bioplastics over conventional plastics.<br>
+                <span class="hindi">पारंपरिक प्लास्टिक की तुलना में जैव प्लास्टिक के लाभ लिखें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q8.</strong> How does Rhizobium help in nitrogen fixation?<br>
+                <span class="hindi">राइज़ोबियम नाइट्रोजन स्थिरीकरण में कैसे मदद करता है?</span>
+            </div>
+
+            <div class="sub-heading">📝 Long Answer Questions (5-7 Marks)</div>
+
+            <div class="question">
+                <strong>Q9.</strong> Explain the mechanism of bioleaching with a flowchart. Discuss its advantages and applications.<br>
+                <span class="hindi">फ्लोचार्ट के साथ बायोलीचिंग की प्रक्रिया समझाइए। इसके लाभ और अनुप्रयोग बताइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q10.</strong> Describe microbial degradation of petroleum. Which microorganisms are involved? What factors affect the process?<br>
+                <span class="hindi">पेट्रोलियम के सूक्ष्मजीवीय अपघटन का वर्णन करें। कौन से सूक्ष्मजीव शामिल हैं? प्रक्रिया को कौन से कारक प्रभावित करते हैं?</span>
+            </div>
+
+            <div class="question">
+                <strong>Q11.</strong> Explain bio-deterioration of ANY THREE materials: paper, leather, wood, textiles, cosmetics. Include causes and prevention.<br>
+                <span class="hindi">किन्हीं तीन पदार्थों का जैव-अवक्षयण समझाइए: कागज, चमड़ा, लकड़ी, कपड़ा, सौंदर्य प्रसाधन। कारण और रोकथाम शामिल करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q12.</strong> What is microbial corrosion of metals? Explain the mechanism with diagram. Discuss control methods.<br>
+                <span class="hindi">धातुओं का सूक्ष्मजीवीय संक्षारण क्या है? आरेख के साथ प्रक्रिया समझाइए। नियंत्रण विधियों पर चर्चा करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q13.</strong> Write detailed notes on microbial inoculants in agriculture. Include types, functions, and benefits.<br>
+                <span class="hindi">कृषि में सूक्ष्मजीवीय टीकों पर विस्तृत टिप्पणी लिखें। प्रकार, कार्य और लाभ शामिल करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q14.</strong> What are GMOs? Discuss their advantages and concerns in agriculture with examples.<br>
+                <span class="hindi">GMO क्या हैं? उदाहरण के साथ कृषि में उनके लाभ और चिंताओं पर चर्चा करें।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q15.</strong> Explain microbial plastics. Describe PHB production process with flowchart. What are the applications and limitations of bioplastics?<br>
+                <span class="hindi">सूक्ष्मजीवीय प्लास्टिक समझाइए। फ्लोचार्ट के साथ PHB उत्पादन प्रक्रिया बताइए। जैव प्लास्टिक के अनुप्रयोग और सीमाएं क्या हैं?</span>
+            </div>
+
+            <div class="sub-heading">📝 Very Short Answer (1 Mark)</div>
+
+            <div class="question">
+                <strong>Q16.</strong> Full form of MIC?<br>
+                <strong>Q17.</strong> Name one sulfate-reducing bacterium.<br>
+                <strong>Q18.</strong> What does Bt stand for in Bt Cotton?<br>
+                <strong>Q19.</strong> What is PLA made from?<br>
+                <strong>Q20.</strong> Name the bacteria used for copper extraction.<br>
+                <strong>Q21.</strong> What causes white-rot in wood?<br>
+                <strong>Q22.</strong> Full form of PSB in agriculture?<br>
+                <strong>Q23.</strong> Time taken for bioplastic degradation?<br>
+                <strong>Q24.</strong> Name one preservative used in cosmetics.<br>
+                <strong>Q25.</strong> What does PHB stand for?
+            </div>
+
+            <div class="sub-heading">📝 Diagram-Based Questions</div>
+
+            <div class="question">
+                <strong>Q26.</strong> Draw and explain the bioleaching process flowchart.<br>
+                <span class="hindi">बायोलीचिंग प्रक्रिया का फ्लोचार्ट बनाकर समझाइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q27.</strong> Draw and label the mechanism of microbial corrosion.<br>
+                <span class="hindi">सूक्ष्मजीवीय संक्षारण की प्रक्रिया का आरेख बनाकर लेबल लगाइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q28.</strong> Draw the Rhizobium nitrogen fixation process.<br>
+                <span class="hindi">राइज़ोबियम नाइट्रोजन स्थिरीकरण प्रक्रिया का चित्र बनाइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q29.</strong> Show PHB production flowchart with all steps.<br>
+                <span class="hindi">सभी चरणों के साथ PHB उत्पादन फ्लोचार्ट दिखाइए।</span>
+            </div>
+
+            <div class="question">
+                <strong>Q30.</strong> Draw oil degradation process by microorganisms.<br>
+                <span class="hindi">सूक्ष्मजीवों द्वारा तेल अपघटन प्रक्रिया का चित्र बनाइए।</span>
+            </div>
+        </div>
+
+        <!-- Important Points Summary -->
+        <div class="topic">
+            <div class="topic-title">⭐ IMPORTANT POINTS TO REMEMBER<br><span class="hindi">(याद रखने के लिए महत्वपूर्ण बिंदु)</span></div>
+
+            <div class="important">
+                <strong>🔥 For Mineral Leaching:</strong>
+                <ul>
+                    <li>Main bacteria: <strong>Thiobacillus ferrooxidans</strong></li>
+                    <li>25% world copper from bioleaching</li>
+                    <li>Works with low-grade ores</li>
+                    <li>Environment friendly & cost-effective</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🔥 For Petroleum Degradation:</strong>
+                <ul>
+                    <li>Main bacteria: <strong>Pseudomonas, Alcanivorax</strong></li>
+                    <li>Optimal temp: 20-30°C</li>
+                    <li>Needs oxygen (aerobic better)</li>
+                    <li>Applications: Oil spill cleanup, soil remediation</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🔥 For Bio-deterioration:</strong>
+                <ul>
+                    <li><strong>Paper:</strong> Aspergillus, keep humidity below 65%</li>
+                    <li><strong>Leather:</strong> Bacillus, causes softening and smell</li>
+                    <li><strong>Wood:</strong> White-rot (lignin), Brown-rot (cellulose)</li>
+                    <li><strong>Textiles:</strong> Fungi damage, antimicrobial finishing helps</li>
+                    <li><strong>Cosmetics:</strong> Add preservatives (Parabens)</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🔥 For Metal Corrosion:</strong>
+                <ul>
+                    <li>Main culprit: <strong>Desulfovibrio</strong> (produces H₂S)</li>
+                    <li>Forms biofilm on metal surface</li>
+                    <li>Control: Biocides, coatings, cathodic protection</li>
+                    <li>Causes billions of dollars damage yearly</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🔥 For Microbial Inoculants & GMO:</strong>
+                <ul>
+                    <li><strong>Rhizobium:</strong> N₂ fixation in legumes, forms nodules</li>
+                    <li><strong>Azotobacter:</strong> Free-living nitrogen fixer</li>
+                    <li><strong>PSB:</strong> Phosphate solubilization</li>
+                    <li><strong>Bt Cotton:</strong> Pest-resistant GMO (only approved in India)</li>
+                    <li>GMO advantages: Higher yield, pest resistance, drought tolerance</li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🔥 For Microbial Plastics:</strong>
+                <ul>
+                    <li><strong>PHB:</strong> Made by Cupriavidus necator</li>
+                    <li>100% biodegradable in 3-6 months</li>
+                    <li><strong>PLA:</strong> From corn starch, sugarcane</li>
+                    <li>Uses: Packaging, medical implants, agriculture</li>
+                    <li>Challenge: High cost (2-3× more than regular plastic)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Quick Revision Table -->
+        <div class="topic">
+            <div class="topic-title">📊 QUICK REVISION TABLE<br><span class="hindi">(त्वरित पुनरीक्षण तालिका)</span></div>
+
+            <table>
+                <tr>
+                    <th>Topic<br><span class="hindi">(विषय)</span></th>
+                    <th>Key Microorganism<br><span class="hindi">(मुख्य सूक्ष्मजीव)</span></th>
+                    <th>Main Application<br><span class="hindi">(मुख्य अनुप्रयोग)</span></th>
+                    <th>Remember This<br><span class="hindi">(यह याद रखें)</span></th>
+                </tr>
+                <tr>
+                    <td><strong>Bioleaching</strong></td>
+                    <td>Thiobacillus ferrooxidans</td>
+                    <td>Copper, uranium extraction</td>
+                    <td>25% world copper</td>
+                </tr>
+                <tr>
+                    <td><strong>Oil Degradation</strong></td>
+                    <td>Pseudomonas, Alcanivorax</td>
+                    <td>Oil spill cleanup</td>
+                    <td>Needs oxygen + nutrients</td>
+                </tr>
+                <tr>
+                    <td><strong>Paper Damage</strong></td>
+                    <td>Aspergillus, Penicillium</td>
+                    <td>Library, archives</td>
+                    <td>Keep humidity <65%</td>
+                </tr>
+                <tr>
+                    <td><strong>Wood Rot</strong></td>
+                    <td>White-rot, Brown-rot fungi</td>
+                    <td>Buildings, furniture</td>
+                    <td>White→lignin, Brown→cellulose</td>
+                </tr>
+                <tr>
+                    <td><strong>Metal Corrosion</strong></td>
+                    <td>Desulfovibrio</td>
+                    <td>Pipelines, ships</td>
+                    <td>Produces H₂S</td>
+                </tr>
+                <tr>
+                    <td><strong>N₂ Fixation</strong></td>
+                    <td>Rhizobium</td>
+                    <td>Legume crops</td>
+                    <td>Forms root nodules</td>
+                </tr>
+                <tr>
+                    <td><strong>GMO</strong></td>
+                    <td>Bt (Bacillus thuringiensis)</td>
+                    <td>Bt Cotton</td>
+                    <td>Pest resistance gene</td>
+                </tr>
+                <tr>
+                    <td><strong>Bioplastic</strong></td>
+                    <td>Cupriavidus necator</td>
+                    <td>PHB production</td>
+                    <td>100% biodegradable</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Exam Tips -->
+        <div class="topic">
+            <div class="topic-title">💡 EXAM TIPS & STRATEGY<br><span class="hindi">(परीक्षा युक्तियाँ और रणनीति)</span></div>
+
+            <div class="content-box">
+                <div class="sub-heading">✍️ How to Score Maximum Marks</div>
+                <ul>
+                    <li><strong>For 2 marks:</strong> Give definition + 1-2 examples<br>
+                    <span class="hindi">(परिभाषा + 1-2 उदाहरण)</span></li>
+                    
+                    <li><strong>For 5 marks:</strong> Introduction + Explanation + Examples + Diagram/Table<br>
+                    <span class="hindi">(परिचय + व्याख्या + उदाहरण + चित्र/तालिका)</span></li>
+                    
+                    <li><strong>For 7 marks:</strong> Detailed explanation + Multiple diagrams + Applications + Advantages/Disadvantages<br>
+                    <span class="hindi">(विस्तृत व्याख्या + कई चित्र + अनुप्रयोग + लाभ/हानि)</span></li>
+                </ul>
+            </div>
+
+            <div class="important">
+                <strong>🎯 Must-Know Topics (हर हाल में याद करें):</strong>
+                <ol>
+                    <li>Bioleaching process + flowchart (बायोलीचिंग प्रक्रिया + फ्लोचार्ट)</li>
+                    <li>Petroleum degradation factors (पेट्रोलियम अपघटन कारक)</li>
+                    <li>Bio-deterioration of any 3 materials (किन्हीं 3 पदार्थों का जैव-अवक्षयण)</li>
+                    <li>MIC mechanism + control (MIC प्रक्रिया + नियंत्रण)</li>
+                    <li>Microbial inoculants types + functions (सूक्ष्मजीवीय टीकों के प्रकार + कार्य)</li>
+                    <li>GMO advantages vs concerns (GMO लाभ बनाम चिंताएं)</li>
+                    <li>PHB production + bioplastic applications (PHB उत्पादन + जैव प्लास्टिक अनुप्रयोग)</li>
+                </ol>
+            </div>
+
+            <div class="example">
+                <strong>📝 Writing Tips (लिखने के टिप्स):</strong>
+                <ul>
+                    <li><strong>Always underline:</strong> Important terms, microorganism names<br>
+                    <span class="hindi">(महत्वपूर्ण शब्द, सूक्ष्मजीव के नाम रेखांकित करें)</span></li>
+                    
+                    <li><strong>Use bullet points:</strong> For advantages, types, examples<br>
+                    <span class="hindi">(लाभ, प्रकार, उदाहरणों के लिए बुलेट पॉइंट्स का उपयोग करें)</span></li>
+                    
+                    <li><strong>Draw diagrams:</strong> Even simple flowcharts get extra marks<br>
+                    <span class="hindi">(सरल फ्लोचार्ट भी अतिरिक्त अंक दिलाते हैं)</span></li>
+                    
+                    <li><strong>Write scientific names:</strong> In italics or underline (e.g., <em>Rhizobium</em>)<br>
+                    <span class="hindi">(वैज्ञानिक नाम तिरछे या रेखांकित लिखें)</span></li>
+                    
+                    <li><strong>Give real examples:</strong> Bt Cotton, Alaska Pipeline, Oil spills<br>
+                    <span class="hindi">(वास्तविक उदाहरण दें)</span></li>
+                    
+                    <li><strong>Mention numbers:</strong> 25% copper, 20-30°C temp, 3-6 months degradation<br>
+                    <span class="hindi">(संख्याएं बताएं)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box" style="background: #d4edda;">
+                <strong>⏰ Time Management (समय प्रबंधन):</strong>
+                <ul>
+                    <li>2 marks = 3-4 minutes</li>
+                    <li>5 marks = 8-10 minutes</li>
+                    <li>7 marks = 12-15 minutes</li>
+                    <li>First answer easy questions (पहले आसान प्रश्न करें)</li>
+                    <li>Leave space for diagrams (चित्रों के लिए जगह छोड़ें)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Common Mistakes to Avoid -->
+        <div class="topic">
+            <div class="topic-title">❌ COMMON MISTAKES TO AVOID<br><span class="hindi">(बचने योग्य सामान्य गलतियाँ)</span></div>
+
+            <div class="content-box" style="background: #ffe0e0; border-left-color: #dc3545;">
+                <ul>
+                    <li>❌ <strong>Don't confuse:</strong> Rhizobium (nitrogen) vs PSB (phosphate)<br>
+                    <span class="hindi">(राइज़ोबियम और PSB को न मिलाएं)</span></li>
+                    
+                    <li>❌ <strong>Don't write:</strong> "Bacteria" without specific names<br>
+                    <span class="hindi">(सिर्फ "जीवाणु" न लिखें, नाम दें)</span></li>
+                    
+                    <li>❌ <strong>Don't forget:</strong> Hindi translations make answers clearer<br>
+                    <span class="hindi">(हिंदी अनुवाद से उत्तर स्पष्ट होते हैं)</span></li>
+                    
+                    <li>❌ <strong>Don't skip:</strong> Diagrams in mechanism questions<br>
+                    <span class="hindi">(प्रक्रिया वाले प्रश्नों में चित्र न छोड़ें)</span></li>
+                    
+                    <li>❌ <strong>Don't mix up:</strong> White-rot (lignin) and Brown-rot (cellulose)<br>
+                    <span class="hindi">(सफेद सड़न और भूरी सड़न को न मिलाएं)</span></li>
+                    
+                    <li>❌ <strong>Don't write only advantages:</strong> Also mention limitations<br>
+                    <span class="hindi">(केवल लाभ ही नहीं, सीमाएं भी लिखें)</span></li>
+                    
+                    <li>❌ <strong>Don't forget units:</strong> Temperature (°C), Time (months), pH<br>
+                    <span class="hindi">(इकाइयां भूलना मत: तापमान, समय, pH)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Memory Tricks -->
+        <div class="topic">
+            <div class="topic-title">🧠 MEMORY TRICKS (याद करने की ट्रिक्स)</div>
+
+            <div class="example">
+                <strong>1. For Bioleaching bacteria:</strong><br>
+                "TB-F कॉपर निकाले" = <strong>T</strong>hiobacillus <strong>F</strong>erro-oxidans for Copper<br><br>
+
+                <strong>2. For Oil degradation:</strong><br>
+                "PA ऑयल खाए" = <strong>P</strong>seudomonas, <strong>A</strong>lcanivorax eat oil<br><br>
+
+                <strong>3. For Wood rot types:</strong><br>
+                "White-Light" = White-rot attacks <strong>L</strong>ignin (light colored)<br>
+                "Brown-Cell" = Brown-rot attacks <strong>C</strong>ellulose<br><br>
+
+                <strong>4. For MIC bacteria:</strong><br>
+                "Desulfo = H₂S बनाए" = Desulfovibrio makes hydrogen sulfide<br><br>
+
+                <strong>5. For Nitrogen fixers:</strong><br>
+                "RAZA नाइट्रोजन" = <strong>R</strong>hizobium, <strong>AZ</strong>otobacter, <strong>A</strong>zospirillum<br><br>
+
+                <strong>6. For Bioplastics:</strong><br>
+                "PHB = Poly Happy Bacteria" = Polyhydroxybutyrate by bacteria<br>
+                "PLA = Plant Lactic Acid" = From plants<br><br>
+
+                <strong>7. For GMO:</strong><br>
+                "Bt = Bacillus thuringiensis = Toxin" = Produces insect-killing toxin
+            </div>
+        </div>
+
+        <!-- Last Minute Revision -->
+        <div class="topic">
+            <div class="topic-title">⚡ LAST MINUTE REVISION CHECKLIST<br><span class="hindi">(परीक्षा से पहले अंतिम बार देखें)</span></div>
+
+            <div class="content-box">
+                <strong>□ Topic 1 - Bioleaching:</strong>
+                <ul>
+                    <li>✓ Main bacteria: Thiobacillus ferrooxidans</li>
+                    <li>✓ Process: Oxidizes metal sulfides → Metal dissolves</li>
+                    <li>✓ Application: Copper (25%), uranium, gold</li>
+                    <li>✓ Advantages: Low cost, eco-friendly, low-grade ores</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <strong>□ Topic 2 - Petroleum Degradation:</strong>
+                <ul>
+                    <li>✓ Bacteria: Pseudomonas, Alcanivorax</li>
+                    <li>✓ Factors: Temp (20-30°C), O₂, pH (6-8), Nutrients (N, P)</li>
+                    <li>✓ Applications: Oil spills, soil remediation</li>
+                    <li>✓ Process: Oil → CO₂ + H₂O</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <strong>□ Topic 3 - Bio-deterioration:</strong>
+                <ul>
+                    <li>✓ Paper: Aspergillus → Keep humidity <65%</li>
+                    <li>✓ Wood: White-rot (lignin), Brown-rot (cellulose)</li>
+                    <li>✓ Leather: Bacillus → Color change, softening</li>
+                    <li>✓ Textiles: Fungi → Antimicrobial finishing</li>
+                    <li>✓ Cosmetics: Add preservatives (Parabens)</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <strong>□ Topic 4 - Metal Corrosion:</strong>
+                <ul>
+                    <li>✓ Main bacteria: Desulfovibrio (produces H₂S)</li>
+                    <li>✓ Mechanism: Biofilm → Anaerobic → Corrosive substances</li>
+                    <li>✓ Control: Biocides, coatings, cathodic protection</li>
+                    <li>✓ Where: Pipelines, ships, cooling systems</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <strong>□ Topic 5 - Inoculants & GMO:</strong>
+                <ul>
+                    <li>✓ Rhizobium: N₂ fixation in legumes (nodules)</li>
+                    <li>✓ Azotobacter: Free-living N₂ fixer</li>
+                    <li>✓ PSB: Phosphate solubilization</li>
+                    <li>✓ Bt Cotton: Pest-resistant (only approved GMO in India)</li>
+                    <li>✓ GMO advantages: Higher yield, pest resistance</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <strong>□ Topic 6 - Bioplastics:</strong>
+                <ul>
+                    <li>✓ PHB: By Cupriavidus necator (80% cell weight)</li>
+                    <li>✓ PLA: From corn starch, sugarcane</li>
+                    <li>✓ Advantages: 100% biodegradable (3-6 months)</li>
+                    <li>✓ Uses: Packaging, medical, agriculture</li>
+                    <li>✓ Limitation: High cost (2-3× more)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+            <h2>🎓 ALL THE BEST FOR YOUR EXAM! 🎓</h2>
+            <h3 style="margin: 15px 0;"><span class="hindi">परीक्षा के लिए शुभकामनाएं!</span></h3>
+            <p style="font-size: 18px; margin-top: 20px;">Study Smart, Not Hard!</p>
+            <p style="font-size: 16px;"><span class="hindi">समझदारी से पढ़ें, मेहनत से नहीं!</span></p>
+            <p style="margin-top: 20px; font-size: 14px;">Click the "Download PDF" button above to save these notes!</p>
+        </div>
+
+        <button class="btn-download" onclick="window.print()" style="margin-top: 20px;">📥 Download / Print as PDF</button>
+    </div>
+
+    <script>
+        // Print instructions
+        console.log("To download as PDF: Click the download button or use Ctrl+P");
+        console.log("Make sure to select 'Save as PDF' in the print dialog");
+    </script>
+</body>
+</html>
