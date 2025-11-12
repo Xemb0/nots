@@ -93,25 +93,169 @@
             margin-bottom: 10px;
         }
         
-        .coming-soon {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-            padding: 40px;
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+        
+        .topic {
             margin: 30px 0;
-            border-radius: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .topic-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .hindi {
+            color: #e74c3c;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .content-box {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .definition {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .important {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .example {
+            background: #cce5ff;
+            border-left: 5px solid #004085;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .diagram {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
             text-align: center;
         }
         
-        .coming-soon h2 {
-            color: #856404;
-            font-size: 2em;
-            margin-bottom: 20px;
+        .diagram-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
         
-        .coming-soon p {
-            color: #856404;
-            font-size: 1.2em;
-            line-height: 1.8;
+        .flow-box {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 80%;
+            font-weight: bold;
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 5px 0;
+        }
+        
+        .sub-heading {
+            color: #2c3e50;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .practice {
+            background: #fff5f5;
+            border: 3px solid #e74c3c;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .practice h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .question {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .btn-download {
+            background: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        .btn-download:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f2f2f2;
         }
         
         .unit-nav {
@@ -153,6 +297,20 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .btn-download, .nav-bar, .unit-nav {
+                display: none;
+            }
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -168,6 +326,15 @@
                 justify-content: center;
             }
             
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .topic-title {
+                font-size: 18px;
+                padding: 12px 15px;
+            }
+            
             .unit-nav {
                 flex-direction: column;
             }
@@ -175,6 +342,14 @@
             .unit-nav a {
                 width: 100%;
                 text-align: center;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
             }
         }
     </style>
@@ -184,7 +359,7 @@
         <a href="index.html" class="home-btn">🏠 Home</a>
         <div class="nav-links">
             <a href="mcr615-unit1.html">Unit I</a>
-            <a href="mcr615-unit2.html" class="active">Unit II</a>
+            <a href="mcr615-unit2.html" style="background: rgba(255,255,255,0.4);">Unit II</a>
             <a href="mcr615-unit3.html">Unit III</a>
             <a href="mcr615-unit4.html">Unit IV</a>
             <a href="mcr615-unit5.html">Unit V</a>
@@ -194,8 +369,8 @@
     <div class="container">
         <div class="header">
             <h1>MCR-615 Applied and Environmental Microbiology</h1>
-            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT II - Water Ecosystem</h2>
-            <p>Simple English + Hindi | Coming Soon</p>
+            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT II - Water Ecosystem - Complete Study Notes</h2>
+            <p>Simple English + Hindi | With Diagrams & Practice Questions</p>
         </div>
 
         <div class="unit-nav">
@@ -204,28 +379,549 @@
             <a href="mcr615-unit3.html" class="next">Next: Unit III →</a>
         </div>
 
-        <div class="coming-soon">
-            <h2>📚 Content Coming Soon!</h2>
-            <p>
-                This unit will cover:<br>
-                • Water ecosystem types: Fresh water (ponds, lakes, streams)<br>
-                • Marine habitats (estuaries, mangroves, deep sea, hydrothermal vents, saltpans, coral reefs)<br>
-                • Zonations of water ecosystem, upwelling, eutrophication, food chain<br>
-                • Potability of water and microbial assessment of water quality<br>
-                • Water purification<br>
-                • Heavy metal tolerance in microbes
-            </p>
-            <p style="margin-top: 20px; font-weight: bold;">
-                <span style="color: #e74c3c;">हिंदी अनुवाद के साथ विस्तृत नोट्स जल्द ही उपलब्ध होंगे!</span>
-            </p>
+        <button class="btn-download" onclick="window.print()">📥 Download / Print as PDF</button>
+
+        <!-- Topic 1: Freshwater Ecosystems -->
+        <div class="topic">
+            <div class="topic-title">1. Freshwater Ecosystems<br><span class="hindi">(मीठे पानी के पारिस्थितिकी तंत्र)</span></div>
+            
+            <div class="definition">
+                <strong>What is Freshwater Ecosystem? (मीठे पानी का पारिस्थितिकी तंत्र क्या है?)</strong><br>
+                Freshwater ecosystems are aquatic environments with low salt concentration (less than 1%). They include ponds, lakes, streams, and rivers.<br>
+                <span class="hindi">मीठे पानी के पारिस्थितिकी तंत्र जलीय वातावरण हैं जिनमें कम नमक एकाग्रता (1% से कम) होती है। इनमें तालाब, झीलें, धाराएं और नदियाँ शामिल हैं।</span>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Types of Freshwater Ecosystems (मीठे पानी के पारिस्थितिकी तंत्र के प्रकार)</div>
+                <div class="flow-box">FRESHWATER ECOSYSTEMS<br>मीठे पानी के पारिस्थितिकी तंत्र</div>
+                <div class="arrow">↓</div>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px;">
+                    <div class="flow-box" style="max-width: 200px; background: #2ecc71;">PONDS<br>तालाब</div>
+                    <div class="flow-box" style="max-width: 200px; background: #3498db;">LAKES<br>झीलें</div>
+                    <div class="flow-box" style="max-width: 200px; background: #9b59b6;">STREAMS/RIVERS<br>धाराएं/नदियाँ</div>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">A. Ponds (तालाब)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Small, shallow water bodies with standing (non-flowing) water<br>
+                    <span class="hindi">(परिभाषा: स्थिर पानी वाले छोटे, उथले जल निकाय)</span></li>
+                    <li><strong>Depth:</strong> Usually less than 12-15 feet (3.6-4.5 meters)<br>
+                    <span class="hindi">(गहराई: आमतौर पर 12-15 फीट से कम)</span></li>
+                    <li><strong>Temperature:</strong> Uniform throughout - no temperature layers<br>
+                    <span class="hindi">(तापमान: पूरे में समान)</span></li>
+                    <li><strong>Light:</strong> Sunlight reaches the bottom<br>
+                    <span class="hindi">(प्रकाश: सूर्य का प्रकाश तल तक पहुंचता है)</span></li>
+                    <li><strong>Organisms:</strong> Frogs, insects, small fish, algae<br>
+                    <span class="hindi">(जीव: मेंढक, कीड़े, छोटी मछलियाँ, शैवाल)</span></li>
+                    <li><strong>Examples:</strong> Garden ponds, village ponds, farm ponds<br>
+                    <span class="hindi">(उदाहरण: बगीचे के तालाब, गांव के तालाब)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">B. Lakes (झीलें)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Large, deep water bodies with standing water<br>
+                    <span class="hindi">(परिभाषा: स्थिर पानी वाले बड़े, गहरे जल निकाय)</span></li>
+                    <li><strong>Depth:</strong> More than 15 feet, can be hundreds of meters deep<br>
+                    <span class="hindi">(गहराई: 15 फीट से अधिक, सैकड़ों मीटर गहरे)</span></li>
+                    <li><strong>Temperature:</strong> Stratified (layered) - warm water on top, cold at bottom<br>
+                    <span class="hindi">(तापमान: स्तरीकृत - ऊपर गर्म, तल पर ठंडा)</span></li>
+                    <li><strong>Zones:</strong>
+                        <ul>
+                            <li><strong>Littoral Zone:</strong> Shallow, near shore, lots of plants<br>
+                            <span class="hindi">(तटीय क्षेत्र: उथला, तट के पास, बहुत सारे पौधे)</span></li>
+                            <li><strong>Limnetic Zone:</strong> Open water, plankton rich<br>
+                            <span class="hindi">(खुला जल क्षेत्र: प्लवक से भरपूर)</span></li>
+                            <li><strong>Profundal Zone:</strong> Deep & dark, decomposers dominate<br>
+                            <span class="hindi">(गहन क्षेत्र: गहरा और अंधेरा, अपघटक प्रभावी)</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>Examples:</strong> Dal Lake (Kashmir), Chilika Lake (Odisha), Wular Lake<br>
+                    <span class="hindi">(उदाहरण: डल झील, चिल्का झील, वुलर झील)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">C. Streams & Rivers (धाराएं और नदियाँ)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Flowing water bodies that move in one direction<br>
+                    <span class="hindi">(परिभाषा: बहते पानी के निकाय जो एक दिशा में चलते हैं)</span></li>
+                    <li><strong>Water:</strong> Constantly moving from source to mouth<br>
+                    <span class="hindi">(पानी: स्रोत से मुहाने तक लगातार गतिशील)</span></li>
+                    <li><strong>Oxygen:</strong> High oxygen due to water turbulence<br>
+                    <span class="hindi">(ऑक्सीजन: पानी की उथल-पुथल के कारण उच्च ऑक्सीजन)</span></li>
+                    <li><strong>Current:</strong> Fast in mountains, slow in plains<br>
+                    <span class="hindi">(धारा: पहाड़ों में तेज, मैदानों में धीमी)</span></li>
+                    <li><strong>Organisms:</strong> Fish adapted to currents, insects, algae on rocks<br>
+                    <span class="hindi">(जीव: धाराओं के अनुकूल मछलियाँ, कीड़े, चट्टानों पर शैवाल)</span></li>
+                    <li><strong>Examples:</strong> Ganga, Yamuna, Brahmaputra, Narmada<br>
+                    <span class="hindi">(उदाहरण: गंगा, यमुना, ब्रह्मपुत्र, नर्मदा)</span></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="unit-nav">
-            <a href="mcr615-unit1.html" class="prev">← Previous: Unit I</a>
-            <a href="index.html" class="home">🏠 All Units</a>
-            <a href="mcr615-unit3.html" class="next">Next: Unit III →</a>
-        </div>
-    </div>
-</body>
-</html>
+        <!-- Topic 2: Marine Habitats -->
+        <div class="topic">
+            <div class="topic-title">2. Marine Habitats<br><span class="hindi">(समुद्री आवास)</span></div>
+            
+            <div class="definition">
+                <strong>What is Marine Habitat? (समुद्री आवास क्या है?)</strong><br>
+                Marine habitats are ecosystems in saltwater environments (oceans and seas). They have high salt concentration (about 3.5%).<br>
+                <span class="hindi">समुद्री आवास खारे पानी के वातावरण (महासागर और समुद्र) में पारिस्थितिकी तंत्र हैं। इनमें उच्च नमक एकाग्रता (लगभग 3.5%) होती है।</span>
+            </div>
 
+            <div class="diagram">
+                <div class="diagram-title">Types of Marine Habitats (समुद्री आवासों के प्रकार)</div>
+                <div class="flow-box">MARINE HABITATS<br>समुद्री आवास</div>
+                <div class="arrow">↓</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                    <div class="flow-box" style="background: #2ecc71;">Estuaries<br>मुहाने</div>
+                    <div class="flow-box" style="background: #27ae60;">Mangroves<br>मैंग्रोव</div>
+                    <div class="flow-box" style="background: #34495e;">Deep Sea<br>गहरा समुद्र</div>
+                    <div class="flow-box" style="background: #e74c3c;">Hydrothermal Vents<br>ताप झरने</div>
+                    <div class="flow-box" style="background: #f39c12;">Salt Pans<br>नमक के खेत</div>
+                    <div class="flow-box" style="background: #9b59b6;">Coral Reefs<br>प्रवाल भित्ति</div>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">A. Estuaries (मुहाने)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Transitional zones where rivers meet the ocean. Mix of freshwater and saltwater<br>
+                    <span class="hindi">(परिभाषा: संक्रमणकालीन क्षेत्र जहाँ नदियाँ समुद्र से मिलती हैं)</span></li>
+                    <li><strong>Water Type:</strong> Brackish water (mixture of fresh and salt water)<br>
+                    <span class="hindi">(पानी का प्रकार: खारा पानी)</span></li>
+                    <li><strong>Salinity:</strong> Variable, changes with tides<br>
+                    <span class="hindi">(लवणता: परिवर्तनशील, ज्वार के साथ बदलता है)</span></li>
+                    <li><strong>Productivity:</strong> Highly productive - "nurseries of the sea"<br>
+                    <span class="hindi">(उत्पादकता: अत्यधिक उत्पादक - "समुद्र की नर्सरी")</span></li>
+                    <li><strong>Examples:</strong> Hooghly estuary (Kolkata), Narmada estuary<br>
+                    <span class="hindi">(उदाहरण: हुगली मुहाना, नर्मदा मुहाना)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">B. Mangroves (मैंग्रोव/सुंदरवन वन)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Unique coastal forests that grow in salty or brackish water<br>
+                    <span class="hindi">(परिभाषा: अनूठे तटीय वन जो नमकीन या खारे पानी में उगते हैं)</span></li>
+                    <li><strong>Adaptations:</strong> Salt-tolerant trees with special roots (aerial roots, pneumatophores)<br>
+                    <span class="hindi">(अनुकूलन: विशेष जड़ों के साथ नमक-सहिष्णु पेड़)</span></li>
+                    <li><strong>Function:</strong> Protect coastlines from erosion and storms<br>
+                    <span class="hindi">(कार्य: कटाव और तूफान से तटरेखाओं की रक्षा)</span></li>
+                    <li><strong>Examples:</strong> Sundarbans (West Bengal), Bhitarkanika (Odisha)<br>
+                    <span class="hindi">(उदाहरण: सुंदरबन, भितरकनिका)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">C. Deep Sea (गहरा समुद्र)</div>
+                <ul>
+                    <li><strong>Depth:</strong> Below 200 meters, up to 11,000 meters (Mariana Trench)<br>
+                    <span class="hindi">(गहराई: 200 मीटर से नीचे, 11,000 मीटर तक)</span></li>
+                    <li><strong>Light:</strong> No sunlight - complete darkness<br>
+                    <span class="hindi">(प्रकाश: कोई सूर्य का प्रकाश नहीं - पूर्ण अंधकार)</span></li>
+                    <li><strong>Temperature:</strong> Very cold (2-4°C)<br>
+                    <span class="hindi">(तापमान: बहुत ठंडा)</span></li>
+                    <li><strong>Pressure:</strong> Extremely high pressure<br>
+                    <span class="hindi">(दबाव: अत्यधिक उच्च दबाव)</span></li>
+                    <li><strong>Organisms:</strong> Bioluminescent fish, giant squid, deep-sea shrimp<br>
+                    <span class="hindi">(जीव: जैव प्रकाशीय मछली, विशाल स्क्विड)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">D. Hydrothermal Vents (जलतापीय झरने)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Hot springs on the ocean floor where heated water shoots out<br>
+                    <span class="hindi">(परिभाषा: समुद्र तल पर गर्म झरने)</span></li>
+                    <li><strong>Temperature:</strong> Water can reach 400°C (752°F)<br>
+                    <span class="hindi">(तापमान: पानी 400°C तक पहुंच सकता है)</span></li>
+                    <li><strong>Chemicals:</strong> Rich in minerals like sulfur, iron, copper<br>
+                    <span class="hindi">(रसायन: सल्फर, लोहा, तांबा जैसे खनिजों से भरपूर)</span></li>
+                    <li><strong>Energy Source:</strong> Chemosynthesis (not photosynthesis!)<br>
+                    <span class="hindi">(ऊर्जा स्रोत: रासायनिक संश्लेषण)</span></li>
+                    <li><strong>Organisms:</strong> Tube worms, vent crabs, bacteria<br>
+                    <span class="hindi">(जीव: ट्यूब कीड़े, वेंट केकड़े, बैक्टीरिया)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">E. Salt Pans / Salinas (नमक के खेत)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Shallow pools of seawater that evaporate to leave salt deposits<br>
+                    <span class="hindi">(परिभाषा: समुद्री जल के उथले पूल जो नमक जमा छोड़ने के लिए वाष्पित होते हैं)</span></li>
+                    <li><strong>Salinity:</strong> Extremely high (much higher than ocean)<br>
+                    <span class="hindi">(लवणता: अत्यधिक उच्च)</span></li>
+                    <li><strong>Organisms:</strong> Halophiles (salt-loving bacteria), algae, brine shrimp<br>
+                    <span class="hindi">(जीव: हैलोफाइल्स, शैवाल, ब्राइन झींगा)</span></li>
+                    <li><strong>Examples:</strong> Gujarat salt pans, Sambhar Salt Lake (Rajasthan)<br>
+                    <span class="hindi">(उदाहरण: गुजरात नमक के खेत, सांभर साल्ट लेक)</span></li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">F. Coral Reefs (प्रवाल भित्ति/मूंगे की चट्टानें)</div>
+                <ul>
+                    <li><strong>Definition:</strong> Underwater structures made from calcium carbonate secreted by corals<br>
+                    <span class="hindi">(परिभाषा: कोरल द्वारा स्रावित कैल्शियम कार्बोनेट से बनी संरचनाएं)</span></li>
+                    <li><strong>Location:</strong> Shallow, warm tropical waters (20-32°C)<br>
+                    <span class="hindi">(स्थान: उथले, गर्म उष्णकटिबंधीय जल)</span></li>
+                    <li><strong>Biodiversity:</strong> Home to 25% of marine species<br>
+                    <span class="hindi">(जैव विविधता: 25% समुद्री प्रजातियों का घर)</span></li>
+                    <li><strong>Importance:</strong> Fish habitat, coastal protection, tourism<br>
+                    <span class="hindi">(महत्व: मछली आवास, तटीय सुरक्षा, पर्यटन)</span></li>
+                    <li><strong>Examples:</strong> Lakshadweep, Andaman & Nicobar Islands<br>
+                    <span class="hindi">(उदाहरण: लक्षद्वीप, अंडमान और निकोबार द्वीप)</span></li>
+                    <li><strong>Threats:</strong> Coral bleaching, pollution, ocean acidification<br>
+                    <span class="hindi">(खतरे: कोरल ब्लीचिंग, प्रदूषण, महासागर अम्लीकरण)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Topic 3: Zonation, Upwelling, Eutrophication, Food Chain -->
+        <div class="topic">
+            <div class="topic-title">3. Zonation, Upwelling, Eutrophication & Food Chain<br><span class="hindi">(क्षेत्रीकरण, अपवेलिंग, सुपोषण और खाद्य श्रृंखला)</span></div>
+            
+            <div class="content-box">
+                <div class="sub-heading">A. Zonation of Water Ecosystems (जल पारिस्थितिकी तंत्र का क्षेत्रीकरण)</div>
+                <div class="definition">
+                    <strong>What is Zonation? (क्षेत्रीकरण क्या है?)</strong><br>
+                    Zonation is the division of aquatic ecosystems into distinct zones based on physical factors like light, temperature, and depth.<br>
+                    <span class="hindi">क्षेत्रीकरण प्रकाश, तापमान और गहराई जैसे भौतिक कारकों के आधार पर जलीय पारिस्थितिकी तंत्र को विशिष्ट क्षेत्रों में विभाजित करना है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Marine Zonation Based on Light (प्रकाश के आधार पर समुद्री क्षेत्रीकरण)</div>
+                    <div class="flow-box" style="background: linear-gradient(135deg, #f1c40f, #f39c12);">
+                        EUPHOTIC ZONE (प्रकाश क्षेत्र)<br>
+                        0-200m | Sunlight reaches | Photosynthesis occurs<br>
+                        सूर्य का प्रकाश पहुंचता है | प्रकाश संश्लेषण होता है
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                        DISPHOTIC ZONE (धुंधला क्षेत्र)<br>
+                        200-1000m | Dim light | No photosynthesis<br>
+                        मंद प्रकाश | कोई प्रकाश संश्लेषण नहीं
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: linear-gradient(135deg, #2c3e50, #000);">
+                        APHOTIC ZONE (अंधकार क्षेत्र)<br>
+                        Below 1000m | Complete darkness | No light<br>
+                        पूर्ण अंधकार | कोई प्रकाश नहीं
+                    </div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Zone (क्षेत्र)</th>
+                        <th>Depth (गहराई)</th>
+                        <th>Light (प्रकाश)</th>
+                        <th>Organisms (जीव)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Euphotic</strong><br>प्रकाश क्षेत्र</td>
+                        <td>0-200m</td>
+                        <td>Bright<br>चमकीला</td>
+                        <td>Phytoplankton, fish, algae<br>फाइटोप्लांकटन, मछली, शैवाल</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disphotic</strong><br>धुंधला क्षेत्र</td>
+                        <td>200-1000m</td>
+                        <td>Dim<br>मंद</td>
+                        <td>Bioluminescent fish, jellyfish<br>जैव प्रकाशीय मछली, जेलीफ़िश</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aphotic</strong><br>अंधकार क्षेत्र</td>
+                        <td>>1000m</td>
+                        <td>None<br>कोई नहीं</td>
+                        <td>Deep-sea creatures, bacteria<br>गहरे समुद्र के जीव, बैक्टीरिया</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">B. Upwelling (अपवेलिंग / ऊपर उठना)</div>
+                <div class="definition">
+                    <strong>What is Upwelling? (अपवेलिंग क्या है?)</strong><br>
+                    Upwelling is the process where deep, cold, nutrient-rich water rises to the ocean surface, replacing warmer surface water.<br>
+                    <span class="hindi">अपवेलिंग वह प्रक्रिया है जहां गहरा, ठंडा, पोषक तत्वों से भरपूर पानी समुद्र की सतह पर उठता है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Upwelling Process (अपवेलिंग प्रक्रिया)</div>
+                    <div class="flow-box">WIND BLOWS parallel to coast<br>हवा तट के समानांतर बहती है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">SURFACE WATER moves away from coast<br>सतह का पानी तट से दूर चला जाता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">DEEP WATER rises to replace surface water<br>गहरा पानी सतह के पानी को बदलने के लिए उठता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">NUTRIENTS come to surface<br>पोषक तत्व सतह पर आते हैं</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">HIGH PRODUCTIVITY - More fish & plankton<br>उच्च उत्पादकता - अधिक मछली और प्लवक</div>
+                </div>
+
+                <div class="important">
+                    <strong>✅ Why Upwelling is Important? (अपवेलिंग क्यों महत्वपूर्ण है?):</strong>
+                    <ul>
+                        <li>Supports 20% of world's fish catch (दुनिया की मछली पकड़ने का 20% समर्थन करता है)</li>
+                        <li>Provides nutrients for phytoplankton (फाइटोप्लांकटन के लिए पोषक तत्व प्रदान करता है)</li>
+                        <li>Affects local weather and temperature (स्थानीय मौसम और तापमान को प्रभावित करता है)</li>
+                        <li>Examples: Peru coast, California coast (पेरू तट, कैलिफोर्निया तट)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">C. Eutrophication (सुपोषण)</div>
+                <div class="definition">
+                    <strong>What is Eutrophication? (सुपोषण क्या है?)</strong><br>
+                    Eutrophication is the excessive enrichment of water bodies with nutrients (especially nitrogen and phosphorus), leading to excessive plant and algae growth.<br>
+                    <span class="hindi">सुपोषण पोषक तत्वों (विशेष रूप से नाइट्रोजन और फास्फोरस) के साथ जल निकायों का अत्यधिक संवर्धन है।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Eutrophication Process (सुपोषण प्रक्रिया)</div>
+                    <div class="flow-box" style="background: #e74c3c;">Excess Nutrients Enter Water<br>अत्यधिक पोषक तत्व पानी में प्रवेश करते हैं<br>(Nitrogen, Phosphorus)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #2ecc71;">Algae & Plants Grow Rapidly<br>शैवाल और पौधे तेजी से बढ़ते हैं<br>(Algal Bloom)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #f39c12;">Algae Die & Decompose<br>शैवाल मर जाते हैं और विघटित होते हैं</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #34495e;">Bacteria Use Oxygen for Decomposition<br>बैक्टीरिया अपघटन के लिए ऑक्सीजन का उपयोग करते हैं</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">Oxygen Depletion - Fish Die<br>ऑक्सीजन की कमी - मछलियाँ मर जाती हैं<br>(Dead Zone)</div>
+                </div>
+
+                <div class="important">
+                    <strong>⚠️ Causes of Eutrophication (सुपोषण के कारण):</strong>
+                    <ul>
+                        <li>Agricultural runoff (fertilizers) (कृषि अपवाह - उर्वरक)</li>
+                        <li>Sewage discharge (मलजल निर्वहन)</li>
+                        <li>Industrial waste (औद्योगिक अपशिष्ट)</li>
+                        <li>Detergents containing phosphates (फॉस्फेट युक्त डिटर्जेंट)</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <strong>📌 Effects of Eutrophication (सुपोषण के प्रभाव):</strong>
+                    <ul>
+                        <li>Algal blooms (शैवाल प्रस्फुटन)</li>
+                        <li>Oxygen depletion (ऑक्सीजन की कमी)</li>
+                        <li>Fish kills (मछली मृत्यु)</li>
+                        <li>Loss of biodiversity (जैव विविधता की हानि)</li>
+                        <li>Water becomes unusable (पानी अनुपयोगी हो जाता है)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">D. Food Chain in Water Ecosystems (जल पारिस्थितिकी तंत्र में खाद्य श्रृंखला)</div>
+                <div class="definition">
+                    <strong>What is Food Chain? (खाद्य श्रृंखला क्या है?)</strong><br>
+                    A food chain shows how energy and nutrients flow from one organism to another in an ecosystem.<br>
+                    <span class="hindi">खाद्य श्रृंखला दिखाती है कि ऊर्जा और पोषक तत्व एक जीव से दूसरे जीव में कैसे प्रवाहित होते हैं।</span>
+                </div>
+
+                <div class="diagram">
+                    <div class="diagram-title">Aquatic Food Chain (जलीय खाद्य श्रृंखला)</div>
+                    <div class="flow-box" style="background: #2ecc71;">PRODUCERS (उत्पादक)<br>Phytoplankton, Algae<br>फाइटोप्लांकटन, शैवाल<br>Make food using sunlight</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #3498db;">PRIMARY CONSUMERS (प्राथमिक उपभोक्ता)<br>Zooplankton, Small Fish<br>जूप्लांकटन, छोटी मछलियाँ<br>Eat producers</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #9b59b6;">SECONDARY CONSUMERS (द्वितीयक उपभोक्ता)<br>Medium Fish, Crabs<br>मध्यम मछलियाँ, केकड़े<br>Eat primary consumers</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #e74c3c;">TERTIARY CONSUMERS (तृतीयक उपभोक्ता)<br>Large Fish, Sharks<br>बड़ी मछलियाँ, शार्क<br>Eat secondary consumers</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box" style="background: #34495e;">DECOMPOSERS (अपघटक)<br>Bacteria, Fungi<br>बैक्टीरिया, कवक<br>Break down dead organisms</div>
+                </div>
+
+                <div class="important">
+                    <strong>✅ Key Points (मुख्य बिंदु):</strong>
+                    <ul>
+                        <li>Energy flows from producers to consumers (ऊर्जा उत्पादकों से उपभोक्ताओं तक प्रवाहित होती है)</li>
+                        <li>Only 10% energy transfers to next level (केवल 10% ऊर्जा अगले स्तर तक स्थानांतरित होती है)</li>
+                        <li>Decomposers recycle nutrients (अपघटक पोषक तत्वों को पुनर्चक्रित करते हैं)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topic 4: Water Potability and Quality Assessment -->
+        <div class="topic">
+            <div class="topic-title">4. Potability of Water & Microbial Assessment of Water Quality<br><span class="hindi">(पानी की पीने योग्यता और जल गुणवत्ता का सूक्ष्मजीवीय मूल्यांकन)</span></div>
+            
+            <div class="definition">
+                <strong>What is Potable Water? (पीने योग्य पानी क्या है?)</strong><br>
+                Potable water is safe drinking water that is free from harmful microorganisms, chemicals, and contaminants.<br>
+                <span class="hindi">पीने योग्य पानी सुरक्षित पीने का पानी है जो हानिकारक सूक्ष्मजीवों, रसायनों और प्रदूषकों से मुक्त है।</span>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Criteria for Potable Water (पीने योग्य पानी के मानदंड)</div>
+                <table>
+                    <tr>
+                        <th>Parameter (पैरामीटर)</th>
+                        <th>Standard (मानक)</th>
+                        <th>Why Important (क्यों महत्वपूर्ण)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Coliform Count</strong><br>कोलिफॉर्म गणना</td>
+                        <td>0 per 100ml<br>100ml में 0</td>
+                        <td>Indicates fecal contamination<br>मल प्रदूषण का संकेत</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E. coli</strong><br>ई. कोलाई</td>
+                        <td>0 per 100ml<br>100ml में 0</td>
+                        <td>Pathogen indicator<br>रोगजनक संकेतक</td>
+                    </tr>
+                    <tr>
+                        <td><strong>pH</strong></td>
+                        <td>6.5 - 8.5</td>
+                        <td>Affects taste and corrosion<br>स्वाद और संक्षारण को प्रभावित करता है</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Turbidity</strong><br>अशांति</td>
+                        <td>&lt; 1 NTU</td>
+                        <td>Clarity of water<br>पानी की स्पष्टता</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Dissolved Solids</strong><br>कुल घुलित ठोस</td>
+                        <td>&lt; 500 mg/L</td>
+                        <td>Taste and health<br>स्वाद और स्वास्थ्य</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Microbial Assessment Methods (सूक्ष्मजीवीय मूल्यांकन विधियां)</div>
+                
+                <strong>A. Coliform Test (कोलिफॉर्म परीक्षण)</strong>
+                <ul>
+                    <li><strong>What are Coliforms?</strong> Bacteria found in intestines of warm-blooded animals<br>
+                    <span class="hindi">(कोलिफॉर्म क्या हैं? गर्म रक्त वाले जानवरों की आंतों में पाए जाने वाले बैक्टीरिया)</span></li>
+                    <li><strong>Indicator:</strong> Presence indicates fecal contamination<br>
+                    <span class="hindi">(संकेतक: उपस्थिति मल प्रदूषण का संकेत देती है)</span></li>
+                    <li><strong>Test:</strong> Multiple Tube Fermentation (MPN method)<br>
+                    <span class="hindi">(परीक्षण: मल्टीपल ट्यूब किण्वन)</span></li>
+                </ul>
+
+                <strong>B. E. coli Test (ई. कोलाई परीक्षण)</strong>
+                <ul>
+                    <li><strong>Most Important Indicator:</strong> Direct indicator of fecal contamination<br>
+                    <span class="hindi">(सबसे महत्वपूर्ण संकेतक: मल प्रदूषण का प्रत्यक्ष संकेतक)</span></li>
+                    <li><strong>Test Methods:</strong>
+                        <ul>
+                            <li>Membrane Filtration (झिल्ली निस्पंदन)</li>
+                            <li>MPN Method (MPN विधि)</li>
+                            <li>Chromogenic Media (रंगजनक माध्यम)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <strong>C. Total Plate Count (TPC) (कुल प्लेट गणना)</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> Count total number of bacteria in water<br>
+                    <span class="hindi">(उद्देश्य: पानी में बैक्टीरिया की कुल संख्या गिनना)</span></li>
+                    <li><strong>Standard:</strong> &lt; 100 CFU/ml for drinking water<br>
+                    <span class="hindi">(मानक: पीने के पानी के लिए 100 CFU/ml से कम)</span></li>
+                    <li><strong>Method:</strong> Spread plate or pour plate technique<br>
+                    <span class="hindi">(विधि: स्प्रेड प्लेट या पोर प्लेट तकनीक)</span></li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Water Quality Testing Process (जल गुणवत्ता परीक्षण प्रक्रिया)</div>
+                <div class="flow-box">Water Sample Collection<br>जल नमूना संग्रह</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Transport to Lab (Cold, &lt;6 hours)<br>प्रयोगशाला में परिवहन (ठंडा, 6 घंटे से कम)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Filtration / Dilution<br>निस्पंदन / तनुकरण</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Culture on Media<br>माध्यम पर संवर्धन<br>(EMB, MacConkey, Nutrient Agar)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Incubation (37°C, 24-48 hours)<br>इनक्यूबेशन (37°C, 24-48 घंटे)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">Count Colonies & Identify<br>कालोनियों की गिनती और पहचान</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #2ecc71;">Result: Safe or Unsafe<br>परिणाम: सुरक्षित या असुरक्षित</div>
+            </div>
+        </div>
+
+        <!-- Topic 5: Water Purification -->
+        <div class="topic">
+            <div class="topic-title">5. Water Purification<br><span class="hindi">(जल शुद्धिकरण)</span></div>
+            
+            <div class="definition">
+                <strong>What is Water Purification? (जल शुद्धिकरण क्या है?)</strong><br>
+                Water purification is the process of removing contaminants, microorganisms, and impurities from water to make it safe for drinking.<br>
+                <span class="hindi">जल शुद्धिकरण पानी से प्रदूषकों, सूक्ष्मजीवों और अशुद्धियों को हटाने की प्रक्रिया है ताकि इसे पीने के लिए सुरक्षित बनाया जा सके।</span>
+            </div>
+
+            <div class="diagram">
+                <div class="diagram-title">Water Purification Process (जल शुद्धिकरण प्रक्रिया)</div>
+                <div class="flow-box" style="background: #e74c3c;">Raw Water (कच्चा पानी)<br>From river/lake/groundwater</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #f39c12;">1. SCREENING (छानना)<br>Remove large debris<br>बड़े मलबे को हटाएं</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #3498db;">2. COAGULATION & FLOCCULATION<br>(जमावट और पुंजन)<br>Add Alum, form flocs<br>फिटकरी मिलाएं, पुंज बनाएं</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #2ecc71;">3. SEDIMENTATION (अवसादन)<br>Heavy particles settle down<br>भारी कण नीचे बैठते हैं</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #9b59b6;">4. FILTRATION (निस्पंदन)<br>Sand, gravel filters<br>रेत, बजरी फिल्टर</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #e74c3c;">5. DISINFECTION (कीटाणुशोधन)<br>Chlorination / UV / Ozone<br>क्लोरीनीकरण / यूवी / ओजोन</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box" style="background: #27ae60;">6. STORAGE & DISTRIBUTION<br>(भंडारण और वितरण)<br>Clean water tank<br>साफ पानी का टैंक</div>
+            </div>
+
+            <div class="content-box">
+                <div class="sub-heading">Methods of Water Purification (जल शुद्धिकरण की विधियां)</div>
+                
+                <strong>A. Physical Methods (भौतिक विधियां):</strong>
+                <ul>
+                    <li><strong>Filtration:</strong> Sand filters, activated carbon filters<br>
+                    <span class="hindi">(निस्पंदन: रेत फिल्टर, सक्रिय कार्बन फिल्टर)</span></li>
+                    <li><strong>Sedimentation:</strong> Let particles settle by gravity<br>
+                    <span class="hindi">(अवसादन: गुरुत्वाकर्षण द्वारा कणों को बैठने दें)</span></li>
+                    <li><strong>Boiling:</strong> Kill microbes by heating to 100°C<br>
+                    <span class="hindi">(उबालना: 100°C तक गर्म करके सूक्ष्मजीवों को मारना)</span></li>
+                    <li><strong>UV Radiation:</strong> Ultraviolet light kills bacteria<br>
+                    <span class="hindi">(यूवी विकिरण: पराबैंगनी प्रकाश बैक्टीरिया को मारता है)</span></li>
+                </ul>
+
+                <strong>B. Chemical Methods (रासायनिक विधियां):</strong>
+                <ul>
+                    <li><strong>Chlorination:</strong> Add chlorine (Cl₂) or chloramine<br>
+                    <span class="hindi">(क्लोरीनीकरण: क्लोरीन या क्लोरामाइन मिलाएं)</span>
+                        <ul>
+                            <li>Most common method (सबसे आम विधि)</li>
+                            <li>Kills bacteria, viruses (बैक्टीरिया, वायरस को मारता है)</li>
+                            <li>Residual chlorine protects water (अवशिष्ट क्लोरीन पानी की रक्षा करता है)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ozonation:</strong> Ozone (O₃) is powerful disinfectant<br>
+                    <span class="hindi">(ओजोनीकरण: ओजोन शक्तिशाली कीटाणुनाशक है)</span></li>
+                    <li><strong>Coagulation:</strong> Add alum (Al₂(SO₄)₃) to form flocs<br>
+                    <span class="hindi">(जमावट: पुंज बनाने के लिए फिटकरी मिलाएं)</span></li>
+                </ul>
+
+                <strong>C. Biological Methods (जैविक विधियां):</strong>
+                <ul>
+                    <li><strong>Slow Sand Filtration:</strong> Biological layer removes microbes<br>
+                    <span class="hindi">(धीमी रेत निस्पंदन: जैविक परत सूक्ष्मजीवों को हटाती है)</span></li>
+                    <li><strong>Activated Sludge:</strong> Use beneficial bacteria<br>
+                    <span class="hindi">(सक्रिय कीचड़: लाभकारी बैक्टीरिया का उपयोग)</span></li>
+                </ul>
+            </div>
+
+
+            <div class="important">
+                <strong>✅ Chlorination Details (क्लोरीनीकरण विवरण):</strong>
+                <ul>
+                    <li><strong>Dose:</strong> 0.2-0.5 mg/L free chlorine (खुराक: 0.2-0.5 mg/L मुक्त क्लोरीन)</li>
+                    <li><strong>Contact Time:</strong> At least 30 minutes (संपर्क स
+                        
