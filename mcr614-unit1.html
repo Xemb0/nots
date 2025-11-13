@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-614 Unit 1 - Microbial Biotechnology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .image-placeholder {
+            background: #ecf0f1;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px dashed #95a5a6;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr614-unit1.html" class="active">Unit I</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔬 MCR-614: Microbial Biotechnology</h1>
+            <h2>UNIT I - General Considerations</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+        </div>
+
+        <!-- Section 1: Metabolic Pathways -->
+        <div class="section">
+            <h3>1. Metabolic Pathways and Metabolic Control Mechanisms</h3>
+            
+            <h4>What are Metabolic Pathways?</h4>
+            <p>
+                Metabolic pathways are sequences of chemical reactions that occur inside cells. These reactions are controlled by enzymes (special proteins that speed up reactions). Think of them as a series of steps that convert one molecule into another, like an assembly line in a factory.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> चयापचय मार्ग कोशिका के अंदर होने वाली रासायनिक प्रतिक्रियाओं की श्रृंखला हैं। ये प्रतिक्रियाएं एंजाइमों (विशेष प्रोटीन जो प्रतिक्रियाओं को तेज करते हैं) द्वारा नियंत्रित होती हैं। इन्हें एक श्रृंखला के रूप में सोचें जो एक अणु को दूसरे में बदलती है, जैसे किसी कारखाने में एक असेंबली लाइन।
+            </div>
+
+            <h4>Types of Metabolic Pathways:</h4>
+            <div class="box">
+                <h5>a) Catabolic Pathways (Breaking Down)</h5>
+                <p>These pathways break down complex molecules into simpler ones and release energy. Example: Breaking down glucose (sugar) to get energy.</p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> ये मार्ग जटिल अणुओं को सरल अणुओं में तोड़ते हैं और ऊर्जा मुक्त करते हैं। उदाहरण: ग्लूकोज (चीनी) को तोड़कर ऊर्जा प्राप्त करना।
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>b) Anabolic Pathways (Building Up)</h5>
+                <p>These pathways build complex molecules from simpler ones and consume energy. Example: Making proteins from amino acids.</p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> ये मार्ग सरल अणुओं से जटिल अणुओं का निर्माण करते हैं और ऊर्जा की खपत करते हैं। उदाहरण: अमीनो एसिड से प्रोटीन बनाना।
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h4>Metabolic Pathway Diagram</h4>
+                <svg width="100%" height="300" viewBox="0 0 800 300">
+                    <!-- Substrate -->
+                    <rect x="50" y="120" width="100" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="100" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Substrate A</text>
+                    <text x="100" y="200" text-anchor="middle" fill="#2c3e50" font-size="12">कच्चा पदार्थ</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 150 150 L 200 150" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="175" y="140" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Enzyme 1</text>
+                    
+                    <!-- Intermediate -->
+                    <rect x="200" y="120" width="100" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="250" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Intermediate B</text>
+                    <text x="250" y="200" text-anchor="middle" fill="#2c3e50" font-size="12">मध्यवर्ती</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 300 150 L 350 150" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="325" y="140" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Enzyme 2</text>
+                    
+                    <!-- Product -->
+                    <rect x="350" y="120" width="100" height="60" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="400" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Product C</text>
+                    <text x="400" y="200" text-anchor="middle" fill="#2c3e50" font-size="12">उत्पाद</text>
+                    
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                    
+                    <!-- Energy labels -->
+                    <text x="100" y="100" text-anchor="middle" fill="#e67e22" font-size="12" font-weight="bold">Energy Released</text>
+                    <text x="100" y="85" text-anchor="middle" fill="#e67e22" font-size="10">(Catabolic)</text>
+                </svg>
+            </div>
+
+            <h4>Metabolic Control Mechanisms:</h4>
+            <ul class="list">
+                <li>
+                    <strong>Feedback Inhibition:</strong> When the end product of a pathway stops the first enzyme from working. This prevents making too much product.
+                    <div class="hindi">
+                        <strong>हिंदी:</strong> जब मार्ग का अंतिम उत्पाद पहले एंजाइम को काम करने से रोकता है। यह बहुत अधिक उत्पाद बनने से रोकता है।
+                    </div>
+                </li>
+                <li>
+                    <strong>Allosteric Regulation:</strong> Molecules bind to enzymes at special sites (not the active site) to turn them on or off.
+                    <div class="hindi">
+                        <strong>हिंदी:</strong> अणु एंजाइमों के विशेष स्थलों (सक्रिय स्थल नहीं) पर बंधते हैं ताकि उन्हें चालू या बंद कर सकें।
+                    </div>
+                </li>
+                <li>
+                    <strong>Covalent Modification:</strong> Enzymes are activated or deactivated by adding or removing chemical groups (like phosphate).
+                    <div class="hindi">
+                        <strong>हिंदी:</strong> एंजाइमों को रासायनिक समूह (जैसे फॉस्फेट) जोड़कर या हटाकर सक्रिय या निष्क्रिय किया जाता है।
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section 2: Primary and Secondary Metabolites -->
+        <div class="section">
+            <h3>2. Primary and Secondary Metabolites</h3>
+            
+            <h4>Primary Metabolites</h4>
+            <p>
+                Primary metabolites are essential compounds that cells need for growth, reproduction, and survival. They are produced during the growth phase and are necessary for basic cell functions.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> प्राथमिक मेटाबोलाइट्स आवश्यक यौगिक हैं जिनकी कोशिकाओं को विकास, प्रजनन और अस्तित्व के लिए आवश्यकता होती है। वे विकास चरण के दौरान उत्पादित होते हैं और बुनियादी कोशिका कार्यों के लिए आवश्यक हैं।
+            </div>
+
+            <div class="box">
+                <h5>Examples of Primary Metabolites:</h5>
+                <ul class="list">
+                    <li><strong>Amino Acids:</strong> Building blocks of proteins (e.g., glycine, alanine)</li>
+                    <li><strong>Nucleotides:</strong> Building blocks of DNA and RNA (e.g., ATP, GTP)</li>
+                    <li><strong>Carbohydrates:</strong> Energy sources (e.g., glucose, starch)</li>
+                    <li><strong>Vitamins:</strong> Essential nutrients (e.g., B-complex vitamins)</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी उदाहरण:</strong> अमीनो एसिड (प्रोटीन के निर्माण खंड), न्यूक्लियोटाइड्स (DNA और RNA के निर्माण खंड), कार्बोहाइड्रेट (ऊर्जा स्रोत), विटामिन (आवश्यक पोषक तत्व)
+                </div>
+            </div>
+
+            <h4>Secondary Metabolites</h4>
+            <p>
+                Secondary metabolites are compounds that are NOT essential for basic cell functions but help organisms survive in their environment. They are often produced after the growth phase and serve ecological functions like defense, competition, or communication.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> द्वितीयक मेटाबोलाइट्स वे यौगिक हैं जो बुनियादी कोशिका कार्यों के लिए आवश्यक नहीं हैं लेकिन जीवों को अपने पर्यावरण में जीवित रहने में मदद करते हैं। वे अक्सर विकास चरण के बाद उत्पादित होते हैं और रक्षा, प्रतिस्पर्धा या संचार जैसे पारिस्थितिक कार्य करते हैं।
+            </div>
+
+            <div class="box">
+                <h5>Examples of Secondary Metabolites:</h5>
+                <ul class="list">
+                    <li><strong>Antibiotics:</strong> Fight against other microorganisms (e.g., penicillin, streptomycin)</li>
+                    <li><strong>Pigments:</strong> Provide color (e.g., carotenoids, melanin)</li>
+                    <li><strong>Toxins:</strong> Defense mechanisms (e.g., botulinum toxin)</li>
+                    <li><strong>Alkaloids:</strong> Chemical defense (e.g., caffeine, nicotine)</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी उदाहरण:</strong> एंटीबायोटिक्स (अन्य सूक्ष्मजीवों के खिलाफ लड़ाई), पिगमेंट्स (रंग प्रदान करते हैं), विषाक्त पदार्थ (रक्षा तंत्र), एल्कलॉइड्स (रासायनिक रक्षा)
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h4>Primary vs Secondary Metabolites Comparison</h4>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Primary Metabolites</th>
+                        <th>Secondary Metabolites</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Importance</strong></td>
+                        <td>Essential for life</td>
+                        <td>Not essential for basic functions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Production Phase</strong></td>
+                        <td>During growth phase</td>
+                        <td>After growth phase (stationary phase)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Function</strong></td>
+                        <td>Growth, reproduction, metabolism</td>
+                        <td>Defense, competition, communication</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distribution</strong></td>
+                        <td>Found in all organisms</td>
+                        <td>Found in specific organisms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Examples</strong></td>
+                        <td>Amino acids, nucleotides, glucose</td>
+                        <td>Antibiotics, pigments, toxins</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="flowchart">
+                <h4>Metabolite Production Flowchart</h4>
+                <pre>
+    ┌─────────────────────────────────────────┐
+    │         Microbial Growth Phase          │
+    │         (विकास चरण)                      │
+    └─────────────────┬───────────────────────┘
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+        ▼                           ▼
+┌───────────────┐         ┌──────────────────┐
+│   PRIMARY     │         │    SECONDARY     │
+│  METABOLITES  │         │   METABOLITES    │
+│               │         │                  │
+│ • Amino Acids │         │ • Antibiotics   │
+│ • Nucleotides │         │ • Pigments      │
+│ • Glucose     │         │ • Toxins        │
+│ • Vitamins    │         │ • Alkaloids     │
+└───────────────┘         └──────────────────┘
+        │                           │
+        ▼                           ▼
+┌─────────────────────────────────────────┐
+│      Essential for Cell Functions        │
+│   (कोशिका कार्यों के लिए आवश्यक)          │
+└─────────────────────────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 3: Biotechnological Innovations -->
+        <div class="section">
+            <h3>3. Biotechnological Innovations in the Chemical Industry</h3>
+            
+            <p>
+                Biotechnology has revolutionized the chemical industry by using living organisms (microbes) and their enzymes to produce chemicals. This is more efficient, environmentally friendly, and cost-effective than traditional chemical methods.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> जैव प्रौद्योगिकी ने रासायनिक उद्योग में क्रांति ला दी है जीवित जीवों (सूक्ष्मजीवों) और उनके एंजाइमों का उपयोग करके रसायनों का उत्पादन करके। यह पारंपरिक रासायनिक विधियों की तुलना में अधिक कुशल, पर्यावरण के अनुकूल और लागत प्रभावी है।
+            </div>
+
+            <h4>Key Innovations:</h4>
+            
+            <div class="box">
+                <h5>a) Biocatalysts in Inorganic Chemical Synthesis</h5>
+                <p>
+                    <strong>What are Biocatalysts?</strong> Biocatalysts are enzymes or whole cells that speed up chemical reactions. They work like tiny machines that make reactions happen faster and more efficiently.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> बायोकैटालिस्ट एंजाइम या पूरी कोशिकाएं हैं जो रासायनिक प्रतिक्रियाओं को तेज करती हैं। वे छोटी मशीनों की तरह काम करती हैं जो प्रतिक्रियाओं को तेजी से और अधिक कुशलता से होने देती हैं।
+                </div>
+                <p style="margin-top: 15px;">
+                    <strong>Advantages:</strong>
+                </p>
+                <ul class="list">
+                    <li>High specificity (only make the product you want)</li>
+                    <li>Work at normal temperature and pressure (saves energy)</li>
+                    <li>Environmentally friendly (less waste)</li>
+                    <li>Can work in water (no need for harmful solvents)</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी लाभ:</strong> उच्च विशिष्टता, सामान्य तापमान और दबाव पर काम करते हैं, पर्यावरण के अनुकूल, पानी में काम कर सकते हैं
+                </div>
+            </div>
+
+            <div class="flowchart">
+                <h4>Biocatalyst Process Flowchart</h4>
+                <pre>
+    ┌──────────────┐
+    │ Raw Material │  (कच्चा माल)
+    │  (Substrate) │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │  Biocatalyst │  (बायोकैटालिस्ट)
+    │   (Enzyme)   │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │   Reaction   │  (प्रतिक्रिया)
+    │   Process    │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │   Product    │  (उत्पाद)
+    │  Formation   │
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ Purification │  (शुद्धिकरण)
+    └──────┬───────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ Final Product│  (अंतिम उत्पाद)
+    └──────────────┘
+                </pre>
+            </div>
+
+            <div class="box">
+                <h5>b) Examples of Biotechnological Applications:</h5>
+                <ul class="list">
+                    <li><strong>Pharmaceuticals:</strong> Making antibiotics, insulin, vaccines</li>
+                    <li><strong>Food Industry:</strong> Making cheese, yogurt, bread (using yeast)</li>
+                    <li><strong>Biofuels:</strong> Producing ethanol from plant materials</li>
+                    <li><strong>Biodegradable Plastics:</strong> Making eco-friendly plastics</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी उदाहरण:</strong> फार्मास्यूटिकल्स (एंटीबायोटिक्स, इंसुलिन, वैक्सीन), खाद्य उद्योग (पनीर, दही, रोटी), बायोफ्यूल (पौधों से इथेनॉल), बायोडिग्रेडेबल प्लास्टिक
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Growth and Product Formation Efficiency -->
+        <div class="section">
+            <h3>4. Efficiency of Growth and Product Formation</h3>
+            
+            <p>
+                Growth efficiency tells us how well a microorganism converts nutrients (food) into biomass (more cells) and useful products. It's like measuring how efficiently a factory uses raw materials to make products.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> विकास दक्षता हमें बताती है कि एक सूक्ष्मजीव पोषक तत्वों (भोजन) को बायोमास (अधिक कोशिकाएं) और उपयोगी उत्पादों में कितनी अच्छी तरह परिवर्तित करता है। यह एक कारखाने के कच्चे माल का उपयोग करके उत्पाद बनाने की दक्षता को मापने जैसा है।
+            </div>
+
+            <h4>Key Concepts:</h4>
+
+            <div class="box">
+                <h5>a) Growth Stoichiometry</h5>
+                <p>
+                    This is the mathematical relationship between the nutrients consumed and the biomass produced. It helps us calculate how much food is needed to make a certain amount of cells.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> यह उपभोग किए गए पोषक तत्वों और उत्पादित बायोमास के बीच गणितीय संबंध है। यह हमें गणना करने में मदद करता है कि एक निश्चित मात्रा की कोशिकाएं बनाने के लिए कितना भोजन चाहिए।
+                </div>
+                <p style="margin-top: 15px;">
+                    <strong>Example Equation:</strong><br>
+                    Substrate (glucose) + Nutrients → Biomass + Products + Energy
+                </p>
+            </div>
+
+            <div class="box">
+                <h5>b) Maintenance Energy Requirement</h5>
+                <p>
+                    Cells need energy just to stay alive, even when they're not growing. This is called maintenance energy. It's like the energy you need to keep your body functioning even when you're sleeping.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> कोशिकाओं को जीवित रहने के लिए ऊर्जा की आवश्यकता होती है, भले ही वे बढ़ न रही हों। इसे रखरखाव ऊर्जा कहा जाता है। यह उस ऊर्जा की तरह है जिसकी आपको अपने शरीर को कार्य करने के लिए आवश्यकता होती है, भले ही आप सो रहे हों।
+                </div>
+                <p style="margin-top: 15px;">
+                    <strong>Uses of Maintenance Energy:</strong>
+                </p>
+                <ul class="list">
+                    <li>Repairing damaged cell parts</li>
+                    <li>Maintaining cell structure</li>
+                    <li>Transporting molecules across membranes</li>
+                    <li>Keeping enzymes active</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>c) Maximum Biomass Yield</h5>
+                <p>
+                    This is the highest amount of biomass (cells) that can be produced from a given amount of substrate (food). It represents the theoretical maximum efficiency.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> यह बायोमास (कोशिकाओं) की अधिकतम मात्रा है जो सब्सट्रेट (भोजन) की दी गई मात्रा से उत्पादित की जा सकती है। यह सैद्धांतिक अधिकतम दक्षता का प्रतिनिधित्व करता है।
+                </div>
+                <p style="margin-top: 15px;">
+                    <strong>Formula:</strong><br>
+                    Y<sub>X/S</sub> = Biomass produced / Substrate consumed
+                </p>
+            </div>
+
+            <div class="diagram">
+                <h4>Growth Efficiency Diagram</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Substrate input -->
+                    <rect x="50" y="50" width="120" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="110" y="90" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Substrate</text>
+                    <text x="110" y="105" text-anchor="middle" fill="white" font-size="12">(100 units)</text>
+                    <text x="110" y="150" text-anchor="middle" fill="#2c3e50" font-size="11">कच्चा पदार्थ</text>
+                    
+                    <!-- Arrow to process -->
+                    <path d="M 170 90 L 250 90" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow2)"/>
+                    
+                    <!-- Process box -->
+                    <rect x="250" y="30" width="200" height="120" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="350" y="60" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Microbial Process</text>
+                    <text x="350" y="80" text-anchor="middle" fill="#2c3e50" font-size="12">(सूक्ष्मजीव प्रक्रिया)</text>
+                    
+                    <!-- Maintenance energy -->
+                    <rect x="260" y="90" width="80" height="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="3"/>
+                    <text x="300" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Maintenance</text>
+                    <text x="300" y="125" text-anchor="middle" fill="white" font-size="10">(20 units)</text>
+                    
+                    <!-- Growth -->
+                    <rect x="350" y="90" width="80" height="30" fill="#27ae60" stroke="#229954" stroke-width="2" rx="3"/>
+                    <text x="390" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Growth</text>
+                    <text x="390" y="125" text-anchor="middle" fill="white" font-size="10">(60 units)</text>
+                    
+                    <!-- Products -->
+                    <rect x="260" y="130" width="80" height="30" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="3"/>
+                    <text x="300" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Products</text>
+                    <text x="300" y="165" text-anchor="middle" fill="white" font-size="10">(15 units)</text>
+                    
+                    <!-- Waste -->
+                    <rect x="350" y="130" width="80" height="30" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2" rx="3"/>
+                    <text x="390" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Waste</text>
+                    <text x="390" y="165" text-anchor="middle" fill="white" font-size="10">(5 units)</text>
+                    
+                    <!-- Output arrows -->
+                    <path d="M 450 60 L 550 60" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="500" y="50" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">Biomass</text>
+                    
+                    <path d="M 450 90 L 550 110" stroke="#f39c12" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="500" y="100" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Products</text>
+                    
+                    <!-- Output boxes -->
+                    <rect x="550" y="30" width="100" height="50" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="600" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Biomass</text>
+                    <text x="600" y="70" text-anchor="middle" fill="white" font-size="12">60 units</text>
+                    
+                    <rect x="550" y="100" width="100" height="50" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="600" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Products</text>
+                    <text x="600" y="140" text-anchor="middle" fill="white" font-size="12">15 units</text>
+                    
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                    
+                    <!-- Efficiency calculation -->
+                    <text x="350" y="200" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">
+                        Efficiency = (Biomass + Products) / Substrate = (60 + 15) / 100 = 75%
+                    </text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 5: P/O Quotients -->
+        <div class="section">
+            <h3>5. P/O Quotients</h3>
+            
+            <p>
+                The P/O ratio (Phosphate/Oxygen ratio) tells us how efficiently cells produce ATP (energy currency) during cellular respiration. It measures how many ATP molecules are made for each oxygen atom used.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> P/O अनुपात (फॉस्फेट/ऑक्सीजन अनुपात) हमें बताता है कि कोशिकीय श्वसन के दौरान कोशिकाएं ATP (ऊर्जा मुद्रा) कितनी कुशलता से उत्पादित करती हैं। यह मापता है कि प्रत्येक उपयोग किए गए ऑक्सीजन परमाणु के लिए कितने ATP अणु बनते हैं।
+            </div>
+
+            <h4>Understanding P/O Ratio:</h4>
+            
+            <div class="box">
+                <h5>What is ATP?</h5>
+                <p>
+                    ATP (Adenosine Triphosphate) is like the "energy currency" of cells. Just like money is used to buy things, ATP is used to power cellular processes.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> ATP (एडेनोसाइन ट्राइफॉस्फेट) कोशिकाओं की "ऊर्जा मुद्रा" की तरह है। जैसे पैसे का उपयोग चीजें खरीदने के लिए किया जाता है, वैसे ही ATP का उपयोग कोशिकीय प्रक्रियाओं को शक्ति देने के लिए किया जाता है।
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>How P/O Ratio Works:</h5>
+                <p>
+                    During oxidative phosphorylation (the process that makes ATP), electrons flow through a chain and create a proton gradient. This gradient is used to make ATP. The P/O ratio tells us how many ATP molecules are produced per oxygen atom reduced.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> ऑक्सीडेटिव फॉस्फोराइलेशन (ATP बनाने की प्रक्रिया) के दौरान, इलेक्ट्रॉन एक श्रृंखला के माध्यम से बहते हैं और एक प्रोटॉन ग्रेडिएंट बनाते हैं। इस ग्रेडिएंट का उपयोग ATP बनाने के लिए किया जाता है। P/O अनुपात हमें बताता है कि प्रति कम किए गए ऑक्सीजन परमाणु पर कितने ATP अणु उत्पादित होते हैं।
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h4>P/O Ratio Diagram</h4>
+                <svg width="100%" height="350" viewBox="0 0 800 350">
+                    <!-- NADH input -->
+                    <rect x="50" y="50" width="100" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="100" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">NADH</text>
+                    <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="11">(Electron Donor)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 150 80 L 200 80" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- Electron Transport Chain -->
+                    <rect x="200" y="30" width="150" height="100" fill="#e8f4f8" stroke="#3498db" stroke-width="2" rx="5"/>
+                    <text x="275" y="60" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Electron Transport</text>
+                    <text x="275" y="80" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Chain</text>
+                    <text x="275" y="100" text-anchor="middle" fill="#7f8c8d" font-size="11">(इलेक्ट्रॉन परिवहन श्रृंखला)</text>
+                    
+                    <!-- Complexes -->
+                    <circle cx="220" cy="120" r="15" fill="#e74c3c"/>
+                    <text x="220" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">I</text>
+                    
+                    <circle cx="250" cy="120" r="15" fill="#f39c12"/>
+                    <text x="250" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">III</text>
+                    
+                    <circle cx="280" cy="120" r="15" fill="#27ae60"/>
+                    <text x="280" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">IV</text>
+                    
+                    <circle cx="310" cy="120" r="15" fill="#8e44ad"/>
+                    <text x="310" y="125" text-anchor="middle" fill="white" font-size="10" font-weight="bold">ATP</text>
+                    
+                    <!-- Oxygen -->
+                    <rect x="400" y="50" width="100" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="450" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">O₂</text>
+                    <text x="450" y="125" text-anchor="middle" fill="#2c3e50" font-size="11">(Oxygen)</text>
+                    
+                    <path d="M 350 80 L 400 80" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- ATP output -->
+                    <rect x="550" y="30" width="120" height="100" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="610" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ATP Produced</text>
+                    <text x="610" y="85" text-anchor="middle" fill="white" font-size="24" font-weight="bold">~2.5-3</text>
+                    <text x="610" y="105" text-anchor="middle" fill="white" font-size="12">per NADH</text>
+                    <text x="610" y="125" text-anchor="middle" fill="#ecf0f1" font-size="11">(प्रति NADH)</text>
+                    
+                    <path d="M 500 80 L 550 80" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- P/O ratio box -->
+                    <rect x="250" y="180" width="300" height="80" fill="#fff3cd" stroke="#f39c12" stroke-width="3" rx="5"/>
+                    <text x="400" y="210" text-anchor="middle" fill="#856404" font-size="18" font-weight="bold">P/O Ratio Calculation</text>
+                    <text x="400" y="235" text-anchor="middle" fill="#856404" font-size="14">
+                        P/O = ATP molecules / O atoms reduced
+                    </text>
+                    <text x="400" y="255" text-anchor="middle" fill="#856404" font-size="14" font-weight="bold">
+                        For NADH: P/O ≈ 2.5-3
+                    </text>
+                    
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Typical P/O Values:</h5>
+                <ul class="list">
+                    <li><strong>NADH:</strong> P/O ratio ≈ 2.5-3 (means 2.5-3 ATP per oxygen atom)</li>
+                    <li><strong>FADH₂:</strong> P/O ratio ≈ 1.5-2 (means 1.5-2 ATP per oxygen atom)</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> NADH के लिए P/O अनुपात ≈ 2.5-3 (प्रति ऑक्सीजन परमाणु 2.5-3 ATP), FADH₂ के लिए P/O अनुपात ≈ 1.5-2 (प्रति ऑक्सीजन परमाणु 1.5-2 ATP)
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: Metabolite Overproduction -->
+        <div class="section">
+            <h3>6. Metabolite Overproduction and Growth Efficiency</h3>
+            
+            <p>
+                Metabolite overproduction means making microorganisms produce MORE of a desired product than they normally would. This is important in biotechnology industries where we want to maximize production of useful compounds like antibiotics, enzymes, or biofuels.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> मेटाबोलाइट ओवरप्रोडक्शन का मतलब है सूक्ष्मजीवों को वांछित उत्पाद का सामान्य से अधिक उत्पादन करना। यह जैव प्रौद्योगिकी उद्योगों में महत्वपूर्ण है जहां हम एंटीबायोटिक्स, एंजाइम या बायोफ्यूल जैसे उपयोगी यौगिकों के उत्पादन को अधिकतम करना चाहते हैं।
+            </div>
+
+            <h4>Strategies for Metabolite Overproduction:</h4>
+
+            <div class="box">
+                <h5>a) Genetic Engineering</h5>
+                <p>
+                    Modify the microorganism's DNA to:
+                </p>
+                <ul class="list">
+                    <li>Increase the number of copies of key enzyme genes</li>
+                    <li>Remove regulatory controls that limit production</li>
+                    <li>Add new genes that enhance production</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सूक्ष्मजीव के DNA को संशोधित करना: मुख्य एंजाइम जीनों की प्रतियों की संख्या बढ़ाना, उत्पादन को सीमित करने वाले नियामक नियंत्रणों को हटाना, उत्पादन बढ़ाने वाले नए जीन जोड़ना
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>b) Pathway Optimization</h5>
+                <p>
+                    Optimize the metabolic pathway by:
+                </p>
+                <ul class="list">
+                    <li>Removing bottlenecks (slow steps) in the pathway</li>
+                    <li>Increasing the supply of precursor molecules</li>
+                    <li>Reducing competing pathways that waste resources</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> चयापचय मार्ग को अनुकूलित करना: मार्ग में अड़चनों (धीमे चरणों) को हटाना, अग्रदूत अणुओं की आपूर्ति बढ़ाना, संसाधन बर्बाद करने वाले प्रतिस्पर्धी मार्गों को कम करना
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>c) Environmental Optimization</h5>
+                <p>
+                    Control growth conditions:
+                </p>
+                <ul class="list">
+                    <li>Optimal temperature and pH</li>
+                    <li>Proper nutrient supply</li>
+                    <li>Oxygen levels (aeration)</li>
+                    <li>Timing of product harvest</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> विकास की स्थितियों को नियंत्रित करना: इष्टतम तापमान और pH, उचित पोषक तत्व आपूर्ति, ऑक्सीजन स्तर (वातन), उत्पाद कटाई का समय
+                </div>
+            </div>
+
+            <div class="flowchart">
+                <h4>Metabolite Overproduction Strategy Flowchart</h4>
+                <pre>
+    ┌─────────────────────────────────────┐
+    │   Wild Type Microorganism           │
+    │   (सामान्य सूक्ष्मजीव)              │
+    │   Low Production                    │
+    └──────────────┬──────────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+        ▼                     ▼
+┌──────────────┐    ┌──────────────────┐
+│   Genetic    │    │   Environmental  │
+│ Engineering  │    │  Optimization    │
+│              │    │                  │
+│ • Gene       │    │ • Temperature    │
+│   Amplification│  │ • pH             │
+│ • Remove     │    │ • Nutrients      │
+│   Regulation │    │ • Aeration       │
+└──────┬───────┘    └────────┬─────────┘
+       │                     │
+       └──────────┬──────────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  Pathway       │
+         │  Optimization  │
+         │                │
+         │ • Remove       │
+         │   Bottlenecks  │
+         │ • Increase     │
+         │   Precursors   │
+         └────────┬───────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  High Yield    │
+         │  Production    │
+         │  (उच्च उपज)    │
+         └────────────────┘
+                </pre>
+            </div>
+
+            <h4>Growth Efficiency Trade-off:</h4>
+            <p>
+                There's often a trade-off between growth and product formation. When cells focus on making products, they may grow slower. When they focus on growing, they may make fewer products. Scientists try to find the right balance.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> विकास और उत्पाद निर्माण के बीच अक्सर एक ट्रेड-ऑफ होता है। जब कोशिकाएं उत्पाद बनाने पर ध्यान केंद्रित करती हैं, तो वे धीमी गति से बढ़ सकती हैं। जब वे बढ़ने पर ध्यान केंद्रित करती हैं, तो वे कम उत्पाद बना सकती हैं। वैज्ञानिक सही संतुलन खोजने की कोशिश करते हैं।
+            </div>
+
+            <div class="diagram">
+                <h4>Growth vs Product Formation Trade-off</h4>
+                <svg width="100%" height="300" viewBox="0 0 600 300">
+                    <!-- Y-axis -->
+                    <line x1="50" y1="50" x2="50" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="20" y="150" text-anchor="middle" fill="#2c3e50" font-size="14" transform="rotate(-90 20 150)">
+                        Production Rate
+                    </text>
+                    
+                    <!-- X-axis -->
+                    <line x1="50" y1="250" x2="550" y2="250" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="300" y="280" text-anchor="middle" fill="#2c3e50" font-size="14">
+                        Growth Rate
+                    </text>
+                    
+                    <!-- Trade-off curve -->
+                    <path d="M 100 200 Q 200 150 300 120 T 500 100" 
+                          stroke="#e74c3c" 
+                          stroke-width="3" 
+                          fill="none"/>
+                    
+                    <!-- Optimal point -->
+                    <circle cx="300" cy="120" r="8" fill="#27ae60"/>
+                    <text x="300" y="110" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">
+                        Optimal
+                    </text>
+                    <line x1="300" y1="120" x2="300" y2="250" stroke="#27ae60" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="50" y1="120" x2="300" y2="120" stroke="#27ae60" stroke-width="1" stroke-dasharray="5,5"/>
+                    
+                    <!-- Labels -->
+                    <text x="100" y="220" text-anchor="middle" fill="#2c3e50" font-size="12">
+                        High Growth
+                    </text>
+                    <text x="100" y="235" text-anchor="middle" fill="#2c3e50" font-size="11">
+                        Low Product
+                    </text>
+                    
+                    <text x="500" y="220" text-anchor="middle" fill="#2c3e50" font-size="12">
+                        Low Growth
+                    </text>
+                    <text x="500" y="235" text-anchor="middle" fill="#2c3e50" font-size="11">
+                        High Product
+                    </text>
+                    
+                    <!-- Title -->
+                    <text x="300" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">
+                        Growth Efficiency Trade-off
+                    </text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 5px solid white;">
+            <h3 style="color: white; border-bottom: 2px solid white;">📝 Summary (सारांश)</h3>
+            <ul class="list" style="color: white;">
+                <li><strong>Metabolic pathways</strong> are sequences of reactions controlled by enzymes (चयापचय मार्ग एंजाइमों द्वारा नियंत्रित प्रतिक्रियाओं की श्रृंखला हैं)</li>
+                <li><strong>Primary metabolites</strong> are essential for growth; <strong>secondary metabolites</strong> serve ecological functions (प्राथमिक मेटाबोलाइट्स विकास के लिए आवश्यक हैं; द्वितीयक मेटाबोलाइट्स पारिस्थितिक कार्य करते हैं)</li>
+                <li><strong>Biocatalysts</strong> make chemical synthesis more efficient and eco-friendly (बायोकैटालिस्ट रासायनिक संश्लेषण को अधिक कुशल और पर्यावरण के अनुकूल बनाते हैं)</li>
+                <li><strong>Growth efficiency</strong> depends on stoichiometry, maintenance energy, and biomass yield (विकास दक्षता स्टोइकियोमेट्री, रखरखाव ऊर्जा और बायोमास उपज पर निर्भर करती है)</li>
+                <li><strong>P/O ratio</strong> measures ATP production efficiency during respiration (P/O अनुपात श्वसन के दौरान ATP उत्पादन दक्षता को मापता है)</li>
+                <li><strong>Metabolite overproduction</strong> requires genetic engineering and pathway optimization (मेटाबोलाइट ओवरप्रोडक्शन के लिए आनुवंशिक इंजीनियरिंग और मार्ग अनुकूलन की आवश्यकता होती है)</li>
+                <li>There's a <strong>trade-off</strong> between growth rate and product formation (विकास दर और उत्पाद निर्माण के बीच एक ट्रेड-ऑफ है)</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+        </div>
+    </div>
+</body>
+</html> 
