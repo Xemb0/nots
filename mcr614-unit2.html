@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-614 Unit 2 - Microbial Biotechnology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr614-unit1.html">Unit I</a>
+            <a href="mcr614-unit2.html" class="active">Unit II</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔬 MCR-614: Microbial Biotechnology</h1>
+            <h2>UNIT II - Fermentation Techniques and Growth Kinetics</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit1.html" class="prev">← Previous: Unit I</a>
+        </div>
+
+        <!-- Section 1: Shake Flask Cultures -->
+        <div class="section">
+            <h3>1. Shake Flask Cultures</h3>
+            
+            <p>
+                Shake flask cultures are a fundamental method used in microbial biotechnology for growing microorganisms in liquid media. The flasks are placed on orbital shakers that continuously agitate the culture, ensuring proper aeration (oxygen supply) and mixing of nutrients.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> शेक फ्लास्क कल्चर माइक्रोबियल बायोटेक्नोलॉजी में सूक्ष्मजीवों को तरल माध्यम में उगाने के लिए उपयोग की जाने वाली एक मौलिक विधि है। फ्लास्क को ऑर्बिटल शेकर पर रखा जाता है जो संस्कृति को लगातार हिलाता है, जिससे उचित वायुवीकरण (ऑक्सीजन आपूर्ति) और पोषक तत्वों का मिश्रण सुनिश्चित होता है।
+            </div>
+
+            <h4>Key Features of Shake Flask Cultures:</h4>
+            <ul class="list">
+                <li><strong>Simple Setup:</strong> Easy to set up and operate, requires minimal equipment</li>
+                <li><strong>Aeration:</strong> Shaking provides oxygen transfer from air to liquid medium</li>
+                <li><strong>Mixing:</strong> Ensures uniform distribution of nutrients and prevents settling</li>
+                <li><strong>Small Scale:</strong> Suitable for screening and small-scale experiments</li>
+                <li><strong>Cost-Effective:</strong> Low cost compared to large fermenters</li>
+            </ul>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सरल सेटअप, वायुवीकरण, मिश्रण, छोटे पैमाने के लिए उपयुक्त, लागत प्रभावी
+            </div>
+
+            <div class="diagram">
+                <h4>Shake Flask Culture Setup</h4>
+                <svg width="100%" height="350" viewBox="0 0 600 350">
+                    <!-- Flask -->
+                    <ellipse cx="300" cy="280" rx="80" ry="20" fill="#95a5a6" stroke="#7f8c8d" stroke-width="2"/>
+                    <path d="M 220 280 Q 220 200 300 200 Q 380 200 380 280" fill="#ecf0f1" stroke="#34495e" stroke-width="3"/>
+                    <line x1="300" y1="200" x2="300" y2="150" stroke="#34495e" stroke-width="2"/>
+                    <ellipse cx="300" cy="150" rx="15" ry="5" fill="#34495e"/>
+                    
+                    <!-- Media -->
+                    <ellipse cx="300" cy="240" rx="60" ry="8" fill="#3498db" opacity="0.6"/>
+                    <text x="300" y="245" text-anchor="middle" fill="#2c3e50" font-size="12">Liquid Media</text>
+                    <text x="300" y="260" text-anchor="middle" fill="#2c3e50" font-size="10">(तरल माध्यम)</text>
+                    
+                    <!-- Shaker platform -->
+                    <rect x="150" y="300" width="300" height="20" fill="#34495e" rx="5"/>
+                    <text x="300" y="315" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Orbital Shaker</text>
+                    <text x="300" y="330" text-anchor="middle" fill="#2c3e50" font-size="10">(ऑर्बिटल शेकर)</text>
+                    
+                    <!-- Motion arrows -->
+                    <path d="M 220 250 Q 300 230 380 250" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrow1)"/>
+                    <path d="M 380 250 Q 300 270 220 250" fill="none" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrow1)"/>
+                    <text x="300" y="220" text-anchor="middle" fill="#e74c3c" font-size="11" font-weight="bold">Circular Motion</text>
+                    
+                    <!-- Air bubbles -->
+                    <circle cx="280" cy="230" r="3" fill="#3498db" opacity="0.7"/>
+                    <circle cx="320" cy="225" r="2" fill="#3498db" opacity="0.7"/>
+                    <circle cx="290" cy="220" r="2.5" fill="#3498db" opacity="0.7"/>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Advantages and Limitations:</h5>
+                <p><strong>Advantages:</strong></p>
+                <ul class="list">
+                    <li>Simple and inexpensive</li>
+                    <li>Good for preliminary studies</li>
+                    <li>Easy to monitor and sample</li>
+                </ul>
+                <p><strong>Limitations:</strong></p>
+                <ul class="list">
+                    <li>Limited oxygen transfer</li>
+                    <li>Cannot control pH automatically</li>
+                    <li>Not suitable for large-scale production</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> लाभ: सरल और सस्ता, प्रारंभिक अध्ययन के लिए अच्छा। सीमाएं: सीमित ऑक्सीजन स्थानांतरण, pH नियंत्रण नहीं, बड़े पैमाने के उत्पादन के लिए उपयुक्त नहीं
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Fermentation Types -->
+        <div class="section">
+            <h3>2. Fermentation: Batch, Fed-Batch, and Continuous Cultures</h3>
+            
+            <p>
+                Fermentation is the process of growing microorganisms to produce useful products. There are three main types of fermentation processes, each with different characteristics and applications.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> किण्वन उपयोगी उत्पादों का उत्पादन करने के लिए सूक्ष्मजीवों को उगाने की प्रक्रिया है। किण्वन प्रक्रियाओं के तीन मुख्य प्रकार हैं, प्रत्येक की अलग-अलग विशेषताएं और अनुप्रयोग हैं।
+            </div>
+
+            <div class="box">
+                <h5>a) Batch Fermentation (बैच किण्वन)</h5>
+                <p>
+                    In batch fermentation, all nutrients are added at the beginning, and the process runs until completion without adding anything else. It's like cooking a meal where you add all ingredients at once and let it cook.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> बैच किण्वन में, सभी पोषक तत्व शुरुआत में जोड़े जाते हैं, और प्रक्रिया बिना कुछ और जोड़े पूरी होने तक चलती है। यह एक भोजन पकाने जैसा है जहां आप सभी सामग्री एक बार में जोड़ते हैं और इसे पकने देते हैं।
+                </div>
+                <p style="margin-top: 15px;"><strong>Characteristics:</strong></p>
+                <ul class="list">
+                    <li>Closed system (nothing added or removed during process)</li>
+                    <li>Growth follows phases: Lag → Exponential → Stationary → Death</li>
+                    <li>Simple to operate</li>
+                    <li>Lower productivity compared to other methods</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>b) Fed-Batch Fermentation (फेड-बैच किण्वन)</h5>
+                <p>
+                    Fed-batch fermentation starts like batch but allows controlled addition of nutrients during the process. Nothing is removed until the end. It's like adding water to a pot while cooking to prevent it from drying out.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> फेड-बैच किण्वन बैच की तरह शुरू होता है लेकिन प्रक्रिया के दौरान पोषक तत्वों के नियंत्रित जोड़ने की अनुमति देता है। अंत तक कुछ भी नहीं निकाला जाता। यह खाना पकाते समय बर्तन में पानी जोड़ने जैसा है ताकि यह सूखने से बचे।
+                </div>
+                <p style="margin-top: 15px;"><strong>Characteristics:</strong></p>
+                <ul class="list">
+                    <li>Semi-closed system (add nutrients, but don't remove culture)</li>
+                    <li>Prevents substrate inhibition (too much substrate can stop growth)</li>
+                    <li>Higher cell densities and product yields</li>
+                    <li>More control over growth rate</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>c) Continuous Fermentation (सतत किण्वन)</h5>
+                <p>
+                    Continuous fermentation maintains steady-state conditions by continuously adding fresh medium and removing culture broth at the same rate. It's like a flowing river - water keeps coming in and going out at the same rate.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सतत किण्वन लगातार ताजा माध्यम जोड़कर और संस्कृति शोरबा को उसी दर पर हटाकर स्थिर-स्थिति की स्थिति बनाए रखता है। यह एक बहती नदी जैसा है - पानी लगातार आता रहता है और उसी दर पर बाहर जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Characteristics:</strong></p>
+                <ul class="list">
+                    <li>Open system (continuous input and output)</li>
+                    <li>Maintains exponential growth phase</li>
+                    <li>High productivity over long periods</li>
+                    <li>Requires careful control to prevent contamination</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Comparison of Fermentation Types</h4>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Batch</th>
+                        <th>Fed-Batch</th>
+                        <th>Continuous</th>
+                    </tr>
+                    <tr>
+                        <td><strong>System Type</strong></td>
+                        <td>Closed</td>
+                        <td>Semi-closed</td>
+                        <td>Open</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nutrient Addition</strong></td>
+                        <td>All at start</td>
+                        <td>During process</td>
+                        <td>Continuous</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Product Removal</strong></td>
+                        <td>At end only</td>
+                        <td>At end only</td>
+                        <td>Continuous</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Growth Phase</strong></td>
+                        <td>All phases</td>
+                        <td>Extended exponential</td>
+                        <td>Exponential only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Productivity</strong></td>
+                        <td>Low</td>
+                        <td>Medium-High</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control</strong></td>
+                        <td>Simple</td>
+                        <td>Moderate</td>
+                        <td>Complex</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="flowchart">
+                <h4>Fermentation Types Flowchart</h4>
+                <pre>
+    ┌─────────────────────────────────────┐
+    │      Fermentation Process           │
+    │      (किण्वन प्रक्रिया)             │
+    └──────────────┬──────────────────────┘
+                   │
+        ┌──────────┼──────────┐
+        │          │          │
+        ▼          ▼          ▼
+    ┌────────┐ ┌──────────┐ ┌──────────┐
+    │ BATCH  │ │FED-BATCH │ │CONTINUOUS│
+    │        │ │          │ │          │
+    │• All   │ │• Add     │ │• Add &   │
+    │  nutrients│  nutrients│   remove  │
+    │  at start│  during   │   continuously│
+    │• No    │ │• No      │ │• Steady  │
+    │  addition│  removal  │   state   │
+    │• Simple│ │• Better │ │• Highest │
+    │        │ │  control │ │  yield   │
+    └────────┘ └──────────┘ └──────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 3: Microbial Growth and Kinetics -->
+        <div class="section">
+            <h3>3. Microbial Growth and Kinetics</h3>
+            
+            <p>
+                Microbial growth kinetics studies how microorganisms grow and produce products over time. Understanding this helps optimize fermentation processes for maximum efficiency.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सूक्ष्मजीव वृद्धि गतिकी अध्ययन करती है कि सूक्ष्मजीव समय के साथ कैसे बढ़ते हैं और उत्पाद बनाते हैं। इसे समझने से अधिकतम दक्षता के लिए किण्वन प्रक्रियाओं को अनुकूलित करने में मदद मिलती है।
+            </div>
+
+            <h4>a) Growth and Product Formation</h4>
+            <p>
+                Microbial growth follows a characteristic pattern with distinct phases. Product formation can occur during different phases depending on the type of product.
+            </p>
+
+            <div class="diagram">
+                <h4>Microbial Growth Curve</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Axes -->
+                    <line x1="50" y1="50" x2="50" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="50" y1="350" x2="650" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Y-axis label -->
+                    <text x="20" y="200" text-anchor="middle" fill="#2c3e50" font-size="14" transform="rotate(-90 20 200)">
+                        Cell Number / Biomass
+                    </text>
+                    
+                    <!-- X-axis label -->
+                    <text x="350" y="380" text-anchor="middle" fill="#2c3e50" font-size="14">
+                        Time (समय)
+                    </text>
+                    
+                    <!-- Growth curve -->
+                    <path d="M 80 320 Q 120 310 150 280 Q 200 200 250 150 Q 300 120 400 110 Q 500 105 550 100 Q 600 95 620 90" 
+                          stroke="#27ae60" 
+                          stroke-width="4" 
+                          fill="none"/>
+                    
+                    <!-- Phase labels -->
+                    <text x="100" y="340" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Lag</text>
+                    <line x1="100" y1="320" x2="100" y2="350" stroke="#e74c3c" stroke-width="1" stroke-dasharray="3,3"/>
+                    
+                    <text x="250" y="340" text-anchor="middle" fill="#3498db" font-size="12" font-weight="bold">Exponential</text>
+                    <line x1="250" y1="150" x2="250" y2="350" stroke="#3498db" stroke-width="1" stroke-dasharray="3,3"/>
+                    
+                    <text x="450" y="340" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Stationary</text>
+                    <line x1="450" y1="110" x2="450" y2="350" stroke="#f39c12" stroke-width="1" stroke-dasharray="3,3"/>
+                    
+                    <text x="600" y="340" text-anchor="middle" fill="#95a5a6" font-size="12" font-weight="bold">Death</text>
+                    <line x1="600" y1="90" x2="600" y2="350" stroke="#95a5a6" stroke-width="1" stroke-dasharray="3,3"/>
+                    
+                    <!-- Phase descriptions -->
+                    <rect x="60" y="50" width="200" height="40" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="160" y="70" text-anchor="middle" fill="#856404" font-size="11" font-weight="bold">Growth Phases</text>
+                    <text x="160" y="85" text-anchor="middle" fill="#856404" font-size="10">Lag → Exponential → Stationary → Death</text>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Growth Phases:</h5>
+                <ul class="list">
+                    <li><strong>Lag Phase:</strong> Cells adapt to new environment, no growth yet</li>
+                    <li><strong>Exponential Phase:</strong> Rapid cell division, maximum growth rate</li>
+                    <li><strong>Stationary Phase:</strong> Growth equals death, cell number constant</li>
+                    <li><strong>Death Phase:</strong> More cells die than grow, population declines</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> लैग चरण: कोशिकाएं नए वातावरण के अनुकूल होती हैं, अभी तक कोई वृद्धि नहीं। एक्सपोनेंशियल चरण: तीव्र कोशिका विभाजन, अधिकतम वृद्धि दर। स्थिर चरण: वृद्धि मृत्यु के बराबर, कोशिका संख्या स्थिर। मृत्यु चरण: अधिक कोशिकाएं मरती हैं, जनसंख्या घटती है
+                </div>
+            </div>
+
+            <h4>b) Heat Evolution (ऊष्मा विकास)</h4>
+            <p>
+                During microbial growth, cells produce heat as a byproduct of metabolic activities. This heat evolution must be controlled to maintain optimal temperature for growth.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सूक्ष्मजीव वृद्धि के दौरान, कोशिकाएं चयापचय गतिविधियों के उप-उत्पाद के रूप में ऊष्मा उत्पादित करती हैं। वृद्धि के लिए इष्टतम तापमान बनाए रखने के लिए इस ऊष्मा विकास को नियंत्रित किया जाना चाहिए।
+            </div>
+            <ul class="list">
+                <li>Heat is produced during respiration and metabolism</li>
+                <li>More active cells produce more heat</li>
+                <li>Cooling systems are needed in large fermenters</li>
+                <li>Heat evolution rate = Metabolic activity indicator</li>
+            </ul>
+
+            <h4>c) Effect of Environment (पर्यावरण का प्रभाव)</h4>
+            <p>
+                Environmental factors significantly affect microbial growth and product formation. Key factors include:
+            </p>
+
+            <div class="box">
+                <h5>pH (Acidity/Alkalinity)</h5>
+                <p>
+                    Each microorganism has an optimal pH range. Too acidic or too alkaline conditions can stop growth or kill cells.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> प्रत्येक सूक्ष्मजीव का एक इष्टतम pH सीमा होती है। बहुत अम्लीय या बहुत क्षारीय स्थितियां वृद्धि को रोक सकती हैं या कोशिकाओं को मार सकती हैं।
+                </div>
+                <ul class="list">
+                    <li>Bacteria: pH 6.5-7.5 (neutral)</li>
+                    <li>Yeast: pH 4.5-5.5 (slightly acidic)</li>
+                    <li>Fungi: pH 5.0-6.0 (slightly acidic)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Temperature (तापमान)</h5>
+                <p>
+                    Temperature affects enzyme activity and growth rate. Each organism has minimum, optimum, and maximum temperatures.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> तापमान एंजाइम गतिविधि और वृद्धि दर को प्रभावित करता है। प्रत्येक जीव का न्यूनतम, इष्टतम और अधिकतम तापमान होता है।
+                </div>
+                <ul class="list">
+                    <li>Psychrophiles: 0-20°C (cold-loving)</li>
+                    <li>Mesophiles: 20-45°C (moderate, most common)</li>
+                    <li>Thermophiles: 45-80°C (heat-loving)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Dissolved Oxygen (DO₂) (विलयित ऑक्सीजन)</h5>
+                <p>
+                    Oxygen is essential for aerobic microorganisms. Insufficient oxygen can limit growth, while too much can be wasteful.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> ऑक्सीजन एरोबिक सूक्ष्मजीवों के लिए आवश्यक है। अपर्याप्त ऑक्सीजन वृद्धि को सीमित कर सकती है, जबकि बहुत अधिक बर्बाद हो सकती है।
+                </div>
+                <ul class="list">
+                    <li>Measured as % saturation or mg/L</li>
+                    <li>Critical DO₂: Minimum level needed for growth</li>
+                    <li>Controlled by aeration rate and agitation speed</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>High Nutrient Concentration (उच्च पोषक तत्व सांद्रता)</h5>
+                <p>
+                    While nutrients are essential, too high concentrations can be inhibitory. This is called substrate inhibition.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> जबकि पोषक तत्व आवश्यक हैं, बहुत अधिक सांद्रता अवरोधक हो सकती है। इसे सब्सट्रेट इनहिबिशन कहा जाता है।
+                </div>
+                <ul class="list">
+                    <li>Can cause osmotic stress (water loss from cells)</li>
+                    <li>May inhibit enzyme activity</li>
+                    <li>Fed-batch fermentation helps avoid this problem</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Environmental Factors Effect Diagram</h4>
+                <svg width="100%" height="300" viewBox="0 0 700 300">
+                    <!-- Center: Microorganism -->
+                    <circle cx="350" cy="150" r="60" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+                    <text x="350" y="145" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Microorganism</text>
+                    <text x="350" y="165" text-anchor="middle" fill="white" font-size="12">(सूक्ष्मजीव)</text>
+                    
+                    <!-- pH -->
+                    <circle cx="150" cy="80" r="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                    <text x="150" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">pH</text>
+                    <line x1="190" y1="100" x2="300" y2="130" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow2)"/>
+                    
+                    <!-- Temperature -->
+                    <circle cx="550" cy="80" r="40" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="550" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Temp</text>
+                    <line x1="510" y1="100" x2="400" y2="130" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow2)"/>
+                    
+                    <!-- DO2 -->
+                    <circle cx="150" cy="220" r="40" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="150" y="225" text-anchor="middle" fill="white" font-size="14" font-weight="bold">DO₂</text>
+                    <line x1="190" y1="200" x2="300" y2="170" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow2)"/>
+                    
+                    <!-- Nutrients -->
+                    <circle cx="550" cy="220" r="40" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+                    <text x="550" y="220" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Nutrients</text>
+                    <text x="550" y="235" text-anchor="middle" fill="white" font-size="10">(पोषक)</text>
+                    <line x1="510" y1="200" x2="400" y2="170" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow2)"/>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 4: Media Formulation -->
+        <div class="section">
+            <h3>4. Media Formulation</h3>
+            
+            <p>
+                Media formulation is the process of designing the nutrient composition for optimal microbial growth and product formation. A well-formulated medium provides all necessary nutrients in the right proportions.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> मीडिया निर्माण इष्टतम सूक्ष्मजीव वृद्धि और उत्पाद निर्माण के लिए पोषक तत्व संरचना को डिजाइन करने की प्रक्रिया है। एक अच्छी तरह से तैयार किया गया माध्यम सही अनुपात में सभी आवश्यक पोषक तत्व प्रदान करता है।
+            </div>
+
+            <h4>Key Components of Fermentation Media:</h4>
+
+            <div class="box">
+                <h5>1. Carbon Source (कार्बन स्रोत)</h5>
+                <p>Provides energy and building blocks for cell components.</p>
+                <ul class="list">
+                    <li>Glucose, sucrose (sugars)</li>
+                    <li>Starch, cellulose (complex carbohydrates)</li>
+                    <li>Molasses (cheap industrial source)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>2. Nitrogen Source (नाइट्रोजन स्रोत)</h5>
+                <p>Needed for protein and nucleic acid synthesis.</p>
+                <ul class="list">
+                    <li>Ammonium salts (NH₄⁺)</li>
+                    <li>Nitrate (NO₃⁻)</li>
+                    <li>Peptone, yeast extract (organic sources)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>3. Minerals (खनिज)</h5>
+                <p>Essential for enzyme function and cell structure.</p>
+                <ul class="list">
+                    <li>Phosphorus (P) - for ATP and DNA</li>
+                    <li>Potassium (K) - for enzyme activation</li>
+                    <li>Magnesium (Mg) - for enzyme cofactor</li>
+                    <li>Trace elements: Fe, Zn, Cu, Mn</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>4. Vitamins and Growth Factors (विटामिन और वृद्धि कारक)</h5>
+                <p>Required in small amounts but essential for growth.</p>
+                <ul class="list">
+                    <li>B-complex vitamins</li>
+                    <li>Amino acids (for some organisms)</li>
+                    <li>Nucleic acid bases</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+                <h4>Media Formulation Process</h4>
+                <pre>
+    ┌─────────────────────────────┐
+    │   Media Formulation         │
+    │   (मीडिया निर्माण)           │
+    └──────────────┬──────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+        ▼                     ▼
+┌──────────────┐    ┌──────────────────┐
+│  Define      │    │  Select           │
+│  Requirements│    │  Components       │
+│              │    │                  │
+│ • Growth     │    │ • Carbon source  │
+│ • Product    │    │ • Nitrogen source│
+│ • Scale      │    │ • Minerals       │
+└──────┬───────┘    │ • Vitamins       │
+       │            └────────┬─────────┘
+       │                     │
+       └──────────┬──────────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  Optimize      │
+         │  Concentrations│
+         │                │
+         │ • Ratios       │
+         │ • pH           │
+         │ • Cost         │
+         └────────┬───────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  Test &        │
+         │  Validate      │
+         └────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 5: Kinetics of Thermal Death -->
+        <div class="section">
+            <h3>5. Kinetics of Thermal Death of Microorganisms</h3>
+            
+            <p>
+                Understanding how microorganisms die at high temperatures is crucial for designing effective sterilization processes. Thermal death kinetics helps determine the time and temperature needed to kill all microorganisms.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> उच्च तापमान पर सूक्ष्मजीवों के मरने की प्रक्रिया को समझना प्रभावी नसबंदी प्रक्रियाओं को डिजाइन करने के लिए महत्वपूर्ण है। थर्मल डेथ काइनेटिक्स सभी सूक्ष्मजीवों को मारने के लिए आवश्यक समय और तापमान निर्धारित करने में मदद करती है।
+            </div>
+
+            <h4>Key Parameters:</h4>
+
+            <div class="box">
+                <h5>D-value (Decimal Reduction Time)</h5>
+                <p>
+                    The time required at a specific temperature to reduce the microbial population by 90% (or 1 log cycle).
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> विशिष्ट तापमान पर सूक्ष्मजीव जनसंख्या को 90% (या 1 लॉग चक्र) तक कम करने के लिए आवश्यक समय।
+                </div>
+                <p style="margin-top: 10px;"><strong>Example:</strong> If D-value = 5 minutes at 121°C, it means:</p>
+                <ul class="list">
+                    <li>After 5 min: 10% survive (90% killed)</li>
+                    <li>After 10 min: 1% survive (99% killed)</li>
+                    <li>After 15 min: 0.1% survive (99.9% killed)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Z-value (Temperature Coefficient)</h5>
+                <p>
+                    The temperature change needed to change the D-value by tenfold (10×). It shows how sensitive microorganisms are to temperature changes.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> D-मूल्य को दस गुना (10×) बदलने के लिए आवश्यक तापमान परिवर्तन। यह दिखाता है कि सूक्ष्मजीव तापमान परिवर्तनों के प्रति कितने संवेदनशील हैं।
+                </div>
+                <p style="margin-top: 10px;"><strong>Example:</strong> If Z-value = 10°C:</p>
+                <ul class="list">
+                    <li>Increasing temperature by 10°C reduces D-value by 10×</li>
+                    <li>If D = 10 min at 110°C, then D = 1 min at 120°C</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>F-value (Lethality Value)</h5>
+                <p>
+                    The total time required to achieve a specified reduction in microbial population at a given temperature. It's the cumulative lethal effect.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> दिए गए तापमान पर सूक्ष्मजीव जनसंख्या में निर्दिष्ट कमी प्राप्त करने के लिए आवश्यक कुल समय। यह संचयी घातक प्रभाव है।
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h4>Thermal Death Curve</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Axes -->
+                    <line x1="50" y1="50" x2="50" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="50" y1="350" x2="650" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Y-axis label -->
+                    <text x="20" y="200" text-anchor="middle" fill="#2c3e50" font-size="14" transform="rotate(-90 20 200)">
+                        Log Survivors (लॉग जीवित)
+                    </text>
+                    
+                    <!-- X-axis label -->
+                    <text x="350" y="380" text-anchor="middle" fill="#2c3e50" font-size="14">
+                        Time (minutes) (समय - मिनट)
+                    </text>
+                    
+                    <!-- Death curve (exponential decay) -->
+                    <path d="M 100 100 L 150 130 L 200 160 L 250 190 L 300 220 L 350 250 L 400 280 L 450 310 L 500 330 L 550 340 L 600 345" 
+                          stroke="#e74c3c" 
+                          stroke-width="4" 
+                          fill="none"/>
+                    
+                    <!-- D-value lines -->
+                    <line x1="100" y1="100" x2="200" y2="190" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="150" y="140" text-anchor="middle" fill="#3498db" font-size="12" font-weight="bold">D-value</text>
+                    
+                    <line x1="200" y1="190" x2="300" y2="280" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="250" y="230" text-anchor="middle" fill="#3498db" font-size="12" font-weight="bold">D-value</text>
+                    
+                    <!-- Labels -->
+                    <text x="100" y="90" text-anchor="middle" fill="#2c3e50" font-size="12">10⁶</text>
+                    <text x="200" y="180" text-anchor="middle" fill="#2c3e50" font-size="12">10⁵</text>
+                    <text x="300" y="270" text-anchor="middle" fill="#2c3e50" font-size="12">10⁴</text>
+                    <text x="400" y="290" text-anchor="middle" fill="#2c3e50" font-size="12">10³</text>
+                    
+                    <!-- Title -->
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">
+                        Thermal Death Kinetics at Constant Temperature
+                    </text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 6: Sterilization Methods -->
+        <div class="section">
+            <h3>6. Batch and Continuous Sterilization</h3>
+            
+            <p>
+                Sterilization is the process of eliminating all viable microorganisms from equipment and media. Two main methods are used in fermentation: batch and continuous sterilization.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> नसबंदी उपकरण और माध्यम से सभी व्यवहार्य सूक्ष्मजीवों को समाप्त करने की प्रक्रिया है। किण्वन में दो मुख्य विधियों का उपयोग किया जाता है: बैच और सतत नसबंदी।
+            </div>
+
+            <div class="box">
+                <h5>a) Batch Sterilization (बैच नसबंदी)</h5>
+                <p>
+                    In batch sterilization, the entire volume of medium is sterilized in a closed vessel (like an autoclave) at a specific temperature and time.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> बैच नसबंदी में, माध्यम की पूरी मात्रा को एक बंद पात्र (जैसे ऑटोक्लेव) में विशिष्ट तापमान और समय पर नसबंद किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Process Steps:</strong></p>
+                <ul class="list">
+                    <li>1. Load medium into vessel</li>
+                    <li>2. Heat to sterilization temperature (usually 121°C)</li>
+                    <li>3. Hold at temperature for required time (usually 15-30 min)</li>
+                    <li>4. Cool down to working temperature</li>
+                    <li>5. Transfer to fermenter</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Advantages:</strong> Simple, reliable, suitable for small-medium scale</p>
+                <p><strong>Disadvantages:</strong> Long heating/cooling time, nutrient degradation, high energy use</p>
+            </div>
+
+            <div class="box">
+                <h5>b) Continuous Sterilization (सतत नसबंदी)</h5>
+                <p>
+                    In continuous sterilization, the medium flows through a heat exchanger system, is rapidly heated, held at sterilization temperature briefly, then cooled quickly.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सतत नसबंदी में, माध्यम एक हीट एक्सचेंजर सिस्टम के माध्यम से बहता है, तेजी से गर्म किया जाता है, नसबंदी तापमान पर थोड़े समय के लिए रखा जाता है, फिर जल्दी ठंडा किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Process Steps:</strong></p>
+                <ul class="list">
+                    <li>1. Medium pumped continuously</li>
+                    <li>2. Preheated in heat exchanger</li>
+                    <li>3. Heated to sterilization temp (140-150°C)</li>
+                    <li>4. Held in holding coil (2-5 minutes)</li>
+                    <li>5. Cooled in heat exchanger</li>
+                    <li>6. Sent directly to fermenter</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Advantages:</strong> Fast, energy efficient, less nutrient loss, suitable for large scale</p>
+                <p><strong>Disadvantages:</strong> Complex equipment, requires precise control</p>
+            </div>
+
+            <div class="diagram">
+                <h4>Comparison: Batch vs Continuous Sterilization</h4>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Batch Sterilization</th>
+                        <th>Continuous Sterilization</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Process</strong></td>
+                        <td>All at once</td>
+                        <td>Continuous flow</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Temperature</strong></td>
+                        <td>121°C</td>
+                        <td>140-150°C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time</strong></td>
+                        <td>15-30 minutes</td>
+                        <td>2-5 minutes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heating/Cooling</strong></td>
+                        <td>Slow</td>
+                        <td>Fast</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nutrient Loss</strong></td>
+                        <td>High</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Energy Use</strong></td>
+                        <td>High</td>
+                        <td>Low (heat recovery)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scale</strong></td>
+                        <td>Small-Medium</td>
+                        <td>Large</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="flowchart">
+                <h4>Sterilization Methods Flowchart</h4>
+                <pre>
+    ┌─────────────────────────────────────┐
+    │      Sterilization Required           │
+    │      (नसबंदी आवश्यक)                  │
+    └──────────────┬──────────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+        ▼                     ▼
+┌──────────────┐    ┌──────────────────┐
+│   BATCH      │    │   CONTINUOUS     │
+│              │    │                  │
+│ • Load all   │    │ • Pump medium    │
+│ • Heat to    │    │ • Heat exchanger │
+│   121°C      │    │ • 140-150°C      │
+│ • Hold 15-30 │    │ • Hold 2-5 min   │
+│   minutes    │    │ • Cool quickly    │
+│ • Cool down  │    │ • Direct to       │
+│ • Transfer   │    │   fermenter      │
+└──────┬───────┘    └────────┬─────────┘
+       │                     │
+       └──────────┬──────────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  Sterile       │
+         │  Medium Ready  │
+         │  (नसबंद माध्यम)│
+         └────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 5px solid white;">
+            <h3 style="color: white; border-bottom: 2px solid white;">📝 Summary (सारांश)</h3>
+            <ul class="list" style="color: white;">
+                <li><strong>Shake flask cultures</strong> are simple methods for small-scale microbial growth with aeration (शेक फ्लास्क कल्चर वायुवीकरण के साथ छोटे पैमाने की सूक्ष्मजीव वृद्धि के लिए सरल विधियां हैं)</li>
+                <li><strong>Batch fermentation</strong> is closed system; <strong>fed-batch</strong> adds nutrients during process; <strong>continuous</strong> maintains steady state (बैच किण्वन बंद प्रणाली है; फेड-बैच प्रक्रिया के दौरान पोषक तत्व जोड़ता है; सतत स्थिर स्थिति बनाए रखता है)</li>
+                <li><strong>Growth kinetics</strong> shows lag, exponential, stationary, and death phases (वृद्धि गतिकी लैग, एक्सपोनेंशियल, स्थिर और मृत्यु चरण दिखाती है)</li>
+                <li><strong>Environmental factors</strong> (pH, temperature, DO₂, nutrients) significantly affect growth (पर्यावरणीय कारक (pH, तापमान, DO₂, पोषक तत्व) वृद्धि को महत्वपूर्ण रूप से प्रभावित करते हैं)</li>
+                <li><strong>Media formulation</strong> requires proper balance of carbon, nitrogen, minerals, and vitamins (मीडिया निर्माण में कार्बन, नाइट्रोजन, खनिज और विटामिन का उचित संतुलन आवश्यक है)</li>
+                <li><strong>Thermal death kinetics</strong> uses D-value, Z-value, and F-value to design sterilization (थर्मल डेथ काइनेटिक्स नसबंदी डिजाइन करने के लिए D-मूल्य, Z-मूल्य और F-मूल्य का उपयोग करती है)</li>
+                <li><strong>Batch sterilization</strong> is simple but slow; <strong>continuous sterilization</strong> is fast and efficient (बैच नसबंदी सरल लेकिन धीमी है; सतत नसबंदी तेज और कुशल है)</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit1.html" class="prev">← Previous: Unit I</a>
+        </div>
+    </div>
+</body>
+</html>
