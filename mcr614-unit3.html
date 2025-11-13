@@ -324,6 +324,35 @@
                 <p><strong>Disadvantages:</strong> High energy consumption, shear stress on cells</p>
             </div>
 
+            <div class="diagram">
+                <h4>Stirred Tank Fermentor Diagram</h4>
+                <svg width="100%" height="400" viewBox="0 0 500 400">
+                    <!-- Tank -->
+                    <rect x="150" y="50" width="200" height="280" fill="#ecf0f1" stroke="#34495e" stroke-width="3" rx="5"/>
+                    <!-- Impeller -->
+                    <circle cx="250" cy="200" r="30" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <line x1="250" y1="50" x2="250" y2="350" stroke="#34495e" stroke-width="3"/>
+                    <!-- Blades -->
+                    <rect x="280" y="195" width="20" height="10" fill="#2980b9"/>
+                    <rect x="200" y="195" width="20" height="10" fill="#2980b9"/>
+                    <!-- Sparger -->
+                    <circle cx="250" cy="320" r="5" fill="#27ae60"/>
+                    <line x1="250" y1="320" x2="250" y2="330" stroke="#27ae60" stroke-width="2"/>
+                    <!-- Bubbles -->
+                    <circle cx="240" cy="300" r="3" fill="#3498db" opacity="0.6"/>
+                    <circle cx="260" cy="290" r="2" fill="#3498db" opacity="0.6"/>
+                    <!-- Baffles -->
+                    <rect x="145" y="100" width="5" height="80" fill="#95a5a6"/>
+                    <rect x="350" y="100" width="5" height="80" fill="#95a5a6"/>
+                    <!-- Labels -->
+                    <text x="250" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Stirred Tank Fermentor</text>
+                    <text x="250" y="45" text-anchor="middle" fill="#7f8c8d" font-size="12">(स्टर्ड टैंक फरमेंटर)</text>
+                    <text x="320" y="210" text-anchor="middle" fill="#2980b9" font-size="12" font-weight="bold">Impeller</text>
+                    <text x="250" y="340" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">Sparger</text>
+                    <text x="120" y="140" text-anchor="middle" fill="#95a5a6" font-size="11">Baffle</text>
+                </svg>
+            </div>
+
             <div class="box">
                 <h5>b) Airlift Fermentor (एयरलिफ्ट फरमेंटर)</h5>
                 <p>
@@ -343,6 +372,48 @@
                 <p><strong>Disadvantages:</strong> Limited mixing, lower oxygen transfer</p>
             </div>
 
+            <div class="diagram">
+                <h4>Airlift Fermentor Diagram</h4>
+                <svg width="100%" height="400" viewBox="0 0 500 400">
+                    <!-- Outer vessel -->
+                    <rect x="150" y="50" width="200" height="300" fill="#ecf0f1" stroke="#34495e" stroke-width="3" rx="5"/>
+                    <!-- Riser zone -->
+                    <rect x="200" y="50" width="80" height="300" fill="#e8f4f8" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+                    <!-- Downcomer zones -->
+                    <rect x="150" y="50" width="50" height="300" fill="#fff3cd" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+                    <rect x="280" y="50" width="70" height="300" fill="#fff3cd" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+                    <!-- Air bubbles in riser -->
+                    <circle cx="240" cy="320" r="4" fill="#3498db"/>
+                    <circle cx="240" cy="280" r="5" fill="#3498db"/>
+                    <circle cx="240" cy="240" r="4" fill="#3498db"/>
+                    <circle cx="240" cy="200" r="5" fill="#3498db"/>
+                    <circle cx="240" cy="160" r="4" fill="#3498db"/>
+                    <circle cx="240" cy="120" r="5" fill="#3498db"/>
+                    <!-- Circulation arrows -->
+                    <path d="M 240 320 L 240 100" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowUp)"/>
+                    <path d="M 175 100 L 175 320" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowDown)"/>
+                    <path d="M 315 100 L 315 320" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowDown)"/>
+                    <!-- Sparger -->
+                    <line x1="200" y1="330" x2="280" y2="330" stroke="#27ae60" stroke-width="3"/>
+                    <circle cx="240" cy="330" r="3" fill="#27ae60"/>
+                    <!-- Labels -->
+                    <text x="250" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Airlift Fermentor</text>
+                    <text x="250" y="45" text-anchor="middle" fill="#7f8c8d" font-size="12">(एयरलिफ्ट फरमेंटर)</text>
+                    <text x="240" y="80" text-anchor="middle" fill="#3498db" font-size="12" font-weight="bold">Riser</text>
+                    <text x="240" y="95" text-anchor="middle" fill="#3498db" font-size="10">(राइजर)</text>
+                    <text x="175" y="80" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Downcomer</text>
+                    <text x="315" y="80" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Downcomer</text>
+                    <defs>
+                        <marker id="arrowUp" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                        <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
             <div class="box">
                 <h5>c) Hollow Fiber Bioreactor (होलो फाइबर बायोरिएक्टर)</h5>
                 <p>
@@ -354,6 +425,45 @@
                 <p style="margin-top: 15px;"><strong>Applications:</strong> Animal cell culture, high-value products, continuous operation</p>
                 <p><strong>Advantages:</strong> High cell density, efficient nutrient exchange, continuous operation</p>
                 <p><strong>Disadvantages:</strong> Complex, expensive, difficult to scale up</p>
+            </div>
+
+            <div class="diagram">
+                <h4>Hollow Fiber Bioreactor Diagram</h4>
+                <svg width="100%" height="300" viewBox="0 0 500 300">
+                    <!-- Fiber bundle -->
+                    <rect x="200" y="50" width="100" height="200" fill="#e8f4f8" stroke="#3498db" stroke-width="2"/>
+                    <!-- Hollow fibers (cross section) -->
+                    <circle cx="220" cy="100" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="250" cy="100" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="280" cy="100" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="220" cy="150" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="250" cy="150" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="280" cy="150" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="220" cy="200" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="250" cy="200" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <circle cx="280" cy="200" r="8" fill="white" stroke="#3498db" stroke-width="2"/>
+                    <!-- Cells on outside -->
+                    <circle cx="230" cy="100" r="3" fill="#27ae60"/>
+                    <circle cx="260" cy="100" r="3" fill="#27ae60"/>
+                    <circle cx="270" cy="150" r="3" fill="#27ae60"/>
+                    <circle cx="240" cy="200" r="3" fill="#27ae60"/>
+                    <!-- Nutrient flow arrows -->
+                    <path d="M 220 80 L 220 60" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowNutrient)"/>
+                    <path d="M 250 80 L 250 60" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowNutrient)"/>
+                    <path d="M 280 80 L 280 60" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowNutrient)"/>
+                    <!-- Labels -->
+                    <text x="250" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Hollow Fiber Bioreactor</text>
+                    <text x="250" y="45" text-anchor="middle" fill="#7f8c8d" font-size="12">(होलो फाइबर बायोरिएक्टर)</text>
+                    <text x="150" y="70" text-anchor="middle" fill="#f39c12" font-size="11">Nutrients In</text>
+                    <text x="150" y="85" text-anchor="middle" fill="#f39c12" font-size="10">(पोषक तत्व)</text>
+                    <text x="350" y="150" text-anchor="middle" fill="#27ae60" font-size="11">Cells</text>
+                    <text x="350" y="165" text-anchor="middle" fill="#27ae60" font-size="10">(कोशिकाएं)</text>
+                    <defs>
+                        <marker id="arrowNutrient" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f39c12"/>
+                        </marker>
+                    </defs>
+                </svg>
             </div>
 
             <div class="box">
@@ -373,6 +483,36 @@
                 </ul>
                 <p style="margin-top: 15px;"><strong>Advantages:</strong> Reusable cells, continuous operation, high productivity</p>
                 <p><strong>Disadvantages:</strong> Mass transfer limitations, cell leakage possible</p>
+            </div>
+
+            <div class="diagram">
+                <h4>Immobilized Cell Reactor Diagram</h4>
+                <svg width="100%" height="300" viewBox="0 0 500 300">
+                    <!-- Support matrix -->
+                    <rect x="150" y="100" width="200" height="150" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="10"/>
+                    <!-- Cells immobilized -->
+                    <circle cx="180" cy="140" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <circle cx="220" cy="160" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <circle cx="260" cy="150" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <circle cx="300" cy="180" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <circle cx="200" cy="200" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <circle cx="280" cy="210" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <!-- Medium flow -->
+                    <path d="M 100 175 L 150 175" stroke="#3498db" stroke-width="3" marker-end="url(#arrowFlow)"/>
+                    <path d="M 350 175 L 400 175" stroke="#3498db" stroke-width="3" marker-end="url(#arrowFlow)"/>
+                    <!-- Labels -->
+                    <text x="250" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Immobilized Cell Reactor</text>
+                    <text x="250" y="45" text-anchor="middle" fill="#7f8c8d" font-size="12">(इम्मोबिलाइज्ड सेल रिएक्टर)</text>
+                    <text x="250" y="90" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">Support Matrix</text>
+                    <text x="250" y="105" text-anchor="middle" fill="#f39c12" font-size="10">(सहायक मैट्रिक्स)</text>
+                    <text x="80" y="180" text-anchor="middle" fill="#3498db" font-size="11">Medium In</text>
+                    <text x="420" y="180" text-anchor="middle" fill="#3498db" font-size="11">Product Out</text>
+                    <defs>
+                        <marker id="arrowFlow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#3498db"/>
+                        </marker>
+                    </defs>
+                </svg>
             </div>
 
             <div class="diagram">
@@ -471,6 +611,43 @@
             <div class="hindi">
                 <strong>हिंदी:</strong> PID नियंत्रक, स्वचालित फीड सिस्टम, pH नियंत्रण, तापमान नियंत्रण, एंटीफोम नियंत्रण
             </div>
+
+            <div class="flowchart">
+                <h4>Instrumentation and Control System Flowchart</h4>
+                <pre>
+    ┌─────────────────────────────────┐
+    │   Fermentor System               │
+    │   (फरमेंटर प्रणाली)              │
+    └──────────────┬──────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+        ▼                     ▼
+┌──────────────┐    ┌──────────────────┐
+│   SENSORS    │    │   CONTROLLERS    │
+│              │    │                  │
+│ • Temperature│    │ • PID Controller │
+│ • pH         │    │ • Feed Control   │
+│ • DO₂        │    │ • pH Control     │
+│ • Pressure   │    │ • Temp Control   │
+│ • Agitation  │    │ • Antifoam       │
+└──────┬───────┘    └────────┬─────────┘
+       │                     │
+       │  Signals            │  Commands
+       │                     │
+       └──────────┬──────────┘
+                  │
+                  ▼
+         ┌────────────────┐
+         │  ACTUATORS      │
+         │                 │
+         │ • Pumps         │
+         │ • Valves        │
+         │ • Heaters       │
+         │ • Coolers       │
+         └────────────────┘
+                </pre>
+            </div>
         </div>
 
         <!-- Section 3: Aeration and Agitation - Oxygen Transfer -->
@@ -526,6 +703,52 @@
             <div class="box">
                 <h5>Medium Properties:</h5>
                 <p>Viscosity, surface tension, and composition affect oxygen solubility and transfer.</p>
+            </div>
+
+            <div class="diagram">
+                <h4>Oxygen Transfer Diagram</h4>
+                <svg width="100%" height="350" viewBox="0 0 600 350">
+                    <!-- Air input -->
+                    <rect x="50" y="50" width="100" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="100" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Air/O₂</text>
+                    <text x="100" y="125" text-anchor="middle" fill="#2c3e50" font-size="11">(हवा/ऑक्सीजन)</text>
+                    <!-- Arrow to sparger -->
+                    <path d="M 150 80 L 200 80" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowO2)"/>
+                    <!-- Sparger -->
+                    <rect x="200" y="60" width="80" height="40" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="240" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Sparger</text>
+                    <!-- Bubbles -->
+                    <circle cx="220" cy="130" r="8" fill="#3498db" opacity="0.7"/>
+                    <circle cx="240" cy="120" r="10" fill="#3498db" opacity="0.7"/>
+                    <circle cx="260" cy="130" r="8" fill="#3498db" opacity="0.7"/>
+                    <circle cx="240" cy="150" r="6" fill="#3498db" opacity="0.7"/>
+                    <!-- Agitation -->
+                    <circle cx="400" cy="200" r="40" fill="#e8f4f8" stroke="#34495e" stroke-width="2"/>
+                    <line x1="400" y1="160" x2="400" y2="240" stroke="#34495e" stroke-width="2"/>
+                    <line x1="360" y1="200" x2="440" y2="200" stroke="#34495e" stroke-width="2"/>
+                    <text x="400" y="195" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Agitation</text>
+                    <!-- Dissolved O2 -->
+                    <rect x="500" y="150" width="80" height="100" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="540" y="190" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Dissolved</text>
+                    <text x="540" y="210" text-anchor="middle" fill="white" font-size="12" font-weight="bold">O₂</text>
+                    <text x="540" y="265" text-anchor="middle" fill="#2c3e50" font-size="10">(विलयित ऑक्सीजन)</text>
+                    <!-- Microorganisms -->
+                    <circle cx="540" cy="300" r="15" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+                    <text x="540" y="305" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Cells</text>
+                    <!-- Arrows -->
+                    <path d="M 300 140 L 360 180" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowO2)"/>
+                    <path d="M 440 200 L 500 200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowO2)"/>
+                    <path d="M 540 250 L 540 285" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowO2)"/>
+                    <!-- Formula box -->
+                    <rect x="200" y="280" width="200" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="300" y="305" text-anchor="middle" fill="#856404" font-size="14" font-weight="bold">OTR = kₗa × (C* - Cₗ)</text>
+                    <text x="300" y="325" text-anchor="middle" fill="#856404" font-size="12">Oxygen Transfer Rate</text>
+                    <defs>
+                        <marker id="arrowO2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
             </div>
 
             <div class="flowchart">
@@ -593,6 +816,35 @@
                 <p><strong>Examples:</strong> Water, simple salt solutions, most bacterial broths</p>
             </div>
 
+            <div class="diagram">
+                <h4>Newtonian vs Non-Newtonian Fluids</h4>
+                <svg width="100%" height="350" viewBox="0 0 600 350">
+                    <!-- Axes -->
+                    <line x1="50" y1="50" x2="50" y2="300" stroke="#2c3e50" stroke-width="2"/>
+                    <line x1="50" y1="300" x2="550" y2="300" stroke="#2c3e50" stroke-width="2"/>
+                    <!-- Y-axis label -->
+                    <text x="20" y="175" text-anchor="middle" fill="#2c3e50" font-size="12" transform="rotate(-90 20 175)">
+                        Shear Stress (τ)
+                    </text>
+                    <!-- X-axis label -->
+                    <text x="300" y="330" text-anchor="middle" fill="#2c3e50" font-size="12">
+                        Shear Rate (γ)
+                    </text>
+                    <!-- Newtonian (straight line) -->
+                    <line x1="100" y1="250" x2="500" y2="100" stroke="#27ae60" stroke-width="4"/>
+                    <text x="520" y="105" text-anchor="start" fill="#27ae60" font-size="14" font-weight="bold">Newtonian</text>
+                    <text x="520" y="120" text-anchor="start" fill="#7f8c8d" font-size="11">(न्यूटोनियन)</text>
+                    <!-- Non-Newtonian (curved) -->
+                    <path d="M 100 280 Q 200 270 300 200 Q 400 150 500 120" stroke="#e74c3c" stroke-width="4" fill="none"/>
+                    <text x="520" y="125" text-anchor="start" fill="#e74c3c" font-size="14" font-weight="bold">Non-Newtonian</text>
+                    <text x="520" y="140" text-anchor="start" fill="#7f8c8d" font-size="11">(गैर-न्यूटोनियन)</text>
+                    <!-- Title -->
+                    <text x="300" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">
+                        Rheology Comparison
+                    </text>
+                </svg>
+            </div>
+
             <div class="box">
                 <h5>b) Non-Newtonian Fluids (गैर-न्यूटोनियन तरल पदार्थ)</h5>
                 <p>
@@ -654,6 +906,42 @@
                     <li><strong>Natural oils:</strong> Soybean oil, corn oil</li>
                 </ul>
             </div>
+
+            <div class="flowchart">
+                <h4>Foam Control Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Foam Detection    │
+    │   (फोम पहचान)        │
+    │   Sensor            │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Foam Level High?  │
+    │   (फोम स्तर अधिक?)   │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        YES           NO
+        │             │
+        ▼             ▼
+┌──────────────┐  ┌──────────────┐
+│ Add Antifoam │  │  Continue    │
+│              │  │  Monitoring  │
+│ • Silicone   │  │              │
+│ • Polyglycol │  │              │
+│ • Natural oil│  │              │
+└──────────────┘  └──────────────┘
+                </pre>
+            </div>
         </div>
 
         <!-- Section 5: Industrial Production - Part A -->
@@ -686,6 +974,49 @@
                 </ul>
             </div>
 
+            <div class="flowchart">
+                <h4>Antibiotic Production Flowchart</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Inoculum          │
+    │   (सीड कल्चर)        │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Medium Prep       │
+    │   (माध्यम तैयारी)    │
+    │   • Carbon source   │
+    │   • Nitrogen        │
+    │   • Precursors      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Fed-batch       │
+    │   • 5-7 days        │
+    │   • 25-27°C         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Recovery          │
+    │   (पुनर्प्राप्ति)    │
+    │   • Filtration      │
+    │   • Extraction      │
+    │   • Purification    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Final Product     │
+    │   (अंतिम उत्पाद)    │
+    └─────────────────────┘
+                </pre>
+            </div>
+
             <div class="box">
                 <h5>Rifamycin (रिफामाइसिन)</h5>
                 <p>
@@ -714,6 +1045,43 @@
                     <li>Fermentation: Submerged, 5-14 days, 30°C</li>
                     <li>Recovery: Precipitation with Ca(OH)₂, filtration</li>
                 </ul>
+            </div>
+
+            <div class="flowchart">
+                <h4>Citric Acid Production</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Aspergillus niger │
+    │   (कवक)              │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Medium            │
+    │   • Molasses        │
+    │   • Low pH (2-3)    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   • 5-14 days       │
+    │   • 30°C            │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Recovery          │
+    │   • Add Ca(OH)₂     │
+    │   • Precipitate     │
+    │   • Filter          │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Citric Acid       │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <div class="box">
@@ -756,6 +1124,51 @@
                 </ul>
             </div>
 
+            <div class="flowchart">
+                <h4>Ethanol Production Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Raw Material      │
+    │   (कच्चा माल)        │
+    │   • Sugarcane       │
+    │   • Corn            │
+    │   • Wheat           │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Pretreatment      │
+    │   (पूर्व-उपचार)      │
+    │   • Milling         │
+    │   • Cooking         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Yeast           │
+    │   • Anaerobic       │
+    │   • 30-35°C         │
+    │   • 48-72 hours      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Distillation      │
+    │   (आसवन)             │
+    │   • Separate        │
+    │   • Concentrate     │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Ethanol           │
+    │   (इथेनॉल)           │
+    └─────────────────────┘
+                </pre>
+            </div>
+
             <h4>d) Enzymes (एंजाइम)</h4>
 
             <div class="box">
@@ -781,6 +1194,49 @@
             <div class="box">
                 <h5>Cellulases (सेल्युलेज)</h5>
                 <p>Break down cellulose. Used in biofuel production, textile. Produced by Trichoderma, Aspergillus.</p>
+            </div>
+
+            <div class="flowchart">
+                <h4>Enzyme Production Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Microorganism     │
+    │   (सूक्ष्मजीव)       │
+    │   • Bacteria        │
+    │   • Fungi           │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Submerged       │
+    │   • Solid state     │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Enzyme Release    │
+    │   (एंजाइम मुक्ति)    │
+    │   • Extracellular   │
+    │   • Intracellular   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Recovery          │
+    │   (पुनर्प्राप्ति)    │
+    │   • Filtration      │
+    │   • Concentration   │
+    │   • Purification    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Enzyme Product    │
+    │   (एंजाइम उत्पाद)   │
+    └─────────────────────┘
+                </pre>
             </div>
         </div>
 
@@ -810,6 +1266,44 @@
                     <strong>हिंदी:</strong> Corynebacterium glutamicum द्वारा उत्पादित। आवश्यक अमीनो एसिड, पशु आहार में उपयोग किया जाता है।
                 </div>
                 <p style="margin-top: 15px;"><strong>Production:</strong> Fed-batch, high glucose, threonine and methionine limitation</p>
+            </div>
+
+            <div class="flowchart">
+                <h4>Amino Acid Production</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Corynebacterium   │
+    │   glutamicum        │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Medium            │
+    │   • Glucose         │
+    │   • Limited biotin  │
+    │   • Precursors      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fed-Batch         │
+    │   Fermentation      │
+    │   (फेड-बैच किण्वन)   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Recovery          │
+    │   • Ion exchange    │
+    │   • Crystallization │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Amino Acid        │
+    │   (Glutamic/Lysine) │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <h4>f) Vitamins (विटामिन)</h4>
@@ -853,6 +1347,40 @@
                 </ul>
             </div>
 
+            <div class="flowchart">
+                <h4>Steroid Transformation Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Starting Steroid  │
+    │   (प्रारंभिक स्टेरॉयड)│
+    │   (e.g., Progesterone)│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Microorganism     │
+    │   (सूक्ष्मजीव)       │
+    │   • Rhizopus        │
+    │   • Specific enzyme │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Biotransformation│
+    │   (जैव परिवर्तन)    │
+    │   • Add OH group    │
+    │   • Specific position│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Product Steroid   │
+    │   (उत्पाद स्टेरॉयड)  │
+    │   (e.g., Cortisone)  │
+    └─────────────────────┘
+                </pre>
+            </div>
+
             <h4>h) Biopesticides (जैव कीटनाशक)</h4>
             <div class="box">
                 <h5>Microbial Pesticides</h5>
@@ -868,6 +1396,40 @@
                     <li><strong>Beauveria bassiana:</strong> Fungal biopesticide</li>
                     <li><strong>Baculoviruses:</strong> Viral biopesticides</li>
                 </ul>
+            </div>
+
+            <div class="flowchart">
+                <h4>Biopesticide Production</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Microorganism     │
+    │   (सूक्ष्मजीव)       │
+    │   • B. thuringiensis│
+    │   • Beauveria       │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Produce toxin   │
+    │   • Spore formation │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Formulation       │
+    │   (निर्माण)          │
+    │   • Drying          │
+    │   • Packaging       │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Biopesticide      │
+    │   (जैव कीटनाशक)     │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <h4>i) Fermented Food Beverages (किण्वित खाद्य पेय)</h4>
@@ -889,6 +1451,49 @@
                 </ul>
             </div>
 
+            <div class="flowchart">
+                <h4>Fermented Beverage Production</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Raw Material      │
+    │   (कच्चा माल)        │
+    │   • Grapes (wine)   │
+    │   • Barley (beer)   │
+    │   • Milk (yogurt)   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Preparation       │
+    │   (तैयारी)           │
+    │   • Crushing        │
+    │   • Mashing         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Yeast/Bacteria  │
+    │   • Anaerobic       │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Maturation        │
+    │   (परिपक्वता)        │
+    │   • Aging           │
+    │   • Flavor develop  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Final Product     │
+    │   (अंतिम उत्पाद)    │
+    └─────────────────────┘
+                </pre>
+            </div>
+
             <h4>j) Biopolymers (जैव पॉलिमर)</h4>
             <div class="box">
                 <h5>Microbial Polymers</h5>
@@ -905,6 +1510,48 @@
                     <li><strong>Xanthan Gum:</strong> Produced by Xanthomonas, food thickener</li>
                     <li><strong>Dextran:</strong> Produced by Leuconostoc, used in medical applications</li>
                 </ul>
+            </div>
+
+            <div class="flowchart">
+                <h4>Biopolymer Production</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Microorganism     │
+    │   (सूक्ष्मजीव)       │
+    │   • Bacteria        │
+    │   • Fungi           │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Produce polymer │
+    │   • Accumulate      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Extraction        │
+    │   (निष्कर्षण)        │
+    │   • Cell disruption │
+    │   • Solvent extract │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Purification      │
+    │   (शुद्धिकरण)        │
+    │   • Precipitation   │
+    │   • Drying          │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Biopolymer        │
+    │   (जैव पॉलिमर)       │
+    └─────────────────────┘
+                </pre>
             </div>
         </div>
 
