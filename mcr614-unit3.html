@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-614 Unit 3 - Microbial Biotechnology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr614-unit1.html">Unit I</a>
+            <a href="mcr614-unit2.html">Unit II</a>
+            <a href="mcr614-unit3.html" class="active">Unit III</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔬 MCR-614: Microbial Biotechnology</h1>
+            <h2>UNIT III - Fermentor Design & Industrial Production</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit2.html" class="prev">← Previous: Unit II</a>
+        </div>
+
+        <!-- Section 1: Fermentor Design -->
+        <div class="section">
+            <h3>1. Fermentor Design</h3>
+            
+            <p>
+                A fermentor (or bioreactor) is a vessel designed to support the growth of microorganisms under controlled conditions. Different types of fermentors are used based on the specific requirements of the process.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> एक फरमेंटर (या बायोरिएक्टर) एक पात्र है जो नियंत्रित परिस्थितियों में सूक्ष्मजीवों के विकास का समर्थन करने के लिए डिज़ाइन किया गया है। प्रक्रिया की विशिष्ट आवश्यकताओं के आधार पर विभिन्न प्रकार के फरमेंटर का उपयोग किया जाता है।
+            </div>
+
+            <div class="box">
+                <h5>a) Stirred Tank Fermentor (स्टर्ड टैंक फरमेंटर)</h5>
+                <p>
+                    The most common type of fermentor, consisting of a cylindrical vessel with mechanical agitation provided by impellers mounted on a central shaft.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सबसे आम प्रकार का फरमेंटर, जिसमें एक केंद्रीय शाफ्ट पर लगे इम्पेलर द्वारा प्रदान किए गए यांत्रिक आंदोलन के साथ एक बेलनाकार पात्र होता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Key Components:</strong></p>
+                <ul class="list">
+                    <li>Vessel (tank) - holds the culture medium</li>
+                    <li>Impeller - mixes the medium and provides agitation</li>
+                    <li>Sparger - introduces air/oxygen into the medium</li>
+                    <li>Baffles - prevent vortex formation and improve mixing</li>
+                    <li>Cooling jacket - maintains temperature</li>
+                    <li>Probes - monitor pH, temperature, DO₂</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Advantages:</strong> Versatile, good mixing, easy to scale up</p>
+                <p><strong>Disadvantages:</strong> High energy consumption, shear stress on cells</p>
+            </div>
+
+            <div class="box">
+                <h5>b) Airlift Fermentor (एयरलिफ्ट फरमेंटर)</h5>
+                <p>
+                    Uses air bubbles to circulate the medium without mechanical agitation. The vessel is divided into riser (where air is sparged) and downcomer zones.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> यांत्रिक आंदोलन के बिना माध्यम को परिचालित करने के लिए हवा के बुलबुले का उपयोग करता है। पात्र को राइजर (जहां हवा स्पार्ज की जाती है) और डाउनकॉमर जोन में विभाजित किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>How it works:</strong></p>
+                <ul class="list">
+                    <li>Air is sparged at the bottom of riser zone</li>
+                    <li>Bubbles reduce density, causing upward flow</li>
+                    <li>In downcomer, bubbles escape, density increases</li>
+                    <li>Density difference creates circulation</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Advantages:</strong> Low energy, low shear stress, simple design</p>
+                <p><strong>Disadvantages:</strong> Limited mixing, lower oxygen transfer</p>
+            </div>
+
+            <div class="box">
+                <h5>c) Hollow Fiber Bioreactor (होलो फाइबर बायोरिएक्टर)</h5>
+                <p>
+                    Uses bundles of hollow semi-permeable fibers. Cells grow on the outside of fibers while nutrients flow through the inside, allowing high cell densities.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> खोखले अर्ध-पारगम्य फाइबर के बंडल का उपयोग करता है। कोशिकाएं फाइबर के बाहर बढ़ती हैं जबकि पोषक तत्व अंदर से बहते हैं, जिससे उच्च कोशिका घनत्व की अनुमति मिलती है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Applications:</strong> Animal cell culture, high-value products, continuous operation</p>
+                <p><strong>Advantages:</strong> High cell density, efficient nutrient exchange, continuous operation</p>
+                <p><strong>Disadvantages:</strong> Complex, expensive, difficult to scale up</p>
+            </div>
+
+            <div class="box">
+                <h5>d) Immobilized Cell Reactors (इम्मोबिलाइज्ड सेल रिएक्टर)</h5>
+                <p>
+                    Cells are attached to or entrapped within a support material (matrix), allowing them to be reused and enabling continuous operation.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> कोशिकाएं एक सहायक सामग्री (मैट्रिक्स) से जुड़ी या उसमें फंसी होती हैं, जिससे उन्हें पुन: उपयोग किया जा सकता है और निरंतर संचालन सक्षम होता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Immobilization Methods:</strong></p>
+                <ul class="list">
+                    <li><strong>Adsorption:</strong> Cells stick to surface (e.g., glass beads)</li>
+                    <li><strong>Entrapment:</strong> Cells trapped in gel (e.g., alginate, carrageenan)</li>
+                    <li><strong>Covalent binding:</strong> Cells chemically attached to support</li>
+                    <li><strong>Encapsulation:</strong> Cells enclosed in membrane</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Advantages:</strong> Reusable cells, continuous operation, high productivity</p>
+                <p><strong>Disadvantages:</strong> Mass transfer limitations, cell leakage possible</p>
+            </div>
+
+            <div class="diagram">
+                <h4>Comparison of Fermentor Types</h4>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Agitation</th>
+                        <th>Energy Use</th>
+                        <th>Shear Stress</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Stirred Tank</strong></td>
+                        <td>Mechanical</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>Bacterial cultures</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Airlift</strong></td>
+                        <td>Pneumatic</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Fungal cultures</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hollow Fiber</strong></td>
+                        <td>Flow-based</td>
+                        <td>Medium</td>
+                        <td>Very Low</td>
+                        <td>Animal cells</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Immobilized</strong></td>
+                        <td>Varies</td>
+                        <td>Low-Medium</td>
+                        <td>Low</td>
+                        <td>Continuous processes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 2: Instrumentation and Control -->
+        <div class="section">
+            <h3>2. Instrumentation and Control: Large Scale Production</h3>
+            
+            <p>
+                Modern fermentors are equipped with various sensors and control systems to monitor and maintain optimal conditions for microbial growth and product formation.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> आधुनिक फरमेंटर विभिन्न सेंसर और नियंत्रण प्रणालियों से सुसज्जित होते हैं ताकि सूक्ष्मजीव वृद्धि और उत्पाद निर्माण के लिए इष्टतम स्थितियों की निगरानी और रखरखाव किया जा सके।
+            </div>
+
+            <h4>Key Parameters Monitored:</h4>
+
+            <div class="box">
+                <h5>Physical Parameters:</h5>
+                <ul class="list">
+                    <li><strong>Temperature:</strong> Thermocouples or RTD sensors</li>
+                    <li><strong>Pressure:</strong> Pressure transducers</li>
+                    <li><strong>Agitation Speed:</strong> Tachometer</li>
+                    <li><strong>Foam Level:</strong> Foam sensors</li>
+                    <li><strong>Liquid Level:</strong> Level sensors</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Chemical Parameters:</h5>
+                <ul class="list">
+                    <li><strong>pH:</strong> pH electrodes (automatically controlled)</li>
+                    <li><strong>Dissolved Oxygen (DO₂):</strong> DO probes</li>
+                    <li><strong>Redox Potential:</strong> Redox electrodes</li>
+                    <li><strong>CO₂ Concentration:</strong> Gas analyzers</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Biological Parameters:</h5>
+                <ul class="list">
+                    <li><strong>Cell Density:</strong> Optical density (OD) measurements</li>
+                    <li><strong>Viability:</strong> Staining methods</li>
+                    <li><strong>Metabolic Activity:</strong> Off-gas analysis</li>
+                </ul>
+            </div>
+
+            <h4>Control Systems:</h4>
+            <ul class="list">
+                <li><strong>PID Controllers:</strong> Proportional-Integral-Derivative controllers maintain setpoints</li>
+                <li><strong>Automated Feed Systems:</strong> Add nutrients automatically based on demand</li>
+                <li><strong>pH Control:</strong> Automatic addition of acid/base</li>
+                <li><strong>Temperature Control:</strong> Cooling/heating systems</li>
+                <li><strong>Antifoam Control:</strong> Automatic antifoam addition</li>
+            </ul>
+            <div class="hindi">
+                <strong>हिंदी:</strong> PID नियंत्रक, स्वचालित फीड सिस्टम, pH नियंत्रण, तापमान नियंत्रण, एंटीफोम नियंत्रण
+            </div>
+        </div>
+
+        <!-- Section 3: Aeration and Agitation - Oxygen Transfer -->
+        <div class="section">
+            <h3>3. Aeration and Agitation: Oxygen Transfer Kinetics</h3>
+            
+            <p>
+                Oxygen transfer is critical for aerobic fermentations. Understanding oxygen transfer kinetics helps optimize aeration and agitation to meet the oxygen demand of microorganisms.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> एरोबिक किण्वन के लिए ऑक्सीजन स्थानांतरण महत्वपूर्ण है। ऑक्सीजन स्थानांतरण गतिकी को समझने से सूक्ष्मजीवों की ऑक्सीजन मांग को पूरा करने के लिए वायुवीकरण और आंदोलन को अनुकूलित करने में मदद मिलती है।
+            </div>
+
+            <h4>Oxygen Transfer Rate (OTR):</h4>
+            <p>
+                The rate at which oxygen is transferred from gas phase to liquid phase. It depends on:
+            </p>
+            <ul class="list">
+                <li>Oxygen concentration gradient (C* - Cₗ)</li>
+                <li>Mass transfer coefficient (kₗa)</li>
+                <li>Liquid volume</li>
+            </ul>
+            <p><strong>Formula:</strong> OTR = kₗa × (C* - Cₗ)</p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> OTR = kₗa × (C* - Cₗ), जहां kₗa मास ट्रांसफर गुणांक है, C* संतृप्ति सांद्रता है, Cₗ वास्तविक सांद्रता है
+            </div>
+
+            <h4>Oxygen Uptake Rate (OUR):</h4>
+            <p>
+                The rate at which microorganisms consume oxygen. It must be balanced with OTR.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> वह दर जिस पर सूक्ष्मजीव ऑक्सीजन का उपभोग करते हैं। इसे OTR के साथ संतुलित होना चाहिए।
+            </div>
+
+            <h4>Factors Affecting Oxygen Transfer:</h4>
+
+            <div class="box">
+                <h5>Aeration Rate:</h5>
+                <p>Higher air flow rate increases oxygen availability but may cause foaming.</p>
+            </div>
+
+            <div class="box">
+                <h5>Agitation Speed:</h5>
+                <p>Higher impeller speed increases kₗa by creating smaller bubbles and better mixing.</p>
+            </div>
+
+            <div class="box">
+                <h5>Impeller Design:</h5>
+                <p>Different impeller types (Rushton, marine, pitched blade) affect mixing and oxygen transfer differently.</p>
+            </div>
+
+            <div class="box">
+                <h5>Medium Properties:</h5>
+                <p>Viscosity, surface tension, and composition affect oxygen solubility and transfer.</p>
+            </div>
+
+            <div class="flowchart">
+                <h4>Oxygen Transfer Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Air/O₂ Input      │
+    │   (हवा/ऑक्सीजन)      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Sparger           │
+    │   (Creates bubbles) │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Agitation         │
+    │   (Breaks bubbles)  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Gas-Liquid        │
+    │   Interface         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Dissolved in      │
+    │   Medium            │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Consumed by       │
+    │   Microorganisms    │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 4: Rheology of Fermentation Broths -->
+        <div class="section">
+            <h3>4. Rheology of Fermentation Broths</h3>
+            
+            <p>
+                Rheology is the study of flow and deformation of fluids. Understanding the rheological properties of fermentation broths is important for mixing, heat transfer, and oxygen transfer.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> रियोलॉजी तरल पदार्थों के प्रवाह और विरूपण का अध्ययन है। किण्वन शोरबा के रियोलॉजिकल गुणों को समझना मिश्रण, ऊष्मा स्थानांतरण और ऑक्सीजन स्थानांतरण के लिए महत्वपूर्ण है।
+            </div>
+
+            <div class="box">
+                <h5>a) Newtonian Fluids (न्यूटोनियन तरल पदार्थ)</h5>
+                <p>
+                    Fluids where viscosity is constant regardless of shear rate. The relationship between shear stress (τ) and shear rate (γ) is linear.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> वे तरल पदार्थ जहां श्यानता कतरनी दर की परवाह किए बिना स्थिर रहती है। कतरनी तनाव (τ) और कतरनी दर (γ) के बीच संबंध रैखिक है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Formula:</strong> τ = μ × γ</p>
+                <p>Where μ = viscosity (constant)</p>
+                <p><strong>Examples:</strong> Water, simple salt solutions, most bacterial broths</p>
+            </div>
+
+            <div class="box">
+                <h5>b) Non-Newtonian Fluids (गैर-न्यूटोनियन तरल पदार्थ)</h5>
+                <p>
+                    Fluids where viscosity changes with shear rate. Common in fungal and filamentous bacterial cultures.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> वे तरल पदार्थ जहां श्यानता कतरनी दर के साथ बदलती है। कवक और फिलामेंटस जीवाणु संस्कृतियों में आम।
+                </div>
+                <p style="margin-top: 15px;"><strong>Types:</strong></p>
+                <ul class="list">
+                    <li><strong>Pseudoplastic (Shear-thinning):</strong> Viscosity decreases with increasing shear rate (most common in fermentation)</li>
+                    <li><strong>Dilatant (Shear-thickening):</strong> Viscosity increases with increasing shear rate</li>
+                    <li><strong>Bingham Plastic:</strong> Requires minimum stress to start flowing</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>c) Plastic Fluids (प्लास्टिक तरल पदार्थ)</h5>
+                <p>
+                    A type of non-Newtonian fluid that behaves like a solid until a yield stress is exceeded, then flows like a liquid.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> गैर-न्यूटोनियन तरल पदार्थ का एक प्रकार जो एक ठोस की तरह व्यवहार करता है जब तक कि एक उपज तनाव पार नहीं हो जाता, फिर एक तरल की तरह बहता है।
+                </div>
+                <p><strong>Formula:</strong> τ = τ₀ + μ × γ</p>
+                <p>Where τ₀ = yield stress</p>
+            </div>
+
+            <div class="box">
+                <h5>d) Apparent Viscosity (स्पष्ट श्यानता)</h5>
+                <p>
+                    For non-Newtonian fluids, viscosity is not constant. Apparent viscosity is the viscosity measured at a specific shear rate.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> गैर-न्यूटोनियन तरल पदार्थों के लिए, श्यानता स्थिर नहीं है। स्पष्ट श्यानता एक विशिष्ट कतरनी दर पर मापी गई श्यानता है।
+                </div>
+                <p><strong>Formula:</strong> μₐ = τ / γ</p>
+            </div>
+
+            <div class="box">
+                <h5>e) Foam and Antifoam (फोम और एंटीफोम)</h5>
+                <p>
+                    Foaming is common in fermentation due to proteins and other surface-active compounds. Excessive foam can cause problems.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> प्रोटीन और अन्य सतह-सक्रिय यौगिकों के कारण किण्वन में फोमिंग आम है। अत्यधिक फोम समस्याएं पैदा कर सकता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Problems with Foam:</strong></p>
+                <ul class="list">
+                    <li>Loss of culture volume</li>
+                    <li>Contamination risk</li>
+                    <li>Reduced oxygen transfer</li>
+                    <li>Blockage of filters</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Antifoam Agents:</strong></p>
+                <ul class="list">
+                    <li><strong>Silicone-based:</strong> Very effective, but may interfere with downstream processing</li>
+                    <li><strong>Polyglycols:</strong> Less effective but more compatible</li>
+                    <li><strong>Natural oils:</strong> Soybean oil, corn oil</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 5: Industrial Production - Part A -->
+        <div class="section">
+            <h3>5. Industrial Production of Various Products</h3>
+            
+            <p>
+                Microorganisms are used to produce a wide variety of industrial products. This section covers major products and their production processes.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सूक्ष्मजीवों का उपयोग विभिन्न प्रकार के औद्योगिक उत्पादों के उत्पादन के लिए किया जाता है। यह खंड प्रमुख उत्पादों और उनकी उत्पादन प्रक्रियाओं को कवर करता है।
+            </div>
+
+            <h4>a) Antibiotics (एंटीबायोटिक्स)</h4>
+
+            <div class="box">
+                <h5>β-Lactam Antibiotics (बीटा-लैक्टम एंटीबायोटिक्स)</h5>
+                <p>
+                    Include penicillin and cephalosporins. Produced by fungi (Penicillium, Acremonium).
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> पेनिसिलिन और सेफलोस्पोरिन शामिल हैं। कवक (Penicillium, Acremonium) द्वारा उत्पादित।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production Process:</strong></p>
+                <ul class="list">
+                    <li>Strain: Penicillium chrysogenum (for penicillin)</li>
+                    <li>Medium: Corn steep liquor, glucose, phenylacetic acid</li>
+                    <li>Fermentation: Fed-batch, 5-7 days, 25-27°C</li>
+                    <li>Recovery: Extraction, precipitation, crystallization</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Rifamycin (रिफामाइसिन)</h5>
+                <p>
+                    Produced by Amycolatopsis mediterranei. Used to treat tuberculosis.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Amycolatopsis mediterranei द्वारा उत्पादित। तपेदिक के इलाज के लिए उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Submerged fermentation, 4-5 days, 28°C</p>
+            </div>
+
+            <h4>b) Organic Acids (कार्बनिक अम्ल)</h4>
+
+            <div class="box">
+                <h5>Citric Acid (साइट्रिक एसिड)</h5>
+                <p>
+                    Produced by Aspergillus niger. Used in food, beverages, pharmaceuticals.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Aspergillus niger द्वारा उत्पादित। खाद्य, पेय, फार्मास्यूटिकल्स में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong></p>
+                <ul class="list">
+                    <li>Strain: Aspergillus niger</li>
+                    <li>Medium: Molasses, sucrose, low pH (2-3)</li>
+                    <li>Fermentation: Submerged, 5-14 days, 30°C</li>
+                    <li>Recovery: Precipitation with Ca(OH)₂, filtration</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Acetic Acid (एसिटिक एसिड)</h5>
+                <p>
+                    Produced by Acetobacter aceti. Used in vinegar production.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Acetobacter aceti द्वारा उत्पादित। सिरका उत्पादन में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Surface or submerged fermentation, ethanol as substrate</p>
+            </div>
+
+            <div class="box">
+                <h5>Lactic Acid (लैक्टिक एसिड)</h5>
+                <p>
+                    Produced by Lactobacillus species. Used in food, pharmaceuticals, biodegradable plastics.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Lactobacillus प्रजातियों द्वारा उत्पादित। खाद्य, फार्मास्यूटिकल्स, बायोडिग्रेडेबल प्लास्टिक में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Anaerobic fermentation, glucose/lactose as substrate, 37-45°C</p>
+            </div>
+
+            <h4>c) Ethanol (इथेनॉल)</h4>
+            <div class="box">
+                <h5>Ethanol Production</h5>
+                <p>
+                    Produced by Saccharomyces cerevisiae (yeast) through alcoholic fermentation.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Saccharomyces cerevisiae (खमीर) द्वारा शराबी किण्वन के माध्यम से उत्पादित।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong></p>
+                <ul class="list">
+                    <li>Substrate: Sugarcane, corn, wheat, molasses</li>
+                    <li>Fermentation: Anaerobic, 30-35°C, 48-72 hours</li>
+                    <li>Recovery: Distillation, dehydration</li>
+                    <li>Applications: Fuel, beverages, solvents</li>
+                </ul>
+            </div>
+
+            <h4>d) Enzymes (एंजाइम)</h4>
+
+            <div class="box">
+                <h5>Pectinases (पेक्टिनेज)</h5>
+                <p>Break down pectin. Used in fruit juice clarification. Produced by Aspergillus niger.</p>
+            </div>
+
+            <div class="box">
+                <h5>Amylases (एमाइलेज)</h5>
+                <p>Break down starch. Used in baking, brewing, textile. Produced by Bacillus subtilis, Aspergillus oryzae.</p>
+            </div>
+
+            <div class="box">
+                <h5>Lipases (लाइपेज)</h5>
+                <p>Break down fats. Used in detergents, food processing. Produced by Candida, Rhizopus.</p>
+            </div>
+
+            <div class="box">
+                <h5>Proteases (प्रोटीज)</h5>
+                <p>Break down proteins. Used in detergents, food, leather. Produced by Bacillus, Aspergillus.</p>
+            </div>
+
+            <div class="box">
+                <h5>Cellulases (सेल्युलेज)</h5>
+                <p>Break down cellulose. Used in biofuel production, textile. Produced by Trichoderma, Aspergillus.</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Industrial Production - Part B -->
+        <div class="section">
+            <h3>6. Industrial Production (Continued)</h3>
+
+            <h4>e) Amino Acids (अमीनो एसिड)</h4>
+
+            <div class="box">
+                <h5>Glutamic Acid (ग्लूटामिक एसिड)</h5>
+                <p>
+                    Produced by Corynebacterium glutamicum. Used as flavor enhancer (MSG), food additive.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Corynebacterium glutamicum द्वारा उत्पादित। स्वाद बढ़ाने वाला (MSG), खाद्य योजक के रूप में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Fed-batch fermentation, glucose as carbon source, biotin limitation</p>
+            </div>
+
+            <div class="box">
+                <h5>Lysine (लाइसीन)</h5>
+                <p>
+                    Produced by Corynebacterium glutamicum. Essential amino acid, used in animal feed.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Corynebacterium glutamicum द्वारा उत्पादित। आवश्यक अमीनो एसिड, पशु आहार में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Fed-batch, high glucose, threonine and methionine limitation</p>
+            </div>
+
+            <h4>f) Vitamins (विटामिन)</h4>
+
+            <div class="box">
+                <h5>Riboflavin (Vitamin B₂) (राइबोफ्लेविन)</h5>
+                <p>
+                    Produced by Ashbya gossypii, Bacillus subtilis. Used as food supplement.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Ashbya gossypii, Bacillus subtilis द्वारा उत्पादित। खाद्य पूरक के रूप में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Submerged fermentation, glucose medium, 28-30°C</p>
+            </div>
+
+            <div class="box">
+                <h5>Cyanocobalamin (Vitamin B₁₂) (सायनोकोबालामिन)</h5>
+                <p>
+                    Produced by Propionibacterium, Pseudomonas. Essential vitamin, used in supplements.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> Propionibacterium, Pseudomonas द्वारा उत्पादित। आवश्यक विटामिन, पूरक में उपयोग किया जाता है।
+                </div>
+                <p style="margin-top: 15px;"><strong>Production:</strong> Complex medium, cobalt addition required, 7-10 days</p>
+            </div>
+
+            <h4>g) Steroids Transformation (स्टेरॉयड परिवर्तन)</h4>
+            <div class="box">
+                <h5>Steroid Biotransformation</h5>
+                <p>
+                    Microorganisms are used to transform steroids into pharmaceutically valuable compounds. Specific enzymes introduce hydroxyl groups at specific positions.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सूक्ष्मजीवों का उपयोग स्टेरॉयड को फार्मास्यूटिकल रूप से मूल्यवान यौगिकों में बदलने के लिए किया जाता है। विशिष्ट एंजाइम विशिष्ट स्थानों पर हाइड्रॉक्सिल समूह पेश करते हैं।
+                </div>
+                <p style="margin-top: 15px;"><strong>Examples:</strong></p>
+                <ul class="list">
+                    <li>Cortisone production from progesterone</li>
+                    <li>11α-hydroxylation by Rhizopus</li>
+                    <li>Used in anti-inflammatory drugs</li>
+                </ul>
+            </div>
+
+            <h4>h) Biopesticides (जैव कीटनाशक)</h4>
+            <div class="box">
+                <h5>Microbial Pesticides</h5>
+                <p>
+                    Living microorganisms or their products used to control pests. More eco-friendly than chemical pesticides.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> कीटों को नियंत्रित करने के लिए उपयोग किए जाने वाले जीवित सूक्ष्मजीव या उनके उत्पाद। रासायनिक कीटनाशकों की तुलना में अधिक पर्यावरण के अनुकूल।
+                </div>
+                <p style="margin-top: 15px;"><strong>Examples:</strong></p>
+                <ul class="list">
+                    <li><strong>Bacillus thuringiensis (Bt):</strong> Produces toxins against insects</li>
+                    <li><strong>Beauveria bassiana:</strong> Fungal biopesticide</li>
+                    <li><strong>Baculoviruses:</strong> Viral biopesticides</li>
+                </ul>
+            </div>
+
+            <h4>i) Fermented Food Beverages (किण्वित खाद्य पेय)</h4>
+            <div class="box">
+                <h5>Fermented Beverages</h5>
+                <p>
+                    Various beverages are produced through microbial fermentation.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> विभिन्न पेय सूक्ष्मजीवी किण्वन के माध्यम से उत्पादित होते हैं।
+                </div>
+                <p style="margin-top: 15px;"><strong>Examples:</strong></p>
+                <ul class="list">
+                    <li><strong>Beer:</strong> Saccharomyces cerevisiae, barley, hops</li>
+                    <li><strong>Wine:</strong> Saccharomyces cerevisiae, grapes</li>
+                    <li><strong>Yogurt:</strong> Lactobacillus, Streptococcus</li>
+                    <li><strong>Cheese:</strong> Lactic acid bacteria, rennet</li>
+                    <li><strong>Soy Sauce:</strong> Aspergillus oryzae, soybeans</li>
+                </ul>
+            </div>
+
+            <h4>j) Biopolymers (जैव पॉलिमर)</h4>
+            <div class="box">
+                <h5>Microbial Polymers</h5>
+                <p>
+                    Polymers produced by microorganisms. Biodegradable and eco-friendly alternatives to synthetic plastics.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सूक्ष्मजीवों द्वारा उत्पादित पॉलिमर। सिंथेटिक प्लास्टिक के लिए बायोडिग्रेडेबल और पर्यावरण के अनुकूल विकल्प।
+                </div>
+                <p style="margin-top: 15px;"><strong>Examples:</strong></p>
+                <ul class="list">
+                    <li><strong>Polyhydroxyalkanoates (PHA):</strong> Produced by various bacteria, biodegradable plastic</li>
+                    <li><strong>Polylactic Acid (PLA):</strong> From lactic acid, biodegradable</li>
+                    <li><strong>Xanthan Gum:</strong> Produced by Xanthomonas, food thickener</li>
+                    <li><strong>Dextran:</strong> Produced by Leuconostoc, used in medical applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 5px solid white;">
+            <h3 style="color: white; border-bottom: 2px solid white;">📝 Summary (सारांश)</h3>
+            <ul class="list" style="color: white;">
+                <li><strong>Fermentor types:</strong> Stirred tank (mechanical), airlift (pneumatic), hollow fiber (membrane), immobilized (fixed cells) (फरमेंटर प्रकार: स्टर्ड टैंक, एयरलिफ्ट, होलो फाइबर, इम्मोबिलाइज्ड)</li>
+                <li><strong>Instrumentation:</strong> Monitors temperature, pH, DO₂, pressure, agitation for optimal control (इंस्ट्रूमेंटेशन: तापमान, pH, DO₂, दबाव, आंदोलन की निगरानी)</li>
+                <li><strong>Oxygen transfer:</strong> OTR = kₗa × (C* - Cₗ), affected by aeration and agitation (ऑक्सीजन स्थानांतरण: OTR = kₗa × (C* - Cₗ))</li>
+                <li><strong>Rheology:</strong> Newtonian (constant viscosity) vs Non-Newtonian (variable viscosity), foam control needed (रियोलॉजी: न्यूटोनियन बनाम गैर-न्यूटोनियन, फोम नियंत्रण आवश्यक)</li>
+                <li><strong>Industrial products:</strong> Antibiotics, organic acids, ethanol, enzymes, amino acids, vitamins, steroids, biopesticides, beverages, biopolymers (औद्योगिक उत्पाद: एंटीबायोटिक्स, कार्बनिक अम्ल, इथेनॉल, एंजाइम, अमीनो एसिड, विटामिन, स्टेरॉयड, जैव कीटनाशक, पेय, जैव पॉलिमर)</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit2.html" class="prev">← Previous: Unit II</a>
+        </div>
+    </div>
+</body>
+</html>
+
