@@ -295,18 +295,741 @@
             <a href="rdt-unit3.html" class="next">Next: Unit III →</a>
         </div>
 
-        <!-- Content will be added here -->
+        <!-- 1. Isolation of DNA -->
         <div class="section">
-            <h3>Content Coming Soon...</h3>
-            <p>This unit will cover:</p>
+            <h3>1. Isolation of Chromosomal and Plasmid DNA from Bacteria and Yeast</h3>
+            
+            <h4>1.1 Isolation of Chromosomal DNA from Bacteria</h4>
+            <p>Isolating bacterial chromosomal DNA is the first step in genetic engineering. The process involves breaking open bacterial cells and separating DNA from other cellular components.</p>
+            
+            <div class="box">
+                <h5>Steps for Bacterial Chromosomal DNA Isolation:</h5>
+                <ol class="list">
+                    <li><strong>Cell Harvesting:</strong> Centrifuge bacterial culture to collect cells</li>
+                    <li><strong>Cell Lysis:</strong> Break open cells using:
+                        <ul>
+                            <li>Physical methods: Freeze-thaw, sonication, or mechanical disruption</li>
+                            <li>Chemical methods: Lysozyme (breaks cell wall) + detergents (SDS) to break membrane</li>
+                        </ul>
+                    </li>
+                    <li><strong>Protein Removal:</strong> Add proteinase K and incubate to digest proteins</li>
+                    <li><strong>DNA Extraction:</strong> Use phenol-chloroform extraction to separate DNA from proteins</li>
+                    <li><strong>DNA Precipitation:</strong> Add ethanol or isopropanol to precipitate DNA</li>
+                    <li><strong>Purification:</strong> Wash with 70% ethanol and resuspend in buffer</li>
+                </ol>
+            </div>
+            
+            <div class="diagram">
+                <h4>Bacterial DNA Isolation Flowchart</h4>
+                <div class="flowchart">Bacterial Culture
+    ↓
+Centrifuge (Collect Pellet)
+    ↓
+Lysozyme + SDS (Cell Lysis)
+    ↓
+Proteinase K (Protein Digestion)
+    ↓
+Phenol-Chloroform Extraction
+    ↓
+Ethanol Precipitation
+    ↓
+Purified Chromosomal DNA</div>
+            </div>
+            
+            <div class="hindi">
+                <strong>Hindi Explanation:</strong> बैक्टीरियल क्रोमोसोमल DNA को अलग करने के लिए पहले बैक्टीरिया की कोशिकाओं को तोड़ा जाता है, फिर प्रोटीन को हटाया जाता है, और अंत में DNA को एथेनॉल से precipitate किया जाता है।
+            </div>
+
+            <h4>1.2 Isolation of Plasmid DNA from Bacteria</h4>
+            <p>Plasmid DNA is smaller and circular, making it easier to isolate separately from chromosomal DNA.</p>
+            
+            <div class="box">
+                <h5>Key Methods for Plasmid DNA Isolation:</h5>
+                <ul class="list">
+                    <li><strong>Alkaline Lysis Method:</strong> Most common method
+                        <ul>
+                            <li>Uses NaOH + SDS to denature DNA and proteins</li>
+                            <li>Chromosomal DNA denatures and precipitates</li>
+                            <li>Plasmid DNA renatures and stays in solution</li>
+                        </ul>
+                    </li>
+                    <li><strong>Boiling Method:</strong> Quick but less pure</li>
+                    <li><strong>Commercial Kits:</strong> Use silica columns for purification</li>
+                </ul>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Chromosomal DNA</th>
+                    <th>Plasmid DNA</th>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>Large (millions of bp)</td>
+                    <td>Small (thousands of bp)</td>
+                </tr>
+                <tr>
+                    <td>Shape</td>
+                    <td>Linear</td>
+                    <td>Circular</td>
+                </tr>
+                <tr>
+                    <td>Copy Number</td>
+                    <td>One per cell</td>
+                    <td>Multiple (10-100s)</td>
+                </tr>
+                <tr>
+                    <td>Isolation Method</td>
+                    <td>Complete cell lysis</td>
+                    <td>Selective alkaline lysis</td>
+                </tr>
+            </table>
+
+            <h4>1.3 Isolation of DNA from Yeast</h4>
+            <p>Yeast cells have a rigid cell wall made of glucan and chitin, requiring special treatment for DNA isolation.</p>
+            
+            <div class="box">
+                <h5>Yeast DNA Isolation Protocol:</h5>
+                <ol class="list">
+                    <li><strong>Cell Wall Digestion:</strong> Use zymolyase or lyticase enzymes</li>
+                    <li><strong>Spheroplast Formation:</strong> Cell wall removed, creating spheroplasts</li>
+                    <li><strong>Lysis:</strong> Use detergents (SDS) or mechanical disruption</li>
+                    <li><strong>Protein Removal:</strong> Phenol-chloroform extraction</li>
+                    <li><strong>DNA Precipitation:</strong> Ethanol precipitation</li>
+                    <li><strong>RNase Treatment:</strong> Remove RNA contamination</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 2. Restriction and Modification Systems -->
+        <div class="section">
+            <h3>2. Bacterial Restriction and Modification Systems</h3>
+            
+            <p>Bacteria have evolved a defense mechanism called <strong>Restriction-Modification (R-M) system</strong> to protect themselves from foreign DNA (like bacteriophages).</p>
+            
+            <div class="box">
+                <h5>Two Components of R-M System:</h5>
+                <ol class="list">
+                    <li><strong>Restriction Enzymes:</strong> Cut foreign DNA at specific sequences</li>
+                    <li><strong>Modification Enzymes:</strong> Methylate (protect) host DNA at the same sequences</li>
+                </ol>
+            </div>
+
+            <h4>2.1 How R-M System Works:</h4>
+            <div class="diagram">
+                <div class="flowchart">Host Bacterial DNA
+    ↓ (Methylated by Modification Enzyme)
+Protected DNA (Not cut)
+
+Foreign DNA (Phage DNA)
+    ↓ (Not methylated)
+Recognized by Restriction Enzyme
+    ↓ (Cut into fragments)
+Foreign DNA Destroyed</div>
+            </div>
+
+            <div class="box">
+                <h5>Key Points:</h5>
+                <ul class="list">
+                    <li>Modification enzymes add methyl groups to specific DNA sequences</li>
+                    <li>Methylated DNA is protected from restriction enzymes</li>
+                    <li>Foreign DNA lacks methylation and gets destroyed</li>
+                    <li>This is a bacterial immune system against bacteriophages</li>
+                </ul>
+            </div>
+            
+            <div class="hindi">
+                <strong>Hindi Explanation:</strong> बैक्टीरिया में रेस्ट्रिक्शन-मोडिफिकेशन सिस्टम एक सुरक्षा तंत्र है जो मेथिलेशन के द्वारा अपने DNA को बचाता है और बिना मेथिलेशन वाले foreign DNA को काटकर नष्ट कर देता है।
+            </div>
+        </div>
+
+        <!-- 3. Restriction Endonucleases -->
+        <div class="section">
+            <h3>3. Restriction Endonucleases and Their Types</h3>
+            
+            <p><strong>Restriction endonucleases</strong> (restriction enzymes) are molecular scissors that cut DNA at specific recognition sequences. They are the foundation of recombinant DNA technology.</p>
+
+            <h4>3.1 Types of Restriction Endonucleases</h4>
+            
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Characteristics</th>
+                    <th>Examples</th>
+                    <th>Use in Cloning</th>
+                </tr>
+                <tr>
+                    <td><strong>Type I</strong></td>
+                    <td>
+                        <ul>
+                            <li>Complex enzyme (3 subunits)</li>
+                            <li>Cut DNA away from recognition site</li>
+                            <li>Requires ATP and SAM</li>
+                            <li>Produces random cuts</li>
+                        </ul>
+                    </td>
+                    <td>EcoKI, EcoBI</td>
+                    <td>Not commonly used</td>
+                </tr>
+                <tr>
+                    <td><strong>Type II</strong></td>
+                    <td>
+                        <ul>
+                            <li>Simple enzyme (single subunit)</li>
+                            <li>Cut DNA at recognition site</li>
+                            <li>Most commonly used</li>
+                            <li>Produces predictable cuts</li>
+                        </ul>
+                    </td>
+                    <td>EcoRI, BamHI, HindIII, PstI</td>
+                    <td>✓ Primary tool for cloning</td>
+                </tr>
+                <tr>
+                    <td><strong>Type III</strong></td>
+                    <td>
+                        <ul>
+                            <li>Two subunits</li>
+                            <li>Cut DNA 20-25 bp away from recognition site</li>
+                            <li>Requires ATP</li>
+                            <li>Less specific</li>
+                        </ul>
+                    </td>
+                    <td>EcoP1I, EcoP15I</td>
+                    <td>Rarely used</td>
+                </tr>
+                <tr>
+                    <td><strong>Type IV</strong></td>
+                    <td>
+                        <ul>
+                            <li>Recognize modified DNA (methylated)</li>
+                            <li>Cut modified sequences</li>
+                        </ul>
+                    </td>
+                    <td>McrBC</td>
+                    <td>Special applications</td>
+                </tr>
+            </table>
+
+            <div class="box">
+                <h5>Why Type II Enzymes are Preferred:</h5>
+                <ul class="list">
+                    <li>✓ Simple and easy to use</li>
+                    <li>✓ Cut at predictable, specific sites</li>
+                    <li>✓ No ATP requirement</li>
+                    <li>✓ Produce sticky ends (overhangs) useful for ligation</li>
+                    <li>✓ Produce blunt ends when needed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 4. Recognition Sequences -->
+        <div class="section">
+            <h3>4. Recognition Sequence for Type II Endonucleases</h3>
+            
+            <p>Type II restriction enzymes recognize and cut specific <strong>palindromic sequences</strong> in DNA. A palindromic sequence reads the same on both DNA strands when read 5' to 3'.</p>
+
+            <h4>4.1 Examples of Recognition Sequences</h4>
+            
+            <table>
+                <tr>
+                    <th>Enzyme</th>
+                    <th>Recognition Sequence</th>
+                    <th>Cut Site</th>
+                    <th>End Type</th>
+                </tr>
+                <tr>
+                    <td><strong>EcoRI</strong></td>
+                    <td>5'-G↓AATTC-3'<br>3'-CTTAA↑G-5'</td>
+                    <td>G^AATTC</td>
+                    <td>Sticky (5' overhang)</td>
+                </tr>
+                <tr>
+                    <td><strong>BamHI</strong></td>
+                    <td>5'-G↓GATCC-3'<br>3'-CCTAG↑G-5'</td>
+                    <td>G^GATCC</td>
+                    <td>Sticky (5' overhang)</td>
+                </tr>
+                <tr>
+                    <td><strong>HindIII</strong></td>
+                    <td>5'-A↓AGCTT-3'<br>3'-TTCGA↑A-5'</td>
+                    <td>A^AGCTT</td>
+                    <td>Sticky (5' overhang)</td>
+                </tr>
+                <tr>
+                    <td><strong>PstI</strong></td>
+                    <td>5'-CTGCA↓G-3'<br>3'-G↑ACGTC-5'</td>
+                    <td>CTGCAG</td>
+                    <td>Sticky (3' overhang)</td>
+                </tr>
+                <tr>
+                    <td><strong>SmaI</strong></td>
+                    <td>5'-CCC↓GGG-3'<br>3'-GGG↑CCC-5'</td>
+                    <td>CCCGGG</td>
+                    <td>Blunt end</td>
+                </tr>
+                <tr>
+                    <td><strong>EcoRV</strong></td>
+                    <td>5'-GAT↓ATC-3'<br>3'-CTA↑TAG-5'</td>
+                    <td>GATATC</td>
+                    <td>Blunt end</td>
+                </tr>
+            </table>
+
+            <h4>4.2 Sticky Ends vs Blunt Ends</h4>
+            
+            <div class="box">
+                <h5>Sticky Ends (Cohesive Ends):</h5>
+                <ul class="list">
+                    <li>Have single-stranded overhangs</li>
+                    <li>Complementary ends can base-pair</li>
+                    <li>Easier to ligate together</li>
+                    <li>Example: EcoRI creates 5'-AATT-3' overhang</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Blunt Ends:</h5>
+                <ul class="list">
+                    <li>No overhangs - cut straight through both strands</li>
+                    <li>Less specific ligation</li>
+                    <li>Require higher ligase concentration</li>
+                    <li>Example: SmaI cuts both strands at same position</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>EcoRI Cutting Example:</h4>
+                <div class="flowchart">Original DNA:
+5'-G AATTC-3'
+3'-CTTAA G-5'
+
+After EcoRI Cut:
+5'-G           AATTC-3'
+3'-CTTAA           G-5'
+    ↑              ↑
+Sticky ends (complementary)
+
+These ends can easily pair with other EcoRI-cut fragments!</div>
+            </div>
+
+            <h4>4.3 Naming Convention</h4>
+            <p>Restriction enzymes are named based on:</p>
             <ul class="list">
-                <li>Isolation of chromosomal and plasmid DNA from bacteria and yeast</li>
-                <li>Bacterial restriction and modification systems</li>
-                <li>Restriction endonucleases and their types</li>
-                <li>Recognition sequence for type II endonucleases</li>
-                <li>DNA Ligation reaction mechanism of DNA ligases</li>
-                <li>Joining of DNA fragments using linkers, adaptors and homopolymer tails</li>
+                <li><strong>Genus:</strong> First letter (E = Escherichia)</li>
+                <li><strong>Species:</strong> Next two letters (co = coli)</li>
+                <li><strong>Strain:</strong> Next letter (R = strain RY13)</li>
+                <li><strong>Number:</strong> Roman numeral (I = first enzyme discovered)</li>
+                <li>Example: <strong>EcoRI</strong> = Escherichia coli R strain, enzyme I</li>
             </ul>
+
+            <div class="hindi">
+                <strong>Hindi Explanation:</strong> Type II रेस्ट्रिक्शन एंजाइम पैलिन्ड्रोमिक सीक्वेंस को पहचानते हैं और काटते हैं। Sticky ends में overhangs होते हैं जो आसानी से जुड़ जाते हैं, जबकि blunt ends में कोई overhang नहीं होता।
+            </div>
+        </div>
+
+        <!-- 5. DNA Ligation -->
+        <div class="section">
+            <h3>5. DNA Ligation Reaction Mechanism of DNA Ligases</h3>
+            
+            <p><strong>DNA ligase</strong> is the enzyme that joins DNA fragments together by forming phosphodiester bonds. It's like molecular glue that seals nicks in DNA.</p>
+
+            <h4>5.1 Types of DNA Ligases</h4>
+            
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Source</th>
+                    <th>Characteristics</th>
+                    <th>Uses</th>
+                </tr>
+                <tr>
+                    <td><strong>T4 DNA Ligase</strong></td>
+                    <td>Bacteriophage T4</td>
+                    <td>
+                        <ul>
+                            <li>Most commonly used</li>
+                            <li>Works on both sticky and blunt ends</li>
+                            <li>Requires ATP</li>
+                            <li>Active at 16°C</li>
+                        </ul>
+                    </td>
+                    <td>General cloning</td>
+                </tr>
+                <tr>
+                    <td><strong>E. coli DNA Ligase</strong></td>
+                    <td>E. coli</td>
+                    <td>
+                        <ul>
+                            <li>Requires NAD+ (not ATP)</li>
+                            <li>Works mainly on sticky ends</li>
+                            <li>Less efficient for blunt ends</li>
+                        </ul>
+                    </td>
+                    <td>Specific applications</td>
+                </tr>
+                <tr>
+                    <td><strong>Thermostable Ligases</strong></td>
+                    <td>Thermophilic bacteria</td>
+                    <td>
+                        <ul>
+                            <li>Active at high temperatures</li>
+                            <li>Used in ligation cycling</li>
+                        </ul>
+                    </td>
+                    <td>Specialized techniques</td>
+                </tr>
+            </table>
+
+            <h4>5.2 Mechanism of DNA Ligation</h4>
+            
+            <div class="box">
+                <h5>T4 DNA Ligase Mechanism (3 Steps):</h5>
+                <ol class="list">
+                    <li><strong>Activation:</strong>
+                        <ul>
+                            <li>Ligase binds to ATP (or NAD+ for E. coli ligase)</li>
+                            <li>Adenosine monophosphate (AMP) is transferred to lysine residue in ligase</li>
+                            <li>Formation of ligase-AMP complex</li>
+                        </ul>
+                    </li>
+                    <li><strong>AMP Transfer:</strong>
+                        <ul>
+                            <li>AMP is transferred from ligase to 5' phosphate of DNA</li>
+                            <li>Formation of DNA-AMP intermediate (pyrophosphate bond)</li>
+                            <li>This activates the 5' phosphate group</li>
+                        </ul>
+                    </li>
+                    <li><strong>Phosphodiester Bond Formation:</strong>
+                        <ul>
+                            <li>The activated 5' phosphate attacks the 3' OH group</li>
+                            <li>Phosphodiester bond is formed</li>
+                            <li>AMP is released</li>
+                            <li>Nick is sealed!</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>DNA Ligation Mechanism:</h4>
+                <div class="flowchart">Step 1: Activation
+Ligase + ATP → Ligase-AMP + PPi
+
+Step 2: AMP Transfer to DNA
+Ligase-AMP + DNA (5'-P, 3'-OH) 
+  → Ligase + DNA-AMP (activated)
+
+Step 3: Bond Formation
+DNA-AMP + adjacent 3'-OH
+  → Sealed DNA + AMP
+
+Result: Phosphodiester bond formed!
+5'-...P-O-P-O-P...-3'
+     ↑         ↑
+  Sealed nick</div>
+            </div>
+
+            <h4>5.3 Ligation Conditions</h4>
+            
+            <div class="box">
+                <h5>Optimal Conditions for T4 DNA Ligase:</h5>
+                <ul class="list">
+                    <li><strong>Temperature:</strong> 16°C (overnight) or 22-25°C (1-2 hours)</li>
+                    <li><strong>Buffer:</strong> Tris-HCl (pH 7.5-8.0), Mg²⁺, DTT, ATP</li>
+                    <li><strong>DNA Ratio:</strong> Insert:Vector = 3:1 to 5:1 (for sticky ends)</li>
+                    <li><strong>DNA Ratio:</strong> Insert:Vector = 10:1 or higher (for blunt ends)</li>
+                    <li><strong>Time:</strong> 1-16 hours depending on DNA concentration</li>
+                </ul>
+            </div>
+
+            <h4>5.4 Ligation Products</h4>
+            <p>After ligation, you can get several products:</p>
+            <ul class="list">
+                <li><strong>Recombinant plasmid:</strong> Vector + insert (desired product)</li>
+                <li><strong>Recircularized vector:</strong> Vector without insert (unwanted)</li>
+                <li><strong>Insert dimers:</strong> Multiple inserts joined together (unwanted)</li>
+                <li><strong>Vector concateners:</strong> Multiple vectors joined (unwanted)</li>
+            </ul>
+
+            <div class="box">
+                <h5>Why Sticky Ends Ligate Better:</h5>
+                <ul class="list">
+                    <li>Complementary overhangs form hydrogen bonds</li>
+                    <li>This holds fragments together temporarily</li>
+                    <li>Ligase can then seal the nick more easily</li>
+                    <li>Blunt ends have no such stabilizing interactions</li>
+                </ul>
+            </div>
+
+            <div class="hindi">
+                <strong>Hindi Explanation:</strong> DNA लिगेज़ एंजाइम DNA fragments को जोड़ने का काम करता है। यह ATP का उपयोग करके phosphodiester bond बनाता है। T4 DNA ligase सबसे ज्यादा इस्तेमाल होता है क्योंकि यह sticky और blunt दोनों ends पर काम करता है।
+            </div>
+        </div>
+
+        <!-- 6. Joining DNA Fragments -->
+        <div class="section">
+            <h3>6. Joining of DNA Fragments Using Linkers, Adaptors and Homopolymer Tails</h3>
+            
+            <p>When DNA fragments don't have compatible restriction sites, we need special methods to join them. Three main techniques are used:</p>
+
+            <h4>6.1 Linkers</h4>
+            
+            <p><strong>Linkers</strong> are short, double-stranded DNA oligonucleotides that contain one or more restriction enzyme recognition sites.</p>
+            
+            <div class="box">
+                <h5>How Linkers Work:</h5>
+                <ol class="list">
+                    <li>Synthesize linkers with desired restriction site (e.g., EcoRI site)</li>
+                    <li>Phosphorylate linkers at 5' end using polynucleotide kinase</li>
+                    <li>Ligate linkers to blunt-ended DNA fragments (using T4 DNA ligase)</li>
+                    <li>Cut with restriction enzyme (e.g., EcoRI) to create sticky ends</li>
+                    <li>Ligate to vector with compatible sticky ends</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>Linker Method:</h4>
+                <div class="flowchart">Blunt-ended Insert DNA
+    ↓
++ Linker (EcoRI site) + ATP
+    ↓ (T4 DNA ligase)
+DNA with Linker attached
+    ↓
+EcoRI digestion
+    ↓
+DNA with EcoRI sticky ends
+    ↓
+Ligate to EcoRI-cut vector
+    ↓
+Recombinant DNA</div>
+            </div>
+
+            <div class="box">
+                <h5>Advantages of Linkers:</h5>
+                <ul class="list">
+                    <li>✓ Can add any restriction site to blunt-ended DNA</li>
+                    <li>✓ Relatively simple and inexpensive</li>
+                    <li>✓ Multiple linkers can be added (concatenation)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Disadvantages:</h5>
+                <ul class="list">
+                    <li>✗ The restriction site becomes part of the insert</li>
+                    <li>✗ If insert contains the same restriction site, it will be cut</li>
+                    <li>✗ Requires phosphorylation step</li>
+                </ul>
+            </div>
+
+            <h4>6.2 Adaptors</h4>
+            
+            <p><strong>Adaptors</strong> are short, double-stranded oligonucleotides that already have one sticky end ready for ligation. They avoid the need for restriction enzyme digestion after ligation.</p>
+
+            <div class="box">
+                <h5>How Adaptors Work:</h5>
+                <ol class="list">
+                    <li>Synthesize adaptor with:
+                        <ul>
+                            <li>One end: Blunt or compatible with insert</li>
+                            <li>Other end: Sticky end (e.g., EcoRI sticky end)</li>
+                        </ul>
+                    </li>
+                    <li>Ligate adaptor to insert DNA (using T4 DNA ligase)</li>
+                    <li>Result: Insert now has sticky end</li>
+                    <li>Ligate directly to vector with compatible sticky end</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>Adaptor Method:</h4>
+                <div class="flowchart">Blunt-ended Insert DNA
+    ↓
++ Adaptor (one blunt end, one EcoRI sticky end)
+    ↓ (T4 DNA ligase - only ligates blunt ends)
+Insert with Adaptor
+    ↓
+Direct ligation to EcoRI-cut vector
+    ↓
+Recombinant DNA
+
+Note: Adaptor already has sticky end!
+No need for restriction enzyme cutting.</div>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Linkers</th>
+                    <th>Adaptors</th>
+                </tr>
+                <tr>
+                    <td>Structure</td>
+                    <td>Blunt on both ends</td>
+                    <td>Blunt on one end, sticky on other</td>
+                </tr>
+                <tr>
+                    <td>After Ligation</td>
+                    <td>Still blunt-ended</td>
+                    <td>Has sticky end</td>
+                </tr>
+                <tr>
+                    <td>Restriction Enzyme Needed?</td>
+                    <td>Yes (after ligation)</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Advantage</td>
+                    <td>Flexible - add any site</td>
+                    <td>Faster - no digestion step</td>
+                </tr>
+            </table>
+
+            <div class="box">
+                <h5>Problem with Adaptors:</h5>
+                <p><strong>Self-ligation:</strong> Adaptors can ligate to each other, forming dimers. To prevent this:</p>
+                <ul class="list">
+                    <li>Don't phosphorylate the sticky end of adaptor</li>
+                    <li>Only the blunt end gets ligated to insert</li>
+                    <li>The sticky end remains unligated until it meets the vector</li>
+                </ul>
+            </div>
+
+            <h4>6.3 Homopolymer Tails</h4>
+            
+            <p><strong>Homopolymer tailing</strong> (also called dG-dC tailing) uses complementary homopolymeric sequences to join DNA fragments.</p>
+
+            <div class="box">
+                <h5>How Homopolymer Tailing Works:</h5>
+                <ol class="list">
+                    <li><strong>Add poly(dG) to vector:</strong>
+                        <ul>
+                            <li>Cut vector to create 3' OH ends</li>
+                            <li>Add multiple G nucleotides using terminal deoxynucleotidyl transferase (TdT)</li>
+                            <li>Creates vector with poly(dG) tails</li>
+                        </ul>
+                    </li>
+                    <li><strong>Add poly(dC) to insert:</strong>
+                        <ul>
+                            <li>Prepare insert DNA with 3' OH ends</li>
+                            <li>Add multiple C nucleotides using TdT</li>
+                            <li>Creates insert with poly(dC) tails</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hybridization:</strong>
+                        <ul>
+                            <li>Mix vector and insert</li>
+                            <li>Poly(dG) and poly(dC) anneal (G-C base pairing)</li>
+                            <li>Forms hybrid molecule</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gap Repair:</strong>
+                        <ul>
+                            <li>Gaps filled by DNA polymerase</li>
+                            <li>Nicks sealed by DNA ligase</li>
+                            <li>Recombinant DNA complete!</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>Homopolymer Tailing Method:</h4>
+                <div class="flowchart">Vector DNA (with 3'-OH)
+    ↓ (TdT + dGTP)
+Vector-poly(dG) tail
+5'-...OH-(G)n-3'
+
+Insert DNA (with 3'-OH)
+    ↓ (TdT + dCTP)
+Insert-poly(dC) tail
+5'-...OH-(C)n-3'
+
+    ↓ (Mix and anneal)
+Hybrid Formation:
+Vector-(G)n...(C)n-Insert
+
+    ↓ (DNA polymerase + ligase)
+Complete Recombinant DNA</div>
+            </div>
+
+            <div class="box">
+                <h5>Advantages of Homopolymer Tailing:</h5>
+                <ul class="list">
+                    <li>✓ Works with any DNA (no need for restriction sites)</li>
+                    <li>✓ Can't recut with restriction enzymes (no restriction site added)</li>
+                    <li>✓ Creates strong hydrogen bonding (G-C pairs)</li>
+                    <li>✓ Good for directional cloning</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Disadvantages:</h5>
+                <ul class="list">
+                    <li>✗ Cannot easily remove the insert later</li>
+                    <li>✗ Creates unpaired regions that need repair</li>
+                    <li>✗ Less efficient than sticky-end ligation</li>
+                </ul>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Best For</th>
+                    <th>Key Enzyme</th>
+                    <th>End Result</th>
+                </tr>
+                <tr>
+                    <td><strong>Linkers</strong></td>
+                    <td>Adding restriction sites to blunt DNA</td>
+                    <td>T4 DNA ligase, Restriction enzyme</td>
+                    <td>Sticky ends with restriction site</td>
+                </tr>
+                <tr>
+                    <td><strong>Adaptors</strong></td>
+                    <td>Quick addition of sticky ends</td>
+                    <td>T4 DNA ligase</td>
+                    <td>Sticky ends (no digestion needed)</td>
+                </tr>
+                <tr>
+                    <td><strong>Homopolymer Tails</strong></td>
+                    <td>Joining without restriction sites</td>
+                    <td>Terminal transferase</td>
+                    <td>G-C tailed hybrid</td>
+                </tr>
+            </table>
+
+            <div class="hindi">
+                <strong>Hindi Explanation:</strong> Linkers, adaptors और homopolymer tails तीन तरीके हैं incompatible DNA fragments को join करने के लिए। Linkers restriction site add करते हैं, adaptors directly sticky ends देते हैं, और homopolymer tails G-C complementary sequences use करते हैं।
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <h3>📚 Unit II Summary</h3>
+            
+            <div class="box">
+                <h5>Key Concepts Covered:</h5>
+                <ul class="list">
+                    <li>✓ Isolation methods for chromosomal DNA, plasmid DNA (bacteria), and yeast DNA</li>
+                    <li>✓ Bacterial restriction-modification system as defense mechanism</li>
+                    <li>✓ Types of restriction endonucleases (I, II, III, IV) - Type II most important</li>
+                    <li>✓ Recognition sequences (palindromic) and cut types (sticky vs blunt ends)</li>
+                    <li>✓ DNA ligation mechanism (3-step process with ATP/AMP)</li>
+                    <li>✓ Methods for joining incompatible fragments: linkers, adaptors, homopolymer tails</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Practical Applications:</h5>
+                <ul class="list">
+                    <li>DNA extraction is the first step in any cloning experiment</li>
+                    <li>Restriction enzymes allow precise DNA cutting for manipulation</li>
+                    <li>DNA ligase seals DNA fragments together to create recombinant molecules</li>
+                    <li>Linkers/adaptors/tails enable flexible DNA joining strategies</li>
+                </ul>
+            </div>
         </div>
 
         <div class="unit-nav">
