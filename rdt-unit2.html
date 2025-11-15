@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDT Unit 2 - Recombinant DNA Technology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="rdt-unit1.html">Unit I</a>
+            <a href="rdt-unit2.html" class="active">Unit II</a>
+            <a href="rdt-unit3.html">Unit III</a>
+            <a href="rdt-unit4.html">Unit IV</a>
+            <a href="rdt-unit5.html">Unit V</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Recombinant DNA Technology</h1>
+            <h2>UNIT II - Strategies in Gene Cloning (Cutting and Joining of DNA)</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="rdt-unit1.html" class="prev">← Previous: Unit I</a>
+            <a href="rdt-unit3.html" class="next">Next: Unit III →</a>
+        </div>
+
+        <!-- Content will be added here -->
+        <div class="section">
+            <h3>Content Coming Soon...</h3>
+            <p>This unit will cover:</p>
+            <ul class="list">
+                <li>Isolation of chromosomal and plasmid DNA from bacteria and yeast</li>
+                <li>Bacterial restriction and modification systems</li>
+                <li>Restriction endonucleases and their types</li>
+                <li>Recognition sequence for type II endonucleases</li>
+                <li>DNA Ligation reaction mechanism of DNA ligases</li>
+                <li>Joining of DNA fragments using linkers, adaptors and homopolymer tails</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="rdt-unit1.html" class="prev">← Previous: Unit I</a>
+            <a href="rdt-unit3.html" class="next">Next: Unit III →</a>
+        </div>
+    </div>
+</body>
+</html>
+
