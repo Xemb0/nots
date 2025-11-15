@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-614 Unit 4 - Microbial Biotechnology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr614-unit1.html">Unit I</a>
+            <a href="mcr614-unit2.html">Unit II</a>
+            <a href="mcr614-unit3.html">Unit III</a>
+            <a href="mcr614-unit4.html" class="active">Unit IV</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔬 MCR-614: Microbial Biotechnology</h1>
+            <h2>UNIT IV - Industrial Strains & Production Systems</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit3.html" class="prev">← Previous: Unit III</a>
+        </div>
+
+        <!-- Section 1: Industrial Strains -->
+        <div class="section">
+            <h3>1. Industrial Strains</h3>
+            
+            <p>
+                Industrial strains are microorganisms that have been selected and improved to produce desired products efficiently on a large scale. These strains are the "workers" in biotechnological industries.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> औद्योगिक उपभेद वे सूक्ष्मजीव हैं जिन्हें बड़े पैमाने पर वांछित उत्पादों को कुशलता से उत्पादित करने के लिए चुना और सुधारा गया है। ये उपभेद जैव प्रौद्योगिकी उद्योगों में "कर्मचारी" हैं।
+            </div>
+
+            <h4>Characteristics of Good Industrial Strains:</h4>
+            <ul class="list">
+                <li><strong>High Productivity:</strong> Produce large amounts of desired product</li>
+                <li><strong>Fast Growth:</strong> Grow quickly to reduce production time</li>
+                <li><strong>Stability:</strong> Don't lose their ability to produce over time</li>
+                <li><strong>Non-pathogenic:</strong> Safe to handle (not disease-causing)</li>
+                <li><strong>Easy to Grow:</strong> Can grow on cheap, simple media</li>
+                <li><strong>Resistant:</strong> Can tolerate harsh industrial conditions</li>
+            </ul>
+            <div class="hindi">
+                <strong>हिंदी:</strong> उच्च उत्पादकता, तेज वृद्धि, स्थिरता, गैर-रोगजनक, आसानी से उगाने योग्य, प्रतिरोधी
+            </div>
+
+            <div class="diagram">
+                <h4>Industrial Strain Characteristics</h4>
+                <svg width="100%" height="350" viewBox="0 0 600 350">
+                    <!-- Center: Industrial Strain -->
+                    <circle cx="300" cy="175" r="60" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+                    <text x="300" y="170" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Industrial</text>
+                    <text x="300" y="190" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Strain</text>
+                    <text x="300" y="210" text-anchor="middle" fill="white" font-size="12">(औद्योगिक उपभेद)</text>
+                    
+                    <!-- Characteristics around -->
+                    <circle cx="150" cy="80" r="40" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="150" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">High Yield</text>
+                    <line x1="190" y1="100" x2="250" y2="150" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowChar)"/>
+                    
+                    <circle cx="450" cy="80" r="40" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="450" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Fast Growth</text>
+                    <line x1="410" y1="100" x2="350" y2="150" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowChar)"/>
+                    
+                    <circle cx="150" cy="270" r="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                    <text x="150" y="270" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Stable</text>
+                    <line x1="190" y1="250" x2="250" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowChar)"/>
+                    
+                    <circle cx="450" cy="270" r="40" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+                    <text x="450" y="270" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Safe</text>
+                    <line x1="410" y1="250" x2="350" y2="200" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowChar)"/>
+                    
+                    <defs>
+                        <marker id="arrowChar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 2: Strategies for Selection and Improvement -->
+        <div class="section">
+            <h3>2. Strategies for Selection and Improvement</h3>
+            
+            <p>
+                Finding and improving the right microorganism is crucial for successful industrial production. Various strategies are used to select and enhance strains.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सही सूक्ष्मजीव को खोजना और सुधारना सफल औद्योगिक उत्पादन के लिए महत्वपूर्ण है। उपभेदों को चुनने और बढ़ाने के लिए विभिन्न रणनीतियों का उपयोग किया जाता है।
+            </div>
+
+            <h4>a) Selection Strategies (चयन रणनीतियां)</h4>
+
+            <div class="box">
+                <h5>1. Natural Selection (प्राकृतिक चयन)</h5>
+                <p>
+                    Isolating microorganisms from natural environments where they naturally produce the desired product.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> प्राकृतिक वातावरण से सूक्ष्मजीवों को अलग करना जहां वे स्वाभाविक रूप से वांछित उत्पाद का उत्पादन करते हैं।
+                </div>
+                <p style="margin-top: 15px;"><strong>Example:</strong> Finding antibiotic-producing fungi from soil</p>
+            </div>
+
+            <div class="box">
+                <h5>2. Screening (स्क्रीनिंग)</h5>
+                <p>
+                    Testing many different microorganisms to find ones that produce the desired product.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> कई अलग-अलग सूक्ष्मजीवों का परीक्षण करना ताकि वांछित उत्पाद का उत्पादन करने वाले को खोजा जा सके।
+                </div>
+                <p style="margin-top: 15px;"><strong>Methods:</strong></p>
+                <ul class="list">
+                    <li>Plate screening (testing on agar plates)</li>
+                    <li>High-throughput screening (testing many at once)</li>
+                    <li>Activity-based screening (testing for specific activity)</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>3. Genetic Engineering (आनुवंशिक इंजीनियरिंग)</h5>
+                <p>
+                    Modifying the DNA of microorganisms to give them new abilities or improve existing ones.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> सूक्ष्मजीवों के DNA को संशोधित करना ताकि उन्हें नई क्षमताएं मिलें या मौजूदा क्षमताओं में सुधार हो।
+                </div>
+                <p style="margin-top: 15px;"><strong>Techniques:</strong></p>
+                <ul class="list">
+                    <li>Gene cloning (copying useful genes)</li>
+                    <li>Gene deletion (removing unwanted genes)</li>
+                    <li>Gene overexpression (making more of useful proteins)</li>
+                </ul>
+            </div>
+
+            <h4>b) Improvement Strategies (सुधार रणनीतियां)</h4>
+
+            <div class="box">
+                <h5>1. Mutation and Selection (उत्परिवर्तन और चयन)</h5>
+                <p>
+                    Creating random changes (mutations) in DNA and then selecting the best performers.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> DNA में यादृच्छिक परिवर्तन (उत्परिवर्तन) बनाना और फिर सर्वश्रेष्ठ प्रदर्शन करने वालों का चयन करना।
+                </div>
+                <p style="margin-top: 15px;"><strong>Methods:</strong></p>
+                <ul class="list">
+                    <li><strong>UV radiation:</strong> Expose to UV light to cause mutations</li>
+                    <li><strong>Chemical mutagens:</strong> Use chemicals to cause mutations</li>
+                    <li><strong>Selection:</strong> Grow mutants and test for improved production</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>2. Metabolic Engineering (चयापचय इंजीनियरिंग)</h5>
+                <p>
+                    Modifying metabolic pathways to increase product yield and reduce waste.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> उत्पाद उपज बढ़ाने और अपशिष्ट कम करने के लिए चयापचय मार्गों को संशोधित करना।
+                </div>
+                <p style="margin-top: 15px;"><strong>Approaches:</strong></p>
+                <ul class="list">
+                    <li>Remove competing pathways</li>
+                    <li>Increase flux through desired pathway</li>
+                    <li>Optimize precursor supply</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>3. Directed Evolution (निर्देशित विकास)</h5>
+                <p>
+                    Creating mutations and selecting the best ones over multiple generations, like artificial selection.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> कई पीढ़ियों में उत्परिवर्तन बनाना और सर्वश्रेष्ठ का चयन करना, कृत्रिम चयन की तरह।
+                </div>
+            </div>
+
+            <div class="flowchart">
+                <h4>Strain Selection and Improvement Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Start: Find       │
+    │   Microorganism      │
+    │   (सूक्ष्मजीव खोजें) │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        ▼             ▼
+┌──────────────┐ ┌──────────────┐
+│  Natural     │ │  Screening   │
+│  Isolation   │ │  (स्क्रीनिंग) │
+│              │ │              │
+│ • From       │ │ • Test many  │
+│   environment│ │ • Find best  │
+└──────┬───────┘ └──────┬───────┘
+       │                 │
+       └────────┬────────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │   Initial Strain    │
+    │   (प्रारंभिक उपभेद)  │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        ▼             ▼
+┌──────────────┐ ┌──────────────┐
+│  Mutation    │ │  Genetic     │
+│  & Selection │ │  Engineering │
+│              │ │              │
+│ • UV/Chemical│ │ • Gene       │
+│ • Select best│ │   modification│
+└──────┬───────┘ └──────┬───────┘
+       │                 │
+       └────────┬────────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │   Improved Strain   │
+    │   (सुधारित उपभेद)   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Test & Validate   │
+    │   (परीक्षण)         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Industrial Strain │
+    │   (औद्योगिक उपभेद)  │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 3: Preservation and Maintenance -->
+        <div class="section">
+            <h3>3. Preservation and Maintenance of Industrial Strains</h3>
+            
+            <p>
+                Once a good industrial strain is found, it must be preserved and maintained properly to prevent it from losing its valuable properties or getting contaminated.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> एक अच्छा औद्योगिक उपभेद मिलने के बाद, इसे अपने मूल्यवान गुणों को खोने या दूषित होने से रोकने के लिए ठीक से संरक्षित और बनाए रखा जाना चाहिए।
+            </div>
+
+            <h4>Preservation Methods (संरक्षण विधियां):</h4>
+
+            <div class="box">
+                <h5>a) Short-term Preservation (अल्पकालिक संरक्षण)</h5>
+                <p>
+                    Methods for storing strains for days to months.
+                </p>
+                <ul class="list">
+                    <li><strong>Refrigeration (4°C):</strong> Store on agar slants in refrigerator</li>
+                    <li><strong>Subculturing:</strong> Transfer to fresh medium regularly (every 1-3 months)</li>
+                    <li><strong>Mineral Oil Overlay:</strong> Cover culture with sterile mineral oil to prevent drying</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> रेफ्रिजरेशन, उप-संवर्धन, खनिज तेल ओवरले
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>b) Long-term Preservation (दीर्घकालिक संरक्षण)</h5>
+                <p>
+                    Methods for storing strains for years without losing viability.
+                </p>
+                <ul class="list">
+                    <li><strong>Freezing (-20°C to -80°C):</strong> Store in freezer with cryoprotectant (glycerol)</li>
+                    <li><strong>Lyophilization (Freeze-drying):</strong> Remove water under vacuum, store as powder</li>
+                    <li><strong>Liquid Nitrogen (-196°C):</strong> Ultra-cold storage, can preserve for decades</li>
+                    <li><strong>Spore Storage:</strong> For spore-forming organisms, store spores (very stable)</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> फ्रीजिंग, लाइओफिलाइजेशन, लिक्विड नाइट्रोजन, स्पोर स्टोरेज
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h4>Preservation Methods Comparison</h4>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Temperature</th>
+                        <th>Duration</th>
+                        <th>Advantages</th>
+                        <th>Disadvantages</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Refrigeration</strong></td>
+                        <td>4°C</td>
+                        <td>1-3 months</td>
+                        <td>Simple, cheap</td>
+                        <td>Short duration, needs subculturing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Freezing</strong></td>
+                        <td>-20°C to -80°C</td>
+                        <td>1-5 years</td>
+                        <td>Long-term, stable</td>
+                        <td>Requires freezer, cryoprotectant</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lyophilization</strong></td>
+                        <td>Room temp</td>
+                        <td>10+ years</td>
+                        <td>Very stable, no freezer needed</td>
+                        <td>Expensive equipment, complex</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Liquid N₂</strong></td>
+                        <td>-196°C</td>
+                        <td>20+ years</td>
+                        <td>Longest preservation</td>
+                        <td>Expensive, needs regular refill</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h4>Maintenance (रखरखाव):</h4>
+            <ul class="list">
+                <li><strong>Regular Testing:</strong> Check that strain still produces desired product</li>
+                <li><strong>Contamination Check:</strong> Ensure no other microorganisms have contaminated</li>
+                <li><strong>Genetic Stability:</strong> Verify strain hasn't mutated and lost abilities</li>
+                <li><strong>Master Stock:</strong> Keep original preserved strain, use working stock for production</li>
+            </ul>
+            <div class="hindi">
+                <strong>हिंदी:</strong> नियमित परीक्षण, संदूषण जांच, आनुवंशिक स्थिरता, मास्टर स्टॉक
+            </div>
+
+            <div class="flowchart">
+                <h4>Strain Preservation Strategy</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Industrial Strain  │
+    │   (औद्योगिक उपभेद)   │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        ▼             ▼
+┌──────────────┐ ┌──────────────┐
+│  Short-term  │ │  Long-term   │
+│  Storage     │ │  Storage     │
+│              │ │              │
+│ • Refrigerate│ │ • Freeze     │
+│ • Subculture │ │ • Lyophilize │
+│ • Mineral oil│ │ • Liquid N₂  │
+└──────┬───────┘ └──────┬───────┘
+       │                 │
+       └────────┬────────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │   Master Stock     │
+    │   (मास्टर स्टॉक)   │
+    │   • Keep safe      │
+    │   • Don't use      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Working Stock     │
+    │   (कार्य स्टॉक)     │
+    │   • Use for         │
+    │     production      │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 4: Aseptic Operation and Containment -->
+        <div class="section">
+            <h3>4. Aseptic Operation and Containment of Recombinant Organisms</h3>
+            
+            <p>
+                Aseptic operation means working in a sterile (germ-free) environment. Containment means preventing recombinant (genetically modified) organisms from escaping into the environment.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> एसेप्टिक संचालन का मतलब है एक नसबंद (रोगाणु-मुक्त) वातावरण में काम करना। कंटेनमेंट का मतलब है पुनः संयोजक (आनुवंशिक रूप से संशोधित) जीवों को पर्यावरण में बचने से रोकना।
+            </div>
+
+            <h4>a) Aseptic Operation (एसेप्टिक संचालन)</h4>
+
+            <div class="box">
+                <h5>Principles of Aseptic Technique:</h5>
+                <ul class="list">
+                    <li><strong>Sterile Environment:</strong> Work in clean, disinfected areas</li>
+                    <li><strong>Sterile Equipment:</strong> All tools and containers must be sterilized</li>
+                    <li><strong>Sterile Media:</strong> Culture media must be sterilized before use</li>
+                    <li><strong>Flame Sterilization:</strong> Use flame to sterilize loops, needles, etc.</li>
+                    <li><strong>Laminar Flow Hood:</strong> Work under sterile air flow</li>
+                    <li><strong>Personal Hygiene:</strong> Wash hands, wear clean clothes, use gloves</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> नसबंद वातावरण, नसबंद उपकरण, नसबंद माध्यम, लौ नसबंदी, लैमिनार फ्लो हुड, व्यक्तिगत स्वच्छता
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>Common Aseptic Practices:</h5>
+                <ul class="list">
+                    <li>Flame the mouth of containers before opening</li>
+                    <li>Work quickly to minimize exposure to air</li>
+                    <li>Never touch sterile surfaces with hands</li>
+                    <li>Keep containers closed when not in use</li>
+                    <li>Dispose of contaminated materials properly</li>
+                </ul>
+            </div>
+
+            <h4>b) Containment of Recombinant Organisms (पुनः संयोजक जीवों का कंटेनमेंट)</h4>
+
+            <div class="box">
+                <h5>Why Containment is Important:</h5>
+                <p>
+                    Recombinant organisms have modified DNA. If they escape, they could:
+                </p>
+                <ul class="list">
+                    <li>Spread modified genes to wild organisms</li>
+                    <li>Cause unknown environmental effects</li>
+                    <li>Create safety risks</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> पुनः संयोजक जीवों के संशोधित DNA होते हैं। यदि वे बच जाते हैं, तो वे जंगली जीवों में संशोधित जीन फैला सकते हैं, अज्ञात पर्यावरणीय प्रभाव पैदा कर सकते हैं, सुरक्षा जोखिम बना सकते हैं।
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>Containment Levels:</h5>
+                <ul class="list">
+                    <li><strong>Biosafety Level 1 (BSL-1):</strong> Low risk, basic containment</li>
+                    <li><strong>Biosafety Level 2 (BSL-2):</strong> Moderate risk, enhanced containment</li>
+                    <li><strong>Biosafety Level 3 (BSL-3):</strong> High risk, strict containment</li>
+                    <li><strong>Biosafety Level 4 (BSL-4):</strong> Very high risk, maximum containment</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> बायोसेफ्टी लेवल 1-4, जोखिम के अनुसार कंटेनमेंट स्तर
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>Containment Measures:</h5>
+                <ul class="list">
+                    <li><strong>Physical Containment:</strong> Closed systems, sealed containers, filters</li>
+                    <li><strong>Biological Containment:</strong> Use organisms that can't survive outside lab</li>
+                    <li><strong>Waste Treatment:</strong> Sterilize all waste before disposal</li>
+                    <li><strong>Personnel Training:</strong> Train workers on safety procedures</li>
+                    <li><strong>Monitoring:</strong> Regular checks for contamination or escape</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Aseptic Operation Setup</h4>
+                <svg width="100%" height="400" viewBox="0 0 600 400">
+                    <!-- Laminar flow hood -->
+                    <rect x="100" y="50" width="400" height="300" fill="#ecf0f1" stroke="#34495e" stroke-width="3" rx="5"/>
+                    <!-- HEPA filter at top -->
+                    <rect x="100" y="50" width="400" height="30" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="300" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">HEPA Filter</text>
+                    <!-- Air flow arrows -->
+                    <path d="M 200 80 L 200 200" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowDown)"/>
+                    <path d="M 300 80 L 300 200" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowDown)"/>
+                    <path d="M 400 80 L 400 200" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowDown)"/>
+                    <!-- Work surface -->
+                    <rect x="120" y="200" width="360" height="10" fill="#95a5a6"/>
+                    <!-- Equipment on surface -->
+                    <rect x="200" y="220" width="80" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="3"/>
+                    <text x="240" y="250" text-anchor="middle" fill="#856404" font-size="11">Petri Dish</text>
+                    <circle cx="350" cy="250" r="20" fill="#e74c3c"/>
+                    <text x="350" y="255" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Flame</text>
+                    <!-- Gloved hands -->
+                    <ellipse cx="280" cy="300" rx="30" ry="15" fill="#8e44ad" opacity="0.7"/>
+                    <ellipse cx="320" cy="300" rx="30" ry="15" fill="#8e44ad" opacity="0.7"/>
+                    <!-- Labels -->
+                    <text x="300" y="30" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Laminar Flow Hood</text>
+                    <text x="300" y="45" text-anchor="middle" fill="#7f8c8d" font-size="12">(लैमिनार फ्लो हुड)</text>
+                    <text x="500" y="150" text-anchor="middle" fill="#27ae60" font-size="11">Sterile Air</text>
+                    <text x="500" y="165" text-anchor="middle" fill="#27ae60" font-size="10">(नसबंद हवा)</text>
+                    <defs>
+                        <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="flowchart">
+                <h4>Aseptic Operation Process</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Preparation       │
+    │   (तैयारी)           │
+    │   • Clean area      │
+    │   • Sterilize tools │
+    │   • Wash hands      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Set Up            │
+    │   (सेटअप)            │
+    │   • Turn on hood    │
+    │   • Wipe surface    │
+    │   • Arrange tools   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Work Aseptically   │
+    │   (एसेप्टिक काम)    │
+    │   • Flame loops     │
+    │   • Work quickly    │
+    │   • Keep closed     │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Clean Up          │
+    │   (सफाई)            │
+    │   • Sterilize waste │
+    │   • Disinfect area │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 5: Scale Up -->
+        <div class="section">
+            <h3>5. Scale Up</h3>
+            
+            <p>
+                Scale up means increasing the size of a fermentation process from laboratory scale (small) to industrial scale (large) while maintaining the same efficiency and product quality.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> स्केल अप का मतलब है प्रयोगशाला पैमाने (छोटे) से औद्योगिक पैमाने (बड़े) तक किण्वन प्रक्रिया के आकार को बढ़ाना, जबकि समान दक्षता और उत्पाद गुणवत्ता बनाए रखना।
+            </div>
+
+            <h4>Scale Up Stages:</h4>
+
+            <div class="box">
+                <h5>1. Laboratory Scale (प्रयोगशाला पैमाना)</h5>
+                <p>
+                    Small volumes (milliliters to liters). Used for initial testing and optimization.
+                </p>
+                <ul class="list">
+                    <li>Volume: 0.1 - 10 liters</li>
+                    <li>Equipment: Shake flasks, small fermentors</li>
+                    <li>Purpose: Find best conditions, test strains</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>2. Pilot Scale (पायलट पैमाना)</h5>
+                <p>
+                    Medium volumes. Bridge between lab and industrial scale.
+                </p>
+                <ul class="list">
+                    <li>Volume: 10 - 1000 liters</li>
+                    <li>Equipment: Pilot fermentors</li>
+                    <li>Purpose: Test scalability, optimize process</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>3. Industrial Scale (औद्योगिक पैमाना)</h5>
+                <p>
+                    Large volumes for commercial production.
+                </p>
+                <ul class="list">
+                    <li>Volume: 1000+ liters (up to 100,000+ liters)</li>
+                    <li>Equipment: Large industrial fermentors</li>
+                    <li>Purpose: Commercial production</li>
+                </ul>
+            </div>
+
+            <h4>Challenges in Scale Up:</h4>
+
+            <div class="box">
+                <h5>Physical Challenges:</h5>
+                <ul class="list">
+                    <li><strong>Mixing:</strong> Harder to mix large volumes uniformly</li>
+                    <li><strong>Heat Transfer:</strong> More heat produced, harder to cool</li>
+                    <li><strong>Oxygen Transfer:</strong> Harder to supply oxygen to all cells</li>
+                    <li><strong>pH Control:</strong> pH gradients can form in large vessels</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>Biological Challenges:</h5>
+                <ul class="list">
+                    <li><strong>Contamination Risk:</strong> Larger scale = higher contamination risk</li>
+                    <li><strong>Genetic Stability:</strong> Strains may mutate over long production runs</li>
+                    <li><strong>Metabolic Changes:</strong> Cells may behave differently at large scale</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Scale Up Process</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Lab scale -->
+                    <rect x="50" y="200" width="120" height="150" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="110" y="250" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Lab Scale</text>
+                    <text x="110" y="270" text-anchor="middle" fill="white" font-size="12">0.1-10 L</text>
+                    <text x="110" y="290" text-anchor="middle" fill="white" font-size="11">(प्रयोगशाला)</text>
+                    <circle cx="110" cy="320" r="15" fill="#ecf0f1"/>
+                    <text x="110" y="325" text-anchor="middle" fill="#2c3e50" font-size="10">Flask</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 170 275 L 220 275" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowScale)"/>
+                    <text x="195" y="265" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Scale Up</text>
+                    
+                    <!-- Pilot scale -->
+                    <rect x="220" y="150" width="150" height="200" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="295" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Pilot Scale</text>
+                    <text x="295" y="220" text-anchor="middle" fill="white" font-size="12">10-1000 L</text>
+                    <text x="295" y="240" text-anchor="middle" fill="white" font-size="11">(पायलट)</text>
+                    <rect x="250" y="280" width="90" height="50" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="3"/>
+                    <text x="295" y="305" text-anchor="middle" fill="#2c3e50" font-size="11">Pilot</text>
+                    <text x="295" y="320" text-anchor="middle" fill="#2c3e50" font-size="11">Fermentor</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 370 275 L 420 275" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowScale)"/>
+                    <text x="395" y="265" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Scale Up</text>
+                    
+                    <!-- Industrial scale -->
+                    <rect x="420" y="50" width="200" height="300" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="520" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Industrial</text>
+                    <text x="520" y="120" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Scale</text>
+                    <text x="520" y="140" text-anchor="middle" fill="white" font-size="12">1000+ L</text>
+                    <text x="520" y="160" text-anchor="middle" fill="white" font-size="11">(औद्योगिक)</text>
+                    <rect x="450" y="200" width="140" height="120" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="3"/>
+                    <text x="520" y="240" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Industrial</text>
+                    <text x="520" y="260" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Fermentor</text>
+                    <text x="520" y="280" text-anchor="middle" fill="#2c3e50" font-size="11">Large Volume</text>
+                    <text x="520" y="295" text-anchor="middle" fill="#2c3e50" font-size="11">Production</text>
+                    
+                    <!-- Title -->
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Scale Up Process</text>
+                    
+                    <defs>
+                        <marker id="arrowScale" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="flowchart">
+                <h4>Scale Up Strategy</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Lab Scale         │
+    │   (प्रयोगशाला)       │
+    │   • Optimize        │
+    │   • Test conditions │
+    │   • Find best strain│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Pilot Scale       │
+    │   (पायलट)            │
+    │   • Test scalability│
+    │   • Adjust parameters│
+    │   • Validate process│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Industrial Scale  │
+    │   (औद्योगिक)        │
+    │   • Commercial     │
+    │   • Large volume    │
+    │   • Production      │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 6: Large Scale Production Using Recombinant Microorganisms -->
+        <div class="section">
+            <h3>6. Large Scale Production Using Recombinant Microorganisms</h3>
+            
+            <p>
+                Recombinant microorganisms are genetically modified to produce specific products. Producing them on a large scale requires special considerations for safety, containment, and efficiency.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> पुनः संयोजक सूक्ष्मजीव आनुवंशिक रूप से संशोधित होते हैं ताकि विशिष्ट उत्पादों का उत्पादन करें। बड़े पैमाने पर उनका उत्पादन सुरक्षा, कंटेनमेंट और दक्षता के लिए विशेष विचारों की आवश्यकता होती है।
+            </div>
+
+            <h4>Recombinant Microorganisms (पुनः संयोजक सूक्ष्मजीव):</h4>
+
+            <div class="box">
+                <h5>What are Recombinant Organisms?</h5>
+                <p>
+                    Microorganisms that have been genetically modified by inserting foreign DNA (genes) to give them new abilities, like producing human insulin or other valuable proteins.
+                </p>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> वे सूक्ष्मजीव जिन्हें विदेशी DNA (जीन) डालकर आनुवंशिक रूप से संशोधित किया गया है ताकि उन्हें नई क्षमताएं मिलें, जैसे मानव इंसुलिन या अन्य मूल्यवान प्रोटीन का उत्पादन करना।
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>Common Host Organisms:</h5>
+                <ul class="list">
+                    <li><strong>E. coli:</strong> Most common, easy to grow, well understood</li>
+                    <li><strong>Yeast (S. cerevisiae):</strong> Good for eukaryotic proteins</li>
+                    <li><strong>Bacillus subtilis:</strong> Secretes proteins well</li>
+                    <li><strong>Pichia pastoris:</strong> High protein production</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> E. coli (सबसे आम), यीस्ट, Bacillus subtilis, Pichia pastoris
+                </div>
+            </div>
+
+            <h4>Production Process:</h4>
+
+            <div class="box">
+                <h5>1. Strain Development (उपभेद विकास)</h5>
+                <ul class="list">
+                    <li>Insert desired gene into host organism</li>
+                    <li>Select successful transformants</li>
+                    <li>Optimize expression conditions</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>2. Fermentation (किण्वन)</h5>
+                <ul class="list">
+                    <li>Use contained fermentors (closed systems)</li>
+                    <li>Monitor for contamination</li>
+                    <li>Control expression (induce gene when needed)</li>
+                    <li>Harvest at optimal time</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>3. Safety Measures (सुरक्षा उपाय)</h5>
+                <ul class="list">
+                    <li>Physical containment (closed vessels, filters)</li>
+                    <li>Biological containment (use safe hosts)</li>
+                    <li>Waste sterilization</li>
+                    <li>Personnel protection</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Recombinant Production System</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Gene insertion -->
+                    <rect x="50" y="50" width="120" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="110" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Foreign Gene</text>
+                    <text x="110" y="105" text-anchor="middle" fill="white" font-size="12">(विदेशी जीन)</text>
+                    <text x="110" y="145" text-anchor="middle" fill="#2c3e50" font-size="11">+</text>
+                    
+                    <!-- Host -->
+                    <circle cx="110" cy="200" r="40" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="110" y="195" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Host</text>
+                    <text x="110" y="210" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Cell</text>
+                    <text x="110" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">(मेजबान कोशिका)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 110 130 L 110 160" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRecom)"/>
+                    
+                    <!-- Recombinant -->
+                    <circle cx="300" cy="200" r="50" fill="#8e44ad" stroke="#7d3c98" stroke-width="3"/>
+                    <text x="300" y="195" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Recombinant</text>
+                    <text x="300" y="215" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Organism</text>
+                    <text x="300" y="260" text-anchor="middle" fill="#2c3e50" font-size="11">(पुनः संयोजक जीव)</text>
+                    
+                    <path d="M 200 200 L 250 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRecom)"/>
+                    
+                    <!-- Fermentation -->
+                    <rect x="400" y="100" width="200" height="200" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="500" y="140" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Large Scale</text>
+                    <text x="500" y="160" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Fermentation</text>
+                    <text x="500" y="180" text-anchor="middle" fill="white" font-size="12">(बड़े पैमाने पर किण्वन)</text>
+                    <circle cx="500" cy="250" r="30" fill="#ecf0f1"/>
+                    <text x="500" y="255" text-anchor="middle" fill="#2c3e50" font-size="11">Contained</text>
+                    
+                    <path d="M 400 200 L 350 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRecom)"/>
+                    
+                    <!-- Product -->
+                    <rect x="450" y="320" width="100" height="60" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="500" y="350" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Product</text>
+                    <text x="500" y="370" text-anchor="middle" fill="white" font-size="11">(उत्पाद)</text>
+                    
+                    <path d="M 500 300 L 500 320" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRecom)"/>
+                    
+                    <defs>
+                        <marker id="arrowRecom" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="flowchart">
+                <h4>Recombinant Production Flowchart</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Gene of Interest   │
+    │   (वांछित जीन)       │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Vector Construction│
+    │   (वेक्टर निर्माण)   │
+    │   • Insert gene      │
+    │   • Add promoters   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Transformation     │
+    │   (रूपांतरण)         │
+    │   • Insert into host │
+    │   • Select positive  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   (किण्वन)           │
+    │   • Large scale     │
+    │   • Contained       │
+    │   • Induce expression│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Product Recovery  │
+    │   (उत्पाद पुनर्प्राप्ति)│
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 7: Product Recovery (Downstream Processing) -->
+        <div class="section">
+            <h3>7. Product Recovery (Downstream Processing)</h3>
+            
+            <p>
+                After fermentation, the desired product must be separated and purified from the fermentation broth. This process is called downstream processing or product recovery.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> किण्वन के बाद, वांछित उत्पाद को किण्वन शोरबा से अलग और शुद्ध किया जाना चाहिए। इस प्रक्रिया को डाउनस्ट्रीम प्रोसेसिंग या उत्पाद पुनर्प्राप्ति कहा जाता है।
+            </div>
+
+            <h4>Stages of Downstream Processing:</h4>
+
+            <div class="box">
+                <h5>1. Cell Separation (कोशिका पृथक्करण)</h5>
+                <p>
+                    Separate cells from the liquid medium (broth).
+                </p>
+                <ul class="list">
+                    <li><strong>Centrifugation:</strong> Spin at high speed to separate cells</li>
+                    <li><strong>Filtration:</strong> Filter through membranes</li>
+                    <li><strong>Sedimentation:</strong> Let cells settle naturally</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> अपकेंद्रण, निस्पंदन, अवसादन
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>2. Cell Disruption (कोशिका विघटन)</h5>
+                <p>
+                    If product is inside cells, break open cells to release it.
+                </p>
+                <ul class="list">
+                    <li><strong>Mechanical:</strong> Homogenization, sonication, bead milling</li>
+                    <li><strong>Chemical:</strong> Detergents, solvents</li>
+                    <li><strong>Enzymatic:</strong> Use enzymes to break cell walls</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> यांत्रिक, रासायनिक, एंजाइमेटिक
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>3. Product Isolation (उत्पाद अलगाव)</h5>
+                <p>
+                    Separate the product from other components.
+                </p>
+                <ul class="list">
+                    <li><strong>Precipitation:</strong> Add chemicals to make product insoluble</li>
+                    <li><strong>Extraction:</strong> Use solvents to extract product</li>
+                    <li><strong>Adsorption:</strong> Bind product to solid material</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h5>4. Purification (शुद्धिकरण)</h5>
+                <p>
+                    Remove impurities to get pure product.
+                </p>
+                <ul class="list">
+                    <li><strong>Chromatography:</strong> Separate based on size, charge, or affinity</li>
+                    <li><strong>Crystallization:</strong> Form crystals of pure product</li>
+                    <li><strong>Dialysis:</strong> Remove small molecules</li>
+                </ul>
+                <div class="hindi">
+                    <strong>हिंदी:</strong> क्रोमैटोग्राफी, क्रिस्टलीकरण, डायलिसिस
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>5. Concentration and Drying (सांद्रता और सुखाना)</h5>
+                <p>
+                    Increase product concentration and remove water.
+                </p>
+                <ul class="list">
+                    <li><strong>Evaporation:</strong> Heat to remove water</li>
+                    <li><strong>Ultrafiltration:</strong> Filter to concentrate</li>
+                    <li><strong>Freeze-drying:</strong> Remove water under vacuum</li>
+                    <li><strong>Spray drying:</strong> Convert to powder</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Downstream Processing Flowchart</h4>
+                <svg width="100%" height="500" viewBox="0 0 600 500">
+                    <!-- Fermentation broth -->
+                    <rect x="200" y="50" width="200" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="300" y="85" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Fermentation Broth</text>
+                    <text x="300" y="105" text-anchor="middle" fill="white" font-size="12">(किण्वन शोरबा)</text>
+                    <text x="300" y="125" text-anchor="middle" fill="#2c3e50" font-size="11">Cells + Product + Medium</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 300 130 L 300 160" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Cell separation -->
+                    <rect x="150" y="160" width="300" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="300" y="190" text-anchor="middle" fill="white" font-size="14" font-weight="bold">1. Cell Separation</text>
+                    <text x="300" y="210" text-anchor="middle" fill="white" font-size="12">(कोशिका पृथक्करण)</text>
+                    <text x="200" y="230" text-anchor="middle" fill="#ecf0f1" font-size="11">Centrifugation</text>
+                    <text x="300" y="230" text-anchor="middle" fill="#ecf0f1" font-size="11">Filtration</text>
+                    <text x="400" y="230" text-anchor="middle" fill="#ecf0f1" font-size="11">Sedimentation</text>
+                    
+                    <path d="M 300 220 L 300 250" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Decision: Intracellular? -->
+                    <rect x="150" y="250" width="300" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="300" y="280" text-anchor="middle" fill="#856404" font-size="14" font-weight="bold">Product Location?</text>
+                    <text x="200" y="300" text-anchor="middle" fill="#856404" font-size="12">Intracellular</text>
+                    <text x="400" y="300" text-anchor="middle" fill="#856404" font-size="12">Extracellular</text>
+                    
+                    <!-- Intracellular path -->
+                    <path d="M 200 310 L 100 350" stroke="#e74c3c" stroke-width="2"/>
+                    <rect x="50" y="350" width="100" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="100" y="380" text-anchor="middle" fill="white" font-size="12" font-weight="bold">2. Cell</text>
+                    <text x="100" y="395" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Disruption</text>
+                    <path d="M 100 410 L 100 440" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Extracellular path -->
+                    <path d="M 400 310 L 500 350" stroke="#27ae60" stroke-width="2"/>
+                    <text x="500" y="340" text-anchor="middle" fill="#27ae60" font-size="11">Skip disruption</text>
+                    
+                    <!-- Merge -->
+                    <path d="M 100 440 L 300 470" stroke="#2c3e50" stroke-width="2"/>
+                    <path d="M 500 350 L 500 470" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Product isolation -->
+                    <rect x="200" y="470" width="300" height="60" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="300" y="500" text-anchor="middle" fill="white" font-size="14" font-weight="bold">3. Product Isolation</text>
+                    <text x="300" y="520" text-anchor="middle" fill="white" font-size="12">(उत्पाद अलगाव)</text>
+                    
+                    <path d="M 300 530 L 300 560" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Purification -->
+                    <rect x="150" y="560" width="300" height="60" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="300" y="590" text-anchor="middle" fill="white" font-size="14" font-weight="bold">4. Purification</text>
+                    <text x="300" y="610" text-anchor="middle" fill="white" font-size="12">(शुद्धिकरण)</text>
+                    
+                    <path d="M 300 620 L 300 650" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Final product -->
+                    <rect x="200" y="650" width="200" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="300" y="680" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Pure Product</text>
+                    <text x="300" y="700" text-anchor="middle" fill="white" font-size="12">(शुद्ध उत्पाद)</text>
+                    
+                    <defs>
+                        <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="flowchart">
+                <h4>Complete Downstream Processing</h4>
+                <pre>
+    ┌─────────────────────┐
+    │   Fermentation      │
+    │   Broth             │
+    │   (किण्वन शोरबा)    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Cell Separation   │
+    │   (कोशिका पृथक्करण) │
+    │   • Centrifuge      │
+    │   • Filter          │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+    Intracellular  Extracellular
+        │             │
+        ▼             │
+┌──────────────┐      │
+│ Cell         │      │
+│ Disruption   │      │
+│ (कोशिका विघटन)│      │
+└──────┬───────┘      │
+       │                 │
+       └────────┬────────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │   Product Isolation │
+    │   (उत्पाद अलगाव)    │
+    │   • Precipitation   │
+    │   • Extraction      │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Purification      │
+    │   (शुद्धिकरण)        │
+    │   • Chromatography  │
+    │   • Crystallization │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Concentration     │
+    │   (सांद्रता)         │
+    │   • Evaporation     │
+    │   • Drying          │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │   Final Product     │
+    │   (अंतिम उत्पाद)    │
+    └─────────────────────┘
+                </pre>
+            </div>
+
+            <div class="box">
+                <h5>Common Purification Methods:</h5>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Principle</th>
+                        <th>Use For</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Ion Exchange</strong></td>
+                        <td>Charge differences</td>
+                        <td>Proteins, amino acids</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Size Exclusion</strong></td>
+                        <td>Size differences</td>
+                        <td>Proteins, polymers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Affinity</strong></td>
+                        <td>Specific binding</td>
+                        <td>Enzymes, antibodies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reverse Phase</strong></td>
+                        <td>Hydrophobicity</td>
+                        <td>Small molecules</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-left: 5px solid white;">
+            <h3 style="color: white; border-bottom: 2px solid white;">📝 Summary (सारांश)</h3>
+            <ul class="list" style="color: white;">
+                <li><strong>Industrial strains</strong> are selected and improved microorganisms for production (औद्योगिक उपभेद उत्पादन के लिए चुने और सुधारे गए सूक्ष्मजीव हैं)</li>
+                <li><strong>Selection strategies:</strong> Natural isolation, screening, genetic engineering (चयन रणनीतियां: प्राकृतिक अलगाव, स्क्रीनिंग, आनुवंशिक इंजीनियरिंग)</li>
+                <li><strong>Improvement:</strong> Mutation, metabolic engineering, directed evolution (सुधार: उत्परिवर्तन, चयापचय इंजीनियरिंग, निर्देशित विकास)</li>
+                <li><strong>Preservation:</strong> Short-term (refrigeration) and long-term (freezing, lyophilization) (संरक्षण: अल्पकालिक और दीर्घकालिक)</li>
+                <li><strong>Aseptic operation</strong> prevents contamination; <strong>containment</strong> prevents escape of GMOs (एसेप्टिक संचालन संदूषण रोकता है; कंटेनमेंट GMO के बचने को रोकता है)</li>
+                <li><strong>Scale up:</strong> Lab → Pilot → Industrial scale (स्केल अप: प्रयोगशाला → पायलट → औद्योगिक)</li>
+                <li><strong>Recombinant production</strong> requires containment and safety measures (पुनः संयोजक उत्पादन के लिए कंटेनमेंट और सुरक्षा उपायों की आवश्यकता होती है)</li>
+                <li><strong>Downstream processing:</strong> Separation → Isolation → Purification → Concentration (डाउनस्ट्रीम प्रोसेसिंग: पृथक्करण → अलगाव → शुद्धिकरण → सांद्रता)</li>
+            </ul>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr614-unit3.html" class="prev">← Previous: Unit III</a>
+        </div>
+    </div>
+</body>
+</html>
