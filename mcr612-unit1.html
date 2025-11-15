@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-612 Unit 1 - Introduction to Bacterial Disease Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .unit-nav {
+                flex-direction: column;
+            }
+            
+            .unit-nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr612-unit1.html" class="active">Unit I</a>
+            <a href="mcr612-unit2.html">Unit II</a>
+            <a href="mcr612-unit4.html">Unit IV</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🦠 Introduction to Bacterial Disease</h1>
+            <h2>MCR-612 UNIT I - Prokaryotic and Eukaryotic Interactions</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Easy English + Hindi | Complete Notes with Diagrams</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr612-unit2.html" class="next">Next: Unit II →</a>
+        </div>
+
+        <!-- Section 1: Introduction -->
+        <div class="section">
+            <h3>1. Introduction: Bacterial Disease (परिचय: जीवाणु रोग)</h3>
+            
+            <p>
+                Bacterial diseases are infections caused by bacteria that can affect humans, animals, and plants. Understanding how bacteria cause disease is crucial for developing treatments and prevention strategies.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> जीवाणु रोग बैक्टीरिया के कारण होने वाले संक्रमण हैं जो मनुष्यों, जानवरों और पौधों को प्रभावित कर सकते हैं। यह समझना कि बैक्टीरिया कैसे बीमारी का कारण बनते हैं, उपचार और रोकथाम रणनीतियों को विकसित करने के लिए महत्वपूर्ण है।
+            </div>
+
+            <div class="box">
+                <h5>Key Concepts (मुख्य अवधारणाएं):</h5>
+                <ul class="list">
+                    <li>Bacteria are prokaryotic microorganisms (बैक्टीरिया प्रोकैरियोटिक सूक्ष्मजीव हैं)</li>
+                    <li>They can cause disease through various mechanisms (वे विभिन्न तंत्रों के माध्यम से बीमारी का कारण बन सकते हैं)</li>
+                    <li>Understanding host-pathogen interactions is essential (मेजबान-रोगजनक अंतःक्रियाओं को समझना आवश्यक है)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2: Emergence of Cellular Microbiology -->
+        <div class="section">
+            <h3>2. Emergence of Cellular Microbiology (सेलुलर सूक्ष्म जीव विज्ञान का उदय)</h3>
+            
+            <p>
+                Cellular microbiology emerged as a field that combines microbiology and cell biology to understand how microorganisms interact with host cells at the molecular and cellular levels.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> सेलुलर सूक्ष्म जीव विज्ञान एक क्षेत्र के रूप में उभरा जो सूक्ष्म जीव विज्ञान और कोशिका जीव विज्ञान को जोड़ता है ताकि यह समझा जा सके कि सूक्ष्मजीव मेजबान कोशिकाओं के साथ आणविक और कोशिकीय स्तर पर कैसे बातचीत करते हैं।
+            </div>
+
+            <div class="diagram">
+                <h4>Evolution of Cellular Microbiology (सेलुलर सूक्ष्म जीव विज्ञान का विकास)</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <rect x="50" y="50" width="600" height="300" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="350" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Development Timeline</text>
+                    <text x="350" y="110" text-anchor="middle" font-size="16" fill="#7f8c8d">(विकास समयरेखा)</text>
+                    
+                    <!-- Step 1 -->
+                    <rect x="80" y="150" width="150" height="100" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="155" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Traditional</text>
+                    <text x="155" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Microbiology</text>
+                    <text x="155" y="220" text-anchor="middle" font-size="12" fill="#ecf0f1">(पारंपरिक</text>
+                    <text x="155" y="235" text-anchor="middle" font-size="12" fill="#ecf0f1">सूक्ष्म जीव विज्ञान)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 230 200 L 280 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowEvol)"/>
+                    
+                    <!-- Step 2 -->
+                    <rect x="280" y="150" width="150" height="100" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="355" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Cell Biology</text>
+                    <text x="355" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Advances</text>
+                    <text x="355" y="220" text-anchor="middle" font-size="12" fill="#ecf0f1">(कोशिका जीव विज्ञान</text>
+                    <text x="355" y="235" text-anchor="middle" font-size="12" fill="#ecf0f1">प्रगति)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 430 200 L 480 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowEvol)"/>
+                    
+                    <!-- Step 3 -->
+                    <rect x="480" y="150" width="150" height="100" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="555" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Cellular</text>
+                    <text x="555" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Microbiology</text>
+                    <text x="555" y="220" text-anchor="middle" font-size="12" fill="#ecf0f1">(सेलुलर</text>
+                    <text x="555" y="235" text-anchor="middle" font-size="12" fill="#ecf0f1">सूक्ष्म जीव विज्ञान)</text>
+                    
+                    <!-- Bottom text -->
+                    <text x="350" y="300" text-anchor="middle" font-size="14" fill="#2c3e50">Integration of Microbiology + Cell Biology</text>
+                    <text x="350" y="320" text-anchor="middle" font-size="12" fill="#7f8c8d">(सूक्ष्म जीव विज्ञान + कोशिका जीव विज्ञान का एकीकरण)</text>
+                    
+                    <defs>
+                        <marker id="arrowEvol" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 3: Prokaryotic and Eukaryotic Interactions -->
+        <div class="section">
+            <h3>3. Underlying Prokaryotic and Eukaryotic Interactions (प्रोकैरियोटिक और यूकैरियोटिक अंतःक्रियाओं का आधार)</h3>
+            
+            <p>
+                The interactions between prokaryotic (bacterial) and eukaryotic (host) cells are fundamental to understanding bacterial pathogenesis. These interactions occur at multiple levels.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> प्रोकैरियोटिक (जीवाणु) और यूकैरियोटिक (मेजबान) कोशिकाओं के बीच की अंतःक्रियाएं जीवाणु रोगजनन को समझने के लिए मौलिक हैं। ये अंतःक्रियाएं कई स्तरों पर होती हैं।
+            </div>
+
+            <div class="diagram">
+                <h4>Prokaryotic-Eukaryotic Interactions (प्रोकैरियोटिक-यूकैरियोटिक अंतःक्रियाएं)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Prokaryotic cell -->
+                    <rect x="50" y="50" width="250" height="200" fill="#3498db" stroke="#2980b9" stroke-width="3" rx="5"/>
+                    <text x="175" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Prokaryotic Cell</text>
+                    <text x="175" y="100" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रोकैरियोटिक कोशिका)</text>
+                    <text x="175" y="130" text-anchor="middle" font-size="12" fill="white">• No nucleus</text>
+                    <text x="175" y="150" text-anchor="middle" font-size="12" fill="white">• No organelles</text>
+                    <text x="175" y="170" text-anchor="middle" font-size="12" fill="white">• Simple structure</text>
+                    <text x="175" y="190" text-anchor="middle" font-size="12" fill="white">• Bacteria</text>
+                    <text x="175" y="210" text-anchor="middle" font-size="11" fill="#ecf0f1">(कोई नाभिक नहीं, सरल संरचना)</text>
+                    <text x="175" y="230" text-anchor="middle" font-size="11" fill="#ecf0f1">(बैक्टीरिया)</text>
+                    
+                    <!-- Interaction arrows -->
+                    <path d="M 300 150 L 400 150" stroke="#2c3e50" stroke-width="4" marker-end="url(#arrowInter)"/>
+                    <text x="350" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Interaction</text>
+                    <text x="350" y="155" text-anchor="middle" font-size="12" fill="#7f8c8d">(अंतःक्रिया)</text>
+                    
+                    <!-- Eukaryotic cell -->
+                    <rect x="400" y="50" width="250" height="200" fill="#27ae60" stroke="#229954" stroke-width="3" rx="5"/>
+                    <text x="525" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Eukaryotic Cell</text>
+                    <text x="525" y="100" text-anchor="middle" font-size="14" fill="#ecf0f1">(यूकैरियोटिक कोशिका)</text>
+                    <text x="525" y="130" text-anchor="middle" font-size="12" fill="white">• Has nucleus</text>
+                    <text x="525" y="150" text-anchor="middle" font-size="12" fill="white">• Has organelles</text>
+                    <text x="525" y="170" text-anchor="middle" font-size="12" fill="white">• Complex structure</text>
+                    <text x="525" y="190" text-anchor="middle" font-size="12" fill="white">• Host cells</text>
+                    <text x="525" y="210" text-anchor="middle" font-size="11" fill="#ecf0f1">(नाभिक है, जटिल संरचना)</text>
+                    <text x="525" y="230" text-anchor="middle" font-size="11" fill="#ecf0f1">(मेजबान कोशिकाएं)</text>
+                    
+                    <!-- Interaction types -->
+                    <rect x="50" y="280" width="600" height="200" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="350" y="310" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">Types of Interactions (अंतःक्रिया के प्रकार)</text>
+                    
+                    <!-- Adhesion -->
+                    <rect x="80" y="340" width="160" height="100" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="3"/>
+                    <text x="160" y="365" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Adhesion</text>
+                    <text x="160" y="385" text-anchor="middle" font-size="12" fill="#ecf0f1">(संसक्ति)</text>
+                    <text x="160" y="405" text-anchor="middle" font-size="11" fill="white">Bacteria attach</text>
+                    <text x="160" y="420" text-anchor="middle" font-size="11" fill="white">to host cells</text>
+                    
+                    <!-- Invasion -->
+                    <rect x="270" y="340" width="160" height="100" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="3"/>
+                    <text x="350" y="365" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Invasion</text>
+                    <text x="350" y="385" text-anchor="middle" font-size="12" fill="#ecf0f1">(आक्रमण)</text>
+                    <text x="350" y="405" text-anchor="middle" font-size="11" fill="white">Bacteria enter</text>
+                    <text x="350" y="420" text-anchor="middle" font-size="11" fill="white">host cells</text>
+                    
+                    <!-- Toxin Production -->
+                    <rect x="460" y="340" width="160" height="100" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="3"/>
+                    <text x="540" y="365" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Toxin</text>
+                    <text x="540" y="385" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Production</text>
+                    <text x="540" y="405" text-anchor="middle" font-size="12" fill="#ecf0f1">(विष उत्पादन)</text>
+                    <text x="540" y="425" text-anchor="middle" font-size="11" fill="white">Damage host</text>
+                    
+                    <defs>
+                        <marker id="arrowInter" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 4: Structure of Eukaryotic Cell -->
+        <div class="section">
+            <h3>4. Structure of Eukaryotic Cell (यूकैरियोटिक कोशिका की संरचना)</h3>
+            
+            <p>
+                Eukaryotic cells have a complex structure with membrane-bound organelles. Understanding this structure is essential to understand how bacteria interact with host cells.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> यूकैरियोटिक कोशिकाओं में झिल्ली-बद्ध अंगकों के साथ एक जटिल संरचना होती है। इस संरचना को समझना बैक्टीरिया के मेजबान कोशिकाओं के साथ कैसे बातचीत करते हैं, इसे समझने के लिए आवश्यक है।
+            </div>
+
+            <div class="box">
+                <h5>Key Components (मुख्य घटक):</h5>
+                <ul class="list">
+                    <li><strong>Nucleus (नाभिक):</strong> Contains DNA, controls cell functions (DNA रखता है, कोशिका कार्यों को नियंत्रित करता है)</li>
+                    <li><strong>Mitochondria (माइटोकॉन्ड्रिया):</strong> Powerhouse of the cell (कोशिका का ऊर्जा केंद्र)</li>
+                    <li><strong>Endoplasmic Reticulum (ER) (अंतर्द्रव्यी जालिका):</strong> Protein synthesis and transport (प्रोटीन संश्लेषण और परिवहन)</li>
+                    <li><strong>Golgi Apparatus (गॉल्जी तंत्र):</strong> Protein modification and packaging (प्रोटीन संशोधन और पैकेजिंग)</li>
+                    <li><strong>Lysosomes (लाइसोसोम):</strong> Digestive organelles (पाचक अंगक)</li>
+                    <li><strong>Cell Membrane (कोशिका झिल्ली):</strong> Boundary and communication (सीमा और संचार)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Eukaryotic Cell Structure (यूकैरियोटिक कोशिका संरचना)</h4>
+                <svg width="100%" height="600" viewBox="0 0 700 600">
+                    <!-- Cell membrane -->
+                    <ellipse cx="350" cy="300" rx="280" ry="200" fill="none" stroke="#2c3e50" stroke-width="4"/>
+                    <text x="350" y="50" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Eukaryotic Cell</text>
+                    <text x="350" y="70" text-anchor="middle" font-size="16" fill="#7f8c8d">(यूकैरियोटिक कोशिका)</text>
+                    
+                    <!-- Nucleus -->
+                    <circle cx="250" cy="250" r="60" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+                    <text x="250" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Nucleus</text>
+                    <text x="250" y="260" text-anchor="middle" font-size="12" fill="white">(नाभिक)</text>
+                    <text x="250" y="280" text-anchor="middle" font-size="11" fill="#ecf0f1">DNA</text>
+                    
+                    <!-- Mitochondria -->
+                    <ellipse cx="450" cy="200" rx="30" ry="50" fill="#27ae60" stroke="#229954" stroke-width="2" transform="rotate(45 450 200)"/>
+                    <text x="450" y="270" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">Mitochondria</text>
+                    <text x="450" y="285" text-anchor="middle" font-size="11" fill="#7f8c8d">(माइटोकॉन्ड्रिया)</text>
+                    
+                    <!-- ER -->
+                    <path d="M 150 350 Q 180 330, 200 350 Q 180 370, 150 350" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="150" y="390" text-anchor="middle" font-size="11" fill="#3498db" font-weight="bold">ER</text>
+                    
+                    <!-- Golgi -->
+                    <rect x="480" y="320" width="40" height="60" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="3"/>
+                    <text x="500" y="395" text-anchor="middle" font-size="11" fill="#f39c12" font-weight="bold">Golgi</text>
+                    
+                    <!-- Lysosome -->
+                    <circle cx="180" cy="400" r="20" fill="#8e44ad" stroke="#7d3c98" stroke-width="2"/>
+                    <text x="180" y="435" text-anchor="middle" font-size="11" fill="#8e44ad" font-weight="bold">Lysosome</text>
+                    
+                    <!-- Ribosomes -->
+                    <circle cx="400" cy="380" r="8" fill="#e74c3c"/>
+                    <circle cx="420" cy="390" r="8" fill="#e74c3c"/>
+                    <circle cx="410" cy="400" r="8" fill="#e74c3c"/>
+                    <text x="410" y="425" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">Ribosomes</text>
+                    
+                    <!-- Cytoplasm label -->
+                    <text x="350" y="520" text-anchor="middle" font-size="14" fill="#2c3e50">Cytoplasm (साइटोप्लाज्म)</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 5: Membrane Receptors and Signal Transduction -->
+        <div class="section">
+            <h3>5. Membrane Receptors and Signal Transduction (झिल्ली रिसेप्टर और सिग्नल ट्रांसडक्शन)</h3>
+            
+            <p>
+                Membrane receptors are proteins on the cell surface that receive signals from the environment. Signal transduction is the process by which these signals are converted into cellular responses.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> झिल्ली रिसेप्टर कोशिका की सतह पर प्रोटीन होते हैं जो पर्यावरण से संकेत प्राप्त करते हैं। सिग्नल ट्रांसडक्शन वह प्रक्रिया है जिसके द्वारा इन संकेतों को कोशिकीय प्रतिक्रियाओं में परिवर्तित किया जाता है।
+            </div>
+
+            <div class="diagram">
+                <h4>Signal Transduction Pathway (सिग्नल ट्रांसडक्शन मार्ग)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Extracellular signal -->
+                    <rect x="50" y="50" width="200" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="150" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Extracellular</text>
+                    <text x="150" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Signal</text>
+                    <text x="150" y="120" text-anchor="middle" font-size="12" fill="#ecf0f1">(बाह्य कोशिकीय संकेत)</text>
+                    
+                    <path d="M 250 90 L 300 90" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowSig)"/>
+                    
+                    <!-- Receptor -->
+                    <rect x="300" y="50" width="200" height="80" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="400" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Membrane</text>
+                    <text x="400" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Receptor</text>
+                    <text x="400" y="120" text-anchor="middle" font-size="12" fill="#ecf0f1">(झिल्ली रिसेप्टर)</text>
+                    
+                    <path d="M 400 130 L 400 180" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowSig)"/>
+                    
+                    <!-- Intracellular signaling -->
+                    <rect x="250" y="180" width="300" height="100" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="400" y="210" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Intracellular</text>
+                    <text x="400" y="230" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Signaling Cascade</text>
+                    <text x="400" y="250" text-anchor="middle" font-size="12" fill="#ecf0f1">(अंतर्कोशिकीय संकेतन कैस्केड)</text>
+                    <text x="400" y="270" text-anchor="middle" font-size="11" fill="white">Second messengers, Kinases</text>
+                    
+                    <path d="M 400 280 L 400 330" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowSig)"/>
+                    
+                    <!-- Cellular response -->
+                    <rect x="250" y="330" width="300" height="100" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="400" y="360" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Cellular</text>
+                    <text x="400" y="380" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Response</text>
+                    <text x="400" y="400" text-anchor="middle" font-size="12" fill="#ecf0f1">(कोशिकीय प्रतिक्रिया)</text>
+                    <text x="400" y="420" text-anchor="middle" font-size="11" fill="white">Gene expression, Metabolism</text>
+                    
+                    <defs>
+                        <marker id="arrowSig" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 6: Cytoskeleton -->
+        <div class="section">
+            <h3>6. Cytoskeleton - Regulation of Assembly (साइटोस्केलेटन - असेंबली का नियमन)</h3>
+            
+            <p>
+                The cytoskeleton is a network of protein filaments that provides structural support and enables cell movement. Bacteria can manipulate the cytoskeleton to invade host cells.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> साइटोस्केलेटन प्रोटीन तंतुओं का एक नेटवर्क है जो संरचनात्मक सहायता प्रदान करता है और कोशिका गति को सक्षम बनाता है। बैक्टीरिया मेजबान कोशिकाओं पर आक्रमण करने के लिए साइटोस्केलेटन में हेरफेर कर सकते हैं।
+            </div>
+
+            <div class="box">
+                <h5>Components (घटक):</h5>
+                <ul class="list">
+                    <li><strong>Actin Filaments (एक्टिन तंतु):</strong> Cell shape and movement (कोशिका आकार और गति)</li>
+                    <li><strong>Microtubules (माइक्रोट्यूब्यूल):</strong> Intracellular transport (अंतर्कोशिकीय परिवहन)</li>
+                    <li><strong>Intermediate Filaments (मध्यवर्ती तंतु):</strong> Structural support (संरचनात्मक सहायता)</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <h4>Cytoskeleton Structure (साइटोस्केलेटन संरचना)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Cell outline -->
+                    <ellipse cx="350" cy="250" rx="280" ry="180" fill="none" stroke="#2c3e50" stroke-width="3" stroke-dasharray="5,5"/>
+                    <text x="350" y="50" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Cytoskeleton Network</text>
+                    <text x="350" y="70" text-anchor="middle" font-size="16" fill="#7f8c8d">(साइटोस्केलेटन नेटवर्क)</text>
+                    
+                    <!-- Actin filaments -->
+                    <line x1="150" y1="150" x2="300" y2="200" stroke="#e74c3c" stroke-width="4"/>
+                    <line x1="200" y1="180" x2="350" y2="220" stroke="#e74c3c" stroke-width="4"/>
+                    <line x1="250" y1="200" x2="400" y2="240" stroke="#e74c3c" stroke-width="4"/>
+                    <line x1="300" y1="220" x2="450" y2="260" stroke="#e74c3c" stroke-width="4"/>
+                    <line x1="100" y1="200" x2="250" y2="250" stroke="#e74c3c" stroke-width="4"/>
+                    <line x1="150" y1="250" x2="300" y2="300" stroke="#e74c3c" stroke-width="4"/>
+                    <text x="100" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">Actin Filaments</text>
+                    <text x="100" y="155" text-anchor="middle" font-size="12" fill="#7f8c8d">(एक्टिन तंतु)</text>
+                    <text x="100" y="170" text-anchor="middle" font-size="11" fill="#2c3e50">• Cell shape</text>
+                    <text x="100" y="185" text-anchor="middle" font-size="11" fill="#2c3e50">• Movement</text>
+                    <text x="100" y="200" text-anchor="middle" font-size="11" fill="#2c3e50">• 7 nm diameter</text>
+                    
+                    <!-- Microtubules -->
+                    <line x1="400" y1="150" x2="550" y2="200" stroke="#3498db" stroke-width="5"/>
+                    <line x1="450" y1="180" x2="600" y2="230" stroke="#3498db" stroke-width="5"/>
+                    <line x1="500" y1="200" x2="550" y2="250" stroke="#3498db" stroke-width="5"/>
+                    <line x1="400" y1="250" x2="550" y2="300" stroke="#3498db" stroke-width="5"/>
+                    <text x="600" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">Microtubules</text>
+                    <text x="600" y="155" text-anchor="middle" font-size="12" fill="#7f8c8d">(माइक्रोट्यूब्यूल)</text>
+                    <text x="600" y="170" text-anchor="middle" font-size="11" fill="#2c3e50">• Transport</text>
+                    <text x="600" y="185" text-anchor="middle" font-size="11" fill="#2c3e50">• Cell division</text>
+                    <text x="600" y="200" text-anchor="middle" font-size="11" fill="#2c3e50">• 25 nm diameter</text>
+                    
+                    <!-- Intermediate filaments -->
+                    <line x1="200" y1="300" x2="350" y2="320" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="250" y1="320" x2="400" y2="340" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="300" y1="340" x2="450" y2="360" stroke="#27ae60" stroke-width="3"/>
+                    <text x="200" y="380" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">Intermediate Filaments</text>
+                    <text x="200" y="395" text-anchor="middle" font-size="12" fill="#7f8c8d">(मध्यवर्ती तंतु)</text>
+                    <text x="200" y="410" text-anchor="middle" font-size="11" fill="#2c3e50">• Structural</text>
+                    <text x="200" y="425" text-anchor="middle" font-size="11" fill="#2c3e50">• Support</text>
+                    <text x="200" y="440" text-anchor="middle" font-size="11" fill="#2c3e50">• 10 nm diameter</text>
+                    
+                    <!-- Bacterial manipulation -->
+                    <rect x="400" y="380" width="250" height="100" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="525" y="410" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Bacterial Manipulation</text>
+                    <text x="525" y="430" text-anchor="middle" font-size="14" fill="#ecf0f1">(जीवाणु हेरफेर)</text>
+                    <text x="525" y="455" text-anchor="middle" font-size="12" fill="white">• Actin polymerization</text>
+                    <text x="525" y="475" text-anchor="middle" font-size="12" fill="white">• Cell invasion</text>
+                    <text x="525" y="495" text-anchor="middle" font-size="11" fill="#ecf0f1">(एक्टिन बहुलकीकरण, कोशिका आक्रमण)</text>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Cytoskeleton Regulation (साइटोस्केलेटन नियमन)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Cytoskeleton       │
+    │  (साइटोस्केलेटन)    │
+    │                     │
+    │  Three Components: │
+    │  (तीन घटक:)        │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        ▼             ▼
+    ┌─────────┐  ┌─────────┐
+    │  Actin  │  │Microtubules│
+    │  (एक्टिन)│  │(माइक्रोट्यूब्यूल)│
+    │  • 7 nm │  │• 25 nm  │
+    │  • Shape│  │• Transport│
+    │  • Move │  │• Division│
+    └────┬────┘  └────┬────┘
+         │            │
+         └──────┬─────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │  Intermediate       │
+    │  Filaments          │
+    │  (मध्यवर्ती तंतु)   │
+    │  • 10 nm            │
+    │  • Structural       │
+    │    support          │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Regulation          │
+    │  (नियमन)            │
+    │  • Assembly          │
+    │  • Disassembly       │
+    │  • Modification      │
+    │  • Bacterial control │
+    └─────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="hindi">
+                <strong>हिंदी व्याख्या:</strong> साइटोस्केलेटन तीन मुख्य घटकों से बना होता है: एक्टिन तंतु (7 nm, कोशिका आकार और गति), माइक्रोट्यूब्यूल (25 nm, अंतर्कोशिकीय परिवहन और कोशिका विभाजन), और मध्यवर्ती तंतु (10 nm, संरचनात्मक सहायता)। बैक्टीरिया इन घटकों में हेरफेर करके मेजबान कोशिकाओं में आक्रमण कर सकते हैं, विशेष रूप से एक्टिन बहुलकीकरण को नियंत्रित करके।
+            </div>
+        </div>
+
+        <!-- Section 7: Secretion Systems in Prokaryotes -->
+        <div class="section">
+            <h3>7. Secretion Systems in Prokaryotes (प्रोकैरियोट्स में स्राव प्रणाली)</h3>
+            
+            <p>
+                Bacteria use specialized secretion systems to deliver virulence factors (toxins, enzymes) into host cells or the extracellular environment. These systems are essential for bacterial pathogenesis.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> बैक्टीरिया मेजबान कोशिकाओं या बाह्य कोशिकीय वातावरण में विषाणु कारकों (विष, एंजाइम) को पहुंचाने के लिए विशेष स्राव प्रणालियों का उपयोग करते हैं। ये प्रणालियां जीवाणु रोगजनन के लिए आवश्यक हैं।
+            </div>
+
+            <div class="diagram">
+                <h4>Types of Secretion Systems (स्राव प्रणालियों के प्रकार)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Type I -->
+                    <rect x="50" y="50" width="180" height="180" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="140" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type I</text>
+                    <text x="140" y="100" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार I)</text>
+                    <text x="140" y="130" text-anchor="middle" font-size="12" fill="white">ABC transporter</text>
+                    <text x="140" y="150" text-anchor="middle" font-size="12" fill="white">One-step</text>
+                    <text x="140" y="170" text-anchor="middle" font-size="12" fill="white">Direct export</text>
+                    <text x="140" y="200" text-anchor="middle" font-size="11" fill="#ecf0f1">(एक-चरण,</text>
+                    <text x="140" y="215" text-anchor="middle" font-size="11" fill="#ecf0f1">प्रत्यक्ष निर्यात)</text>
+                    
+                    <!-- Type II -->
+                    <rect x="260" y="50" width="180" height="180" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="350" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type II</text>
+                    <text x="350" y="100" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार II)</text>
+                    <text x="350" y="130" text-anchor="middle" font-size="12" fill="white">Sec/Tat pathway</text>
+                    <text x="350" y="150" text-anchor="middle" font-size="12" fill="white">Two-step</text>
+                    <text x="350" y="170" text-anchor="middle" font-size="12" fill="white">Pilus-like</text>
+                    <text x="350" y="200" text-anchor="middle" font-size="11" fill="#ecf0f1">(दो-चरण,</text>
+                    <text x="350" y="215" text-anchor="middle" font-size="11" fill="#ecf0f1">पिलस जैसा)</text>
+                    
+                    <!-- Type III -->
+                    <rect x="470" y="50" width="180" height="180" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="560" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type III</text>
+                    <text x="560" y="100" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार III)</text>
+                    <text x="560" y="130" text-anchor="middle" font-size="12" fill="white">Injectisome</text>
+                    <text x="560" y="150" text-anchor="middle" font-size="12" fill="white">Direct injection</text>
+                    <text x="560" y="170" text-anchor="middle" font-size="12" fill="white">Into host cell</text>
+                    <text x="560" y="200" text-anchor="middle" font-size="11" fill="#ecf0f1">(इंजेक्टिसोम,</text>
+                    <text x="560" y="215" text-anchor="middle" font-size="11" fill="#ecf0f1">प्रत्यक्ष इंजेक्शन)</text>
+                    
+                    <!-- Type IV -->
+                    <rect x="50" y="260" width="180" height="180" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="140" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type IV</text>
+                    <text x="140" y="310" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार IV)</text>
+                    <text x="140" y="340" text-anchor="middle" font-size="12" fill="white">Conjugative</text>
+                    <text x="140" y="360" text-anchor="middle" font-size="12" fill="white">DNA transfer</text>
+                    <text x="140" y="380" text-anchor="middle" font-size="12" fill="white">Pilus-mediated</text>
+                    <text x="140" y="410" text-anchor="middle" font-size="11" fill="#ecf0f1">(संयुग्मी,</text>
+                    <text x="140" y="425" text-anchor="middle" font-size="11" fill="#ecf0f1">पिलस-मध्यस्थ)</text>
+                    
+                    <!-- Type V -->
+                    <rect x="260" y="260" width="180" height="180" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="350" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type V</text>
+                    <text x="350" y="310" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार V)</text>
+                    <text x="350" y="340" text-anchor="middle" font-size="12" fill="white">Autotransporter</text>
+                    <text x="350" y="360" text-anchor="middle" font-size="12" fill="white">Self-transport</text>
+                    <text x="350" y="380" text-anchor="middle" font-size="12" fill="white">Two-domain</text>
+                    <text x="350" y="410" text-anchor="middle" font-size="11" fill="#ecf0f1">(स्वत: परिवहक,</text>
+                    <text x="350" y="425" text-anchor="middle" font-size="11" fill="#ecf0f1">दो-डोमेन)</text>
+                    
+                    <!-- Type VI -->
+                    <rect x="470" y="260" width="180" height="180" fill="#c0392b" stroke="#a93226" stroke-width="2" rx="5"/>
+                    <text x="560" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Type VI</text>
+                    <text x="560" y="310" text-anchor="middle" font-size="14" fill="#ecf0f1">(प्रकार VI)</text>
+                    <text x="560" y="340" text-anchor="middle" font-size="12" fill="white">T6SS</text>
+                    <text x="560" y="360" text-anchor="middle" font-size="12" fill="white">Contractile</text>
+                    <text x="560" y="380" text-anchor="middle" font-size="12" fill="white">Needle-like</text>
+                    <text x="560" y="410" text-anchor="middle" font-size="11" fill="#ecf0f1">(संकुचनशील,</text>
+                    <text x="560" y="425" text-anchor="middle" font-size="11" fill="#ecf0f1">सुई जैसा)</text>
+                </svg>
+            </div>
+            
+            <div class="box">
+                <h5>Key Secretion Systems (मुख्य स्राव प्रणालियां):</h5>
+                <ul class="list">
+                    <li><strong>Type I (प्रकार I):</strong> ABC transporter system, one-step secretion (ABC परिवहक प्रणाली, एक-चरण स्राव)</li>
+                    <li><strong>Type II (प्रकार II):</strong> Sec/Tat pathway, two-step process via periplasm (Sec/Tat मार्ग, दो-चरण प्रक्रिया)</li>
+                    <li><strong>Type III (प्रकार III):</strong> Injectisome, direct injection into host cells (इंजेक्टिसोम, मेजबान कोशिकाओं में प्रत्यक्ष इंजेक्शन)</li>
+                    <li><strong>Type IV (प्रकार IV):</strong> Conjugative system, DNA and protein transfer (संयुग्मी प्रणाली, DNA और प्रोटीन स्थानांतरण)</li>
+                    <li><strong>Type V (प्रकार V):</strong> Autotransporter, self-transporting proteins (स्वत: परिवहक, स्व-परिवहन प्रोटीन)</li>
+                    <li><strong>Type VI (प्रकार VI):</strong> T6SS, contractile needle-like structure (T6SS, संकुचनशील सुई जैसी संरचना)</li>
+                </ul>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Secretion System Mechanism (स्राव प्रणाली तंत्र)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Bacterial Cell      │
+    │  (जीवाणु कोशिका)     │
+    │  • Virulence factors │
+    │    synthesized      │
+    │  • Toxins, enzymes  │
+    └──────────┬──────────┘
+               │
+        ┌──────┴──────┐
+        │             │
+        ▼             ▼
+    ┌─────────┐  ┌─────────┐
+    │  Type I │  │ Type II │
+    │  (एक-चरण)│  │ (दो-चरण)│
+    │  Direct │  │ Via     │
+    │  export │  │ periplasm│
+    └────┬────┘  └────┬────┘
+         │            │
+         │            │
+         ▼            ▼
+    ┌─────────┐  ┌─────────┐
+    │  Type III│  │ Type IV │
+    │  (इंजेक्शन)│  │ (संयुग्मी)│
+    │  Direct │  │ DNA/    │
+    │  injection│ │ protein │
+    └────┬────┘  └────┬────┘
+         │            │
+         └──────┬─────┘
+                │
+                ▼
+    ┌─────────────────────┐
+    │  Host Cell          │
+    │  (मेजबान कोशिका)    │
+    │  • Receives         │
+    │    virulence factors│
+    │  • Cell damage      │
+    └─────────────────────┘
+                </pre>
+            </div>
+        </div>
+
+        <!-- Section 8: Pathogenicity Islands -->
+        <div class="section">
+            <h3>8. Pathogenicity Islands (रोगजनन द्वीप)</h3>
+            
+            <p>
+                Pathogenicity islands (PAIs) are distinct genetic elements in bacterial genomes that contain clusters of virulence genes. They are often acquired through horizontal gene transfer and contribute significantly to bacterial pathogenicity.
+            </p>
+            <div class="hindi">
+                <strong>हिंदी:</strong> रोगजनन द्वीप (PAIs) जीवाणु जीनोम में विशिष्ट आनुवंशिक तत्व हैं जिनमें विषाणु जीनों के समूह होते हैं। वे अक्सर क्षैतिज जीन स्थानांतरण के माध्यम से प्राप्त किए जाते हैं और जीवाणु रोगजनन में महत्वपूर्ण योगदान देते हैं।
+            </div>
+
+            <div class="box">
+                <h5>Characteristics of Pathogenicity Islands (रोगजनन द्वीप की विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Large DNA segments (बड़े DNA खंड):</strong> Typically 10-200 kb in size (आमतौर पर 10-200 kb आकार)</li>
+                    <li><strong>GC content different (GC सामग्री अलग):</strong> Different from rest of genome (जीनोम के बाकी हिस्से से अलग)</li>
+                    <li><strong>Flanked by direct repeats (प्रत्यक्ष दोहराव से घिरा):</strong> Often have insertion sequences (अक्सर सम्मिलन अनुक्रम होते हैं)</li>
+                    <li><strong>Associated with tRNA genes (tRNA जीनों से जुड़ा):</strong> Often integrated near tRNA genes (अक्सर tRNA जीनों के पास एकीकृत)</li>
+                    <li><strong>Mobile genetic elements (मोबाइल आनुवंशिक तत्व):</strong> Can be transferred between bacteria (बैक्टीरिया के बीच स्थानांतरित किया जा सकता है)</li>
+                    <li><strong>Encode virulence factors (विषाणु कारकों को एनकोड करता है):</strong> Toxins, adhesins, secretion systems (विष, आसंजक, स्राव प्रणालियां)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Pathogenicity Island Structure (रोगजनन द्वीप संरचना)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Bacterial chromosome -->
+                    <rect x="50" y="100" width="600" height="80" fill="#ecf0f1" stroke="#34495e" stroke-width="3" rx="5"/>
+                    <text x="350" y="50" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Bacterial Chromosome</text>
+                    <text x="350" y="70" text-anchor="middle" font-size="16" fill="#7f8c8d">(जीवाणु गुणसूत्र)</text>
+                    <text x="350" y="140" text-anchor="middle" font-size="14" fill="#2c3e50">Core Genome (मुख्य जीनोम)</text>
+                    
+                    <!-- PAI -->
+                    <rect x="200" y="220" width="300" height="120" fill="#e74c3c" stroke="#c0392b" stroke-width="3" rx="5"/>
+                    <text x="350" y="250" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Pathogenicity Island (PAI)</text>
+                    <text x="350" y="270" text-anchor="middle" font-size="14" fill="#ecf0f1">(रोगजनन द्वीप)</text>
+                    
+                    <!-- Direct repeats -->
+                    <rect x="190" y="220" width="20" height="120" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="200" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="white">DR</text>
+                    <rect x="490" y="220" width="20" height="120" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="500" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="white">DR</text>
+                    <text x="350" y="310" text-anchor="middle" font-size="12" fill="#ecf0f1">Direct Repeats (प्रत्यक्ष दोहराव)</text>
+                    
+                    <!-- tRNA gene -->
+                    <rect x="180" y="360" width="40" height="40" fill="#27ae60" stroke="#229954" stroke-width="2" rx="3"/>
+                    <text x="200" y="385" text-anchor="middle" font-size="12" font-weight="bold" fill="white">tRNA</text>
+                    <text x="200" y="410" text-anchor="middle" font-size="11" fill="#ecf0f1">gene</text>
+                    
+                    <!-- Virulence genes -->
+                    <rect x="250" y="240" width="50" height="30" fill="#8e44ad" stroke="#7d3c98" stroke-width="1" rx="2"/>
+                    <text x="275" y="260" text-anchor="middle" font-size="10" fill="white">Toxin</text>
+                    <rect x="320" y="240" width="50" height="30" fill="#8e44ad" stroke="#7d3c98" stroke-width="1" rx="2"/>
+                    <text x="345" y="260" text-anchor="middle" font-size="10" fill="white">Adhesin</text>
+                    <rect x="390" y="240" width="50" height="30" fill="#8e44ad" stroke="#7d3c98" stroke-width="1" rx="2"/>
+                    <text x="415" y="260" text-anchor="middle" font-size="10" fill="white">T3SS</text>
+                    <rect x="280" y="280" width="50" height="30" fill="#8e44ad" stroke="#7d3c98" stroke-width="1" rx="2"/>
+                    <text x="305" y="300" text-anchor="middle" font-size="10" fill="white">Enzyme</text>
+                    <rect x="360" y="280" width="50" height="30" fill="#8e44ad" stroke="#7d3c98" stroke-width="1" rx="2"/>
+                    <text x="385" y="300" text-anchor="middle" font-size="10" fill="white">Regulator</text>
+                    
+                    <text x="350" y="330" text-anchor="middle" font-size="12" fill="#ecf0f1">Virulence Genes (विषाणु जीन)</text>
+                    
+                    <!-- Arrow showing transfer -->
+                    <path d="M 350 360 L 350 400" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowPAI)"/>
+                    <text x="370" y="380" text-anchor="start" font-size="12" fill="#2c3e50">Horizontal Gene Transfer</text>
+                    <text x="370" y="395" text-anchor="start" font-size="11" fill="#7f8c8d">(क्षैतिज जीन स्थानांतरण)</text>
+                    
+                    <!-- Features box -->
+                    <rect x="50" y="420" width="600" height="60" fill="#fff5f5" stroke="#e74c3c" stroke-width="2" rx="5"/>
+                    <text x="350" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Key Features: Large size (10-200 kb) | Different GC content | Mobile | Virulence genes</text>
+                    <text x="350" y="465" text-anchor="middle" font-size="12" fill="#7f8c8d">(मुख्य विशेषताएं: बड़ा आकार | अलग GC सामग्री | मोबाइल | विषाणु जीन)</text>
+                    
+                    <defs>
+                        <marker id="arrowPAI" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Pathogenicity Island Acquisition (रोगजनन द्वीप अधिग्रहण)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Donor Bacteria     │
+    │  (दाता जीवाणु)      │
+    │  • Contains PAI    │
+    │  • Virulence genes  │
+    └──────────┬──────────┘
+               │
+               ▼ (Horizontal Transfer)
+    ┌─────────────────────┐
+    │  Gene Transfer      │
+    │  (जीन स्थानांतरण)   │
+    │  • Conjugation      │
+    │  • Transduction     │
+    │  • Transformation   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Recipient Bacteria │
+    │  (प्राप्तकर्ता जीवाणु)│
+    │  • Receives PAI     │
+    │  • Integration near│
+    │    tRNA gene        │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Pathogenic        │
+    │  Bacteria          │
+    │  (रोगजनक जीवाणु)   │
+    │  • Can cause       │
+    │    disease         │
+    │  • Virulence       │
+    │    factors active  │
+    └─────────────────────┘
+                </pre>
+            </div>
+            
+            <div class="hindi">
+                <strong>हिंदी व्याख्या:</strong> रोगजनन द्वीप बैक्टीरिया के जीनोम में बड़े DNA खंड होते हैं जो विषाणु जीनों को रखते हैं। वे अक्सर क्षैतिज जीन स्थानांतरण (conjugation, transduction, transformation) के माध्यम से प्राप्त किए जाते हैं और tRNA जीनों के पास एकीकृत होते हैं। ये द्वीप बैक्टीरिया को रोगजनक बनाने में महत्वपूर्ण भूमिका निभाते हैं।
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <h3>📚 Unit I Summary</h3>
+            
+            <div class="box">
+                <h5>Key Concepts Covered (कवर किए गए मुख्य अवधारणाएं):</h5>
+                <ul class="list">
+                    <li>✓ Introduction to bacterial diseases and their mechanisms (जीवाणु रोगों का परिचय और उनके तंत्र)</li>
+                    <li>✓ Emergence of cellular microbiology as a field (सेलुलर सूक्ष्म जीव विज्ञान का क्षेत्र के रूप में उदय)</li>
+                    <li>✓ Prokaryotic-eukaryotic interactions (प्रोकैरियोटिक-यूकैरियोटिक अंतःक्रियाएं)</li>
+                    <li>✓ Structure and components of eukaryotic cells (यूकैरियोटिक कोशिकाओं की संरचना और घटक)</li>
+                    <li>✓ Membrane receptors and signal transduction pathways (झिल्ली रिसेप्टर और सिग्नल ट्रांसडक्शन मार्ग)</li>
+                    <li>✓ Cytoskeleton structure and regulation (साइटोस्केलेटन संरचना और नियमन)</li>
+                    <li>✓ Bacterial secretion systems (Types I-VI) (जीवाणु स्राव प्रणालियां (प्रकार I-VI))</li>
+                    <li>✓ Pathogenicity islands and their role in virulence (रोगजनन द्वीप और विषाणु में उनकी भूमिका)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unit-nav">
+            <a href="index.html" class="home">🏠 All Units</a>
+            <a href="mcr612-unit2.html" class="next">Next: Unit II →</a>
+        </div>
+    </div>
+</body>
+</html>
