@@ -320,42 +320,231 @@
             </div>
             
             <div class="diagram">
-                <h4>Bacterial DNA Isolation Flowchart</h4>
-                <div class="flowchart">Bacterial Culture
-    ↓
-Centrifuge (Collect Pellet)
-    ↓
-Lysozyme + SDS (Cell Lysis)
-    ↓
-Proteinase K (Protein Digestion)
-    ↓
-Phenol-Chloroform Extraction
-    ↓
-Ethanol Precipitation
-    ↓
-Purified Chromosomal DNA</div>
+                <h4>Bacterial DNA Isolation Flowchart (बैक्टीरियल DNA अलगाव प्रवाह चार्ट)</h4>
+                <svg width="100%" height="500" viewBox="0 0 600 500">
+                    <!-- Step 1: Bacterial Culture -->
+                    <rect x="200" y="30" width="200" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="300" y="55" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Bacterial Culture</text>
+                    <text x="300" y="75" text-anchor="middle" fill="#ecf0f1" font-size="12">(बैक्टीरियल संवर्धन)</text>
+                    <circle cx="250" cy="60" r="8" fill="#ecf0f1"/>
+                    <circle cx="300" cy="60" r="8" fill="#ecf0f1"/>
+                    <circle cx="350" cy="60" r="8" fill="#ecf0f1"/>
+                    
+                    <!-- Arrow -->
+                    <path d="M 300 90 L 300 130" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Step 2: Centrifuge -->
+                    <rect x="200" y="130" width="200" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="300" y="155" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Centrifuge</text>
+                    <text x="300" y="175" text-anchor="middle" fill="#ecf0f1" font-size="12">(अपकेंद्रित्र)</text>
+                    <ellipse cx="300" cy="160" rx="40" ry="20" fill="#ecf0f1" opacity="0.3"/>
+                    
+                    <path d="M 300 190 L 300 230" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Step 3: Cell Lysis -->
+                    <rect x="200" y="230" width="200" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="300" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Cell Lysis</text>
+                    <text x="300" y="275" text-anchor="middle" fill="#ecf0f1" font-size="12">Lysozyme + SDS</text>
+                    <text x="300" y="290" text-anchor="middle" fill="#ecf0f1" font-size="11">(कोशिका विखंडन)</text>
+                    
+                    <path d="M 300 290 L 300 330" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Step 4: Protein Removal -->
+                    <rect x="200" y="330" width="200" height="60" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="300" y="355" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Protein Removal</text>
+                    <text x="300" y="375" text-anchor="middle" fill="#ecf0f1" font-size="12">Proteinase K</text>
+                    <text x="300" y="390" text-anchor="middle" fill="#ecf0f1" font-size="11">(प्रोटीन हटाना)</text>
+                    
+                    <path d="M 300 390 L 300 430" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown)"/>
+                    
+                    <!-- Step 5: DNA Extraction -->
+                    <rect x="200" y="430" width="200" height="60" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="300" y="455" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DNA Extraction</text>
+                    <text x="300" y="475" text-anchor="middle" fill="#ecf0f1" font-size="12">Phenol-Chloroform</text>
+                    <text x="300" y="490" text-anchor="middle" fill="#ecf0f1" font-size="11">(DNA निष्कर्षण)</text>
+                    
+                    <defs>
+                        <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Detailed Process Flow (विस्तृत प्रक्रिया प्रवाह)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Bacterial Culture  │
+    │  (बैक्टीरियल संवर्धन)│
+    │  • Grow bacteria    │
+    │  • In liquid media  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Centrifuge         │
+    │  (अपकेंद्रित्र)      │
+    │  • Spin at high     │
+    │    speed            │
+    │  • Collect pellet   │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Cell Lysis         │
+    │  (कोशिका विखंडन)    │
+    │  • Lysozyme:        │
+    │    breaks cell wall │
+    │  • SDS: breaks      │
+    │    membrane         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Protein Removal    │
+    │  (प्रोटीन हटाना)     │
+    │  • Proteinase K     │
+    │    digests proteins │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  DNA Extraction     │
+    │  (DNA निष्कर्षण)    │
+    │  • Phenol-chloroform│
+    │    separates DNA    │
+    │    from proteins    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Ethanol            │
+    │  Precipitation      │
+    │  (एथेनॉल अवक्षेपण)  │
+    │  • DNA precipitates │
+    │  • Forms white      │
+    │    pellet           │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Purified DNA       │
+    │  (शुद्ध DNA)        │
+    │  • Resuspend in     │
+    │    buffer           │
+    │  • Ready for use!   │
+    └─────────────────────┘
+                </pre>
             </div>
             
             <div class="hindi">
-                <strong>Hindi Explanation:</strong> बैक्टीरियल क्रोमोसोमल DNA को अलग करने के लिए पहले बैक्टीरिया की कोशिकाओं को तोड़ा जाता है, फिर प्रोटीन को हटाया जाता है, और अंत में DNA को एथेनॉल से precipitate किया जाता है।
+                <strong>हिंदी व्याख्या:</strong> बैक्टीरियल क्रोमोसोमल DNA को अलग करने के लिए पहले बैक्टीरिया की कोशिकाओं को तोड़ा जाता है (लाइसोजाइम और SDS के साथ), फिर प्रोटीन को हटाया जाता है (प्रोटीनेज K के साथ), और अंत में DNA को एथेनॉल से अवक्षेपित किया जाता है। यह प्रक्रिया शुद्ध DNA देती है जो आनुवंशिक इंजीनियरिंग में उपयोग के लिए तैयार है।
             </div>
 
-            <h4>1.2 Isolation of Plasmid DNA from Bacteria</h4>
-            <p>Plasmid DNA is smaller and circular, making it easier to isolate separately from chromosomal DNA.</p>
+            <h4>1.2 Isolation of Plasmid DNA from Bacteria (बैक्टीरिया से प्लास्मिड DNA अलगाव)</h4>
+            <p>Plasmid DNA is smaller and circular, making it easier to isolate separately from chromosomal DNA. Plasmid DNA छोटा और वृत्ताकार होता है, जिससे इसे क्रोमोसोमल DNA से अलग करना आसान होता है।</p>
             
             <div class="box">
-                <h5>Key Methods for Plasmid DNA Isolation:</h5>
+                <h5>Key Methods for Plasmid DNA Isolation (प्लास्मिड DNA अलगाव की मुख्य विधियाँ):</h5>
                 <ul class="list">
-                    <li><strong>Alkaline Lysis Method:</strong> Most common method
+                    <li><strong>Alkaline Lysis Method (क्षारीय लाइसिस विधि):</strong> Most common method (सबसे आम विधि)
                         <ul>
-                            <li>Uses NaOH + SDS to denature DNA and proteins</li>
-                            <li>Chromosomal DNA denatures and precipitates</li>
-                            <li>Plasmid DNA renatures and stays in solution</li>
+                            <li>Uses NaOH + SDS to denature DNA and proteins (DNA और प्रोटीन को denature करने के लिए NaOH + SDS का उपयोग)</li>
+                            <li>Chromosomal DNA denatures and precipitates (क्रोमोसोमल DNA denature होकर अवक्षेपित हो जाता है)</li>
+                            <li>Plasmid DNA renatures and stays in solution (प्लास्मिड DNA renature होकर विलयन में रहता है)</li>
                         </ul>
                     </li>
-                    <li><strong>Boiling Method:</strong> Quick but less pure</li>
-                    <li><strong>Commercial Kits:</strong> Use silica columns for purification</li>
+                    <li><strong>Boiling Method (उबालने की विधि):</strong> Quick but less pure (तेज़ लेकिन कम शुद्ध)</li>
+                    <li><strong>Commercial Kits (व्यावसायिक किट):</strong> Use silica columns for purification (शुद्धिकरण के लिए सिलिका कॉलम का उपयोग)</li>
                 </ul>
+            </div>
+            
+            <div class="diagram">
+                <h4>Alkaline Lysis Method for Plasmid DNA (प्लास्मिड DNA के लिए क्षारीय लाइसिस विधि)</h4>
+                <svg width="100%" height="600" viewBox="0 0 700 600">
+                    <!-- Step 1: Bacterial Cells -->
+                    <rect x="50" y="30" width="250" height="100" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="175" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Bacterial Cells</text>
+                    <text x="175" y="80" text-anchor="middle" fill="#ecf0f1" font-size="12">(बैक्टीरियल कोशिकाएं)</text>
+                    <!-- Chromosomal DNA -->
+                    <line x1="100" y1="100" x2="200" y2="100" stroke="#e74c3c" stroke-width="4"/>
+                    <text x="150" y="95" text-anchor="middle" fill="#e74c3c" font-size="10">Chromosomal DNA</text>
+                    <!-- Plasmid DNA -->
+                    <circle cx="175" cy="120" r="15" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="175" y="125" text-anchor="middle" fill="white" font-size="9">Plasmid</text>
+                    <circle cx="220" cy="120" r="15" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="220" y="125" text-anchor="middle" fill="white" font-size="9">Plasmid</text>
+                    
+                    <path d="M 175 130 L 175 170" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown2)"/>
+                    
+                    <!-- Step 2: NaOH + SDS -->
+                    <rect x="50" y="170" width="250" height="100" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="175" y="200" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Add NaOH + SDS</text>
+                    <text x="175" y="220" text-anchor="middle" fill="#ecf0f1" font-size="12">(क्षारीय लाइसिस)</text>
+                    <text x="175" y="240" text-anchor="middle" fill="#ecf0f1" font-size="11">• Denatures DNA</text>
+                    <text x="175" y="255" text-anchor="middle" fill="#ecf0f1" font-size="11">• Breaks membranes</text>
+                    
+                    <path d="M 175 270 L 175 310" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown2)"/>
+                    
+                    <!-- Step 3: Neutralization -->
+                    <rect x="50" y="310" width="250" height="100" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="175" y="340" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Add KOAc (Neutralize)</text>
+                    <text x="175" y="360" text-anchor="middle" fill="#ecf0f1" font-size="12">(तटस्थीकरण)</text>
+                    <!-- Denatured chromosomal DNA -->
+                    <line x1="100" y1="380" x2="200" y2="380" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,5"/>
+                    <text x="150" y="375" text-anchor="middle" fill="#e74c3c" font-size="10">Denatured</text>
+                    <text x="150" y="395" text-anchor="middle" fill="#e74c3c" font-size="9">Chromosomal DNA</text>
+                    <!-- Renatured plasmid -->
+                    <circle cx="220" cy="390" r="12" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="220" y="395" text-anchor="middle" fill="white" font-size="8">P</text>
+                    
+                    <path d="M 175 410 L 175 450" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowDown2)"/>
+                    
+                    <!-- Step 4: Centrifuge -->
+                    <rect x="50" y="450" width="250" height="100" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="175" y="480" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Centrifuge</text>
+                    <text x="175" y="500" text-anchor="middle" fill="#ecf0f1" font-size="12">(अपकेंद्रित्र)</text>
+                    <!-- Pellet -->
+                    <rect x="120" y="520" width="110" height="20" fill="#e74c3c" rx="3"/>
+                    <text x="175" y="535" text-anchor="middle" fill="white" font-size="10">Pellet: Chromosomal DNA</text>
+                    <!-- Supernatant -->
+                    <text x="175" y="545" text-anchor="middle" fill="#27ae60" font-size="10">Supernatant: Plasmid DNA</text>
+                    
+                    <!-- Right side: Comparison -->
+                    <rect x="400" y="30" width="280" height="520" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="540" y="60" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Comparison</text>
+                    <text x="540" y="80" text-anchor="middle" fill="#7f8c8d" font-size="14">(तुलना)</text>
+                    
+                    <!-- Chromosomal DNA box -->
+                    <rect x="420" y="120" width="240" height="180" fill="#fff5f5" stroke="#e74c3c" stroke-width="2" rx="5"/>
+                    <text x="540" y="150" text-anchor="middle" fill="#e74c3c" font-size="16" font-weight="bold">Chromosomal DNA</text>
+                    <text x="540" y="170" text-anchor="middle" fill="#7f8c8d" font-size="12">(क्रोमोसोमल DNA)</text>
+                    <line x1="480" y1="190" x2="600" y2="190" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="540" y="210" text-anchor="middle" fill="#2c3e50" font-size="12">• Large (millions bp)</text>
+                    <text x="540" y="230" text-anchor="middle" fill="#2c3e50" font-size="12">• Linear</text>
+                    <text x="540" y="250" text-anchor="middle" fill="#2c3e50" font-size="12">• Denatures → Precipitates</text>
+                    <text x="540" y="270" text-anchor="middle" fill="#2c3e50" font-size="12">• Forms pellet</text>
+                    <text x="540" y="290" text-anchor="middle" fill="#7f8c8d" font-size="11">(बड़ा, रैखिक, अवक्षेपित होता है)</text>
+                    
+                    <!-- Plasmid DNA box -->
+                    <rect x="420" y="340" width="240" height="180" fill="#f0fff4" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="540" y="370" text-anchor="middle" fill="#27ae60" font-size="16" font-weight="bold">Plasmid DNA</text>
+                    <text x="540" y="390" text-anchor="middle" fill="#7f8c8d" font-size="12">(प्लास्मिड DNA)</text>
+                    <circle cx="540" cy="420" r="20" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="540" y="425" text-anchor="middle" fill="white" font-size="12" font-weight="bold">P</text>
+                    <text x="540" y="450" text-anchor="middle" fill="#2c3e50" font-size="12">• Small (thousands bp)</text>
+                    <text x="540" y="470" text-anchor="middle" fill="#2c3e50" font-size="12">• Circular</text>
+                    <text x="540" y="490" text-anchor="middle" fill="#2c3e50" font-size="12">• Renatures → Stays soluble</text>
+                    <text x="540" y="510" text-anchor="middle" fill="#2c3e50" font-size="12">• In supernatant</text>
+                    <text x="540" y="530" text-anchor="middle" fill="#7f8c8d" font-size="11">(छोटा, वृत्ताकार, विलयन में रहता है)</text>
+                    
+                    <defs>
+                        <marker id="arrowDown2" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
             </div>
             
             <table>
@@ -386,19 +575,23 @@ Purified Chromosomal DNA</div>
                 </tr>
             </table>
 
-            <h4>1.3 Isolation of DNA from Yeast</h4>
-            <p>Yeast cells have a rigid cell wall made of glucan and chitin, requiring special treatment for DNA isolation.</p>
+            <h4>1.3 Isolation of DNA from Yeast (यीस्ट से DNA अलगाव)</h4>
+            <p>Yeast cells have a rigid cell wall made of glucan and chitin, requiring special treatment for DNA isolation. यीस्ट कोशिकाओं में ग्लूकन और काइटिन से बनी कठोर कोशिका भित्ति होती है, जिसके लिए DNA अलगाव में विशेष उपचार की आवश्यकता होती है।</p>
             
             <div class="box">
-                <h5>Yeast DNA Isolation Protocol:</h5>
+                <h5>Yeast DNA Isolation Protocol (यीस्ट DNA अलगाव प्रोटोकॉल):</h5>
                 <ol class="list">
-                    <li><strong>Cell Wall Digestion:</strong> Use zymolyase or lyticase enzymes</li>
-                    <li><strong>Spheroplast Formation:</strong> Cell wall removed, creating spheroplasts</li>
-                    <li><strong>Lysis:</strong> Use detergents (SDS) or mechanical disruption</li>
-                    <li><strong>Protein Removal:</strong> Phenol-chloroform extraction</li>
-                    <li><strong>DNA Precipitation:</strong> Ethanol precipitation</li>
-                    <li><strong>RNase Treatment:</strong> Remove RNA contamination</li>
+                    <li><strong>Cell Wall Digestion (कोशिका भित्ति पाचन):</strong> Use zymolyase or lyticase enzymes (जाइमोलेज या लाइटिकेज एंजाइम का उपयोग)</li>
+                    <li><strong>Spheroplast Formation (स्फेरोप्लास्ट निर्माण):</strong> Cell wall removed, creating spheroplasts (कोशिका भित्ति हटाई जाती है, स्फेरोप्लास्ट बनते हैं)</li>
+                    <li><strong>Lysis (लाइसिस):</strong> Use detergents (SDS) or mechanical disruption (डिटर्जेंट (SDS) या यांत्रिक विघटन का उपयोग)</li>
+                    <li><strong>Protein Removal (प्रोटीन हटाना):</strong> Phenol-chloroform extraction (फेनोल-क्लोरोफॉर्म निष्कर्षण)</li>
+                    <li><strong>DNA Precipitation (DNA अवक्षेपण):</strong> Ethanol precipitation (एथेनॉल अवक्षेपण)</li>
+                    <li><strong>RNase Treatment (RNase उपचार):</strong> Remove RNA contamination (RNA संदूषण हटाना)</li>
                 </ol>
+            </div>
+            
+            <div class="hindi">
+                <strong>हिंदी व्याख्या:</strong> यीस्ट से DNA अलग करने के लिए पहले कोशिका भित्ति को तोड़ना होता है (जाइमोलेज के साथ), फिर कोशिका को तोड़ा जाता है, प्रोटीन हटाया जाता है, और अंत में DNA को अवक्षेपित किया जाता है। यह प्रक्रिया बैक्टीरिया से थोड़ी अलग है क्योंकि यीस्ट में कठोर कोशिका भित्ति होती है।
             </div>
         </div>
 
@@ -416,31 +609,137 @@ Purified Chromosomal DNA</div>
                 </ol>
             </div>
 
-            <h4>2.1 How R-M System Works:</h4>
+            <h4>2.1 How R-M System Works (R-M सिस्टम कैसे काम करता है):</h4>
             <div class="diagram">
-                <div class="flowchart">Host Bacterial DNA
-    ↓ (Methylated by Modification Enzyme)
-Protected DNA (Not cut)
+                <h4>Restriction-Modification System (रेस्ट्रिक्शन-मोडिफिकेशन सिस्टम)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Host DNA Path -->
+                    <rect x="50" y="30" width="280" height="200" fill="#27ae60" stroke="#229954" stroke-width="3" rx="5"/>
+                    <text x="190" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Host Bacterial DNA</text>
+                    <text x="190" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(मेजबान बैक्टीरियल DNA)</text>
+                    
+                    <!-- DNA strand with methyl groups -->
+                    <line x1="100" y1="120" x2="280" y2="120" stroke="white" stroke-width="4"/>
+                    <circle cx="120" cy="120" r="5" fill="#f39c12"/>
+                    <circle cx="180" cy="120" r="5" fill="#f39c12"/>
+                    <circle cx="240" cy="120" r="5" fill="#f39c12"/>
+                    <text x="190" y="145" text-anchor="middle" fill="white" font-size="12">Methylated (Protected)</text>
+                    <text x="190" y="165" text-anchor="middle" fill="#ecf0f1" font-size="11">(मेथिलेटेड - सुरक्षित)</text>
+                    
+                    <path d="M 190 230 L 190 270" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRM)"/>
+                    
+                    <rect x="50" y="270" width="280" height="80" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="190" y="300" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Protected DNA</text>
+                    <text x="190" y="320" text-anchor="middle" fill="#ecf0f1" font-size="14">Not Cut by Restriction Enzyme</text>
+                    <text x="190" y="340" text-anchor="middle" fill="#ecf0f1" font-size="12">(सुरक्षित DNA - कटता नहीं)</text>
+                    
+                    <!-- Foreign DNA Path -->
+                    <rect x="370" y="30" width="280" height="200" fill="#e74c3c" stroke="#c0392b" stroke-width="3" rx="5"/>
+                    <text x="510" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Foreign DNA (Phage)</text>
+                    <text x="510" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(विदेशी DNA - फेज)</text>
+                    
+                    <!-- DNA strand without methyl groups -->
+                    <line x1="420" y1="120" x2="600" y2="120" stroke="white" stroke-width="4"/>
+                    <text x="510" y="145" text-anchor="middle" fill="white" font-size="12">Not Methylated</text>
+                    <text x="510" y="165" text-anchor="middle" fill="#ecf0f1" font-size="11">(मेथिलेटेड नहीं)</text>
+                    
+                    <path d="M 510 230 L 510 270" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRM)"/>
+                    
+                    <rect x="370" y="270" width="280" height="80" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="510" y="300" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Recognized by</text>
+                    <text x="510" y="320" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Restriction Enzyme</text>
+                    <text x="510" y="340" text-anchor="middle" fill="#ecf0f1" font-size="12">(रेस्ट्रिक्शन एंजाइम द्वारा पहचाना गया)</text>
+                    
+                    <path d="M 510 350 L 510 390" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowRM)"/>
+                    
+                    <!-- Cut DNA -->
+                    <rect x="370" y="390" width="280" height="80" fill="#c0392b" stroke="#a93226" stroke-width="2" rx="5"/>
+                    <text x="510" y="420" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DNA Cut into Fragments</text>
+                    <text x="510" y="440" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Foreign DNA Destroyed!</text>
+                    <text x="510" y="460" text-anchor="middle" fill="#ecf0f1" font-size="12">(DNA टुकड़ों में कट गया - नष्ट!)</text>
+                    
+                    <!-- Scissors icon for restriction -->
+                    <path d="M 480 280 L 480 300 M 480 290 L 500 290 M 500 280 L 500 300" stroke="white" stroke-width="3"/>
+                    <path d="M 540 280 L 540 300 M 540 290 L 520 290 M 520 280 L 520 300" stroke="white" stroke-width="3"/>
+                    
+                    <!-- Modification enzyme icon -->
+                    <circle cx="150" cy="200" r="15" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="150" y="206" text-anchor="middle" fill="white" font-size="12" font-weight="bold">M</text>
+                    <text x="150" y="225" text-anchor="middle" fill="white" font-size="10">Modification</text>
+                    
+                    <!-- Restriction enzyme icon -->
+                    <rect x="480" y="200" width="30" height="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="3"/>
+                    <text x="495" y="220" text-anchor="middle" fill="white" font-size="12" font-weight="bold">R</text>
+                    <text x="495" y="235" text-anchor="middle" fill="white" font-size="10">Restriction</text>
+                    
+                    <defs>
+                        <marker id="arrowRM" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>R-M System Flow (R-M सिस्टम प्रवाह)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Host DNA           │
+    │  (मेजबान DNA)       │
+    │                     │
+    │  Modification       │
+    │  Enzyme adds        │
+    │  methyl groups      │
+    │  (मेथिल समूह जोड़ता है)│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Methylated DNA     │
+    │  (मेथिलेटेड DNA)    │
+    │  • Protected        │
+    │  • Not recognized   │
+    │    by restriction   │
+    │    enzyme           │
+    └─────────────────────┘
 
-Foreign DNA (Phage DNA)
-    ↓ (Not methylated)
-Recognized by Restriction Enzyme
-    ↓ (Cut into fragments)
-Foreign DNA Destroyed</div>
+    ┌─────────────────────┐
+    │  Foreign DNA        │
+    │  (विदेशी DNA)       │
+    │  • Not methylated   │
+    │  • No protection    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Restriction        │
+    │  Enzyme recognizes │
+    │  (रेस्ट्रिक्शन      │
+    │   एंजाइम पहचानता है)│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  DNA Cut            │
+    │  (DNA कट गया)       │
+    │  • Fragmented       │
+    │  • Destroyed        │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <div class="box">
-                <h5>Key Points:</h5>
+                <h5>Key Points (मुख्य बिंदु):</h5>
                 <ul class="list">
-                    <li>Modification enzymes add methyl groups to specific DNA sequences</li>
-                    <li>Methylated DNA is protected from restriction enzymes</li>
-                    <li>Foreign DNA lacks methylation and gets destroyed</li>
-                    <li>This is a bacterial immune system against bacteriophages</li>
+                    <li>Modification enzymes add methyl groups to specific DNA sequences (मोडिफिकेशन एंजाइम विशिष्ट DNA अनुक्रमों में मेथिल समूह जोड़ते हैं)</li>
+                    <li>Methylated DNA is protected from restriction enzymes (मेथिलेटेड DNA रेस्ट्रिक्शन एंजाइमों से सुरक्षित होता है)</li>
+                    <li>Foreign DNA lacks methylation and gets destroyed (विदेशी DNA में मेथिलेशन नहीं होता और वह नष्ट हो जाता है)</li>
+                    <li>This is a bacterial immune system against bacteriophages (यह बैक्टीरियोफेज के खिलाफ बैक्टीरिया की प्रतिरक्षा प्रणाली है)</li>
                 </ul>
             </div>
             
             <div class="hindi">
-                <strong>Hindi Explanation:</strong> बैक्टीरिया में रेस्ट्रिक्शन-मोडिफिकेशन सिस्टम एक सुरक्षा तंत्र है जो मेथिलेशन के द्वारा अपने DNA को बचाता है और बिना मेथिलेशन वाले foreign DNA को काटकर नष्ट कर देता है।
+                <strong>हिंदी व्याख्या:</strong> बैक्टीरिया में रेस्ट्रिक्शन-मोडिफिकेशन सिस्टम एक सुरक्षा तंत्र है जो मेथिलेशन के द्वारा अपने DNA को बचाता है और बिना मेथिलेशन वाले विदेशी DNA को काटकर नष्ट कर देता है। यह बैक्टीरिया की एक प्राकृतिक प्रतिरक्षा प्रणाली है जो उन्हें वायरस (बैक्टीरियोफेज) से बचाती है।
             </div>
         </div>
 
@@ -599,32 +898,115 @@ Foreign DNA Destroyed</div>
             </div>
 
             <div class="diagram">
-                <h4>EcoRI Cutting Example:</h4>
-                <div class="flowchart">Original DNA:
-5'-G AATTC-3'
-3'-CTTAA G-5'
-
-After EcoRI Cut:
+                <h4>EcoRI Cutting Example (EcoRI काटने का उदाहरण):</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Before cutting -->
+                    <rect x="50" y="30" width="600" height="120" fill="#e8f4f8" stroke="#3498db" stroke-width="2" rx="5"/>
+                    <text x="350" y="60" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Before EcoRI Cut (EcoRI काटने से पहले)</text>
+                    
+                    <!-- DNA double helix representation -->
+                    <line x1="150" y1="100" x2="550" y2="100" stroke="#2c3e50" stroke-width="4"/>
+                    <line x1="150" y1="120" x2="550" y2="120" stroke="#2c3e50" stroke-width="4"/>
+                    <!-- Base pairs -->
+                    <line x1="200" y1="100" x2="200" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="250" y1="100" x2="250" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="300" y1="100" x2="300" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="350" y1="100" x2="350" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="400" y1="100" x2="400" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="450" y1="100" x2="450" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    <line x1="500" y1="100" x2="500" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                    
+                    <!-- Recognition site highlight -->
+                    <rect x="300" y="85" width="100" height="50" fill="#f39c12" opacity="0.3" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="350" y="80" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">EcoRI Site: GAATTC</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 350 150 L 350 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowEcoRI)"/>
+                    <text x="370" y="175" text-anchor="start" fill="#2c3e50" font-size="14" font-weight="bold">EcoRI cuts here</text>
+                    
+                    <!-- After cutting -->
+                    <rect x="50" y="200" width="600" height="180" fill="#fff5f5" stroke="#e74c3c" stroke-width="2" rx="5"/>
+                    <text x="350" y="230" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">After EcoRI Cut (EcoRI काटने के बाद)</text>
+                    
+                    <!-- Top strand -->
+                    <line x1="150" y1="260" x2="300" y2="260" stroke="#2c3e50" stroke-width="4"/>
+                    <line x1="400" y1="260" x2="550" y2="260" stroke="#2c3e50" stroke-width="4"/>
+                    <!-- Overhang -->
+                    <line x1="300" y1="250" x2="400" y2="280" stroke="#27ae60" stroke-width="3" stroke-dasharray="3,3"/>
+                    <text x="350" y="270" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">5'-AATT-3'</text>
+                    <text x="350" y="285" text-anchor="middle" fill="#7f8c8d" font-size="11">Sticky End (Overhang)</text>
+                    
+                    <!-- Bottom strand -->
+                    <line x1="150" y1="320" x2="300" y2="320" stroke="#2c3e50" stroke-width="4"/>
+                    <line x1="400" y1="320" x2="550" y2="320" stroke="#2c3e50" stroke-width="4"/>
+                    <!-- Overhang -->
+                    <line x1="300" y1="330" x2="400" y2="300" stroke="#27ae60" stroke-width="3" stroke-dasharray="3,3"/>
+                    <text x="350" y="340" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">3'-TTAA-5'</text>
+                    <text x="350" y="355" text-anchor="middle" fill="#7f8c8d" font-size="11">Complementary Sticky End</text>
+                    
+                    <!-- Labels -->
+                    <text x="100" y="280" text-anchor="middle" fill="#2c3e50" font-size="12">5'-G</text>
+                    <text x="100" y="340" text-anchor="middle" fill="#2c3e50" font-size="12">3'-CTTAA</text>
+                    <text x="550" y="280" text-anchor="middle" fill="#2c3e50" font-size="12">AATTC-3'</text>
+                    <text x="550" y="340" text-anchor="middle" fill="#2c3e50" font-size="12">G-5'</text>
+                    
+                    <!-- Complementary pairing indication -->
+                    <rect x="200" y="300" width="300" height="40" fill="#d5f4e6" stroke="#27ae60" stroke-width="2" rx="5" opacity="0.5"/>
+                    <text x="350" y="325" text-anchor="middle" fill="#27ae60" font-size="14" font-weight="bold">✓ Complementary Ends Can Pair!</text>
+                    <text x="350" y="340" text-anchor="middle" fill="#7f8c8d" font-size="11">(पूरक सिरे जोड़ सकते हैं!)</text>
+                    
+                    <defs>
+                        <marker id="arrowEcoRI" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>EcoRI Recognition and Cutting (EcoRI पहचान और काटना)</h4>
+                <pre>
+    Recognition Sequence (पहचान अनुक्रम):
+    5'-G↓AATTC-3'
+    3'-CTTAA↑G-5'
+           ↑
+        Cut Site
+    
+    After Cutting (काटने के बाद):
+    
 5'-G           AATTC-3'
 3'-CTTAA           G-5'
     ↑              ↑
-Sticky ends (complementary)
-
-These ends can easily pair with other EcoRI-cut fragments!</div>
+    Sticky Ends (चिपचिपे सिरे)
+    
+    • 5' overhang: AATT
+    • Complementary to each other
+    • Can easily ligate to other
+      EcoRI-cut fragments
+                </pre>
             </div>
 
-            <h4>4.3 Naming Convention</h4>
-            <p>Restriction enzymes are named based on:</p>
+            <h4>4.3 Naming Convention (नामकरण परंपरा)</h4>
+            <p>Restriction enzymes are named based on (रेस्ट्रिक्शन एंजाइमों का नामकरण इस आधार पर होता है):</p>
             <ul class="list">
-                <li><strong>Genus:</strong> First letter (E = Escherichia)</li>
-                <li><strong>Species:</strong> Next two letters (co = coli)</li>
-                <li><strong>Strain:</strong> Next letter (R = strain RY13)</li>
-                <li><strong>Number:</strong> Roman numeral (I = first enzyme discovered)</li>
-                <li>Example: <strong>EcoRI</strong> = Escherichia coli R strain, enzyme I</li>
+                <li><strong>Genus (जीनस):</strong> First letter (E = Escherichia) (पहला अक्षर)</li>
+                <li><strong>Species (प्रजाति):</strong> Next two letters (co = coli) (अगले दो अक्षर)</li>
+                <li><strong>Strain (तनाव):</strong> Next letter (R = strain RY13) (अगला अक्षर)</li>
+                <li><strong>Number (संख्या):</strong> Roman numeral (I = first enzyme discovered) (रोमन अंक - पहला खोजा गया एंजाइम)</li>
+                <li>Example (उदाहरण): <strong>EcoRI</strong> = Escherichia coli R strain, enzyme I</li>
             </ul>
+            
+            <div class="box">
+                <h5>More Examples (अधिक उदाहरण):</h5>
+                <ul class="list">
+                    <li><strong>BamHI:</strong> Bacillus amyloliquefaciens H strain, enzyme I</li>
+                    <li><strong>HindIII:</strong> Haemophilus influenzae d strain, enzyme III</li>
+                    <li><strong>PstI:</strong> Providencia stuartii, enzyme I</li>
+                </ul>
+            </div>
 
             <div class="hindi">
-                <strong>Hindi Explanation:</strong> Type II रेस्ट्रिक्शन एंजाइम पैलिन्ड्रोमिक सीक्वेंस को पहचानते हैं और काटते हैं। Sticky ends में overhangs होते हैं जो आसानी से जुड़ जाते हैं, जबकि blunt ends में कोई overhang नहीं होता।
+                <strong>हिंदी व्याख्या:</strong> Type II रेस्ट्रिक्शन एंजाइम पैलिन्ड्रोमिक अनुक्रम को पहचानते हैं और काटते हैं। Sticky ends में overhangs होते हैं जो आसानी से जुड़ जाते हैं, जबकि blunt ends में कोई overhang नहीं होता। एंजाइमों का नाम उनके स्रोत बैक्टीरिया के जीनस, प्रजाति, तनाव और खोज क्रम के आधार पर रखा जाता है।
             </div>
         </div>
 
@@ -712,45 +1094,194 @@ These ends can easily pair with other EcoRI-cut fragments!</div>
             </div>
 
             <div class="diagram">
-                <h4>DNA Ligation Mechanism:</h4>
-                <div class="flowchart">Step 1: Activation
-Ligase + ATP → Ligase-AMP + PPi
-
-Step 2: AMP Transfer to DNA
-Ligase-AMP + DNA (5'-P, 3'-OH) 
-  → Ligase + DNA-AMP (activated)
-
-Step 3: Bond Formation
-DNA-AMP + adjacent 3'-OH
-  → Sealed DNA + AMP
+                <h4>DNA Ligation Mechanism (DNA लिगेशन तंत्र):</h4>
+                <svg width="100%" height="600" viewBox="0 0 700 600">
+                    <!-- Step 1: Activation -->
+                    <rect x="50" y="30" width="600" height="120" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="350" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Step 1: Activation (सक्रियकरण)</text>
+                    
+                    <!-- Ligase -->
+                    <ellipse cx="200" cy="100" rx="40" ry="25" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="200" y="105" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Ligase</text>
+                    
+                    <!-- Plus sign -->
+                    <text x="280" y="105" text-anchor="middle" fill="white" font-size="24" font-weight="bold">+</text>
+                    
+                    <!-- ATP -->
+                    <rect x="320" y="85" width="60" height="30" fill="#27ae60" stroke="#229954" stroke-width="2" rx="3"/>
+                    <text x="350" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">ATP</text>
+                    
+                    <!-- Arrow -->
+                    <text x="420" y="105" text-anchor="middle" fill="white" font-size="20" font-weight="bold">→</text>
+                    
+                    <!-- Ligase-AMP -->
+                    <ellipse cx="500" cy="100" rx="50" ry="25" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="500" y="95" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Ligase-AMP</text>
+                    <text x="500" y="110" text-anchor="middle" fill="white" font-size="10">(सक्रिय)</text>
+                    
+                    <!-- Plus PPi -->
+                    <text x="580" y="105" text-anchor="middle" fill="white" font-size="14">+ PPi</text>
+                    
+                    <path d="M 350 150 L 350 200" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowLig)"/>
+                    
+                    <!-- Step 2: AMP Transfer -->
+                    <rect x="50" y="200" width="600" height="140" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="350" y="230" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Step 2: AMP Transfer to DNA (DNA में AMP स्थानांतरण)</text>
+                    
+                    <!-- DNA with nick -->
+                    <line x1="150" y1="280" x2="300" y2="280" stroke="#2c3e50" stroke-width="4"/>
+                    <line x1="400" y1="280" x2="550" y2="280" stroke="#2c3e50" stroke-width="4"/>
+                    <!-- Gap -->
+                    <line x1="300" y1="270" x2="400" y2="290" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+                    <text x="350" y="275" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Nick</text>
+                    
+                    <!-- Labels -->
+                    <text x="200" y="295" text-anchor="middle" fill="white" font-size="11">5'-P</text>
+                    <text x="500" y="295" text-anchor="middle" fill="white" font-size="11">3'-OH</text>
+                    
+                    <!-- Ligase-AMP approaching -->
+                    <ellipse cx="350" cy="320" rx="40" ry="20" fill="#f39c12" stroke="#d68910" stroke-width="2"/>
+                    <text x="350" y="325" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Ligase-AMP</text>
+                    
+                    <path d="M 350 340 L 350 380" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowLig)"/>
+                    
+                    <!-- Step 3: Bond Formation -->
+                    <rect x="50" y="380" width="600" height="180" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="350" y="410" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Step 3: Phosphodiester Bond Formation</text>
+                    <text x="350" y="430" text-anchor="middle" fill="#ecf0f1" font-size="14">(फॉस्फोडाइएस्टर बंधन निर्माण)</text>
+                    
+                    <!-- Sealed DNA -->
+                    <line x1="150" y1="480" x2="550" y2="480" stroke="#27ae60" stroke-width="5"/>
+                    <text x="350" y="500" text-anchor="middle" fill="white" font-size="14" font-weight="bold">5'-...P-O-P-O-P...-3'</text>
+                    <text x="350" y="520" text-anchor="middle" fill="#ecf0f1" font-size="12">✓ Sealed! (बंद!)</text>
+                    
+                    <!-- AMP released -->
+                    <rect x="450" y="530" width="50" height="20" fill="#f39c12" stroke="#d68910" stroke-width="1" rx="3"/>
+                    <text x="475" y="545" text-anchor="middle" fill="white" font-size="10">AMP</text>
+                    <text x="520" y="545" text-anchor="start" fill="white" font-size="11">Released</text>
+                    
+                    <!-- Result box -->
+                    <rect x="200" y="540" width="300" height="20" fill="#27ae60" stroke="#229954" stroke-width="2" rx="3"/>
+                    <text x="350" y="555" text-anchor="middle" fill="white" font-size="14" font-weight="bold">✓ Phosphodiester Bond Formed!</text>
+                    
+                    <defs>
+                        <marker id="arrowLig" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Detailed Ligation Mechanism (विस्तृत लिगेशन तंत्र)</h4>
+                <pre>
+    Step 1: Activation (सक्रियकरण)
+    ┌─────────────┐
+    │ Ligase + ATP│
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────────┐
+    │ Ligase-AMP   │
+    │ + PPi        │
+    │ (AMP attached│
+    │  to ligase)  │
+    └──────┬──────┘
+           │
+           ▼
+    Step 2: AMP Transfer (AMP स्थानांतरण)
+    ┌─────────────┐
+    │ Ligase-AMP  │
+    │ + DNA       │
+    │ (5'-P, 3'-OH)│
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────────┐
+    │ DNA-AMP     │
+    │ (activated) │
+    │ Ligase free │
+    └──────┬──────┘
+           │
+           ▼
+    Step 3: Bond Formation (बंधन निर्माण)
+    ┌─────────────┐
+    │ DNA-AMP +   │
+    │ 3'-OH       │
+    │ (adjacent)  │
+    └──────┬──────┘
+           │
+           ▼
+    ┌─────────────┐
+    │ Sealed DNA  │
+    │ + AMP       │
+    │ (released)  │
+    └─────────────┘
 
 Result: Phosphodiester bond formed!
-5'-...P-O-P-O-P...-3'
-     ↑         ↑
-  Sealed nick</div>
+    (परिणाम: फॉस्फोडाइएस्टर बंधन बना!)
+                </pre>
             </div>
 
-            <h4>5.3 Ligation Conditions</h4>
+            <h4>5.3 Ligation Conditions (लिगेशन स्थितियां)</h4>
             
             <div class="box">
-                <h5>Optimal Conditions for T4 DNA Ligase:</h5>
+                <h5>Optimal Conditions for T4 DNA Ligase (T4 DNA लिगेज़ के लिए इष्टतम स्थितियां):</h5>
                 <ul class="list">
-                    <li><strong>Temperature:</strong> 16°C (overnight) or 22-25°C (1-2 hours)</li>
-                    <li><strong>Buffer:</strong> Tris-HCl (pH 7.5-8.0), Mg²⁺, DTT, ATP</li>
-                    <li><strong>DNA Ratio:</strong> Insert:Vector = 3:1 to 5:1 (for sticky ends)</li>
-                    <li><strong>DNA Ratio:</strong> Insert:Vector = 10:1 or higher (for blunt ends)</li>
-                    <li><strong>Time:</strong> 1-16 hours depending on DNA concentration</li>
+                    <li><strong>Temperature (तापमान):</strong> 16°C (overnight) or 22-25°C (1-2 hours) (16°C रात भर या 22-25°C 1-2 घंटे)</li>
+                    <li><strong>Buffer (बफर):</strong> Tris-HCl (pH 7.5-8.0), Mg²⁺, DTT, ATP</li>
+                    <li><strong>DNA Ratio (DNA अनुपात):</strong> Insert:Vector = 3:1 to 5:1 (for sticky ends) (चिपचिपे सिरों के लिए 3:1 से 5:1)</li>
+                    <li><strong>DNA Ratio (DNA अनुपात):</strong> Insert:Vector = 10:1 or higher (for blunt ends) (सीधे सिरों के लिए 10:1 या अधिक)</li>
+                    <li><strong>Time (समय):</strong> 1-16 hours depending on DNA concentration (DNA सांद्रता के आधार पर 1-16 घंटे)</li>
                 </ul>
             </div>
 
-            <h4>5.4 Ligation Products</h4>
-            <p>After ligation, you can get several products:</p>
+            <div class="hindi">
+                <strong>हिंदी व्याख्या:</strong> T4 DNA लिगेज़ के लिए इष्टतम तापमान 16°C है (रात भर के लिए) या 22-25°C (1-2 घंटे के लिए)। Sticky ends के लिए Insert:Vector अनुपात 3:1 से 5:1 होना चाहिए, जबकि blunt ends के लिए 10:1 या अधिक की आवश्यकता होती है क्योंकि blunt ends का लिगेशन कम कुशल होता है।
+            </div>
+
+            <h4>5.4 Ligation Products (लिगेशन उत्पाद)</h4>
+            <p>After ligation, you can get several products (लिगेशन के बाद, कई उत्पाद मिल सकते हैं):</p>
             <ul class="list">
-                <li><strong>Recombinant plasmid:</strong> Vector + insert (desired product)</li>
-                <li><strong>Recircularized vector:</strong> Vector without insert (unwanted)</li>
-                <li><strong>Insert dimers:</strong> Multiple inserts joined together (unwanted)</li>
-                <li><strong>Vector concateners:</strong> Multiple vectors joined (unwanted)</li>
+                <li><strong>Recombinant plasmid (पुनः संयोजक प्लास्मिड):</strong> Vector + insert (desired product) (वेक्टर + इन्सर्ट - वांछित उत्पाद)</li>
+                <li><strong>Recircularized vector (पुनः वृत्ताकार वेक्टर):</strong> Vector without insert (unwanted) (इन्सर्ट के बिना वेक्टर - अवांछित)</li>
+                <li><strong>Insert dimers (इन्सर्ट डाइमर):</strong> Multiple inserts joined together (unwanted) (कई इन्सर्ट एक साथ जुड़े - अवांछित)</li>
+                <li><strong>Vector concateners (वेक्टर कॉन्केटेनर):</strong> Multiple vectors joined (unwanted) (कई वेक्टर जुड़े - अवांछित)</li>
             </ul>
+            
+            <div class="diagram">
+                <h4>Ligation Products (लिगेशन उत्पाद)</h4>
+                <svg width="100%" height="400" viewBox="0 0 700 400">
+                    <!-- Desired product -->
+                    <rect x="50" y="30" width="280" height="160" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="190" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">✓ Desired Product</text>
+                    <text x="190" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(वांछित उत्पाद)</text>
+                    <text x="190" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Recombinant Plasmid</text>
+                    <!-- Vector circle -->
+                    <circle cx="190" cy="140" r="30" fill="#3498db" stroke="white" stroke-width="2"/>
+                    <text x="190" y="145" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Vector</text>
+                    <!-- Insert -->
+                    <rect x="160" y="130" width="60" height="20" fill="#e74c3c" rx="3"/>
+                    <text x="190" y="145" text-anchor="middle" fill="white" font-size="9">Insert</text>
+                    <text x="190" y="175" text-anchor="middle" fill="#ecf0f1" font-size="12">Vector + Insert</text>
+                    
+                    <!-- Unwanted products -->
+                    <rect x="370" y="30" width="280" height="160" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="510" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">✗ Unwanted Products</text>
+                    <text x="510" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(अवांछित उत्पाद)</text>
+                    
+                    <!-- Recircularized vector -->
+                    <circle cx="450" cy="120" r="25" fill="#3498db" stroke="white" stroke-width="2"/>
+                    <text x="450" y="125" text-anchor="middle" fill="white" font-size="9">Vector</text>
+                    <text x="450" y="150" text-anchor="middle" fill="white" font-size="11">Recircularized</text>
+                    
+                    <!-- Insert dimer -->
+                    <rect x="550" y="100" width="80" height="40" fill="#e74c3c" rx="3"/>
+                    <text x="590" y="125" text-anchor="middle" fill="white" font-size="10">Insert</text>
+                    <text x="590" y="140" text-anchor="middle" fill="white" font-size="10">Dimer</text>
+                    <text x="510" y="175" text-anchor="middle" fill="#ecf0f1" font-size="11">Multiple unwanted products</text>
+                </svg>
+            </div>
 
             <div class="box">
                 <h5>Why Sticky Ends Ligate Better:</h5>
@@ -789,20 +1320,121 @@ Result: Phosphodiester bond formed!
             </div>
 
             <div class="diagram">
-                <h4>Linker Method:</h4>
-                <div class="flowchart">Blunt-ended Insert DNA
-    ↓
-+ Linker (EcoRI site) + ATP
-    ↓ (T4 DNA ligase)
-DNA with Linker attached
-    ↓
-EcoRI digestion
-    ↓
-DNA with EcoRI sticky ends
-    ↓
-Ligate to EcoRI-cut vector
-    ↓
-Recombinant DNA</div>
+                <h4>Linker Method (लिंकर विधि):</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Step 1: Blunt-ended DNA -->
+                    <rect x="50" y="30" width="250" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="175" y="55" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Blunt-ended DNA</text>
+                    <text x="175" y="75" text-anchor="middle" fill="#ecf0f1" font-size="12">(सीधे सिरे वाला DNA)</text>
+                    <line x1="100" y1="95" x2="250" y2="95" stroke="white" stroke-width="3"/>
+                    <line x1="100" y1="105" x2="250" y2="105" stroke="white" stroke-width="3"/>
+                    
+                    <path d="M 175 110 L 175 150" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowLink)"/>
+                    
+                    <!-- Step 2: Add Linker -->
+                    <rect x="50" y="150" width="250" height="100" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="175" y="180" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Add Linker</text>
+                    <text x="175" y="200" text-anchor="middle" fill="#ecf0f1" font-size="12">(EcoRI site) + ATP</text>
+                    <text x="175" y="220" text-anchor="middle" fill="#ecf0f1" font-size="11">T4 DNA ligase</text>
+                    <!-- Linker representation -->
+                    <rect x="120" y="230" width="110" height="15" fill="#f39c12" rx="2"/>
+                    <text x="175" y="242" text-anchor="middle" fill="white" font-size="10">Linker</text>
+                    
+                    <path d="M 175 250 L 175 290" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowLink)"/>
+                    
+                    <!-- Step 3: DNA with Linker -->
+                    <rect x="50" y="290" width="250" height="80" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="175" y="315" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DNA + Linker</text>
+                    <text x="175" y="335" text-anchor="middle" fill="#ecf0f1" font-size="12">(Still blunt-ended)</text>
+                    <line x1="100" y1="355" x2="250" y2="355" stroke="white" stroke-width="3"/>
+                    
+                    <path d="M 175 370 L 175 410" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowLink)"/>
+                    
+                    <!-- Step 4: EcoRI digestion -->
+                    <rect x="50" y="410" width="250" height="80" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="175" y="435" text-anchor="middle" fill="white" font-size="16" font-weight="bold">EcoRI Digestion</text>
+                    <text x="175" y="455" text-anchor="middle" fill="#ecf0f1" font-size="12">(EcoRI पाचन)</text>
+                    <text x="175" y="475" text-anchor="middle" fill="#ecf0f1" font-size="11">Creates sticky ends</text>
+                    
+                    <!-- Right side: Comparison -->
+                    <rect x="400" y="30" width="280" height="460" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="540" y="60" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Linker Structure</text>
+                    <text x="540" y="80" text-anchor="middle" fill="#7f8c8d" font-size="14">(लिंकर संरचना)</text>
+                    
+                    <!-- Linker diagram -->
+                    <rect x="450" y="120" width="180" height="100" fill="#fff5f5" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="540" y="150" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Linker</text>
+                    <line x1="480" y1="180" x2="600" y2="180" stroke="#2c3e50" stroke-width="3"/>
+                    <line x1="480" y1="200" x2="600" y2="200" stroke="#2c3e50" stroke-width="3"/>
+                    <text x="540" y="195" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">GAATTC</text>
+                    <text x="540" y="215" text-anchor="middle" fill="#7f8c8d" font-size="11">EcoRI site</text>
+                    
+                    <!-- Advantages -->
+                    <rect x="450" y="250" width="180" height="200" fill="#d5f4e6" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="540" y="280" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Advantages</text>
+                    <text x="540" y="300" text-anchor="middle" fill="#7f8c8d" font-size="12">(लाभ)</text>
+                    <text x="540" y="330" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Add any restriction</text>
+                    <text x="540" y="350" text-anchor="middle" fill="#2c3e50" font-size="12">  site</text>
+                    <text x="540" y="370" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Simple method</text>
+                    <text x="540" y="390" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Inexpensive</text>
+                    <text x="540" y="410" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Multiple linkers</text>
+                    <text x="540" y="430" text-anchor="middle" fill="#7f8c8d" font-size="11">(किसी भी restriction site को जोड़ सकते हैं)</text>
+                    
+                    <defs>
+                        <marker id="arrowLink" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Linker Method Flow (लिंकर विधि प्रवाह)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Blunt-ended DNA    │
+    │  (सीधे सिरे वाला DNA)│
+    │  • No overhangs     │
+    │  • Cannot ligate    │
+    │    directly         │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Add Linker         │
+    │  (लिंकर जोड़ें)     │
+    │  • Contains EcoRI   │
+    │    site             │
+    │  • Phosphorylate    │
+    │  • Ligate to DNA    │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  DNA + Linker       │
+    │  (DNA + लिंकर)      │
+    │  • Still blunt      │
+    │  • Linker attached  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  EcoRI Digestion   │
+    │  (EcoRI पाचन)      │
+    │  • Cuts linker     │
+    │  • Creates sticky  │
+    │    ends            │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  DNA with Sticky    │
+    │  Ends               │
+    │  (चिपचिपे सिरे वाला)│
+    │  • Ready to ligate │
+    │  • To vector       │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <div class="box">
@@ -843,19 +1475,115 @@ Recombinant DNA</div>
             </div>
 
             <div class="diagram">
-                <h4>Adaptor Method:</h4>
-                <div class="flowchart">Blunt-ended Insert DNA
-    ↓
-+ Adaptor (one blunt end, one EcoRI sticky end)
-    ↓ (T4 DNA ligase - only ligates blunt ends)
-Insert with Adaptor
-    ↓
-Direct ligation to EcoRI-cut vector
-    ↓
-Recombinant DNA
-
-Note: Adaptor already has sticky end!
-No need for restriction enzyme cutting.</div>
+                <h4>Adaptor Method (एडाप्टर विधि):</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Step 1: Blunt-ended DNA -->
+                    <rect x="50" y="30" width="250" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="175" y="55" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Blunt-ended DNA</text>
+                    <text x="175" y="75" text-anchor="middle" fill="#ecf0f1" font-size="12">(सीधे सिरे वाला DNA)</text>
+                    <line x1="100" y1="95" x2="250" y2="95" stroke="white" stroke-width="3"/>
+                    <line x1="100" y1="105" x2="250" y2="105" stroke="white" stroke-width="3"/>
+                    
+                    <path d="M 175 110 L 175 150" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowAdapt)"/>
+                    
+                    <!-- Step 2: Add Adaptor -->
+                    <rect x="50" y="150" width="250" height="120" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="175" y="180" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Add Adaptor</text>
+                    <text x="175" y="200" text-anchor="middle" fill="#ecf0f1" font-size="12">(एडाप्टर जोड़ें)</text>
+                    <!-- Adaptor representation -->
+                    <rect x="120" y="220" width="60" height="20" fill="#f39c12" rx="2"/>
+                    <line x1="180" y1="220" x2="220" y2="210" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="180" y1="240" x2="220" y2="250" stroke="#27ae60" stroke-width="3"/>
+                    <text x="175" y="255" text-anchor="middle" fill="#ecf0f1" font-size="11">Blunt + Sticky end</text>
+                    
+                    <path d="M 175 270 L 175 310" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowAdapt)"/>
+                    
+                    <!-- Step 3: DNA with Adaptor -->
+                    <rect x="50" y="310" width="250" height="80" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="175" y="335" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DNA + Adaptor</text>
+                    <text x="175" y="355" text-anchor="middle" fill="#ecf0f1" font-size="12">(Has sticky end!)</text>
+                    <line x1="100" y1="375" x2="200" y2="375" stroke="white" stroke-width="3"/>
+                    <line x1="200" y1="365" x2="240" y2="385" stroke="#27ae60" stroke-width="3"/>
+                    <text x="175" y="380" text-anchor="middle" fill="#ecf0f1" font-size="11">Ready to ligate!</text>
+                    
+                    <path d="M 175 390 L 175 430" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowAdapt)"/>
+                    
+                    <!-- Step 4: Direct ligation -->
+                    <rect x="50" y="430" width="250" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="175" y="455" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Direct Ligation</text>
+                    <text x="175" y="475" text-anchor="middle" fill="#ecf0f1" font-size="12">To EcoRI-cut vector</text>
+                    
+                    <!-- Right side: Adaptor structure -->
+                    <rect x="400" y="30" width="280" height="460" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="540" y="60" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Adaptor Structure</text>
+                    <text x="540" y="80" text-anchor="middle" fill="#7f8c8d" font-size="14">(एडाप्टर संरचना)</text>
+                    
+                    <!-- Adaptor diagram -->
+                    <rect x="450" y="120" width="180" height="120" fill="#fff5f5" stroke="#8e44ad" stroke-width="2" rx="5"/>
+                    <text x="540" y="150" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Adaptor</text>
+                    <!-- Blunt end -->
+                    <line x1="480" y1="180" x2="520" y2="180" stroke="#2c3e50" stroke-width="3"/>
+                    <line x1="480" y1="200" x2="520" y2="200" stroke="#2c3e50" stroke-width="3"/>
+                    <text x="500" y="195" text-anchor="middle" fill="#2c3e50" font-size="11">Blunt</text>
+                    <!-- Sticky end -->
+                    <line x1="520" y1="180" x2="600" y2="170" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="520" y1="200" x2="600" y2="210" stroke="#27ae60" stroke-width="3"/>
+                    <text x="560" y="195" text-anchor="middle" fill="#27ae60" font-size="11" font-weight="bold">Sticky</text>
+                    <text x="540" y="225" text-anchor="middle" fill="#7f8c8d" font-size="11">(EcoRI overhang)</text>
+                    
+                    <!-- Advantages -->
+                    <rect x="450" y="270" width="180" height="200" fill="#f0e6ff" stroke="#8e44ad" stroke-width="2" rx="5"/>
+                    <text x="540" y="300" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Advantages</text>
+                    <text x="540" y="320" text-anchor="middle" fill="#7f8c8d" font-size="12">(लाभ)</text>
+                    <text x="540" y="350" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Faster - no digestion</text>
+                    <text x="540" y="370" text-anchor="middle" fill="#2c3e50" font-size="12">  needed</text>
+                    <text x="540" y="390" text-anchor="middle" fill="#2c3e50" font-size="12">✓ Direct sticky end</text>
+                    <text x="540" y="410" text-anchor="middle" fill="#2c3e50" font-size="12">✓ One-step process</text>
+                    <text x="540" y="430" text-anchor="middle" fill="#2c3e50" font-size="12">✓ No restriction site</text>
+                    <text x="540" y="450" text-anchor="middle" fill="#2c3e50" font-size="12">  in insert</text>
+                    <text x="540" y="470" text-anchor="middle" fill="#7f8c8d" font-size="11">(तेज़ - पाचन की जरूरत नहीं)</text>
+                    
+                    <defs>
+                        <marker id="arrowAdapt" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Adaptor Method Flow (एडाप्टर विधि प्रवाह)</h4>
+                <pre>
+    ┌─────────────────────┐
+    │  Blunt-ended DNA    │
+    │  (सीधे सिरे वाला DNA)│
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Add Adaptor        │
+    │  (एडाप्टर जोड़ें)   │
+    │  • One blunt end    │
+    │  • One sticky end   │
+    │    (EcoRI)          │
+    └──────────┬──────────┘
+               │
+               ▼ (T4 ligase)
+    ┌─────────────────────┐
+    │  DNA + Adaptor      │
+    │  (DNA + एडाप्टर)    │
+    │  • Has sticky end! │
+    │  • Ready to ligate  │
+    └──────────┬──────────┘
+               │
+               ▼
+    ┌─────────────────────┐
+    │  Direct Ligation    │
+    │  (सीधा लिगेशन)      │
+    │  • To EcoRI vector  │
+    │  • No digestion!    │
+    └─────────────────────┘
+                </pre>
             </div>
 
             <table>
@@ -935,23 +1663,131 @@ No need for restriction enzyme cutting.</div>
             </div>
 
             <div class="diagram">
-                <h4>Homopolymer Tailing Method:</h4>
-                <div class="flowchart">Vector DNA (with 3'-OH)
-    ↓ (TdT + dGTP)
-Vector-poly(dG) tail
-5'-...OH-(G)n-3'
-
-Insert DNA (with 3'-OH)
-    ↓ (TdT + dCTP)
-Insert-poly(dC) tail
-5'-...OH-(C)n-3'
-
-    ↓ (Mix and anneal)
-Hybrid Formation:
-Vector-(G)n...(C)n-Insert
-
-    ↓ (DNA polymerase + ligase)
-Complete Recombinant DNA</div>
+                <h4>Homopolymer Tailing Method (होमोपोलिमर टेलिंग विधि):</h4>
+                <svg width="100%" height="600" viewBox="0 0 700 600">
+                    <!-- Left side: Vector -->
+                    <rect x="50" y="30" width="280" height="250" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="190" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Vector DNA</text>
+                    <text x="190" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(वेक्टर DNA)</text>
+                    
+                    <!-- Vector DNA -->
+                    <line x1="100" y1="120" x2="280" y2="120" stroke="white" stroke-width="4"/>
+                    <text x="190" y="140" text-anchor="middle" fill="white" font-size="12">5'-...OH-3'</text>
+                    <text x="190" y="160" text-anchor="middle" fill="#ecf0f1" font-size="11">(with 3'-OH end)</text>
+                    
+                    <path d="M 190 180 L 190 220" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowTail)"/>
+                    <text x="210" y="200" text-anchor="start" fill="white" font-size="12">+ TdT + dGTP</text>
+                    
+                    <!-- Vector with poly(dG) -->
+                    <line x1="100" y1="240" x2="200" y2="240" stroke="white" stroke-width="4"/>
+                    <text x="150" y="220" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">(G)n</text>
+                    <text x="150" y="235" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">(G)n</text>
+                    <text x="150" y="250" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">(G)n</text>
+                    <text x="190" y="255" text-anchor="middle" fill="white" font-size="12">5'-...OH-(G)n-3'</text>
+                    
+                    <!-- Right side: Insert -->
+                    <rect x="370" y="30" width="280" height="250" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="510" y="60" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Insert DNA</text>
+                    <text x="510" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(इन्सर्ट DNA)</text>
+                    
+                    <!-- Insert DNA -->
+                    <line x1="420" y1="120" x2="600" y2="120" stroke="white" stroke-width="4"/>
+                    <text x="510" y="140" text-anchor="middle" fill="white" font-size="12">5'-...OH-3'</text>
+                    <text x="510" y="160" text-anchor="middle" fill="#ecf0f1" font-size="11">(with 3'-OH end)</text>
+                    
+                    <path d="M 510 180 L 510 220" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowTail)"/>
+                    <text x="530" y="200" text-anchor="start" fill="white" font-size="12">+ TdT + dCTP</text>
+                    
+                    <!-- Insert with poly(dC) -->
+                    <line x1="420" y1="240" x2="520" y2="240" stroke="white" stroke-width="4"/>
+                    <text x="470" y="220" text-anchor="middle" fill="#8e44ad" font-size="14" font-weight="bold">(C)n</text>
+                    <text x="470" y="235" text-anchor="middle" fill="#8e44ad" font-size="14" font-weight="bold">(C)n</text>
+                    <text x="470" y="250" text-anchor="middle" fill="#8e44ad" font-size="14" font-weight="bold">(C)n</text>
+                    <text x="510" y="255" text-anchor="middle" fill="white" font-size="12">5'-...OH-(C)n-3'</text>
+                    
+                    <!-- Arrow to hybrid -->
+                    <path d="M 190 280 L 190 320" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowTail)"/>
+                    <path d="M 510 280 L 510 320" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowTail)"/>
+                    <text x="350" y="300" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Mix & Anneal</text>
+                    <text x="350" y="315" text-anchor="middle" fill="#7f8c8d" font-size="12">(मिलाएं और जोड़ें)</text>
+                    
+                    <!-- Hybrid formation -->
+                    <rect x="150" y="320" width="400" height="120" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="350" y="350" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Hybrid Formation</text>
+                    <text x="350" y="370" text-anchor="middle" fill="#ecf0f1" font-size="14">(संकर निर्माण)</text>
+                    
+                    <!-- Hybrid DNA -->
+                    <line x1="200" y1="400" x2="500" y2="400" stroke="white" stroke-width="4"/>
+                    <!-- G-C pairing -->
+                    <line x1="300" y1="380" x2="400" y2="380" stroke="#f39c12" stroke-width="3"/>
+                    <line x1="300" y1="420" x2="400" y2="420" stroke="#8e44ad" stroke-width="3"/>
+                    <text x="350" y="410" text-anchor="middle" fill="white" font-size="12">Vector-(G)n...(C)n-Insert</text>
+                    <text x="350" y="425" text-anchor="middle" fill="#ecf0f1" font-size="11">G-C base pairing</text>
+                    
+                    <path d="M 350 440 L 350 480" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowTail)"/>
+                    <text x="370" y="460" text-anchor="start" fill="#2c3e50" font-size="12">+ DNA polymerase + ligase</text>
+                    
+                    <!-- Final recombinant -->
+                    <rect x="150" y="480" width="400" height="100" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="350" y="510" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Complete Recombinant DNA</text>
+                    <text x="350" y="530" text-anchor="middle" fill="#ecf0f1" font-size="14">(पूर्ण पुनः संयोजक DNA)</text>
+                    <line x1="200" y1="560" x2="500" y2="560" stroke="white" stroke-width="5"/>
+                    <text x="350" y="575" text-anchor="middle" fill="white" font-size="12">✓ Sealed and complete!</text>
+                    
+                    <defs>
+                        <marker id="arrowTail" markerWidth="10" markerHeight="10" refX="5" refY="7" orient="auto">
+                            <polygon points="0 10, 10 7, 0 4" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+                <h4>Homopolymer Tailing Process (होमोपोलिमर टेलिंग प्रक्रिया)</h4>
+                <pre>
+    Vector DNA (वेक्टर DNA)
+    ┌─────────────┐
+    │ 3'-OH end   │
+    │ (3'-OH सिरा)│
+    └──────┬──────┘
+           │
+           ▼ (TdT + dGTP)
+    ┌─────────────┐
+    │ Vector-     │
+    │ poly(dG)    │
+    │ (G)n tail   │
+    └──────┬──────┘
+           │
+           │
+    Insert DNA (इन्सर्ट DNA)
+    ┌─────────────┐
+    │ 3'-OH end   │
+    │ (3'-OH सिरा)│
+    └──────┬──────┘
+           │
+           ▼ (TdT + dCTP)
+    ┌─────────────┐
+    │ Insert-     │
+    │ poly(dC)    │
+    │ (C)n tail   │
+    └──────┬──────┘
+           │
+           ▼ (Mix & Anneal)
+    ┌─────────────┐
+    │ Hybrid:     │
+    │ Vector-(G)n │
+    │ ...(C)n-    │
+    │ Insert      │
+    │ (G-C pairs) │
+    └──────┬──────┘
+           │
+           ▼ (DNA pol + ligase)
+    ┌─────────────┐
+    │ Recombinant │
+    │ DNA         │
+    │ (पुनः संयोजक)│
+    └─────────────┘
+                </pre>
             </div>
 
             <div class="box">
@@ -1000,8 +1836,108 @@ Complete Recombinant DNA</div>
                 </tr>
             </table>
 
+            <div class="diagram">
+                <h4>Comparison of All Three Methods (सभी तीन विधियों की तुलना)</h4>
+                <svg width="100%" height="500" viewBox="0 0 700 500">
+                    <!-- Linkers -->
+                    <rect x="50" y="30" width="180" height="200" fill="#f39c12" stroke="#d68910" stroke-width="2" rx="5"/>
+                    <text x="140" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Linkers</text>
+                    <text x="140" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(लिंकर)</text>
+                    <line x1="80" y1="120" x2="200" y2="120" stroke="white" stroke-width="3"/>
+                    <line x1="80" y1="140" x2="200" y2="140" stroke="white" stroke-width="3"/>
+                    <text x="140" y="135" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">GAATTC</text>
+                    <text x="140" y="160" text-anchor="middle" fill="white" font-size="11">Blunt on both ends</text>
+                    <text x="140" y="180" text-anchor="middle" fill="white" font-size="11">Need restriction</text>
+                    <text x="140" y="200" text-anchor="middle" fill="white" font-size="11">enzyme after</text>
+                    <text x="140" y="220" text-anchor="middle" fill="#ecf0f1" font-size="10">(दोनों सिरे सीधे)</text>
+                    
+                    <!-- Adaptors -->
+                    <rect x="260" y="30" width="180" height="200" fill="#8e44ad" stroke="#7d3c98" stroke-width="2" rx="5"/>
+                    <text x="350" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Adaptors</text>
+                    <text x="350" y="80" text-anchor="middle" fill="#ecf0f1" font-size="14">(एडाप्टर)</text>
+                    <line x1="290" y1="120" x2="330" y2="120" stroke="white" stroke-width="3"/>
+                    <line x1="290" y1="140" x2="330" y2="140" stroke="white" stroke-width="3"/>
+                    <line x1="330" y1="110" x2="380" y2="100" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="330" y1="150" x2="380" y2="160" stroke="#27ae60" stroke-width="3"/>
+                    <text x="350" y="160" text-anchor="middle" fill="white" font-size="11">Blunt + Sticky</text>
+                    <text x="350" y="180" text-anchor="middle" fill="white" font-size="11">No restriction</text>
+                    <text x="350" y="200" text-anchor="middle" fill="white" font-size="11">enzyme needed</text>
+                    <text x="350" y="220" text-anchor="middle" fill="#ecf0f1" font-size="10">(सीधा + चिपचिपा)</text>
+                    
+                    <!-- Homopolymer Tails -->
+                    <rect x="470" y="30" width="180" height="200" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="560" y="60" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Homopolymer</text>
+                    <text x="560" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Tails</text>
+                    <text x="560" y="100" text-anchor="middle" fill="#ecf0f1" font-size="14">(होमोपोलिमर टेल)</text>
+                    <line x1="500" y1="140" x2="540" y2="140" stroke="white" stroke-width="3"/>
+                    <text x="520" y="130" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">(G)n</text>
+                    <text x="520" y="145" text-anchor="middle" fill="#f39c12" font-size="14" font-weight="bold">(G)n</text>
+                    <line x1="580" y1="140" x2="620" y2="140" stroke="white" stroke-width="3"/>
+                    <text x="600" y="130" text-anchor="middle" fill="#8e44ad" font-size="14" font-weight="bold">(C)n</text>
+                    <text x="600" y="145" text-anchor="middle" fill="#8e44ad" font-size="14" font-weight="bold">(C)n</text>
+                    <text x="560" y="170" text-anchor="middle" fill="white" font-size="11">G-C pairing</text>
+                    <text x="560" y="190" text-anchor="middle" fill="white" font-size="11">No restriction</text>
+                    <text x="560" y="210" text-anchor="middle" fill="white" font-size="11">site added</text>
+                    <text x="560" y="230" text-anchor="middle" fill="#ecf0f1" font-size="10">(G-C जोड़ी)</text>
+                    
+                    <!-- Comparison table -->
+                    <rect x="50" y="260" width="600" height="220" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5"/>
+                    <text x="350" y="290" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Method Comparison (विधि तुलना)</text>
+                    
+                    <!-- Headers -->
+                    <rect x="70" y="300" width="100" height="30" fill="#2c3e50" rx="3"/>
+                    <text x="120" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Feature</text>
+                    <rect x="180" y="300" width="130" height="30" fill="#f39c12" rx="3"/>
+                    <text x="245" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Linkers</text>
+                    <rect x="320" y="300" width="130" height="30" fill="#8e44ad" rx="3"/>
+                    <text x="385" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Adaptors</text>
+                    <rect x="460" y="300" width="130" height="30" fill="#3498db" rx="3"/>
+                    <text x="525" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Homopolymer</text>
+                    
+                    <!-- Rows -->
+                    <rect x="70" y="340" width="100" height="25" fill="#fff" rx="2"/>
+                    <text x="120" y="357" text-anchor="middle" fill="#2c3e50" font-size="11">Structure</text>
+                    <rect x="180" y="340" width="130" height="25" fill="#fff5f5" rx="2"/>
+                    <text x="245" y="357" text-anchor="middle" fill="#2c3e50" font-size="10">Blunt both ends</text>
+                    <rect x="320" y="340" width="130" height="25" fill="#f0e6ff" rx="2"/>
+                    <text x="385" y="357" text-anchor="middle" fill="#2c3e50" font-size="10">Blunt + Sticky</text>
+                    <rect x="460" y="340" width="130" height="25" fill="#e8f4f8" rx="2"/>
+                    <text x="525" y="357" text-anchor="middle" fill="#2c3e50" font-size="10">G/C tails</text>
+                    
+                    <rect x="70" y="375" width="100" height="25" fill="#fff" rx="2"/>
+                    <text x="120" y="392" text-anchor="middle" fill="#2c3e50" font-size="11">Restriction</text>
+                    <rect x="180" y="375" width="130" height="25" fill="#fff5f5" rx="2"/>
+                    <text x="245" y="392" text-anchor="middle" fill="#2c3e50" font-size="10">✓ Needed</text>
+                    <rect x="320" y="375" width="130" height="25" fill="#f0e6ff" rx="2"/>
+                    <text x="385" y="392" text-anchor="middle" fill="#2c3e50" font-size="10">✗ Not needed</text>
+                    <rect x="460" y="375" width="130" height="25" fill="#e8f4f8" rx="2"/>
+                    <text x="525" y="392" text-anchor="middle" fill="#2c3e50" font-size="10">✗ Not needed</text>
+                    
+                    <rect x="70" y="410" width="100" height="25" fill="#fff" rx="2"/>
+                    <text x="120" y="427" text-anchor="middle" fill="#2c3e50" font-size="11">Speed</text>
+                    <rect x="180" y="410" width="130" height="25" fill="#fff5f5" rx="2"/>
+                    <text x="245" y="427" text-anchor="middle" fill="#2c3e50" font-size="10">Slower</text>
+                    <rect x="320" y="410" width="130" height="25" fill="#f0e6ff" rx="2"/>
+                    <text x="385" y="427" text-anchor="middle" fill="#2c3e50" font-size="10">Faster</text>
+                    <rect x="460" y="410" width="130" height="25" fill="#e8f4f8" rx="2"/>
+                    <text x="525" y="427" text-anchor="middle" fill="#2c3e50" font-size="10">Medium</text>
+                    
+                    <rect x="70" y="445" width="100" height="25" fill="#fff" rx="2"/>
+                    <text x="120" y="462" text-anchor="middle" fill="#2c3e50" font-size="11">Best For</text>
+                    <rect x="180" y="445" width="130" height="25" fill="#fff5f5" rx="2"/>
+                    <text x="245" y="462" text-anchor="middle" fill="#2c3e50" font-size="9">Adding restriction</text>
+                    <rect x="320" y="445" width="130" height="25" fill="#f0e6ff" rx="2"/>
+                    <text x="385" y="462" text-anchor="middle" fill="#2c3e50" font-size="9">Quick sticky ends</text>
+                    <rect x="460" y="445" width="130" height="25" fill="#e8f4f8" rx="2"/>
+                    <text x="525" y="462" text-anchor="middle" fill="#2c3e50" font-size="9">No restriction</text>
+                    <text x="245" y="475" text-anchor="middle" fill="#7f8c8d" font-size="8">sites</text>
+                    <text x="385" y="475" text-anchor="middle" fill="#7f8c8d" font-size="8">needed</text>
+                    <text x="525" y="475" text-anchor="middle" fill="#7f8c8d" font-size="8">sites</text>
+                </svg>
+            </div>
+
             <div class="hindi">
-                <strong>Hindi Explanation:</strong> Linkers, adaptors और homopolymer tails तीन तरीके हैं incompatible DNA fragments को join करने के लिए। Linkers restriction site add करते हैं, adaptors directly sticky ends देते हैं, और homopolymer tails G-C complementary sequences use करते हैं।
+                <strong>हिंदी व्याख्या:</strong> Linkers, adaptors और homopolymer tails तीन तरीके हैं incompatible DNA fragments को join करने के लिए। Linkers restriction site add करते हैं और restriction enzyme digestion की जरूरत होती है। Adaptors directly sticky ends देते हैं और तेज़ होते हैं। Homopolymer tails G-C complementary sequences use करते हैं और restriction site add नहीं करते, जिससे insert को बाद में आसानी से निकाला जा सकता है।
             </div>
         </div>
 
