@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-615 Unit IV - Immune Response to Bacterial Infections</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-title {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .subsection {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .subsection-title {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .content-box {
+            margin: 15px 0;
+            padding: 15px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+        }
+        
+        .english {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .hindi {
+            color: #e74c3c;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        .diagram-container {
+            margin: 25px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .diagram-title {
+            color: #667eea;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .flow-box {
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .flow-box-green {
+            background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+        }
+        
+        .flow-box-orange {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+        
+        .arrow {
+            font-size: 30px;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .key-points {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #27ae60;
+            margin: 20px 0;
+        }
+        
+        .key-points-title {
+            color: #27ae60;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .key-points ul {
+            margin-left: 25px;
+        }
+        
+        .key-points li {
+            margin: 8px 0;
+            color: #2c3e50;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .note-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .note-box strong {
+            color: #ff9800;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .comparison-card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .innate-card {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 5px solid #27ae60;
+        }
+        
+        .adaptive-card {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196f3;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header h2 {
+                font-size: 20px;
+            }
+            
+            .flow-box {
+                width: 100%;
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MCR-615 Applied and Environmental Microbiology</h1>
+            <h2>UNIT IV - Immune Response to Bacterial Infections</h2>
+            <p style="color: #666; font-size: 16px; margin-top: 10px;">आसान अंग्रेजी और हिंदी में | Easy English and Hindi</p>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">Complete Notes - पूर्ण नोट्स</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="section">
+            <h2 class="section-title">📚 Introduction - परिचय</h2>
+            <div class="content-box">
+                <p class="english"><strong>What is Immune Response?</strong> Immune response is the body's defense system that fights against harmful bacteria and protects us from infections.</p>
+                <p class="hindi"><strong>प्रतिरक्षा प्रतिक्रिया क्या है?</strong> यह हमारे शरीर की रक्षा प्रणाली है जो हानिकारक बैक्टीरिया से लड़ती है और संक्रमण से हमारी रक्षा करती है।</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card innate-card">
+                    <h3 style="color: #27ae60; margin-bottom: 10px;">🛡️ Innate Immunity</h3>
+                    <p class="english"><strong>जन्मजात प्रतिरक्षा</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Born with it | जन्म से मिलती है</li>
+                        <li>Works immediately | तुरंत काम करती है</li>
+                        <li>Not specific | विशिष्ट नहीं</li>
+                        <li>No memory | कोई याद नहीं</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card adaptive-card">
+                    <h3 style="color: #2196f3; margin-bottom: 10px;">🎯 Adaptive Immunity</h3>
+                    <p class="english"><strong>अर्जित प्रतिरक्षा</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Develops over time | समय के साथ विकसित</li>
+                        <li>Takes days to activate | सक्रिय होने में दिन लगते</li>
+                        <li>Very specific | बहुत विशिष्ट</li>
+                        <li>Has memory | याद रखती है</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Flowchart -->
+        <div class="diagram-container">
+            <div class="diagram-title">🔄 Complete Immune Response Flow | पूर्ण प्रतिरक्षा प्रवाह</div>
+            <div class="flowchart">
+                <div class="flow-box">बैक्टीरिया शरीर में प्रवेश करता है<br>Bacteria Enters Body</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box flow-box-green">जन्मजात प्रतिरक्षा सक्रिय (0-4 घंटे)<br>Innate Immunity Activated (0-4 hours)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box flow-box-orange">अर्जित प्रतिरक्षा सक्रिय (4-7 दिन)<br>Adaptive Immunity Activated (4-7 days)</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box">बैक्टीरिया नष्ट + याद रखा<br>Bacteria Destroyed + Remembered</div>
+            </div>
+        </div>
+
+        <!-- PART 1: INNATE IMMUNITY -->
+        <div class="section">
+            <h2 class="section-title">🛡️ PART 1: Innate Immune Response - जन्मजात प्रतिरक्षा</h2>
+            
+            <!-- Complement System -->
+            <div class="subsection">
+                <h3 class="subsection-title">1. Complement System - पूरक प्रणाली</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>What is Complement?</strong> A group of about 30 proteins in blood that work together like a chain reaction to kill bacteria.</p>
+                    <p class="hindi"><strong>कॉम्प्लीमेंट क्या है?</strong> रक्त में लगभग 30 प्रोटीन का समूह जो श्रृंखला प्रतिक्रिया की तरह मिलकर बैक्टीरिया को मारता है।</p>
+                </div>
+
+                <div class="diagram-container">
+                    <div class="diagram-title">Three Pathways of Complement | तीन रास्ते</div>
+                    <div class="flowchart">
+                        <div class="flow-box">1. Classical Pathway (शास्त्रीय)<br>Antibody + Bacteria → C1 activation</div>
+                        <div class="flow-box">2. Alternative Pathway (वैकल्पिक)<br>Direct bacteria recognition</div>
+                        <div class="flow-box">3. Lectin Pathway (लेक्टिन)<br>Mannose-binding lectin</div>
+                        <div class="arrow">↓ सभी मिलते हैं ↓</div>
+                        <div class="flow-box">C3 → C3a + C3b</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">MAC Formation (C5b-C9)<br>बैक्टीरिया में छेद बनाता है</div>
+                    </div>
+                </div>
+                
+                <div class="comparison-card" style="background: linear-gradient(135deg, #fff4e8 0%, #ffd9b3 100%); border-left: 5px solid #f39c12;">
+                    <h3 style="color: #f39c12; margin-bottom: 10px;">Th17 Cells</h3>
+                    <p><strong>Function:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 5px;">
+                        <li>Fight extracellular bacteria</li>
+                        <li>Recruit neutrophils</li>
+                        <li>Release IL-17</li>
+                        <li>बाहरी बैक्टीरिया से लड़ते हैं</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="diagram-container">
+                <div class="diagram-title">Cell-Mediated Response Process | प्रक्रिया</div>
+                <div class="flowchart">
+                    <div class="flow-box">Step 1: Bacteria Infects Cell<br>बैक्टीरिया कोशिका को संक्रमित करता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 2: APC Processes Antigen<br>एंटीजन को प्रोसेस करता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 3: APC Presents to T Cell via MHC<br>MHC के माध्यम से T कोशिका को दिखाता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 4: T Cell Activation<br>T कोशिका सक्रिय होती है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 5: T Cell Clonal Expansion<br>T कोशिकाएं बढ़ती हैं (हजारों बन जाती हैं)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 6: Cytotoxic T Cells Kill Infected Cells<br>संक्रमित कोशिकाओं को मारना</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 7: Memory T Cells Formed<br>स्मृति T कोशिकाएं बनती हैं</div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <div class="key-points-title">🎯 How Cytotoxic T Cells Kill | कैसे मारते हैं:</div>
+                <ul>
+                    <li><strong>Perforin:</strong> Makes pores/holes in infected cell membrane | छेद बनाता है</li>
+                    <li><strong>Granzymes:</strong> Enter through pores and trigger cell death | कोशिका मृत्यु को ट्रिगर करते हैं</li>
+                    <li><strong>Fas-FasL:</strong> Signals cell to commit suicide (apoptosis) | कोशिका को आत्महत्या का संकेत</li>
+                </ul>
+            </div>
+
+            <div class="note-box">
+                <strong>⏰ Timeline:</strong> Cell-mediated response takes 4-7 days to fully develop on first infection. Second time: 1-3 days!<br>
+                <span class="hindi">समयरेखा: पहली बार 4-7 दिन लगते हैं। दूसरी बार: 1-3 दिन!</span>
+            </div>
+        </div>
+
+        <!-- PART 4: HUMORAL IMMUNITY -->
+        <div class="section">
+            <h2 class="section-title">💉 PART 4: Humoral Immune Response - हास्य प्रतिरक्षा प्रतिक्रिया</h2>
+            
+            <div class="content-box">
+                <p class="english"><strong>What is it?</strong> Immune response done by B cells that make antibodies. Antibodies float in blood and body fluids ("humors") to neutralize bacteria.</p>
+                <p class="hindi"><strong>यह क्या है?</strong> B कोशिकाओं द्वारा की गई प्रतिरक्षा प्रतिक्रिया जो एंटीबॉडी बनाती हैं। एंटीबॉडी रक्त में तैरते हैं और बैक्टीरिया को निष्क्रिय करते हैं।</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">What are B Cells? - B कोशिकाएं क्या हैं?</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>B Lymphocytes:</strong> White blood cells that make antibodies. Each B cell makes antibodies against ONE specific antigen.</p>
+                    <p class="hindi"><strong>B लिम्फोसाइट्स:</strong> सफेद रक्त कोशिकाएं जो एंटीबॉडी बनाती हैं। प्रत्येक B कोशिका एक विशिष्ट एंटीजन के खिलाफ एंटीबॉडी बनाती है।</p>
+                </div>
+
+                <div class="content-box">
+                    <p class="english"><strong>Made in:</strong> Bone Marrow (बोन मैरो में बनती हैं)</p>
+                    <p class="english"><strong>Mature in:</strong> Bone Marrow (बोन मैरो में परिपक्व होती हैं)</p>
+                    <p class="english"><strong>Found in:</strong> Blood, Lymph nodes, Spleen (रक्त, लिम्फ नोड्स, प्लीहा में मिलती हैं)</p>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Humoral Response Process | हास्य प्रतिक्रिया प्रक्रिया</div>
+                <div class="flowchart">
+                    <div class="flow-box">Step 1: Bacteria Enters Body<br>बैक्टीरिया शरीर में प्रवेश</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 2: B Cell Recognizes Antigen<br>B कोशिका एंटीजन को पहचानती है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 3: Helper T Cell Helps B Cell<br>सहायक T कोशिका मदद करती है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 4: B Cell Activation<br>B कोशिका सक्रिय होती है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 5: Clonal Expansion<br>B कोशिकाएं बढ़ती हैं (हजारों बन जाती हैं)</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Step 6: Differentiation into Two Types<br>दो प्रकारों में विभेदन</div>
+                    <div class="arrow">↓ Splits ↓</div>
+                    <div style="display: flex; gap: 10px; width: 100%; justify-content: center;">
+                        <div class="flow-box flow-box-green" style="max-width: 45%;">Plasma Cells<br>Make Antibodies<br>एंटीबॉडी बनाते हैं</div>
+                        <div class="flow-box flow-box-orange" style="max-width: 45%;">Memory B Cells<br>Remember Bacteria<br>याद रखते हैं</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">What are Antibodies? - एंटीबॉडी क्या हैं?</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>Antibodies (Immunoglobulins - Ig):</strong> Y-shaped proteins made by plasma cells. They stick to bacteria and neutralize them.</p>
+                    <p class="hindi"><strong>एंटीबॉडी (इम्युनोग्लोबुलिन):</strong> प्लाज्मा कोशिकाओं द्वारा बनाए गए Y-आकार के प्रोटीन। वे बैक्टीरिया से चिपकते हैं और उन्हें निष्क्रिय करते हैं।</p>
+                </div>
+
+                <div class="note-box">
+                    <strong>🔍 Structure:</strong> Antibody has 2 parts:<br>
+                    • <strong>Fab region:</strong> Binds to antigen (एंटीजन से जुड़ता है)<br>
+                    • <strong>Fc region:</strong> Binds to immune cells (प्रतिरक्षा कोशिकाओं से जुड़ता है)
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Five Types of Antibodies - पांच प्रकार की एंटीबॉडी</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Antibody Type</th>
+                            <th>Location (स्थान)</th>
+                            <th>Function (कार्य)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>IgG</strong><br>(75% of total)</td>
+                            <td>Blood, tissues<br>रक्त, ऊतकों में</td>
+                            <td>• Main antibody in blood<br>• Crosses placenta to baby<br>• Long-lasting protection<br>• Neutralizes bacteria, activates complement<br>• बच्चे को सुरक्षा देता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IgM</strong><br>(10% of total)</td>
+                            <td>Blood<br>रक्त में</td>
+                            <td>• First antibody made in infection<br>• Very large (pentamer - 5 units)<br>• Best at activating complement<br>• संक्रमण में पहला बनता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IgA</strong><br>(15% of total)</td>
+                            <td>Tears, saliva, mucus, breast milk<br>आंसू, लार, बलगम, स्तन के दूध में</td>
+                            <td>• Protects mucous membranes<br>• Found in body secretions<br>• Prevents bacteria from sticking<br>• श्लेष्म झिल्ली की रक्षा करता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IgE</strong><br>(0.002% of total)</td>
+                            <td>Blood (very small amount)<br>रक्त में (बहुत कम)</td>
+                            <td>• Allergic reactions<br>• Fights parasites<br>• Binds to mast cells<br>• एलर्जी प्रतिक्रियाओं में भूमिका</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IgD</strong><br>(0.2% of total)</td>
+                            <td>B cell surface<br>B कोशिका की सतह पर</td>
+                            <td>• Helps B cell activation<br>• Function not fully understood<br>• B कोशिका सक्रियण में मदद</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="key-points">
+                <div class="key-points-title">🎯 How Antibodies Work | एंटीबॉडी कैसे काम करती हैं:</div>
+                <ul>
+                    <li><strong>Neutralization (निष्क्रियीकरण):</strong> Block bacteria from entering cells | कोशिकाओं में प्रवेश से रोकते हैं</li>
+                    <li><strong>Opsonization (ऑप्सोनाइजेशन):</strong> Mark bacteria for phagocytes to eat | फैगोसाइट्स के लिए चिह्नित करते हैं</li>
+                    <li><strong>Complement Activation:</strong> Activate complement system to kill bacteria | कॉम्प्लीमेंट सिस्टम को सक्रिय करते हैं</li>
+                    <li><strong>Agglutination (समूहन):</strong> Clump bacteria together for easy removal | बैक्टीरिया को एक साथ गुच्छा बनाते हैं</li>
+                </ul>
+            </div>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Primary vs Secondary Response | प्राथमिक बनाम द्वितीयक प्रतिक्रिया</div>
+                <div class="comparison-grid">
+                    <div class="comparison-card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 5px solid #ff9800;">
+                        <h3 style="color: #ff9800; margin-bottom: 10px;">Primary Response</h3>
+                        <p style="font-weight: 600;">प्राथमिक प्रतिक्रिया (पहली बार)</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Time:</strong> 4-7 days | 4-7 दिन</li>
+                            <li><strong>First Antibody:</strong> IgM</li>
+                            <li><strong>Later:</strong> IgG appears</li>
+                            <li><strong>Amount:</strong> Low to moderate</li>
+                            <li><strong>Duration:</strong> Short-lived</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 5px solid #27ae60;">
+                        <h3 style="color: #27ae60; margin-bottom: 10px;">Secondary Response</h3>
+                        <p style="font-weight: 600;">द्वितीयक प्रतिक्रिया (दूसरी बार)</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Time:</strong> 1-3 days | 1-3 दिन</li>
+                            <li><strong>Main Antibody:</strong> IgG (more)</li>
+                            <li><strong>Amount:</strong> MUCH HIGHER (100-1000x)</li>
+                            <li><strong>Duration:</strong> Long-lasting</li>
+                            <li><strong>Reason:</strong> Memory B cells remember!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <strong>💡 Important:</strong> This is why vaccines work! First dose = Primary response. Second dose (booster) = Secondary response with more antibodies!<br>
+                <span class="hindi">महत्वपूर्ण: यही कारण है कि टीके काम करते हैं! पहली खुराक = प्राथमिक प्रतिक्रिया। दूसरी खुराक = अधिक एंटीबॉडी के साथ द्वितीयक प्रतिक्रिया!</span>
+            </div>
+        </div>
+
+        <!-- COMPARISON SECTION -->
+        <div class="section">
+            <h2 class="section-title">⚖️ Cell-Mediated vs Humoral Immunity - तुलना</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature<br>विशेषता</th>
+                        <th>Cell-Mediated Immunity<br>कोशिका मध्यस्थता</th>
+                        <th>Humoral Immunity<br>हास्य प्रतिरक्षा</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Main Cells</strong></td>
+                        <td>T cells (T कोशिकाएं)</td>
+                        <td>B cells (B कोशिकाएं)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Produces</strong></td>
+                        <td>Cytokines, activated T cells<br>साइटोकिन्स, सक्रिय T कोशिकाएं</td>
+                        <td>Antibodies (एंटीबॉडी)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Target</strong></td>
+                        <td>Intracellular bacteria<br>कोशिका के अंदर के बैक्टीरिया</td>
+                        <td>Extracellular bacteria<br>कोशिका के बाहर के बैक्टीरिया</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Action</strong></td>
+                        <td>Kills infected cells directly<br>संक्रमित कोशिकाओं को सीधे मारता है</td>
+                        <td>Neutralizes bacteria in fluids<br>तरल पदार्थों में बैक्टीरिया को निष्क्रिय करता है</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transfer</strong></td>
+                        <td>Cannot be transferred<br>स्थानांतरित नहीं किया जा सकता</td>
+                        <td>Can be transferred via serum/antibodies<br>सीरम के माध्यम से स्थानांतरित किया जा सकता है</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Examples</strong></td>
+                        <td>TB, Leprosy, Listeria<br>तपेदिक, कुष्ठ रोग</td>
+                        <td>Streptococcus, Staphylococcus<br>स्ट्रेप्टोकोकस</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SUMMARY SECTION -->
+        <div class="section">
+            <h2 class="section-title">📝 Complete Summary - पूर्ण सारांश</h2>
+            
+            <div class="diagram-container">
+                <div class="diagram-title">Complete Immune Response Timeline | पूर्ण समयरेखा</div>
+                <div class="flowchart">
+                    <div class="flow-box flow-box-green">0-4 Hours: Innate Immunity<br>Complement, Macrophages, Cytokines</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">4-96 Hours: Bridge Phase<br>Dendritic cells activate adaptive immunity</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box flow-box-orange">4-7 Days: Adaptive Immunity<br>T cells & B cells activated</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">7-14 Days: Peak Response<br>Maximum antibodies & T cells</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">After: Memory Formed<br>Faster response next time!</div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <div class="key-points-title">🎯 Key Points to Remember | याद रखने योग्य मुख्य बिंदु:</div>
+                <ul>
+                    <li><strong>Innate immunity</strong> is fast but not specific | तेज़ लेकिन विशिष्ट नहीं</li>
+                    <li><strong>Adaptive immunity</strong> is slow but very specific and has memory | धीमा लेकिन बहुत विशिष्ट और याददाश्त है</li>
+                    <li><strong>Cell-mediated</strong> uses T cells to kill infected cells | T कोशिकाएं संक्रमित कोशिकाओं को मारती हैं</li>
+                    <li><strong>Humoral</strong> uses B cells to make antibodies | B कोशिकाएं एंटीबॉडी बनाती हैं</li>
+                    <li><strong>IgM</strong> appears first, <strong>IgG</strong> appears later and lasts longer | IgM पहले, IgG बाद में और लंबे समय तक रहता है</li>
+                    <li><strong>Memory cells</strong> make second infection response much faster | स्मृति कोशिकाएं दूसरी प्रतिक्रिया को तेज़ बनाती हैं</li>
+                </ul>
+            </div>
+
+            <div class="note-box">
+                <strong>🎓 Exam Tips | परीक्षा युक्तियाँ:</strong><br>
+                • Draw flowcharts for complement pathways | कॉम्प्लीमेंट पाथवे के लिए फ्लोचार्ट बनाएं<br>
+                • Remember: IgM = "I'm the first" (पहला) | IgG = "I'm the Guard" (रक्षक)<br>
+                • Know differences between Th1, Th2, and Th17 cells | Th1, Th2, और Th17 कोशिकाओं के बीच अंतर जानें<br>
+                • Understand primary vs secondary response timing | प्राथमिक बनाम द्वितीयक प्रतिक्रिया का समय समझें
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+            <h3 style="margin-bottom: 10px;">✅ Unit IV Complete!</h3>
+            <p style="font-size: 18px;">यूनिट IV पूर्ण!</p>
+            <p style="margin-top: 15px; font-size: 14px;">Study well and practice drawing diagrams! | अच्छे से अध्ययन करें और आरेख बनाने का अभ्यास करें!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+                <div class="key-points">
+                    <div class="key-points-title">🎯 Main Functions (मुख्य कार्य):</div>
+                    <ul>
+                        <li><strong>Opsonization:</strong> Marks bacteria for eating | बैक्टीरिया को चिह्नित करना</li>
+                        <li><strong>Inflammation:</strong> Attracts immune cells | प्रतिरक्षा कोशिकाओं को आकर्षित करना</li>
+                        <li><strong>Direct Killing:</strong> Makes holes in bacteria | बैक्टीरिया में छेद बनाना</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Acute Phase Proteins -->
+            <div class="subsection">
+                <h3 class="subsection-title">2. Acute Phase Proteins - तीव्र चरण प्रोटीन</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>What are they?</strong> Special proteins made by liver during infection. Their blood levels change rapidly.</p>
+                    <p class="hindi"><strong>ये क्या हैं?</strong> संक्रमण के दौरान यकृत द्वारा बनाए गए विशेष प्रोटीन। रक्त में इनका स्तर तेजी से बदलता है।</p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Protein</th>
+                            <th>Function (कार्य)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CRP (C-Reactive Protein)</strong></td>
+                            <td>Binds bacteria, activates complement<br>बैक्टीरिया से बंधता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fibrinogen</strong></td>
+                            <td>Blood clotting, traps bacteria<br>रक्त का थक्का बनाना</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Serum Amyloid A</strong></td>
+                            <td>Recruits immune cells<br>प्रतिरक्षा कोशिकाओं को बुलाना</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Macrophages -->
+            <div class="subsection">
+                <h3 class="subsection-title">3. Macrophages - मैक्रोफेज (Big Eaters)</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>What are Macrophages?</strong> Large white blood cells that eat bacteria. They are like "soldiers" of immune system.</p>
+                    <p class="hindi"><strong>मैक्रोफेज क्या हैं?</strong> बड़ी सफेद रक्त कोशिकाएं जो बैक्टीरिया खाती हैं। प्रतिरक्षा प्रणाली के "सैनिक" हैं।</p>
+                </div>
+
+                <div class="diagram-container">
+                    <div class="diagram-title">How Macrophages Work | कैसे काम करते हैं</div>
+                    <div class="flowchart">
+                        <div class="flow-box">1. Recognition (पहचान)<br>Detects bacteria</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">2. Phagocytosis (फैगोसाइटोसिस)<br>Eats bacteria</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">3. Killing (हत्या)<br>Destroys with enzymes</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">4. Antigen Presentation<br>Shows pieces to T cells</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cytokines -->
+            <div class="subsection">
+                <h3 class="subsection-title">4. Cytokines - साइटोकिन्स (Messengers)</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>What are Cytokines?</strong> Small proteins that cells use to communicate. Like "text messages" between immune cells!</p>
+                    <p class="hindi"><strong>साइटोकिन्स क्या हैं?</strong> छोटे प्रोटीन जो कोशिकाएं संचार के लिए उपयोग करती हैं। कोशिकाओं के बीच "संदेश" की तरह!</p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Cytokine</th>
+                            <th>Main Function (मुख्य कार्य)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>IL-1</strong></td>
+                            <td>Causes fever, activates T cells<br>बुखार लाता है, T कोशिकाओं को सक्रिय करता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IL-6</strong></td>
+                            <td>Triggers acute phase proteins<br>तीव्र चरण प्रोटीन बनाता है</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TNF-α</strong></td>
+                            <td>Inflammation, fever<br>सूजन और बुखार</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Interferon -->
+            <div class="subsection">
+                <h3 class="subsection-title">5. Interferon - इंटरफेरॉन</h3>
+                
+                <div class="content-box">
+                    <p class="english"><strong>What is Interferon?</strong> Proteins that "interfere" with infections. They activate immune cells and make cells resistant to infection.</p>
+                    <p class="hindi"><strong>इंटरफेरॉन क्या है?</strong> प्रोटीन जो संक्रमण में "हस्तक्षेप" करते हैं। प्रतिरक्षा कोशिकाओं को सक्रिय करते हैं।</p>
+                </div>
+
+                <div class="key-points">
+                    <div class="key-points-title">Types & Functions:</div>
+                    <ul>
+                        <li><strong>Type I (IFN-α, IFN-β):</strong> Antiviral, activates NK cells | वायरस रोधी</li>
+                        <li><strong>Type II (IFN-γ):</strong> Activates macrophages for bacteria killing | बैक्टीरिया मारने के लिए</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 2: ADAPTIVE/ACQUIRED IMMUNITY -->
+        <div class="section">
+            <h2 class="section-title">🎯 PART 2: Adaptive Immune Response - अर्जित प्रतिरक्षा प्रतिक्रिया</h2>
+            
+            <div class="content-box">
+                <p class="english"><strong>What is Adaptive Immunity?</strong> A specific immune response that develops over time. It has memory - remembers bacteria and responds faster next time!</p>
+                <p class="hindi"><strong>अर्जित प्रतिरक्षा क्या है?</strong> एक विशिष्ट प्रतिरक्षा प्रतिक्रिया जो समय के साथ विकसित होती है। इसमें याददाश्त है - बैक्टीरिया को याद रखती है!</p>
+            </div>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Two Types of Adaptive Immunity | दो प्रकार</div>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3 style="color: #2196f3; margin-bottom: 10px;">🔬 Cell-Mediated Immunity</h3>
+                        <p style="font-weight: 600;">कोशिका मध्यस्थता प्रतिरक्षा</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Done by T cells</li>
+                            <li>Kills infected cells</li>
+                            <li>No antibodies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <h3 style="color: #e91e63; margin-bottom: 10px;">💉 Humoral Immunity</h3>
+                        <p style="font-weight: 600;">हास्य प्रतिरक्षा</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Done by B cells</li>
+                            <li>Makes antibodies</li>
+                            <li>Antibodies in blood</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Flowchart -->
+            <div class="diagram-container">
+                <div class="diagram-title">Adaptive Immunity Overview | अवलोकन</div>
+                <div class="flowchart">
+                    <div class="flow-box">Bacteria Enters Body<br>बैक्टीरिया प्रवेश करता है</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">Antigen Presenting Cells (APC)<br>Macrophages & Dendritic cells eat bacteria</div>
+                    <div class="arrow">↓</div>
+                    <div class="flow-box">APC shows bacterial pieces to T & B cells<br>बैक्टीरिया के टुकड़े दिखाते हैं</div>
+                    <div class="arrow">↓ Splits into 2 paths ↓</div>
+                    <div style="display: flex; gap: 10px; width: 100%; justify-content: center;">
+                        <div class="flow-box" style="max-width: 45%;">T Cells Activated<br>Cell-Mediated</div>
+                        <div class="flow-box" style="max-width: 45%;">B Cells Activated<br>Humoral</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 3: CELL-MEDIATED IMMUNITY -->
+        <div class="section">
+            <h2 class="section-title">🔬 PART 3: Cell-Mediated Immunity - कोशिका मध्यस्थता प्रतिरक्षा</h2>
+            
+            <div class="content-box">
+                <p class="english"><strong>What is it?</strong> Immune response done by T cells. They kill cells that are infected by bacteria. No antibodies involved!</p>
+                <p class="hindi"><strong>यह क्या है?</strong> T कोशिकाओं द्वारा की गई प्रतिरक्षा प्रतिक्रिया। वे संक्रमित कोशिकाओं को मारते हैं। कोई एंटीबॉडी नहीं!</p>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Types of T Cells - T कोशिकाओं के प्रकार</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>T Cell Type</th>
+                            <th>Function (कार्य)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Helper T cells (CD4+)</strong><br>सहायक T कोशिकाएं</td>
+                            <td>• Release cytokines to help other cells<br>• Activate B cells and Cytotoxic T cells<br>• मास्टर कमांडर की तरह आदेश देते हैं</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cytotoxic T cells (CD8+)</strong><br>साइटोटॉक्सिक T कोशिकाएं</td>
+                            <td>• Kill infected cells directly<br>• Release perforin (makes holes)<br>• संक्रमित कोशिकाओं को मारते हैं</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regulatory T cells</strong><br>नियामक T कोशिकाएं</td>
+                            <td>• Control immune response<br>• Prevent too much inflammation<br>• प्रतिरक्षा को नियंत्रित करते हैं</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory T cells</strong><br>स्मृति T कोशिकाएं</td>
+                            <td>• Remember bacteria<br>• Quick response next time<br>• बैक्टीरिया को याद रखते हैं</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Helper T Cell Subtypes - सहायक T कोशिका उपप्रकार</h3>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-card" style="background: linear-gradient(135deg, #ffe8e8 0%, #ffcccc 100%); border-left: 5px solid #e74c3c;">
+                        <h3 style="color: #e74c3c; margin-bottom: 10px;">Th1 Cells</h3>
+                        <p><strong>Function:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Fight intracellular bacteria</li>
+                            <li>Activate macrophages</li>
+                            <li>Release IFN-γ</li>
+                            <li>कोशिकाओं के अंदर के बैक्टीरिया से लड़ते हैं</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card" style="background: linear-gradient(135deg, #e8f4f8 0%, #b3d9e8 100%); border-left: 5px solid #3498db;">
+                        <h3 style="color: #3498db; margin-bottom: 10px;">Th2 Cells</h3>
+                        <p><strong>Function:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Help B cells make antibodies</li>
+                            <li>Fight extracellular bacteria</li>
+                            <li>Release IL-4, IL-5, IL-13</li>
+                            <li>B कोशिकाओं की मदद करते हैं</li>
+                        </ul>
+                    </div>
+                </div
+                
