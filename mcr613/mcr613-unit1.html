@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-613 Unit 1 - Genetic Engineering Techniques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #f5576c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f5576c;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5576c;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #f5576c;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #f5576c;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .comparison-box {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="../index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr613-unit1.html" class="active">Unit I</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Genetic Engineering</h1>
+            <h2>MCR-613 UNIT I - Techniques in Genetic Engineering</h2>
+            <p style="color: #666; font-size: 16px; margin-top: 10px;">आसान अंग्रेजी और हिंदी में | Easy English and Hindi</p>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">Complete Notes with Diagrams & Flowcharts - पूर्ण नोट्स</p>
+        </div>
+
+        <!-- Section 1: Blotting Techniques -->
+        <div class="section">
+            <h3>1. Blotting Techniques (ब्लॉटिंग तकनीकें)</h3>
+            
+            <p><strong>What is Blotting?</strong> Blotting is a technique used to transfer DNA, RNA, or proteins from a gel to a membrane for detection. Think of it like making a photocopy of your gel!</p>
+            
+            <div class="hindi">
+                <strong>हिंदी:</strong> ब्लॉटिंग एक तकनीक है जिसका उपयोग DNA, RNA, या प्रोटीन को जेल से एक झिल्ली (membrane) पर स्थानांतरित करने के लिए किया जाता है। इसे अपने जेल की फोटोकॉपी बनाने जैसा समझें!
+            </div>
+
+            <h4>1.1 Southern Blotting (सदर्न ब्लॉटिंग)</h4>
+            
+            <p><strong>Purpose:</strong> Detects specific DNA sequences</p>
+            <p><strong>Invented by:</strong> Edwin Southern (1975)</p>
+            
+            <div class="hindi">
+                <strong>उद्देश्य:</strong> विशिष्ट DNA अनुक्रमों का पता लगाना
+            </div>
+
+            <div class="box">
+                <h5>Steps in Southern Blotting:</h5>
+                <ol class="list">
+                    <li><strong>DNA Extraction:</strong> Get DNA from cells</li>
+                    <li><strong>Restriction Digestion:</strong> Cut DNA with enzymes</li>
+                    <li><strong>Gel Electrophoresis:</strong> Separate DNA fragments by size</li>
+                    <li><strong>Denaturation:</strong> Make DNA single-stranded (using NaOH)</li>
+                    <li><strong>Transfer:</strong> Blot DNA onto nitrocellulose/nylon membrane</li>
+                    <li><strong>Hybridization:</strong> Add labeled probe (complementary DNA)</li>
+                    <li><strong>Detection:</strong> Visualize using autoradiography or chemiluminescence</li>
+                </ol>
+            </div>
+
+            <div class="hindi">
+                <strong>चरण:</strong> 1) DNA निकालना, 2) एंजाइम से काटना, 3) जेल में अलग करना, 4) एकल-स्ट्रैंड बनाना, 5) झिल्ली पर स्थानांतरित करना, 6) प्रोब जोड़ना, 7) दिखाना
+            </div>
+
+            <div class="diagram">
+                <h4>Southern Blotting Process (सदर्न ब्लॉटिंग प्रक्रिया)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- DNA fragments in gel -->
+                    <rect x="50" y="50" width="100" height="400" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <text x="100" y="30" text-anchor="middle" font-size="14" font-weight="bold">Gel Electrophoresis</text>
+                    <text x="100" y="45" text-anchor="middle" font-size="12">(जेल इलेक्ट्रोफोरेसिस)</text>
+                    
+                    <!-- DNA bands -->
+                    <rect x="60" y="100" width="80" height="20" fill="#1976d2"/>
+                    <rect x="60" y="150" width="80" height="20" fill="#1976d2"/>
+                    <rect x="60" y="200" width="80" height="20" fill="#1976d2"/>
+                    <rect x="60" y="250" width="80" height="20" fill="#1976d2"/>
+                    
+                    <!-- Arrow -->
+                    <path d="M 180 250 L 250 250" stroke="#f5576c" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="215" y="240" text-anchor="middle" font-size="12" fill="#f5576c">Transfer</text>
+                    <text x="215" y="255" text-anchor="middle" font-size="10" fill="#f5576c">(स्थानांतरण)</text>
+                    
+                    <!-- Membrane -->
+                    <rect x="280" y="50" width="100" height="400" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
+                    <text x="330" y="30" text-anchor="middle" font-size="14" font-weight="bold">Membrane</text>
+                    <text x="330" y="45" text-anchor="middle" font-size="12">(झिल्ली)</text>
+                    
+                    <!-- Bands on membrane -->
+                    <rect x="290" y="100" width="80" height="20" fill="#f57f17"/>
+                    <rect x="290" y="150" width="80" height="20" fill="#f57f17"/>
+                    <rect x="290" y="200" width="80" height="20" fill="#f57f17"/>
+                    <rect x="290" y="250" width="80" height="20" fill="#f57f17"/>
+                    
+                    <!-- Arrow to probe -->
+                    <path d="M 420 250 L 490 250" stroke="#9c27b0" stroke-width="3" marker-end="url(#arrowhead)"/>
+                    <text x="455" y="240" text-anchor="middle" font-size="12" fill="#9c27b0">Probe</text>
+                    <text x="455" y="255" text-anchor="middle" font-size="10" fill="#9c27b0">(प्रोब)</text>
+                    
+                    <!-- Final detection -->
+                    <rect x="530" y="50" width="100" height="400" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                    <text x="580" y="30" text-anchor="middle" font-size="14" font-weight="bold">Detection</text>
+                    <text x="580" y="45" text-anchor="middle" font-size="12">(पहचान)</text>
+                    
+                    <!-- Detected bands -->
+                    <rect x="540" y="150" width="80" height="20" fill="#9c27b0"/>
+                    <rect x="540" y="250" width="80" height="20" fill="#9c27b0"/>
+                    
+                    <!-- Arrow marker -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of Southern Blotting:</h5>
+                <ul class="list">
+                    <li>DNA fingerprinting (DNA फिंगरप्रिंटिंग)</li>
+                    <li>Gene mapping (जीन मैपिंग)</li>
+                    <li>Detecting gene mutations (जीन उत्परिवर्तन का पता लगाना)</li>
+                    <li>Diagnosing genetic diseases (आनुवंशिक रोगों का निदान)</li>
+                    <li>Forensic analysis (फोरेंसिक विश्लेषण)</li>
+                </ul>
+            </div>
+
+            <h4>1.2 Northern Blotting (नॉर्दर्न ब्लॉटिंग)</h4>
+            
+            <p><strong>Purpose:</strong> Detects specific RNA sequences (mRNA, rRNA, tRNA)</p>
+            
+            <div class="hindi">
+                <strong>उद्देश्य:</strong> विशिष्ट RNA अनुक्रमों का पता लगाना (mRNA, rRNA, tRNA)
+            </div>
+
+            <div class="comparison-box">
+                <h5>Key Differences from Southern:</h5>
+                <ul class="list">
+                    <li>Uses RNA instead of DNA (DNA के बजाय RNA का उपयोग)</li>
+                    <li>RNA is already single-stranded, so no denaturation needed (RNA पहले से ही एकल-स्ट्रैंड है)</li>
+                    <li>Uses formaldehyde gel to prevent RNA degradation (RNA के टूटने को रोकने के लिए फॉर्मलडिहाइड जेल)</li>
+                    <li>Detects gene expression levels (जीन अभिव्यक्ति स्तर का पता लगाता है)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>Northern Blotting Flowchart (नॉर्दर्न ब्लॉटिंग फ्लोचार्ट)</h4>
+┌─────────────────────────────────────┐
+│  1. Extract RNA from cells          │
+│     (कोशिकाओं से RNA निकालना)        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Separate RNA by gel             │
+│     electrophoresis                 │
+│     (जेल इलेक्ट्रोफोरेसिस द्वारा     │
+│      RNA को अलग करना)               │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Transfer RNA to membrane        │
+│     (RNA को झिल्ली पर स्थानांतरित)   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Add labeled DNA/RNA probe       │
+│     (लेबल किए गए DNA/RNA प्रोब जोड़ें)│
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Detect and visualize            │
+│     (पहचानें और दिखाएं)              │
+└─────────────────────────────────────┘
+            </div>
+
+            <h4>1.3 Western Blotting (वेस्टर्न ब्लॉटिंग)</h4>
+            
+            <p><strong>Purpose:</strong> Detects specific proteins</p>
+            
+            <div class="hindi">
+                <strong>उद्देश्य:</strong> विशिष्ट प्रोटीन का पता लगाना
+            </div>
+
+            <div class="box">
+                <h5>Steps in Western Blotting:</h5>
+                <ol class="list">
+                    <li><strong>Protein Extraction:</strong> Get proteins from cells/tissues</li>
+                    <li><strong>SDS-PAGE:</strong> Separate proteins by size (polyacrylamide gel)</li>
+                    <li><strong>Transfer:</strong> Blot proteins onto PVDF or nitrocellulose membrane</li>
+                    <li><strong>Blocking:</strong> Block non-specific binding sites (using milk or BSA)</li>
+                    <li><strong>Primary Antibody:</strong> Add antibody that binds to target protein</li>
+                    <li><strong>Washing:</strong> Remove unbound antibodies</li>
+                    <li><strong>Secondary Antibody:</strong> Add labeled antibody (binds to primary antibody)</li>
+                    <li><strong>Detection:</strong> Visualize using chemiluminescence or colorimetric methods</li>
+                </ol>
+            </div>
+
+            <div class="hindi">
+                <strong>चरण:</strong> 1) प्रोटीन निकालना, 2) SDS-PAGE जेल में अलग करना, 3) झिल्ली पर स्थानांतरित करना, 4) ब्लॉकिंग, 5) प्राथमिक एंटीबॉडी, 6) धोना, 7) द्वितीयक एंटीबॉडी, 8) पहचान
+            </div>
+
+            <div class="diagram">
+                <h4>Western Blotting Process (वेस्टर्न ब्लॉटिंग प्रक्रिया)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- SDS-PAGE Gel -->
+                    <rect x="50" y="50" width="120" height="300" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+                    <text x="110" y="30" text-anchor="middle" font-size="14" font-weight="bold">SDS-PAGE Gel</text>
+                    <text x="110" y="45" text-anchor="middle" font-size="12">(SDS-PAGE जेल)</text>
+                    
+                    <!-- Protein bands -->
+                    <rect x="60" y="80" width="100" height="15" fill="#0277bd"/>
+                    <rect x="60" y="120" width="100" height="15" fill="#0277bd"/>
+                    <rect x="60" y="160" width="100" height="15" fill="#0277bd"/>
+                    <rect x="60" y="200" width="100" height="15" fill="#0277bd"/>
+                    <rect x="60" y="240" width="100" height="15" fill="#0277bd"/>
+                    
+                    <!-- Arrow -->
+                    <path d="M 200 200 L 280 200" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="240" y="190" text-anchor="middle" font-size="12" fill="#f5576c">Transfer</text>
+                    
+                    <!-- Membrane -->
+                    <rect x="310" y="50" width="120" height="300" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+                    <text x="370" y="30" text-anchor="middle" font-size="14" font-weight="bold">Membrane</text>
+                    <text x="370" y="45" text-anchor="middle" font-size="12">(झिल्ली)</text>
+                    
+                    <!-- Protein bands on membrane -->
+                    <rect x="320" y="80" width="100" height="15" fill="#e65100"/>
+                    <rect x="320" y="120" width="100" height="15" fill="#e65100"/>
+                    <rect x="320" y="160" width="100" height="15" fill="#e65100"/>
+                    <rect x="320" y="200" width="100" height="15" fill="#e65100"/>
+                    <rect x="320" y="240" width="100" height="15" fill="#e65100"/>
+                    
+                    <!-- Antibody steps -->
+                    <rect x="470" y="100" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+                    <text x="520" y="120" text-anchor="middle" font-size="12" font-weight="bold">Primary</text>
+                    <text x="520" y="135" text-anchor="middle" font-size="12" font-weight="bold">Antibody</text>
+                    
+                    <rect x="470" y="180" width="100" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+                    <text x="520" y="200" text-anchor="middle" font-size="12" font-weight="bold">Secondary</text>
+                    <text x="520" y="215" text-anchor="middle" font-size="12" font-weight="bold">Antibody</text>
+                    
+                    <!-- Final detection -->
+                    <rect x="610" y="50" width="120" height="300" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
+                    <text x="670" y="30" text-anchor="middle" font-size="14" font-weight="bold">Detection</text>
+                    <text x="670" y="45" text-anchor="middle" font-size="12">(पहचान)</text>
+                    
+                    <!-- Detected bands -->
+                    <rect x="620" y="120" width="100" height="15" fill="#f57f17"/>
+                    <rect x="620" y="200" width="100" height="15" fill="#f57f17"/>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Technique</th>
+                    <th>Detects</th>
+                    <th>Named After</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Southern</strong></td>
+                    <td>DNA</td>
+                    <td>Edwin Southern</td>
+                    <td>DNA का पता लगाता है</td>
+                </tr>
+                <tr>
+                    <td><strong>Northern</strong></td>
+                    <td>RNA</td>
+                    <td>Wordplay on "Southern"</td>
+                    <td>RNA का पता लगाता है</td>
+                </tr>
+                <tr>
+                    <td><strong>Western</strong></td>
+                    <td>Protein</td>
+                    <td>Continuing the naming pattern</td>
+                    <td>प्रोटीन का पता लगाता है</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: PCR -->
+        <div class="section">
+            <h3>2. PCR - Polymerase Chain Reaction (पीसीआर - पॉलीमरेज़ चेन रिएक्शन)</h3>
+            
+            <p><strong>What is PCR?</strong> PCR is like a DNA photocopying machine! It makes millions of copies of a specific DNA sequence in just a few hours.</p>
+            
+            <div class="hindi">
+                <strong>PCR क्या है?</strong> PCR एक DNA फोटोकॉपी मशीन जैसा है! यह कुछ घंटों में एक विशिष्ट DNA अनुक्रम की लाखों प्रतियां बनाता है।
+            </div>
+
+            <div class="box">
+                <h5>Invented by:</h5>
+                <p>Kary Mullis in 1983 (Nobel Prize in Chemistry 1993)</p>
+                <div class="hindi">कैरी मुलिस द्वारा 1983 में (रसायन विज्ञान में नोबेल पुरस्कार 1993)</div>
+            </div>
+
+            <h4>2.1 Components Needed for PCR (PCR के लिए आवश्यक घटक)</h4>
+            
+            <ol class="list">
+                <li><strong>Template DNA:</strong> The DNA you want to copy (जिस DNA की प्रतिलिपि बनानी है)</li>
+                <li><strong>Primers:</strong> Short DNA sequences that mark the start and end (शुरुआत और अंत को चिह्नित करने वाले छोटे DNA अनुक्रम)</li>
+                <li><strong>DNA Polymerase:</strong> Enzyme that builds new DNA (नया DNA बनाने वाला एंजाइम) - Usually Taq polymerase (heat-stable)</li>
+                <li><strong>dNTPs:</strong> Building blocks (A, T, G, C nucleotides) (निर्माण खंड)</li>
+                <li><strong>Buffer:</strong> Provides optimal conditions (इष्टतम स्थितियां प्रदान करता है)</li>
+                <li><strong>Mg²⁺:</strong> Cofactor for polymerase (पॉलीमरेज़ के लिए सहकारक)</li>
+            </ol>
+
+            <h4>2.2 PCR Steps (PCR के चरण)</h4>
+
+            <div class="flowchart">
+<h4>PCR Cycle (PCR चक्र)</h4>
+┌─────────────────────────────────────┐
+│  STEP 1: DENATURATION (95°C)        │
+│  (डेनैचुरेशन - DNA को गर्म करके      │
+│   दो स्ट्रैंड अलग करना)              │
+│  • Heat to 95°C                     │
+│  • DNA strands separate             │
+│  • Time: 30 seconds - 1 minute      │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  STEP 2: ANNEALING (50-65°C)        │
+│  (एनीलिंग - प्राइमर को DNA से जोड़ना)│
+│  • Cool to 50-65°C                  │
+│  • Primers bind to DNA              │
+│  • Time: 30 seconds - 1 minute      │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  STEP 3: EXTENSION (72°C)           │
+│  (एक्सटेंशन - नया DNA बनाना)         │
+│  • Heat to 72°C                     │
+│  • DNA polymerase adds nucleotides  │
+│  • Time: 1-2 minutes                │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  REPEAT 25-35 CYCLES                │
+│  (25-35 चक्र दोहराएं)                │
+│  Result: Millions of DNA copies!    │
+│  (परिणाम: लाखों DNA प्रतियां!)        │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>PCR Amplification (PCR प्रवर्धन)</h4>
+                <svg width="800" height="600" viewBox="0 0 800 600">
+                    <!-- Cycle 1 -->
+                    <text x="100" y="30" font-size="16" font-weight="bold">Cycle 1 (चक्र 1)</text>
+                    
+                    <!-- Original DNA -->
+                    <line x1="50" y1="80" x2="150" y2="80" stroke="#1976d2" stroke-width="4"/>
+                    <line x1="50" y1="100" x2="150" y2="100" stroke="#1976d2" stroke-width="4"/>
+                    <text x="100" y="125" text-anchor="middle" font-size="12">1 DNA molecule</text>
+                    <text x="100" y="140" text-anchor="middle" font-size="10">(1 DNA अणु)</text>
+                    
+                    <!-- After cycle 1 -->
+                    <line x1="250" y1="80" x2="350" y2="80" stroke="#1976d2" stroke-width="4"/>
+                    <line x1="250" y1="100" x2="350" y2="100" stroke="#1976d2" stroke-width="4"/>
+                    <line x1="250" y1="120" x2="350" y2="120" stroke="#1976d2" stroke-width="4"/>
+                    <line x1="250" y1="140" x2="350" y2="140" stroke="#1976d2" stroke-width="4"/>
+                    <text x="300" y="165" text-anchor="middle" font-size="12">2 DNA molecules</text>
+                    <text x="300" y="180" text-anchor="middle" font-size="10">(2 DNA अणु)</text>
+                    
+                    <!-- Cycle 2 -->
+                    <text x="100" y="230" font-size="16" font-weight="bold">Cycle 2 (चक्र 2)</text>
+                    
+                    <line x1="50" y1="280" x2="150" y2="280" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="50" y1="300" x2="150" y2="300" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="50" y1="320" x2="150" y2="320" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="50" y1="340" x2="150" y2="340" stroke="#1976d2" stroke-width="3"/>
+                    
+                    <!-- After cycle 2 -->
+                    <line x1="250" y1="280" x2="350" y2="280" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="300" x2="350" y2="300" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="320" x2="350" y2="320" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="340" x2="350" y2="340" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="360" x2="350" y2="360" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="380" x2="350" y2="380" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="400" x2="350" y2="400" stroke="#1976d2" stroke-width="3"/>
+                    <line x1="250" y1="420" x2="350" y2="420" stroke="#1976d2" stroke-width="3"/>
+                    <text x="300" y="445" text-anchor="middle" font-size="12">4 DNA molecules</text>
+                    <text x="300" y="460" text-anchor="middle" font-size="10">(4 DNA अणु)</text>
+                    
+                    <!-- After 30 cycles -->
+                    <text x="550" y="30" font-size="16" font-weight="bold">After 30 Cycles</text>
+                    <text x="550" y="50" font-size="14" font-weight="bold">(30 चक्रों के बाद)</text>
+                    
+                    <rect x="500" y="80" width="200" height="400" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <text x="600" y="120" text-anchor="middle" font-size="14" font-weight="bold">1,073,741,824</text>
+                    <text x="600" y="140" text-anchor="middle" font-size="12">DNA molecules!</text>
+                    <text x="600" y="160" text-anchor="middle" font-size="10">(1 अरब से अधिक!)</text>
+                    
+                    <!-- Arrows -->
+                    <path d="M 180 90 L 230 90" stroke="#f5576c" stroke-width="2" marker-end="url(#arrow3)"/>
+                    <path d="M 180 310 L 230 310" stroke="#f5576c" stroke-width="2" marker-end="url(#arrow3)"/>
+                    <path d="M 380 200 L 480 200" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>2.3 Types of PCR (PCR के प्रकार)</h4>
+
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Purpose</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Standard PCR</strong></td>
+                    <td>Amplify DNA</td>
+                    <td>DNA को बढ़ाना</td>
+                </tr>
+                <tr>
+                    <td><strong>RT-PCR</strong> (Reverse Transcriptase)</td>
+                    <td>Amplify RNA (first converts RNA to DNA)</td>
+                    <td>RNA को बढ़ाना (पहले RNA को DNA में बदलता है)</td>
+                </tr>
+                <tr>
+                    <td><strong>qPCR/Real-time PCR</strong></td>
+                    <td>Quantify DNA/RNA in real-time</td>
+                    <td>वास्तविक समय में DNA/RNA की मात्रा मापना</td>
+                </tr>
+                <tr>
+                    <td><strong>Nested PCR</strong></td>
+                    <td>Increase specificity (uses two sets of primers)</td>
+                    <td>विशिष्टता बढ़ाना (दो सेट प्राइमर का उपयोग)</td>
+                </tr>
+                <tr>
+                    <td><strong>Multiplex PCR</strong></td>
+                    <td>Amplify multiple targets at once</td>
+                    <td>एक साथ कई लक्ष्यों को बढ़ाना</td>
+                </tr>
+                <tr>
+                    <td><strong>Hot Start PCR</strong></td>
+                    <td>Prevent non-specific amplification</td>
+                    <td>गैर-विशिष्ट प्रवर्धन को रोकना</td>
+                </tr>
+            </table>
+
+            <div class="box">
+                <h5>Applications of PCR (PCR के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>DNA fingerprinting and forensics (DNA फिंगरप्रिंटिंग और फोरेंसिक)</li>
+                    <li>Medical diagnosis (COVID-19, HIV, etc.) (चिकित्सा निदान)</li>
+                    <li>Genetic testing (आनुवंशिक परीक्षण)</li>
+                    <li>Paternity testing (पितृत्व परीक्षण)</li>
+                    <li>Archaeology (ancient DNA) (पुरातत्व - प्राचीन DNA)</li>
+                    <li>Gene cloning (जीन क्लोनिंग)</li>
+                    <li>Mutation detection (उत्परिवर्तन का पता लगाना)</li>
+                    <li>Food safety testing (खाद्य सुरक्षा परीक्षण)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: DNA Sequencing -->
+        <div class="section">
+            <h3>3. DNA Sequencing Methods (DNA अनुक्रमण विधियां)</h3>
+            
+            <p><strong>What is DNA Sequencing?</strong> DNA sequencing is like reading a book made of only 4 letters (A, T, G, C). It tells us the exact order of nucleotides in a DNA molecule.</p>
+            
+            <div class="hindi">
+                <strong>DNA अनुक्रमण क्या है?</strong> DNA अनुक्रमण केवल 4 अक्षरों (A, T, G, C) से बनी किताब पढ़ने जैसा है। यह हमें DNA अणु में न्यूक्लियोटाइड के सटीक क्रम के बारे में बताता है।
+            </div>
+
+            <h4>3.1 Sanger's Method (Chain Termination Method) (सेंगर की विधि)</h4>
+            
+            <p><strong>Invented by:</strong> Frederick Sanger (1977) - Nobel Prize winner!</p>
+            <div class="hindi">फ्रेडरिक सेंगर द्वारा 1977 में - नोबेल पुरस्कार विजेता!</div>
+
+            <div class="box">
+                <h5>How Sanger Sequencing Works (सेंगर अनुक्रमण कैसे काम करता है):</h5>
+                <ol class="list">
+                    <li><strong>Template DNA:</strong> Single-stranded DNA to be sequenced (अनुक्रमित किया जाने वाला एकल-स्ट्रैंड DNA)</li>
+                    <li><strong>Primer:</strong> Short DNA sequence that binds to template (टेम्प्लेट से बंधने वाला छोटा DNA अनुक्रम)</li>
+                    <li><strong>DNA Polymerase:</strong> Enzyme that builds new DNA strand (नया DNA स्ट्रैंड बनाने वाला एंजाइम)</li>
+                    <li><strong>dNTPs:</strong> Normal nucleotides (A, T, G, C) (सामान्य न्यूक्लियोटाइड)</li>
+                    <li><strong>ddNTPs:</strong> Dideoxynucleotides - STOP signals! (रुकने का संकेत!)</li>
+                </ol>
+            </div>
+
+            <div class="comparison-box">
+                <h5>Key Concept: ddNTPs (ddNTPs की मुख्य अवधारणा):</h5>
+                <p><strong>ddNTPs</strong> (dideoxynucleotides) are special nucleotides that STOP DNA synthesis. They lack the 3'-OH group needed for chain extension.</p>
+                <div class="hindi">
+                    <strong>ddNTPs</strong> (डाइडिऑक्सीन्यूक्लियोटाइड) विशेष न्यूक्लियोटाइड हैं जो DNA संश्लेषण को रोकते हैं। उनमें चेन एक्सटेंशन के लिए आवश्यक 3'-OH समूह नहीं होता है।
+                </div>
+            </div>
+
+            <div class="flowchart">
+<h4>Sanger Sequencing Process (सेंगर अनुक्रमण प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Prepare 4 separate reactions    │
+│     (4 अलग प्रतिक्रियाएं तैयार करें) │
+│     • Reaction A: ddATP             │
+│     • Reaction T: ddTTP             │
+│     • Reaction G: ddGTP             │
+│     • Reaction C: ddCTP             │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Each reaction contains:         │
+│     (प्रत्येक प्रतिक्रिया में होता है:) │
+│     • Template DNA                  │
+│     • Primer                        │
+│     • DNA polymerase                │
+│     • All 4 dNTPs (normal)          │
+│     • One type of ddNTP (stops)     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. DNA synthesis occurs            │
+│     (DNA संश्लेषण होता है)           │
+│     • Polymerase adds nucleotides   │
+│     • When ddNTP is added,          │
+│       synthesis STOPS!              │
+│     • Result: Fragments of          │
+│       different lengths             │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Run on polyacrylamide gel       │
+│     (पॉलीएक्रिलामाइड जेल पर चलाएं)    │
+│     • Separate fragments by size    │
+│     • Smallest fragments run        │
+│       fastest (bottom)              │
+│     • Largest fragments run         │
+│       slowest (top)                 │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Read sequence from bottom       │
+│     to top                          │
+│     (नीचे से ऊपर तक अनुक्रम पढ़ें)   │
+│     Result: DNA sequence!           │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>Sanger Sequencing Visualization (सेंगर अनुक्रमण दृश्यीकरण)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Four reactions -->
+                    <text x="100" y="30" font-size="14" font-weight="bold">Reaction A (ddATP)</text>
+                    <text x="300" y="30" font-size="14" font-weight="bold">Reaction T (ddTTP)</text>
+                    <text x="500" y="30" font-size="14" font-weight="bold">Reaction G (ddGTP)</text>
+                    <text x="700" y="30" font-size="14" font-weight="bold">Reaction C (ddCTP)</text>
+                    
+                    <!-- DNA fragments in each reaction -->
+                    <!-- Reaction A -->
+                    <line x1="50" y1="80" x2="150" y2="80" stroke="#e74c3c" stroke-width="3"/>
+                    <line x1="50" y1="120" x2="150" y2="120" stroke="#e74c3c" stroke-width="3"/>
+                    <line x1="50" y1="160" x2="150" y2="160" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="100" y="200" text-anchor="middle" font-size="10">A stops</text>
+                    
+                    <!-- Reaction T -->
+                    <line x1="250" y1="100" x2="350" y2="100" stroke="#3498db" stroke-width="3"/>
+                    <line x1="250" y1="140" x2="350" y2="140" stroke="#3498db" stroke-width="3"/>
+                    <text x="300" y="180" text-anchor="middle" font-size="10">T stops</text>
+                    
+                    <!-- Reaction G -->
+                    <line x1="450" y1="90" x2="550" y2="90" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="450" y1="130" x2="550" y2="130" stroke="#27ae60" stroke-width="3"/>
+                    <line x1="450" y1="170" x2="550" y2="170" stroke="#27ae60" stroke-width="3"/>
+                    <text x="500" y="210" text-anchor="middle" font-size="10">G stops</text>
+                    
+                    <!-- Reaction C -->
+                    <line x1="650" y1="110" x2="750" y2="110" stroke="#9b59b6" stroke-width="3"/>
+                    <line x1="650" y1="150" x2="750" y2="150" stroke="#9b59b6" stroke-width="3"/>
+                    <text x="700" y="190" text-anchor="middle" font-size="10">C stops</text>
+                    
+                    <!-- Arrow to gel -->
+                    <path d="M 400 250 L 400 300" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="420" y="275" font-size="12" fill="#f5576c">Gel Electrophoresis</text>
+                    
+                    <!-- Gel lanes -->
+                    <rect x="50" y="320" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="200" y="320" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="350" y="320" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="500" y="320" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    
+                    <text x="100" y="310" text-anchor="middle" font-size="12">A</text>
+                    <text x="250" y="310" text-anchor="middle" font-size="12">T</text>
+                    <text x="400" y="310" text-anchor="middle" font-size="12">G</text>
+                    <text x="550" y="310" text-anchor="middle" font-size="12">C</text>
+                    
+                    <!-- Bands in gel -->
+                    <rect x="60" y="430" width="80" height="5" fill="#e74c3c"/>
+                    <rect x="60" y="410" width="80" height="5" fill="#e74c3c"/>
+                    <rect x="60" y="390" width="80" height="5" fill="#e74c3c"/>
+                    
+                    <rect x="210" y="420" width="80" height="5" fill="#3498db"/>
+                    <rect x="210" y="400" width="80" height="5" fill="#3498db"/>
+                    
+                    <rect x="360" y="440" width="80" height="5" fill="#27ae60"/>
+                    <rect x="360" y="420" width="80" height="5" fill="#27ae60"/>
+                    <rect x="360" y="400" width="80" height="5" fill="#27ae60"/>
+                    
+                    <rect x="510" y="415" width="80" height="5" fill="#9b59b6"/>
+                    <rect x="510" y="395" width="80" height="5" fill="#9b59b6"/>
+                    
+                    <!-- Sequence reading -->
+                    <text x="400" y="500" text-anchor="middle" font-size="14" font-weight="bold">Read: A T G C A T G C...</text>
+                    
+                    <defs>
+                        <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>3.2 Maxam-Gilbert Method (Chemical Cleavage Method) (मैक्सम-गिल्बर्ट विधि)</h4>
+            
+            <p><strong>Invented by:</strong> Allan Maxam and Walter Gilbert (1977)</p>
+            <div class="hindi">एलन मैक्सम और वाल्टर गिल्बर्ट द्वारा 1977 में</div>
+
+            <div class="comparison-box">
+                <h5>Key Difference from Sanger:</h5>
+                <p>Maxam-Gilbert uses <strong>chemicals</strong> to break DNA at specific bases, while Sanger uses <strong>enzymes</strong> (DNA polymerase).</p>
+                <div class="hindi">
+                    मैक्सम-गिल्बर्ट विशिष्ट बेस पर DNA को तोड़ने के लिए <strong>रसायनों</strong> का उपयोग करता है, जबकि सेंगर <strong>एंजाइमों</strong> (DNA पॉलीमरेज़) का उपयोग करता है।
+                </div>
+            </div>
+
+            <div class="box">
+                <h5>Maxam-Gilbert Steps (मैक्सम-गिल्बर्ट चरण):</h5>
+                <ol class="list">
+                    <li><strong>Label DNA:</strong> Radioactively label one end of DNA (DNA के एक सिरे को रेडियोएक्टिव रूप से लेबल करें)</li>
+                    <li><strong>Chemical Treatment:</strong> Use different chemicals to break DNA at specific bases:
+                        <ul>
+                            <li>Dimethyl sulfate (DMS) - breaks at G</li>
+                            <li>Formic acid - breaks at G and A</li>
+                            <li>Hydrazine - breaks at T and C</li>
+                            <li>Hydrazine + salt - breaks at C only</li>
+                        </ul>
+                    </li>
+                    <li><strong>Partial Cleavage:</strong> Use limited amounts so not all sites break (सीमित मात्रा का उपयोग करें)</li>
+                    <li><strong>Gel Electrophoresis:</strong> Separate fragments by size (आकार के अनुसार अलग करें)</li>
+                    <li><strong>Autoradiography:</strong> Visualize bands (बैंड दिखाएं)</li>
+                    <li><strong>Read Sequence:</strong> Read from bottom to top (नीचे से ऊपर तक पढ़ें)</li>
+                </ol>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Principle</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Sanger</strong></td>
+                    <td>Enzymatic (DNA polymerase + ddNTPs)</td>
+                    <td>Simple, widely used, automated</td>
+                    <td>Limited read length (~800 bp)</td>
+                    <td>एंजाइमी, सरल, व्यापक रूप से उपयोग</td>
+                </tr>
+                <tr>
+                    <td><strong>Maxam-Gilbert</strong></td>
+                    <td>Chemical cleavage</td>
+                    <td>Can sequence double-stranded DNA</td>
+                    <td>Uses toxic chemicals, complex</td>
+                    <td>रासायनिक विखंडन, जटिल</td>
+                </tr>
+            </table>
+
+            <div class="hindi">
+                <strong>नोट:</strong> आजकल, Sanger विधि अधिक लोकप्रिय है क्योंकि यह सरल और स्वचालित है। Maxam-Gilbert विधि अब शायद ही कभी उपयोग की जाती है।
+            </div>
+
+            <h4>3.3 Sequence Assembly (अनुक्रम असेंबली)</h4>
+            
+            <p><strong>What is Sequence Assembly?</strong> When you sequence a long DNA molecule, you can't read it all at once. You break it into small pieces, sequence each piece, and then put them back together like a puzzle!</p>
+            
+            <div class="hindi">
+                <strong>अनुक्रम असेंबली क्या है?</strong> जब आप एक लंबे DNA अणु का अनुक्रमण करते हैं, तो आप इसे एक बार में नहीं पढ़ सकते। आप इसे छोटे टुकड़ों में तोड़ते हैं, प्रत्येक टुकड़े का अनुक्रमण करते हैं, और फिर उन्हें पहेली की तरह वापस एक साथ रखते हैं!
+            </div>
+
+            <div class="box">
+                <h5>Two Main Approaches (दो मुख्य दृष्टिकोण):</h5>
+                <ol class="list">
+                    <li><strong>Shotgun Sequencing:</strong> Break DNA randomly into fragments, sequence all, then assemble using overlapping regions (DNA को यादृच्छिक रूप से टुकड़ों में तोड़ें, सभी का अनुक्रमण करें, फिर ओवरलैपिंग क्षेत्रों का उपयोग करके असेंबल करें)</li>
+                    <li><strong>Hierarchical Sequencing:</strong> First create a map, then sequence specific regions in order (पहले एक मानचित्र बनाएं, फिर क्रम में विशिष्ट क्षेत्रों का अनुक्रमण करें)</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>Sequence Assembly Process (अनुक्रम असेंबली प्रक्रिया)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Original DNA -->
+                    <rect x="50" y="50" width="700" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="400" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Original Long DNA (मूल लंबा DNA)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 100 L 400 130" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <text x="420" y="120" font-size="12" fill="#f5576c">Break into fragments</text>
+                    <text x="420" y="135" font-size="10" fill="#f5576c">(टुकड़ों में तोड़ें)</text>
+                    
+                    <!-- Fragments -->
+                    <rect x="50" y="150" width="120" height="30" fill="#e74c3c"/>
+                    <rect x="180" y="150" width="100" height="30" fill="#27ae60"/>
+                    <rect x="290" y="150" width="110" height="30" fill="#9b59b6"/>
+                    <rect x="410" y="150" width="90" height="30" fill="#f39c12"/>
+                    <rect x="510" y="150" width="105" height="30" fill="#1abc9c"/>
+                    <rect x="625" y="150" width="125" height="30" fill="#e67e22"/>
+                    <text x="400" y="200" text-anchor="middle" font-size="12">DNA Fragments (DNA टुकड़े)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 220 L 400 250" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <text x="420" y="240" font-size="12" fill="#f5576c">Sequence each fragment</text>
+                    <text x="420" y="255" font-size="10" fill="#f5576c">(प्रत्येक टुकड़े का अनुक्रमण)</text>
+                    
+                    <!-- Sequenced fragments with overlaps -->
+                    <rect x="50" y="270" width="120" height="30" fill="#e74c3c" opacity="0.7"/>
+                    <text x="110" y="290" text-anchor="middle" font-size="10" fill="white">ATCG...</text>
+                    
+                    <rect x="150" y="270" width="100" height="30" fill="#27ae60" opacity="0.7"/>
+                    <text x="200" y="290" text-anchor="middle" font-size="10" fill="white">CGAT...</text>
+                    
+                    <rect x="230" y="270" width="110" height="30" fill="#9b59b6" opacity="0.7"/>
+                    <text x="285" y="290" text-anchor="middle" font-size="10" fill="white">GCTA...</text>
+                    
+                    <rect x="320" y="270" width="90" height="30" fill="#f39c12" opacity="0.7"/>
+                    <text x="365" y="290" text-anchor="middle" font-size="10" fill="white">TAGC...</text>
+                    
+                    <rect x="390" y="270" width="105" height="30" fill="#1abc9c" opacity="0.7"/>
+                    <text x="442" y="290" text-anchor="middle" font-size="10" fill="white">CGTA...</text>
+                    
+                    <rect x="475" y="270" width="125" height="30" fill="#e67e22" opacity="0.7"/>
+                    <text x="537" y="290" text-anchor="middle" font-size="10" fill="white">ATGC...</text>
+                    
+                    <!-- Overlap indicators -->
+                    <rect x="150" y="270" width="20" height="30" fill="yellow" opacity="0.5"/>
+                    <rect x="230" y="270" width="20" height="30" fill="yellow" opacity="0.5"/>
+                    <rect x="320" y="270" width="20" height="30" fill="yellow" opacity="0.5"/>
+                    <rect x="390" y="270" width="20" height="30" fill="yellow" opacity="0.5"/>
+                    <rect x="475" y="270" width="20" height="30" fill="yellow" opacity="0.5"/>
+                    
+                    <text x="400" y="320" text-anchor="middle" font-size="12">Overlapping Regions (ओवरलैपिंग क्षेत्र)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 340 L 400 360" stroke="#27ae60" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <text x="420" y="355" font-size="12" fill="#27ae60">Assemble using overlaps</text>
+                    <text x="420" y="370" font-size="10" fill="#27ae60">(ओवरलैप का उपयोग करके असेंबल करें)</text>
+                    
+                    <!-- Final assembled -->
+                    <rect x="50" y="380" width="700" height="20" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="400" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Complete Sequence! (पूर्ण अनुक्रम!)</text>
+                    
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>3.4 Automated Sequencing (स्वचालित अनुक्रमण)</h4>
+            
+            <p><strong>What is Automated Sequencing?</strong> Modern DNA sequencers use machines that can read DNA sequences automatically, much faster than manual methods!</p>
+            
+            <div class="hindi">
+                <strong>स्वचालित अनुक्रमण क्या है?</strong> आधुनिक DNA अनुक्रमण मशीनें ऐसी मशीनों का उपयोग करती हैं जो DNA अनुक्रमों को स्वचालित रूप से पढ़ सकती हैं, मैनुअल विधियों की तुलना में बहुत तेज!
+            </div>
+
+            <div class="box">
+                <h5>Key Features (मुख्य विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Fluorescent Labels:</strong> Each ddNTP is labeled with a different colored dye (प्रत्येक ddNTP एक अलग रंग के डाई से लेबल किया जाता है)</li>
+                    <li><strong>Capillary Electrophoresis:</strong> Uses thin glass tubes instead of gels (जेल के बजाय पतली कांच की नलियों का उपयोग)</li>
+                    <li><strong>Laser Detection:</strong> Laser reads the colors as DNA passes through (DNA के गुजरने पर लेजर रंग पढ़ता है)</li>
+                    <li><strong>Computer Analysis:</strong> Software automatically converts colors to DNA sequence (सॉफ्टवेयर स्वचालित रूप से रंगों को DNA अनुक्रम में बदलता है)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Automated Sequencing (स्वचालित अनुक्रमण)</h4>
+                <svg width="800" height="300" viewBox="0 0 800 300">
+                    <!-- Capillary -->
+                    <rect x="100" y="50" width="20" height="200" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <text x="110" y="30" text-anchor="middle" font-size="12" font-weight="bold">Capillary</text>
+                    <text x="110" y="45" text-anchor="middle" font-size="10">(कैपिलरी)</text>
+                    
+                    <!-- DNA fragments moving -->
+                    <circle cx="110" cy="80" r="5" fill="#e74c3c"/>
+                    <circle cx="110" cy="120" r="5" fill="#3498db"/>
+                    <circle cx="110" cy="160" r="5" fill="#27ae60"/>
+                    <circle cx="110" cy="200" r="5" fill="#9b59b6"/>
+                    
+                    <!-- Laser -->
+                    <line x1="130" y1="140" x2="200" y2="140" stroke="#f5576c" stroke-width="2"/>
+                    <text x="165" y="135" font-size="12" fill="#f5576c">Laser</text>
+                    <text x="165" y="150" font-size="10" fill="#f5576c">(लेजर)</text>
+                    
+                    <!-- Detector -->
+                    <rect x="220" y="100" width="80" height="80" fill="#fff3cd" stroke="#f39c12" stroke-width="2"/>
+                    <text x="260" y="130" text-anchor="middle" font-size="12" font-weight="bold">Detector</text>
+                    <text x="260" y="145" text-anchor="middle" font-size="10">(डिटेक्टर)</text>
+                    
+                    <!-- Computer -->
+                    <rect x="330" y="100" width="100" height="80" fill="#d5f4e6" stroke="#27ae60" stroke-width="2"/>
+                    <text x="380" y="130" text-anchor="middle" font-size="12" font-weight="bold">Computer</text>
+                    <text x="380" y="145" text-anchor="middle" font-size="10">(कंप्यूटर)</text>
+                    
+                    <!-- Output -->
+                    <text x="480" y="140" font-size="14" font-weight="bold">ATCGATCG...</text>
+                    <text x="480" y="160" font-size="12">DNA Sequence</text>
+                    <text x="480" y="175" font-size="10">(DNA अनुक्रम)</text>
+                    
+                    <!-- Color legend -->
+                    <rect x="100" y="270" width="15" height="15" fill="#e74c3c"/>
+                    <text x="120" y="282" font-size="12">A (Adenine)</text>
+                    
+                    <rect x="250" y="270" width="15" height="15" fill="#3498db"/>
+                    <text x="270" y="282" font-size="12">T (Thymine)</text>
+                    
+                    <rect x="400" y="270" width="15" height="15" fill="#27ae60"/>
+                    <text x="420" y="282" font-size="12">G (Guanine)</text>
+                    
+                    <rect x="550" y="270" width="15" height="15" fill="#9b59b6"/>
+                    <text x="570" y="282" font-size="12">C (Cytosine)</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 4: Restriction Mapping -->
+        <div class="section">
+            <h3>4. Restriction Mapping (प्रतिबंध मैपिंग)</h3>
+            
+            <p><strong>What is Restriction Mapping?</strong> It's like making a map of where restriction enzymes cut DNA. This helps us understand the structure of DNA molecules.</p>
+            
+            <div class="hindi">
+                <strong>प्रतिबंध मैपिंग क्या है?</strong> यह DNA पर प्रतिबंध एंजाइम कहाँ काटते हैं, इसका नक्शा बनाने जैसा है। यह हमें DNA अणुओं की संरचना को समझने में मदद करता है।
+            </div>
+
+            <h4>4.1 RFLP - Restriction Fragment Length Polymorphism (RFLP - प्रतिबंध खंड लंबाई बहुरूपता)</h4>
+            
+            <p><strong>What is RFLP?</strong> RFLP detects differences in DNA sequences between individuals. These differences create different sized DNA fragments when cut with restriction enzymes.</p>
+            
+            <div class="hindi">
+                <strong>RFLP क्या है?</strong> RFLP व्यक्तियों के बीच DNA अनुक्रमों में अंतर का पता लगाता है। ये अंतर प्रतिबंध एंजाइमों से काटने पर अलग-अलग आकार के DNA खंड बनाते हैं।
+            </div>
+
+            <div class="box">
+                <h5>RFLP Process (RFLP प्रक्रिया):</h5>
+                <ol class="list">
+                    <li><strong>Extract DNA:</strong> Get DNA from samples (नमूनों से DNA निकालें)</li>
+                    <li><strong>Cut with Restriction Enzyme:</strong> Use enzyme like EcoRI (EcoRI जैसे एंजाइम का उपयोग करें)</li>
+                    <li><strong>Gel Electrophoresis:</strong> Separate fragments by size (आकार के अनुसार अलग करें)</li>
+                    <li><strong>Southern Blotting:</strong> Transfer to membrane (झिल्ली पर स्थानांतरित करें)</li>
+                    <li><strong>Hybridization:</strong> Use labeled probe (लेबल किए गए प्रोब का उपयोग करें)</li>
+                    <li><strong>Detection:</strong> Visualize different band patterns (अलग-अलग बैंड पैटर्न दिखाएं)</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>RFLP Pattern (RFLP पैटर्न)</h4>
+                <svg width="600" height="400" viewBox="0 0 600 400">
+                    <!-- Person 1 DNA -->
+                    <text x="100" y="30" font-size="14" font-weight="bold">Person 1 (व्यक्ति 1)</text>
+                    <rect x="50" y="50" width="200" height="30" fill="#3498db"/>
+                    <line x1="120" y1="50" x2="120" y2="80" stroke="red" stroke-width="3"/>
+                    <line x1="180" y1="50" x2="180" y2="80" stroke="red" stroke-width="3"/>
+                    <text x="115" y="45" font-size="10">EcoRI</text>
+                    <text x="175" y="45" font-size="10">EcoRI</text>
+                    
+                    <!-- Person 1 fragments -->
+                    <rect x="50" y="100" width="70" height="20" fill="#e74c3c"/>
+                    <rect x="130" y="100" width="60" height="20" fill="#e74c3c"/>
+                    <rect x="200" y="100" width="50" height="20" fill="#e74c3c"/>
+                    <text x="125" y="140" font-size="12">Fragments: 70, 60, 50 bp</text>
+                    
+                    <!-- Person 2 DNA -->
+                    <text x="450" y="30" font-size="14" font-weight="bold">Person 2 (व्यक्ति 2)</text>
+                    <rect x="350" y="50" width="200" height="30" fill="#27ae60"/>
+                    <line x1="420" y1="50" x2="420" y2="80" stroke="red" stroke-width="3"/>
+                    <line x1="500" y1="50" x2="500" y2="80" stroke="red" stroke-width="3"/>
+                    <text x="415" y="45" font-size="10">EcoRI</text>
+                    <text x="495" y="45" font-size="10">EcoRI</text>
+                    
+                    <!-- Person 2 fragments -->
+                    <rect x="350" y="100" width="70" height="20" fill="#9b59b6"/>
+                    <rect x="430" y="100" width="100" height="20" fill="#9b59b6"/>
+                    <rect x="540" y="100" width="10" height="20" fill="#9b59b6"/>
+                    <text x="450" y="140" font-size="12">Fragments: 70, 100, 10 bp</text>
+                    
+                    <!-- Gel -->
+                    <text x="300" y="200" text-anchor="middle" font-size="16" font-weight="bold">Gel Electrophoresis (जेल इलेक्ट्रोफोरेसिस)</text>
+                    <rect x="50" y="220" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="200" y="220" width="100" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    
+                    <text x="100" y="210" text-anchor="middle" font-size="12">Person 1</text>
+                    <text x="250" y="210" text-anchor="middle" font-size="12">Person 2</text>
+                    
+                    <!-- Bands in gel -->
+                    <rect x="60" y="300" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="280" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="260" width="80" height="8" fill="#e74c3c"/>
+                    
+                    <rect x="210" y="300" width="80" height="8" fill="#9b59b6"/>
+                    <rect x="210" y="270" width="80" height="8" fill="#9b59b6"/>
+                    <rect x="210" y="250" width="80" height="8" fill="#9b59b6"/>
+                    
+                    <text x="300" y="390" text-anchor="middle" font-size="14" font-weight="bold">Different Patterns = Different DNA! (अलग पैटर्न = अलग DNA!)</text>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of RFLP (RFLP के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>DNA fingerprinting (DNA फिंगरप्रिंटिंग)</li>
+                    <li>Paternity testing (पितृत्व परीक्षण)</li>
+                    <li>Genetic disease diagnosis (आनुवंशिक रोग निदान)</li>
+                    <li>Forensic analysis (फोरेंसिक विश्लेषण)</li>
+                    <li>Population genetics studies (जनसंख्या आनुवंशिकी अध्ययन)</li>
+                </ul>
+            </div>
+
+            <h4>4.2 AFLP - Amplified Fragment Length Polymorphism (AFLP - प्रवर्धित खंड लंबाई बहुरूपता)</h4>
+            
+            <p><strong>What is AFLP?</strong> AFLP combines RFLP with PCR! It's more sensitive and can detect more differences than RFLP alone.</p>
+            
+            <div class="hindi">
+                <strong>AFLP क्या है?</strong> AFLP RFLP को PCR के साथ जोड़ता है! यह अधिक संवेदनशील है और अकेले RFLP की तुलना में अधिक अंतर का पता लगा सकता है।
+            </div>
+
+            <div class="flowchart">
+<h4>AFLP Process (AFLP प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Cut DNA with restriction        │
+│     enzymes (EcoRI + MseI)          │
+│     (प्रतिबंध एंजाइमों से DNA काटें)  │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Attach adapters to cut ends     │
+│     (कटे हुए सिरों पर एडाप्टर जोड़ें) │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. PCR amplification with          │
+│     selective primers               │
+│     (चयनात्मक प्राइमर के साथ PCR)    │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Gel electrophoresis             │
+│     (जेल इलेक्ट्रोफोरेसिस)            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Visualize band patterns         │
+│     (बैंड पैटर्न दिखाएं)             │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="comparison-box">
+                <h5>RFLP vs AFLP (RFLP बनाम AFLP):</h5>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>RFLP</th>
+                        <th>AFLP</th>
+                        <th>हिंदी</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensitivity</strong></td>
+                        <td>Lower (कम)</td>
+                        <td>Higher (अधिक)</td>
+                        <td>संवेदनशीलता</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNA Amount Needed</strong></td>
+                        <td>More (अधिक)</td>
+                        <td>Less (कम)</td>
+                        <td>आवश्यक DNA मात्रा</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Uses PCR</strong></td>
+                        <td>No (नहीं)</td>
+                        <td>Yes (हाँ)</td>
+                        <td>PCR का उपयोग</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed</strong></td>
+                        <td>Slower (धीमा)</td>
+                        <td>Faster (तेज)</td>
+                        <td>गति</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 5: RAPD and REP-PCR -->
+        <div class="section">
+            <h3>5. RAPD and REP-PCR (RAPD और REP-PCR)</h3>
+
+            <h4>5.1 RAPD - Random Amplified Polymorphic DNA (RAPD - यादृच्छिक प्रवर्धित बहुरूपी DNA)</h4>
+            
+            <p><strong>What is RAPD?</strong> RAPD uses random short primers (10 nucleotides) to amplify random DNA regions. No need to know the DNA sequence beforehand!</p>
+            
+            <div class="hindi">
+                <strong>RAPD क्या है?</strong> RAPD यादृच्छिक DNA क्षेत्रों को प्रवर्धित करने के लिए यादृच्छिक छोटे प्राइमर (10 न्यूक्लियोटाइड) का उपयोग करता है। पहले से DNA अनुक्रम जानने की आवश्यकता नहीं है!
+            </div>
+
+            <div class="box">
+                <h5>RAPD Characteristics (RAPD विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Random Primers:</strong> 10 base pair primers (यादृच्छिक 10 बेस जोड़ी प्राइमर)</li>
+                    <li><strong>No Sequence Knowledge Needed:</strong> Works on any DNA (किसी भी DNA पर काम करता है)</li>
+                    <li><strong>Fast and Cheap:</strong> Quick results, low cost (तेज परिणाम, कम लागत)</li>
+                    <li><strong>Polymorphism Detection:</strong> Finds differences between samples (नमूनों के बीच अंतर ढूंढता है)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>RAPD Process (RAPD प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Extract DNA from samples        │
+│     (नमूनों से DNA निकालें)          │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Add random 10-mer primer        │
+│     (यादृच्छिक 10-mer प्राइमर जोड़ें) │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. PCR amplification               │
+│     (PCR प्रवर्धन)                   │
+│     • Low annealing temperature     │
+│     • Multiple random sites amplify │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Gel electrophoresis             │
+│     (जेल इलेक्ट्रोफोरेसिस)            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Compare band patterns           │
+│     (बैंड पैटर्न की तुलना करें)      │
+│     • Different patterns =          │
+│       different DNA                 │
+└─────────────────────────────────────┘
+            </div>
+
+            <h4>5.2 REP-PCR - Repetitive Extragenic Palindromic PCR (REP-PCR - दोहरावदार एक्सट्राजेनिक पैलिंड्रोमिक PCR)</h4>
+            
+            <p><strong>What is REP-PCR?</strong> REP-PCR uses primers that bind to repetitive DNA sequences found in bacterial genomes. Great for bacterial typing!</p>
+            
+            <div class="hindi">
+                <strong>REP-PCR क्या है?</strong> REP-PCR उन प्राइमर का उपयोग करता है जो जीवाणु जीनोम में पाए जाने वाले दोहरावदार DNA अनुक्रमों से बंधते हैं। जीवाणु टाइपिंग के लिए बहुत अच्छा!
+            </div>
+
+            <div class="box">
+                <h5>Types of Repetitive Sequences (दोहरावदार अनुक्रमों के प्रकार):</h5>
+                <ul class="list">
+                    <li><strong>REP:</strong> Repetitive Extragenic Palindromic (दोहरावदार एक्सट्राजेनिक पैलिंड्रोमिक)</li>
+                    <li><strong>ERIC:</strong> Enterobacterial Repetitive Intergenic Consensus (एंटरोबैक्टीरियल दोहरावदार इंटरजेनिक सहमति)</li>
+                    <li><strong>BOX:</strong> Found in Streptococcus (स्ट्रेप्टोकोकस में पाया जाता है)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>REP-PCR Principle (REP-PCR सिद्धांत)</h4>
+                <svg width="700" height="300" viewBox="0 0 700 300">
+                    <!-- Bacterial genome -->
+                    <rect x="50" y="50" width="600" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="350" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Bacterial Genome (जीवाणु जीनोम)</text>
+                    
+                    <!-- REP sequences -->
+                    <rect x="100" y="50" width="30" height="40" fill="#e74c3c"/>
+                    <text x="115" y="75" text-anchor="middle" font-size="10" fill="white">REP</text>
+                    
+                    <rect x="250" y="50" width="30" height="40" fill="#e74c3c"/>
+                    <text x="265" y="75" text-anchor="middle" font-size="10" fill="white">REP</text>
+                    
+                    <rect x="400" y="50" width="30" height="40" fill="#e74c3c"/>
+                    <text x="415" y="75" text-anchor="middle" font-size="10" fill="white">REP</text>
+                    
+                    <rect x="550" y="50" width="30" height="40" fill="#e74c3c"/>
+                    <text x="565" y="75" text-anchor="middle" font-size="10" fill="white">REP</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 350 100 L 350 130" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow6)"/>
+                    <text x="370" y="120" font-size="12" fill="#f5576c">PCR with REP primers</text>
+                    <text x="370" y="135" font-size="10" fill="#f5576c">(REP प्राइमर के साथ PCR)</text>
+                    
+                    <!-- Fragments -->
+                    <rect x="100" y="150" width="150" height="30" fill="#27ae60"/>
+                    <text x="175" y="170" text-anchor="middle" font-size="12" fill="white">Fragment 1</text>
+                    
+                    <rect x="250" y="150" width="150" height="30" fill="#9b59b6"/>
+                    <text x="325" y="170" text-anchor="middle" font-size="12" fill="white">Fragment 2</text>
+                    
+                    <rect x="400" y="150" width="150" height="30" fill="#f39c12"/>
+                    <text x="475" y="170" text-anchor="middle" font-size="12" fill="white">Fragment 3</text>
+                    
+                    <text x="350" y="210" text-anchor="middle" font-size="14" font-weight="bold">Unique Pattern for Each Strain!</text>
+                    <text x="350" y="230" text-anchor="middle" font-size="12">(प्रत्येक स्ट्रेन के लिए अद्वितीय पैटर्न!)</text>
+                    
+                    <defs>
+                        <marker id="arrow6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of REP-PCR (REP-PCR के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>Bacterial strain typing (जीवाणु स्ट्रेन टाइपिंग)</li>
+                    <li>Epidemiological studies (महामारी विज्ञान अध्ययन)</li>
+                    <li>Outbreak investigation (प्रकोप जांच)</li>
+                    <li>Bacterial diversity studies (जीवाणु विविधता अध्ययन)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 6: DNA Fingerprinting -->
+        <div class="section">
+            <h3>6. DNA Fingerprinting (DNA फिंगरप्रिंटिंग)</h3>
+            
+            <p><strong>What is DNA Fingerprinting?</strong> Just like your fingerprints are unique, your DNA pattern is also unique! DNA fingerprinting identifies individuals based on their unique DNA patterns.</p>
+            
+            <div class="hindi">
+                <strong>DNA फिंगरप्रिंटिंग क्या है?</strong> जैसे आपके फिंगरप्रिंट अद्वितीय हैं, वैसे ही आपका DNA पैटर्न भी अद्वितीय है! DNA फिंगरप्रिंटिंग उनके अद्वितीय DNA पैटर्न के आधार पर व्यक्तियों की पहचान करती है।
+            </div>
+
+            <div class="box">
+                <h5>Techniques Used for DNA Fingerprinting (DNA फिंगरप्रिंटिंग के लिए उपयोग की जाने वाली तकनीकें):</h5>
+                <ol class="list">
+                    <li><strong>RFLP:</strong> First method used (पहली विधि)</li>
+                    <li><strong>STR (Short Tandem Repeats):</strong> Most common today (आज सबसे आम)</li>
+                    <li><strong>VNTR (Variable Number Tandem Repeats):</strong> Longer repeats (लंबे दोहराव)</li>
+                    <li><strong>RAPD:</strong> Quick screening (त्वरित स्क्रीनिंग)</li>
+                    <li><strong>AFLP:</strong> High resolution (उच्च रिज़ॉल्यूशन)</li>
+                </ol>
+            </div>
+
+            <div class="flowchart">
+<h4>DNA Fingerprinting Process (DNA फिंगरप्रिंटिंग प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Collect sample                  │
+│     (नमूना एकत्र करें)               │
+│     • Blood, saliva, hair, etc.     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Extract DNA                     │
+│     (DNA निकालें)                    │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Amplify specific regions        │
+│     (विशिष्ट क्षेत्रों को प्रवर्धित)  │
+│     • Using PCR                     │
+│     • Target STR/VNTR regions       │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Separate fragments              │
+│     (खंडों को अलग करें)              │
+│     • Gel electrophoresis           │
+│     • Capillary electrophoresis     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Analyze pattern                 │
+│     (पैटर्न का विश्लेषण करें)         │
+│     • Compare with known samples    │
+│     • Calculate match probability   │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>DNA Fingerprint Comparison (DNA फिंगरप्रिंट तुलना)</h4>
+                <svg width="700" height="400" viewBox="0 0 700 400">
+                    <!-- Suspect 1 -->
+                    <text x="100" y="30" font-size="14" font-weight="bold">Suspect 1 (संदिग्ध 1)</text>
+                    <rect x="50" y="50" width="100" height="300" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="60" y="80" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="120" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="180" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="240" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="60" y="300" width="80" height="8" fill="#e74c3c"/>
+                    
+                    <!-- Crime Scene -->
+                    <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="bold">Crime Scene (अपराध स्थल)</text>
+                    <rect x="300" y="50" width="100" height="300" fill="#fff3cd" stroke="#f39c12" stroke-width="2"/>
+                    <rect x="310" y="80" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="310" y="120" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="310" y="180" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="310" y="240" width="80" height="8" fill="#e74c3c"/>
+                    <rect x="310" y="300" width="80" height="8" fill="#e74c3c"/>
+                    
+                    <!-- Suspect 2 -->
+                    <text x="600" y="30" font-size="14" font-weight="bold">Suspect 2 (संदिग्ध 2)</text>
+                    <rect x="550" y="50" width="100" height="300" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+                    <rect x="560" y="100" width="80" height="8" fill="#9b59b6"/>
+                    <rect x="560" y="160" width="80" height="8" fill="#9b59b6"/>
+                    <rect x="560" y="220" width="80" height="8" fill="#9b59b6"/>
+                    <rect x="560" y="280" width="80" height="8" fill="#9b59b6"/>
+                    
+                    <!-- Match indicator -->
+                    <path d="M 150 200 L 290 200" stroke="#27ae60" stroke-width="4" marker-end="url(#arrow7)"/>
+                    <text x="220" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">MATCH!</text>
+                    <text x="220" y="210" text-anchor="middle" font-size="12" fill="#27ae60">(मैच!)</text>
+                    
+                    <!-- No match indicator -->
+                    <path d="M 450 200 L 540 200" stroke="#e74c3c" stroke-width="4" stroke-dasharray="5,5"/>
+                    <text x="495" y="195" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">NO MATCH</text>
+                    <text x="495" y="210" text-anchor="middle" font-size="12" fill="#e74c3c">(मैच नहीं)</text>
+                    
+                    <defs>
+                        <marker id="arrow7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of DNA Fingerprinting (DNA फिंगरप्रिंटिंग के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>Forensic science (criminal investigations) (फोरेंसिक विज्ञान - आपराधिक जांच)</li>
+                    <li>Paternity testing (पितृत्व परीक्षण)</li>
+                    <li>Maternity testing (मातृत्व परीक्षण)</li>
+                    <li>Missing person identification (लापता व्यक्ति की पहचान)</li>
+                    <li>Wildlife conservation (जंगली जीव संरक्षण)</li>
+                    <li>Plant breeding (पौधे प्रजनन)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 7: Site-Directed Mutagenesis -->
+        <div class="section">
+            <h3>7. Site-Directed Mutagenesis (स्थल-निर्देशित उत्परिवर्तन)</h3>
+            
+            <p><strong>What is Site-Directed Mutagenesis?</strong> It's like editing a specific word in a book! You can change a specific DNA base (A, T, G, or C) at a specific location in a gene.</p>
+            
+            <div class="hindi">
+                <strong>स्थल-निर्देशित उत्परिवर्तन क्या है?</strong> यह किताब में एक विशिष्ट शब्द को संपादित करने जैसा है! आप एक जीन में एक विशिष्ट स्थान पर एक विशिष्ट DNA बेस (A, T, G, या C) बदल सकते हैं।
+            </div>
+
+            <div class="box">
+                <h5>Why Do We Need It? (हमें इसकी आवश्यकता क्यों है?):</h5>
+                <ul class="list">
+                    <li>Study gene function (जीन कार्य का अध्ययन)</li>
+                    <li>Create specific mutations (विशिष्ट उत्परिवर्तन बनाएं)</li>
+                    <li>Improve protein function (प्रोटीन कार्य में सुधार)</li>
+                    <li>Understand disease mechanisms (रोग तंत्र को समझें)</li>
+                    <li>Design better enzymes (बेहतर एंजाइम डिजाइन करें)</li>
+                </ul>
+            </div>
+
+            <h4>7.1 Methods of Site-Directed Mutagenesis (स्थल-निर्देशित उत्परिवर्तन की विधियां)</h4>
+
+            <div class="flowchart">
+<h4>PCR-Based Site-Directed Mutagenesis (PCR-आधारित स्थल-निर्देशित उत्परिवर्तन)</h4>
+┌─────────────────────────────────────┐
+│  1. Design primers with mutation    │
+│     (उत्परिवर्तन के साथ प्राइमर डिजाइन) │
+│     • Forward primer: contains      │
+│       desired mutation              │
+│     • Reverse primer: contains      │
+│       desired mutation              │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. PCR amplification               │
+│     (PCR प्रवर्धन)                   │
+│     • Two separate PCRs             │
+│     • Each produces half of         │
+│       the mutated gene              │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Mix PCR products                │
+│     (PCR उत्पादों को मिलाएं)         │
+│     • Overlapping ends anneal       │
+│     • Forms full-length gene        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Second PCR to amplify           │
+│     full-length mutated gene        │
+│     (पूर्ण-लंबाई उत्परिवर्तित जीन को   │
+│      प्रवर्धित करने के लिए दूसरा PCR)  │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Clone into vector               │
+│     (वेक्टर में क्लोन करें)           │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  6. Verify mutation by sequencing   │
+│     (अनुक्रमण द्वारा उत्परिवर्तन सत्यापित)│
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>Site-Directed Mutagenesis (स्थल-निर्देशित उत्परिवर्तन)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Original DNA -->
+                    <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Original DNA (मूल DNA)</text>
+                    <rect x="100" y="50" width="600" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="200" y="75" text-anchor="middle" font-size="14" fill="white">ATCGATCG</text>
+                    <text x="400" y="75" text-anchor="middle" font-size="14" fill="white">ATCGATCG</text>
+                    <text x="600" y="75" text-anchor="middle" font-size="14" fill="white">ATCGATCG</text>
+                    
+                    <!-- Target base -->
+                    <circle cx="400" cy="70" r="15" fill="#e74c3c" opacity="0.7"/>
+                    <text x="400" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">G</text>
+                    <text x="400" y="105" text-anchor="middle" font-size="12" fill="#e74c3c">Target (लक्ष्य)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 110 L 400 150" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow8)"/>
+                    <text x="420" y="135" font-size="12" fill="#f5576c">Mutate G → A</text>
+                    
+                    <!-- Mutated DNA -->
+                    <text x="400" y="190" text-anchor="middle" font-size="16" font-weight="bold">Mutated DNA (उत्परिवर्तित DNA)</text>
+                    <rect x="100" y="210" width="600" height="40" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="200" y="235" text-anchor="middle" font-size="14" fill="white">ATCGATCG</text>
+                    <text x="400" y="235" text-anchor="middle" font-size="14" fill="white" font-weight="bold">A</text>
+                    <text x="600" y="235" text-anchor="middle" font-size="14" fill="white">ATCGATCG</text>
+                    
+                    <!-- Changed base highlighted -->
+                    <circle cx="400" cy="230" r="15" fill="#e74c3c" opacity="0.7"/>
+                    <text x="400" y="235" text-anchor="middle" font-size="12" fill="white" font-weight="bold">A</text>
+                    <text x="400" y="265" text-anchor="middle" font-size="12" fill="#e74c3c">Changed! (बदला!)</text>
+                    
+                    <!-- Protein effect -->
+                    <path d="M 400 280 L 400 320" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow8)"/>
+                    <text x="420" y="305" font-size="12" fill="#9b59b6">Protein Change</text>
+                    <text x="420" y="320" font-size="10" fill="#9b59b6">(प्रोटीन परिवर्तन)</text>
+                    
+                    <!-- Original protein -->
+                    <rect x="50" y="340" width="150" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="125" y="365" text-anchor="middle" font-size="12" fill="white">Original Protein</text>
+                    <text x="125" y="380" text-anchor="middle" font-size="10" fill="white">(मूल प्रोटीन)</text>
+                    <text x="125" y="395" text-anchor="middle" font-size="12" fill="white">Glycine</text>
+                    
+                    <!-- Mutated protein -->
+                    <rect x="250" y="340" width="150" height="60" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+                    <text x="325" y="365" text-anchor="middle" font-size="12" fill="white">Mutated Protein</text>
+                    <text x="325" y="380" text-anchor="middle" font-size="10" fill="white">(उत्परिवर्तित प्रोटीन)</text>
+                    <text x="325" y="395" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Aspartic Acid</text>
+                    
+                    <!-- Different function -->
+                    <rect x="450" y="340" width="300" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2"/>
+                    <text x="600" y="365" text-anchor="middle" font-size="12" font-weight="bold">Different Function!</text>
+                    <text x="600" y="380" text-anchor="middle" font-size="10">(अलग कार्य!)</text>
+                    <text x="600" y="395" text-anchor="middle" font-size="12">May improve or reduce activity</text>
+                    <text x="600" y="410" text-anchor="middle" font-size="10">(गतिविधि में सुधार या कमी हो सकती है)</text>
+                    
+                    <defs>
+                        <marker id="arrow8" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of Site-Directed Mutagenesis (स्थल-निर्देशित उत्परिवर्तन के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>Protein engineering (प्रोटीन इंजीनियरिंग)</li>
+                    <li>Enzyme optimization (एंजाइम अनुकूलन)</li>
+                    <li>Drug design (दवा डिजाइन)</li>
+                    <li>Understanding protein structure-function relationships (प्रोटीन संरचना-कार्य संबंधों को समझना)</li>
+                    <li>Creating disease models (रोग मॉडल बनाना)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 8: Protein Engineering -->
+        <div class="section">
+            <h3>8. Protein Engineering (प्रोटीन इंजीनियरिंग)</h3>
+            
+            <p><strong>What is Protein Engineering?</strong> Protein engineering is like being a tailor for proteins! You modify proteins to make them better - stronger, faster, or more useful for specific tasks.</p>
+            
+            <div class="hindi">
+                <strong>प्रोटीन इंजीनियरिंग क्या है?</strong> प्रोटीन इंजीनियरिंग प्रोटीन के लिए एक दर्जी होने जैसा है! आप प्रोटीन को बेहतर बनाने के लिए संशोधित करते हैं - मजबूत, तेज, या विशिष्ट कार्यों के लिए अधिक उपयोगी।
+            </div>
+
+            <div class="box">
+                <h5>Goals of Protein Engineering (प्रोटीन इंजीनियरिंग के लक्ष्य):</h5>
+                <ul class="list">
+                    <li><strong>Improve Stability:</strong> Make proteins work at higher temperatures or pH (उच्च तापमान या pH पर काम करने के लिए प्रोटीन बनाएं)</li>
+                    <li><strong>Increase Activity:</strong> Make enzymes work faster (एंजाइम को तेजी से काम करने के लिए बनाएं)</li>
+                    <li><strong>Change Specificity:</strong> Make enzymes work on different substrates (एंजाइम को अलग-अलग सबस्ट्रेट पर काम करने के लिए बनाएं)</li>
+                    <li><strong>Reduce Side Effects:</strong> Make therapeutic proteins safer (चिकित्सीय प्रोटीन को सुरक्षित बनाएं)</li>
+                    <li><strong>Industrial Applications:</strong> Create enzymes for manufacturing (विनिर्माण के लिए एंजाइम बनाएं)</li>
+                </ul>
+            </div>
+
+            <h4>8.1 Approaches to Protein Engineering (प्रोटीन इंजीनियरिंग के दृष्टिकोण)</h4>
+
+            <div class="flowchart">
+<h4>Protein Engineering Approaches (प्रोटीन इंजीनियरिंग दृष्टिकोण)</h4>
+┌─────────────────────────────────────┐
+│  RATIONAL DESIGN                    │
+│  (तर्कसंगत डिजाइन)                   │
+│  • Know protein structure           │
+│  • Predict which changes help       │
+│  • Make specific mutations          │
+│  • Test results                     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  DIRECTED EVOLUTION                 │
+│  (निर्देशित विकास)                   │
+│  • Create many random mutations     │
+│  • Screen for best performers       │
+│  • Repeat process                   │
+│  • Like natural selection in lab!   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  COMBINATORIAL APPROACH             │
+│  (संयोजन दृष्टिकोण)                  │
+│  • Combine both methods             │
+│  • Use rational design to guide     │
+│  • Use evolution to optimize        │
+└─────────────────────────────────────┘
+            </div>
+
+            <h4>8.2 Rational Design (तर्कसंगत डिजाइन)</h4>
+
+            <div class="box">
+                <h5>Steps in Rational Design (तर्कसंगत डिजाइन के चरण):</h5>
+                <ol class="list">
+                    <li><strong>Understand Structure:</strong> Study 3D structure of protein (प्रोटीन की 3D संरचना का अध्ययन करें)</li>
+                    <li><strong>Identify Key Residues:</strong> Find amino acids important for function (कार्य के लिए महत्वपूर्ण अमीनो एसिड खोजें)</li>
+                    <li><strong>Design Mutations:</strong> Plan which amino acids to change (कौन से अमीनो एसिड बदलने हैं, योजना बनाएं)</li>
+                    <li><strong>Site-Directed Mutagenesis:</strong> Make the changes (परिवर्तन करें)</li>
+                    <li><strong>Test Function:</strong> Measure how well it works (यह कितना अच्छा काम करता है, मापें)</li>
+                </ol>
+            </div>
+
+            <h4>8.3 Directed Evolution (निर्देशित विकास)</h4>
+
+            <div class="box">
+                <h5>Steps in Directed Evolution (निर्देशित विकास के चरण):</h5>
+                <ol class="list">
+                    <li><strong>Create Library:</strong> Make many random mutations (कई यादृच्छिक उत्परिवर्तन बनाएं)</li>
+                    <li><strong>Screen/Select:</strong> Find proteins with desired properties (वांछित गुणों वाले प्रोटीन खोजें)</li>
+                    <li><strong>Amplify Winners:</strong> Make more copies of best proteins (सर्वश्रेष्ठ प्रोटीन की अधिक प्रतियां बनाएं)</li>
+                    <li><strong>Repeat:</strong> Do it again with improved proteins (बेहतर प्रोटीन के साथ फिर से करें)</li>
+                    <li><strong>Continue:</strong> Keep improving until satisfied (संतुष्ट होने तक सुधार करते रहें)</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>Directed Evolution Cycle (निर्देशित विकास चक्र)</h4>
+                <svg width="700" height="500" viewBox="0 0 700 500">
+                    <!-- Start -->
+                    <circle cx="350" cy="50" r="40" fill="#3498db" stroke="#2980b9" stroke-width="3"/>
+                    <text x="350" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Start</text>
+                    <text x="350" y="70" text-anchor="middle" font-size="10" fill="white">(शुरू)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 350 90 L 350 130" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow9)"/>
+                    
+                    <!-- Mutate -->
+                    <rect x="250" y="130" width="200" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="10"/>
+                    <text x="350" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="white">1. Mutate</text>
+                    <text x="350" y="175" text-anchor="middle" font-size="12" fill="white">(उत्परिवर्तन)</text>
+                    <text x="350" y="190" text-anchor="middle" font-size="10" fill="white">Create many variants</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 350 200 L 350 240" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow9)"/>
+                    
+                    <!-- Screen -->
+                    <rect x="250" y="240" width="200" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="10"/>
+                    <text x="350" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="white">2. Screen</text>
+                    <text x="350" y="285" text-anchor="middle" font-size="12" fill="white">(स्क्रीन)</text>
+                    <text x="350" y="300" text-anchor="middle" font-size="10" fill="white">Find best performers</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 350 310 L 350 350" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow9)"/>
+                    
+                    <!-- Select -->
+                    <rect x="250" y="350" width="200" height="60" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="10"/>
+                    <text x="350" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="white">3. Select</text>
+                    <text x="350" y="395" text-anchor="middle" font-size="12" fill="white">(चुनें)</text>
+                    <text x="350" y="410" text-anchor="middle" font-size="10" fill="white">Pick winners</text>
+                    
+                    <!-- Arrow curved back -->
+                    <path d="M 250 380 Q 200 420 200 460 Q 200 500 350 500 Q 500 500 500 460 Q 500 420 450 380" 
+                          stroke="#f39c12" stroke-width="3" fill="none" marker-end="url(#arrow9)"/>
+                    <text x="300" y="450" font-size="12" fill="#f39c12">Repeat!</text>
+                    <text x="300" y="465" font-size="10" fill="#f39c12">(दोहराएं!)</text>
+                    
+                    <!-- Improved protein -->
+                    <circle cx="350" cy="480" r="30" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+                    <text x="350" y="485" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Better!</text>
+                    <text x="350" y="497" text-anchor="middle" font-size="9" fill="white">(बेहतर!)</text>
+                    
+                    <defs>
+                        <marker id="arrow9" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of Protein Engineering (प्रोटीन इंजीनियरिंग के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li><strong>Industrial Enzymes:</strong> Detergents, food processing, biofuels (डिटर्जेंट, खाद्य प्रसंस्करण, जैव ईंधन)</li>
+                    <li><strong>Therapeutic Proteins:</strong> Insulin, growth hormones, antibodies (इंसुलिन, वृद्धि हार्मोन, एंटीबॉडी)</li>
+                    <li><strong>Biosensors:</strong> Detect diseases, toxins (रोगों, विषाक्त पदार्थों का पता लगाना)</li>
+                    <li><strong>Bioremediation:</strong> Clean up pollution (प्रदूषण साफ करना)</li>
+                    <li><strong>Research Tools:</strong> Study protein function (प्रोटीन कार्य का अध्ययन)</li>
+                </ul>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Rational Design</strong></td>
+                    <td>Targeted, efficient, predictable</td>
+                    <td>Requires structure knowledge, limited by understanding</td>
+                    <td>लक्षित, कुशल, अनुमानित</td>
+                </tr>
+                <tr>
+                    <td><strong>Directed Evolution</strong></td>
+                    <td>No structure needed, can find unexpected solutions</td>
+                    <td>Time-consuming, requires good screening</td>
+                    <td>संरचना की आवश्यकता नहीं, अप्रत्याशित समाधान मिल सकते हैं</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: #e8f5e9; border-left: 5px solid #27ae60;">
+            <h3>📚 Summary (सारांश)</h3>
+            
+            <div class="box">
+                <h5>Key Techniques Covered (कवर की गई मुख्य तकनीकें):</h5>
+                <ol class="list">
+                    <li><strong>Blotting:</strong> Southern (DNA), Northern (RNA), Western (Protein) - ब्लॉटिंग: सदर्न, नॉर्दर्न, वेस्टर्न</li>
+                    <li><strong>PCR:</strong> Amplifies DNA millions of times - DNA को लाखों गुना बढ़ाता है</li>
+                    <li><strong>DNA Sequencing:</strong> Sanger (enzymatic) and Maxam-Gilbert (chemical) - DNA अनुक्रमण: सेंगर और मैक्सम-गिल्बर्ट</li>
+                    <li><strong>Restriction Mapping:</strong> RFLP and AFLP for DNA fingerprinting - प्रतिबंध मैपिंग: RFLP और AFLP</li>
+                    <li><strong>RAPD & REP-PCR:</strong> Quick DNA typing methods - त्वरित DNA टाइपिंग विधियां</li>
+                    <li><strong>DNA Fingerprinting:</strong> Identifies individuals - व्यक्तियों की पहचान करता है</li>
+                    <li><strong>Site-Directed Mutagenesis:</strong> Changes specific DNA bases - विशिष्ट DNA बेस बदलता है</li>
+                    <li><strong>Protein Engineering:</strong> Improves proteins for better function - बेहतर कार्य के लिए प्रोटीन में सुधार</li>
+                </ol>
+            </div>
+
+            <div class="hindi" style="background: #fff3cd; border-left: 3px solid #ffc107;">
+                <strong>याद रखने योग्य बातें:</strong>
+                <ul style="margin-top: 10px;">
+                    <li>सभी तकनीकें DNA, RNA, या प्रोटीन के साथ काम करती हैं</li>
+                    <li>PCR सबसे महत्वपूर्ण तकनीक है - यह DNA को बढ़ाता है</li>
+                    <li>DNA फिंगरप्रिंटिंग फोरेंसिक और पितृत्व परीक्षण में उपयोगी है</li>
+                    <li>प्रोटीन इंजीनियरिंग बेहतर दवाएं और एंजाइम बनाने में मदद करती है</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="background: #f8f9fa; padding: 20px; margin: 30px 0; border-radius: 10px; text-align: center;">
+            <a href="../index.html" style="background: #f5576c; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                🏠 Back to Home (होम पर वापस)
+            </a>
+        </div>
+    </div>
+</body>
+</html>
