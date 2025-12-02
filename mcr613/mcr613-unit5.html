@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-613 Unit 5 - Applications of RDT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #f5576c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f5576c;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5576c;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #f5576c;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #f5576c;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .comparison-box {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="../index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr613-unit1.html">Unit I</a>
+            <a href="mcr613-unit4.html">Unit IV</a>
+            <a href="mcr613-unit5.html" class="active">Unit V</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Genetic Engineering</h1>
+            <h2>MCR-613 UNIT V - Applications of Recombinant DNA Technology</h2>
+            <p style="color: #666; font-size: 16px; margin-top: 10px;">आसान अंग्रेजी और हिंदी में | Easy English and Hindi</p>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">Complete Notes with Diagrams & Flowcharts - पूर्ण नोट्स</p>
+        </div>
+
+        <!-- Section 1: Introduction -->
+        <div class="section">
+            <h3>1. Applications of RDT in Pharmaceuticals and Medicines (फार्मास्यूटिकल्स और दवाओं में RDT के अनुप्रयोग)</h3>
+            
+            <p><strong>What is RDT in Medicine?</strong> Recombinant DNA Technology (RDT) has revolutionized medicine! Instead of extracting proteins from animals or humans, we can now produce them in bacteria, yeast, or other cells using genetic engineering.</p>
+            
+            <div class="hindi">
+                <strong>चिकित्सा में RDT क्या है?</strong> रिकॉम्बिनेंट DNA तकनीक (RDT) ने चिकित्सा में क्रांति ला दी है! जानवरों या मनुष्यों से प्रोटीन निकालने के बजाय, अब हम आनुवंशिक इंजीनियरिंग का उपयोग करके बैक्टीरिया, खमीर, या अन्य कोशिकाओं में उनका उत्पादन कर सकते हैं।
+            </div>
+
+            <div class="box">
+                <h5>Advantages of Recombinant Proteins (रिकॉम्बिनेंट प्रोटीन के लाभ):</h5>
+                <ul class="list">
+                    <li><strong>Purity:</strong> Very pure, no contamination (बहुत शुद्ध, कोई संदूषण नहीं)</li>
+                    <li><strong>Safety:</strong> No risk of disease transmission (रोग संचरण का कोई जोखिम नहीं)</li>
+                    <li><strong>Availability:</strong> Large quantities can be produced (बड़ी मात्रा में उत्पादन संभव)</li>
+                    <li><strong>Cost-effective:</strong> Cheaper than traditional methods (पारंपरिक विधियों से सस्ता)</li>
+                    <li><strong>Consistency:</strong> Same quality every time (हर बार समान गुणवत्ता)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>RDT in Medicine Overview (चिकित्सा में RDT अवलोकन)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- DNA -->
+                    <rect x="50" y="50" width="150" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="125" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Human Gene</text>
+                    <text x="125" y="100" text-anchor="middle" font-size="12" fill="white">(मानव जीन)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 220 80 L 280 80" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="250" y="70" font-size="12" fill="#f5576c">Clone</text>
+                    
+                    <!-- Vector -->
+                    <rect x="300" y="50" width="150" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="375" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Vector</text>
+                    <text x="375" y="100" text-anchor="middle" font-size="12" fill="white">(वेक्टर)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 470 80 L 530 80" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="500" y="70" font-size="12" fill="#f5576c">Transform</text>
+                    
+                    <!-- Bacteria -->
+                    <circle cx="650" cy="80" r="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+                    <text x="650" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Bacteria</text>
+                    <text x="650" y="90" text-anchor="middle" font-size="10" fill="white">(बैक्टीरिया)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 650 120 L 650 160" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="670" y="145" font-size="12" fill="#f5576c">Produce</text>
+                    
+                    <!-- Protein -->
+                    <rect x="550" y="180" width="200" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="650" y="210" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Recombinant Protein</text>
+                    <text x="650" y="230" text-anchor="middle" font-size="14" fill="white">(रिकॉम्बिनेंट प्रोटीन)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 650 250 L 650 290" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="670" y="275" font-size="12" fill="#f5576c">Purify</text>
+                    
+                    <!-- Medicine -->
+                    <rect x="550" y="310" width="200" height="60" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+                    <text x="650" y="340" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Medicine!</text>
+                    <text x="650" y="360" text-anchor="middle" font-size="14" fill="white">(दवा!)</text>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 2: Recombinant Human Growth Hormone -->
+        <div class="section">
+            <h3>2. Recombinant Human Growth Hormone (रिकॉम्बिनेंट मानव वृद्धि हार्मोन)</h3>
+            
+            <p><strong>What is Human Growth Hormone (HGH)?</strong> HGH is a protein hormone that helps children grow and maintains tissues in adults. Before RDT, it was extracted from dead bodies (cadavers) - very limited and risky!</p>
+            
+            <div class="hindi">
+                <strong>मानव वृद्धि हार्मोन (HGH) क्या है?</strong> HGH एक प्रोटीन हार्मोन है जो बच्चों को बढ़ने में मदद करता है और वयस्कों में ऊतकों को बनाए रखता है। RDT से पहले, इसे मृत शरीरों (कैडेवर) से निकाला जाता था - बहुत सीमित और जोखिम भरा!
+            </div>
+
+            <div class="box">
+                <h5>Problems with Old Method (पुरानी विधि की समस्याएं):</h5>
+                <ul class="list">
+                    <li>Limited supply (सीमित आपूर्ति)</li>
+                    <li>Risk of disease transmission (रोग संचरण का जोखिम)</li>
+                    <li>Very expensive (बहुत महंगा)</li>
+                    <li>Ethical concerns (नैतिक चिंताएं)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>Production of Recombinant HGH (रिकॉम्बिनेंट HGH का उत्पादन)</h4>
+┌─────────────────────────────────────┐
+│  1. Isolate HGH gene from human DNA │
+│     (मानव DNA से HGH जीन अलग करें)   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Insert into expression vector   │
+│     (एक्सप्रेशन वेक्टर में डालें)     │
+│     • Use E. coli or yeast          │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Transform into host cells       │
+│     (मेजबान कोशिकाओं में रूपांतरित)   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Ferment and grow cells          │
+│     (किण्वन और कोशिकाओं को बढ़ाएं)    │
+│     • Large-scale production        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Extract and purify HGH          │
+│     (HGH निकालें और शुद्ध करें)       │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  6. Quality control and packaging   │
+│     (गुणवत्ता नियंत्रण और पैकेजिंग)   │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="box">
+                <h5>Uses of Recombinant HGH (रिकॉम्बिनेंट HGH के उपयोग):</h5>
+                <ul class="list">
+                    <li>Growth hormone deficiency in children (बच्चों में वृद्धि हार्मोन की कमी)</li>
+                    <li>Turner syndrome (टर्नर सिंड्रोम)</li>
+                    <li>Chronic kidney disease (क्रोनिक किडनी रोग)</li>
+                    <li>Muscle wasting in AIDS patients (एड्स रोगियों में मांसपेशियों की कमजोरी)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Recombinant Insulin -->
+        <div class="section">
+            <h3>3. Recombinant Insulin (रिकॉम्बिनेंट इंसुलिन)</h3>
+            
+            <p><strong>What is Insulin?</strong> Insulin is a hormone that controls blood sugar levels. People with diabetes need insulin injections. Before 1982, insulin came from pigs and cows - not ideal!</p>
+            
+            <div class="hindi">
+                <strong>इंसुलिन क्या है?</strong> इंसुलिन एक हार्मोन है जो रक्त शर्करा के स्तर को नियंत्रित करता है। मधुमेह वाले लोगों को इंसुलिन इंजेक्शन की आवश्यकता होती है। 1982 से पहले, इंसुलिन सूअरों और गायों से आता था - आदर्श नहीं!
+            </div>
+
+            <div class="diagram">
+                <h4>Recombinant Insulin Production (रिकॉम्बिनेंट इंसुलिन उत्पादन)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Human insulin gene -->
+                    <rect x="50" y="50" width="200" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="150" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Human Insulin Gene</text>
+                    <text x="150" y="100" text-anchor="middle" font-size="12" fill="white">(मानव इंसुलिन जीन)</text>
+                    
+                    <!-- Two chains -->
+                    <rect x="50" y="130" width="90" height="40" fill="#e74c3c"/>
+                    <text x="95" y="155" text-anchor="middle" font-size="11" fill="white">A Chain</text>
+                    <text x="95" y="170" text-anchor="middle" font-size="9" fill="white">(A श्रृंखला)</text>
+                    
+                    <rect x="160" y="130" width="90" height="40" fill="#27ae60"/>
+                    <text x="205" y="155" text-anchor="middle" font-size="11" fill="white">B Chain</text>
+                    <text x="205" y="170" text-anchor="middle" font-size="9" fill="white">(B श्रृंखला)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 150 190 L 150 230" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="170" y="215" font-size="12" fill="#f5576c">Clone separately</text>
+                    <text x="170" y="230" font-size="10" fill="#f5576c">(अलग-अलग क्लोन करें)</text>
+                    
+                    <!-- E. coli -->
+                    <circle cx="150" cy="280" r="50" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+                    <text x="150" y="275" text-anchor="middle" font-size="12" font-weight="bold" fill="white">E. coli</text>
+                    <text x="150" y="290" text-anchor="middle" font-size="10" fill="white">(बैक्टीरिया)</text>
+                    <text x="150" y="305" text-anchor="middle" font-size="9" fill="white">Producing</text>
+                    <text x="150" y="318" text-anchor="middle" font-size="9" fill="white">chains</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 220 280 L 300 280" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="260" y="270" font-size="12" fill="#f5576c">Extract</text>
+                    
+                    <!-- Purification -->
+                    <rect x="320" y="230" width="150" height="100" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="395" y="260" text-anchor="middle" font-size="14" font-weight="bold">Purification</text>
+                    <text x="395" y="280" text-anchor="middle" font-size="12">(शुद्धिकरण)</text>
+                    <text x="395" y="300" text-anchor="middle" font-size="11">• Separate A & B</text>
+                    <text x="395" y="315" text-anchor="middle" font-size="11">• Purify each</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 490 280 L 570 280" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="530" y="270" font-size="12" fill="#f5576c">Combine</text>
+                    
+                    <!-- Final insulin -->
+                    <rect x="590" y="230" width="150" height="100" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="665" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">Insulin!</text>
+                    <text x="665" y="280" text-anchor="middle" font-size="12" fill="#27ae60">(इंसुलिन!)</text>
+                    <text x="665" y="300" text-anchor="middle" font-size="11" fill="#27ae60">A + B chains</text>
+                    <text x="665" y="315" text-anchor="middle" font-size="11" fill="#27ae60">joined</text>
+                    
+                    <!-- Benefits -->
+                    <rect x="50" y="380" width="700" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+                    <text x="400" y="410" text-anchor="middle" font-size="16" font-weight="bold">Benefits: Pure, Safe, Abundant!</text>
+                    <text x="400" y="435" text-anchor="middle" font-size="14">(लाभ: शुद्ध, सुरक्षित, प्रचुर मात्रा में!)</text>
+                    <text x="400" y="455" text-anchor="middle" font-size="12">No animal source needed | Millions of diabetics helped</text>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="comparison-box">
+                <h5>Old vs New Insulin (पुराना बनाम नया इंसुलिन):</h5>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Old (Animal)</th>
+                        <th>New (Recombinant)</th>
+                        <th>हिंदी</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Source</strong></td>
+                        <td>Pigs, Cows (सूअर, गाय)</td>
+                        <td>E. coli bacteria (E. coli बैक्टीरिया)</td>
+                        <td>स्रोत</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Purity</strong></td>
+                        <td>Less pure (कम शुद्ध)</td>
+                        <td>Very pure (बहुत शुद्ध)</td>
+                        <td>शुद्धता</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Allergic reactions</strong></td>
+                        <td>Common (आम)</td>
+                        <td>Rare (दुर्लभ)</td>
+                        <td>एलर्जी प्रतिक्रियाएं</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Availability</strong></td>
+                        <td>Limited (सीमित)</td>
+                        <td>Unlimited (असीमित)</td>
+                        <td>उपलब्धता</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 4: Recombinant Vaccines -->
+        <div class="section">
+            <h3>4. Recombinant Vaccines (रिकॉम्बिनेंट वैक्सीन)</h3>
+            
+            <p><strong>What are Recombinant Vaccines?</strong> Instead of using weakened or killed pathogens, recombinant vaccines use only specific proteins (antigens) from the pathogen. Much safer!</p>
+            
+            <div class="hindi">
+                <strong>रिकॉम्बिनेंट वैक्सीन क्या हैं?</strong> कमजोर या मारे गए रोगजनकों का उपयोग करने के बजाय, रिकॉम्बिनेंट वैक्सीन रोगजनक से केवल विशिष्ट प्रोटीन (एंटीजन) का उपयोग करते हैं। बहुत सुरक्षित!
+            </div>
+
+            <div class="flowchart">
+<h4>Recombinant Vaccine Production (रिकॉम्बिनेंट वैक्सीन उत्पादन)</h4>
+┌─────────────────────────────────────┐
+│  1. Identify antigen gene           │
+│     (एंटीजन जीन की पहचान करें)        │
+│     • From pathogen                 │
+│     • Protein that triggers         │
+│       immune response               │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Clone antigen gene              │
+│     (एंटीजन जीन को क्लोन करें)         │
+│     • Insert into vector            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Express in host cells           │
+│     (मेजबान कोशिकाओं में व्यक्त करें)  │
+│     • Bacteria, yeast, or           │
+│       mammalian cells               │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Purify antigen protein          │
+│     (एंटीजन प्रोटीन को शुद्ध करें)     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Formulate vaccine               │
+│     (वैक्सीन तैयार करें)               │
+│     • Add adjuvants                 │
+│     • Package for delivery          │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="box">
+                <h5>Examples of Recombinant Vaccines (रिकॉम्बिनेंट वैक्सीन के उदाहरण):</h5>
+                <ul class="list">
+                    <li><strong>Hepatitis B Vaccine:</strong> First recombinant vaccine (1986) (हेपेटाइटिस B वैक्सीन: पहली रिकॉम्बिनेंट वैक्सीन)</li>
+                    <li><strong>HPV Vaccine:</strong> Prevents cervical cancer (HPV वैक्सीन: गर्भाशय ग्रीवा कैंसर को रोकता है)</li>
+                    <li><strong>COVID-19 Vaccines:</strong> Some use recombinant technology (COVID-19 वैक्सीन: कुछ रिकॉम्बिनेंट तकनीक का उपयोग करते हैं)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Recombinant Vaccine vs Traditional (रिकॉम्बिनेंट वैक्सीन बनाम पारंपरिक)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Traditional -->
+                    <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Traditional Vaccine</text>
+                    <text x="200" y="50" text-anchor="middle" font-size="14" font-weight="bold">(पारंपरिक वैक्सीन)</text>
+                    
+                    <circle cx="200" cy="120" r="60" fill="#e74c3c" stroke="#c0392b" stroke-width="3"/>
+                    <text x="200" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Pathogen</text>
+                    <text x="200" y="135" text-anchor="middle" font-size="11" fill="white">(रोगजनक)</text>
+                    <text x="200" y="150" text-anchor="middle" font-size="10" fill="white">Weakened/</text>
+                    <text x="200" y="165" text-anchor="middle" font-size="10" fill="white">Killed</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 200 190 L 200 230" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- Vaccine -->
+                    <rect x="120" y="250" width="160" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="200" y="280" text-anchor="middle" font-size="14" font-weight="bold">Vaccine</text>
+                    <text x="200" y="300" text-anchor="middle" font-size="12">Whole pathogen</text>
+                    <text x="200" y="315" text-anchor="middle" font-size="11">(पूरा रोगजनक)</text>
+                    
+                    <!-- Risks -->
+                    <text x="200" y="350" text-anchor="middle" font-size="12" fill="#e74c3c" font-weight="bold">⚠️ Risk of infection</text>
+                    <text x="200" y="370" text-anchor="middle" font-size="11" fill="#e74c3c">(संक्रमण का जोखिम)</text>
+                    
+                    <!-- Recombinant -->
+                    <text x="600" y="30" text-anchor="middle" font-size="16" font-weight="bold">Recombinant Vaccine</text>
+                    <text x="600" y="50" text-anchor="middle" font-size="14" font-weight="bold">(रिकॉम्बिनेंट वैक्सीन)</text>
+                    
+                    <rect x="540" y="80" width="120" height="80" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="600" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Pathogen</text>
+                    <text x="600" y="130" text-anchor="middle" font-size="11" fill="white">(रोगजनक)</text>
+                    <text x="600" y="150" text-anchor="middle" font-size="10" fill="white">Extract</text>
+                    <text x="600" y="165" text-anchor="middle" font-size="10" fill="white">antigen gene</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 600 170 L 600 210" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- Antigen only -->
+                    <rect x="540" y="230" width="120" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="600" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Antigen</text>
+                    <text x="600" y="265" text-anchor="middle" font-size="11" fill="white">(एंटीजन)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 600 280 L 600 310" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow3)"/>
+                    
+                    <!-- Vaccine -->
+                    <rect x="520" y="330" width="160" height="40" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="600" y="350" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">Vaccine</text>
+                    <text x="600" y="365" text-anchor="middle" font-size="12" fill="#27ae60">Only antigen!</text>
+                    
+                    <!-- Safe -->
+                    <text x="600" y="390" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">✓ Safe, no infection risk</text>
+                    <text x="600" y="405" text-anchor="middle" font-size="11" fill="#27ae60">(सुरक्षित, कोई संक्रमण जोखिम नहीं)</text>
+                    
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 5: Food and Agriculture -->
+        <div class="section">
+            <h3>5. RDT in Food and Agriculture (खाद्य और कृषि में RDT)</h3>
+            
+            <p><strong>How RDT Helps Agriculture?</strong> Genetic engineering has transformed agriculture! We can create crops that are more nutritious, resistant to pests, and can grow in harsh conditions.</p>
+            
+            <div class="hindi">
+                <strong>RDT कृषि में कैसे मदद करता है?</strong> आनुवंशिक इंजीनियरिंग ने कृषि को बदल दिया है! हम ऐसी फसलें बना सकते हैं जो अधिक पौष्टिक हैं, कीटों के प्रति प्रतिरोधी हैं, और कठोर परिस्थितियों में बढ़ सकती हैं।
+            </div>
+
+            <h4>5.1 Genetically Modified (GM) Crops (आनुवंशिक रूप से संशोधित (GM) फसलें)</h4>
+
+            <div class="box">
+                <h5>Benefits of GM Crops (GM फसलों के लाभ):</h5>
+                <ul class="list">
+                    <li><strong>Pest Resistance:</strong> Crops produce their own pesticides (कीट प्रतिरोध: फसलें अपने कीटनाशक बनाती हैं)</li>
+                    <li><strong>Herbicide Tolerance:</strong> Can survive weed killers (खरपतवार नाशक सहनशीलता: खरपतवार नाशकों से बच सकती हैं)</li>
+                    <li><strong>Disease Resistance:</strong> Resistant to plant diseases (रोग प्रतिरोध: पौधों के रोगों के प्रति प्रतिरोधी)</li>
+                    <li><strong>Better Nutrition:</strong> More vitamins and minerals (बेहतर पोषण: अधिक विटामिन और खनिज)</li>
+                    <li><strong>Drought Tolerance:</strong> Can grow with less water (सूखा सहनशीलता: कम पानी के साथ बढ़ सकती हैं)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>Creating GM Crops (GM फसलें बनाना)</h4>
+┌─────────────────────────────────────┐
+│  1. Identify useful gene            │
+│     (उपयोगी जीन की पहचान करें)        │
+│     • From bacteria, other plants   │
+│     • Desired trait (pest resistance)│
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Clone gene into plant vector    │
+│     (पौधे वेक्टर में जीन क्लोन करें)   │
+│     • Ti plasmid (Agrobacterium)    │
+│     • Gene gun method               │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Transform plant cells           │
+│     (पौधे की कोशिकाओं को रूपांतरित करें)│
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Grow into whole plants          │
+│     (पूरे पौधों में बढ़ाएं)            │
+│     • Tissue culture                │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Test and approve                │
+│     (परीक्षण और अनुमोदन)               │
+│     • Safety testing                │
+│     • Field trials                  │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="box">
+                <h5>Examples of GM Crops (GM फसलों के उदाहरण):</h5>
+                <ul class="list">
+                    <li><strong>Bt Cotton:</strong> Produces insect-killing protein (Bt कपास: कीट-मारने वाला प्रोटीन बनाती है)</li>
+                    <li><strong>Golden Rice:</strong> Contains vitamin A (गोल्डन राइस: विटामिन A युक्त)</li>
+                    <li><strong>Roundup Ready Soybean:</strong> Resistant to herbicide (राउंडअप रेडी सोयाबीन: खरपतवार नाशक के प्रति प्रतिरोधी)</li>
+                    <li><strong>Flavr Savr Tomato:</strong> Stays fresh longer (Flavr Savr टमाटर: लंबे समय तक ताजा रहता है)</li>
+                </ul>
+            </div>
+
+            <h4>5.2 Animal Applications (पशु अनुप्रयोग)</h4>
+
+            <div class="box">
+                <h5>RDT in Animal Agriculture (पशु कृषि में RDT):</h5>
+                <ul class="list">
+                    <li><strong>Growth Hormones:</strong> Faster growth in livestock (वृद्धि हार्मोन: पशुओं में तेजी से वृद्धि)</li>
+                    <li><strong>Disease Resistance:</strong> Animals resistant to diseases (रोग प्रतिरोध: रोगों के प्रति प्रतिरोधी जानवर)</li>
+                    <li><strong>Better Milk Production:</strong> More milk from cows (बेहतर दूध उत्पादन: गायों से अधिक दूध)</li>
+                    <li><strong>Pharmaceutical Production:</strong> Animals produce medicines (फार्मास्यूटिकल उत्पादन: जानवर दवाएं बनाते हैं)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 6: Industrial Products -->
+        <div class="section">
+            <h3>6. Production of Useful Industrial Products (उपयोगी औद्योगिक उत्पादों का उत्पादन)</h3>
+            
+            <p><strong>RDT in Industry:</strong> Many industrial products are now made using recombinant DNA technology - from enzymes in detergents to biofuels!</p>
+            
+            <div class="hindi">
+                <strong>उद्योग में RDT:</strong> कई औद्योगिक उत्पाद अब रिकॉम्बिनेंट DNA तकनीक का उपयोग करके बनाए जाते हैं - डिटर्जेंट में एंजाइम से लेकर जैव ईंधन तक!
+            </div>
+
+            <h4>6.1 Industrial Enzymes (औद्योगिक एंजाइम)</h4>
+
+            <div class="box">
+                <h5>Recombinant Enzymes in Industry (उद्योग में रिकॉम्बिनेंट एंजाइम):</h5>
+                <ul class="list">
+                    <li><strong>Detergents:</strong> Proteases and lipases break down stains (डिटर्जेंट: प्रोटीज और लाइपेज दाग हटाते हैं)</li>
+                    <li><strong>Food Processing:</strong> Chymosin for cheese making (खाद्य प्रसंस्करण: पनीर बनाने के लिए काइमोसिन)</li>
+                    <li><strong>Textiles:</strong> Enzymes for fabric processing (टेक्सटाइल: कपड़ा प्रसंस्करण के लिए एंजाइम)</li>
+                    <li><strong>Paper Industry:</strong> Enzymes for pulp processing (कागज उद्योग: लुगदी प्रसंस्करण के लिए एंजाइम)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Industrial Enzyme Production (औद्योगिक एंजाइम उत्पादन)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Gene -->
+                    <rect x="50" y="50" width="150" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="125" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Enzyme Gene</text>
+                    <text x="125" y="100" text-anchor="middle" font-size="12" fill="white">(एंजाइम जीन)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 220 80 L 300 80" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    
+                    <!-- Fermenter -->
+                    <rect x="320" y="20" width="200" height="120" fill="#9b59b6" stroke="#8e44ad" stroke-width="3" rx="10"/>
+                    <text x="420" y="50" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Fermenter</text>
+                    <text x="420" y="70" text-anchor="middle" font-size="14" fill="white">(किण्वक)</text>
+                    <circle cx="420" cy="100" r="30" fill="#e74c3c" opacity="0.7"/>
+                    <text x="420" y="105" text-anchor="middle" font-size="11" fill="white">Bacteria</text>
+                    <text x="420" y="120" text-anchor="middle" font-size="10" fill="white">Producing</text>
+                    <text x="420" y="135" text-anchor="middle" font-size="10" fill="white">enzyme</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 420 150 L 420 200" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    
+                    <!-- Extraction -->
+                    <rect x="320" y="220" width="200" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="420" y="245" text-anchor="middle" font-size="14" font-weight="bold">Extract & Purify</text>
+                    <text x="420" y="265" text-anchor="middle" font-size="12">(निकालें और शुद्ध करें)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 420 290 L 420 330" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    
+                    <!-- Products -->
+                    <rect x="50" y="350" width="150" height="40" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="125" y="375" text-anchor="middle" font-size="12" font-weight="bold">Detergents</text>
+                    
+                    <rect x="220" y="350" width="150" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+                    <text x="295" y="375" text-anchor="middle" font-size="12" font-weight="bold">Food Processing</text>
+                    
+                    <rect x="390" y="350" width="150" height="40" fill="#f3e5f5" stroke="#9b59b6" stroke-width="2" rx="5"/>
+                    <text x="465" y="375" text-anchor="middle" font-size="12" font-weight="bold">Textiles</text>
+                    
+                    <rect x="560" y="350" width="150" height="40" fill="#fff3e0" stroke="#e67e22" stroke-width="2" rx="5"/>
+                    <text x="635" y="375" text-anchor="middle" font-size="12" font-weight="bold">Biofuels</text>
+                    
+                    <defs>
+                        <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>6.2 Biofuels (जैव ईंधन)</h4>
+
+            <div class="box">
+                <h5>RDT in Biofuel Production (जैव ईंधन उत्पादन में RDT):</h5>
+                <ul class="list">
+                    <li><strong>Ethanol Production:</strong> Engineered yeast produce more ethanol (एथनॉल उत्पादन: इंजीनियर खमीर अधिक एथनॉल बनाते हैं)</li>
+                    <li><strong>Biodiesel:</strong> Modified algae produce oil (बायोडीजल: संशोधित शैवाल तेल बनाते हैं)</li>
+                    <li><strong>Cellulose Breakdown:</strong> Enzymes break down plant waste (सेल्यूलोज विघटन: एंजाइम पौधे के कचरे को तोड़ते हैं)</li>
+                </ul>
+            </div>
+
+            <h4>6.3 Other Industrial Products (अन्य औद्योगिक उत्पाद)</h4>
+
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Use</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Biodegradable Plastics</strong></td>
+                    <td>Environmentally friendly packaging</td>
+                    <td>पर्यावरण के अनुकूल पैकेजिंग</td>
+                </tr>
+                <tr>
+                    <td><strong>Bio-based Chemicals</strong></td>
+                    <td>Replace petroleum-based chemicals</td>
+                    <td>पेट्रोलियम-आधारित रसायनों को बदलें</td>
+                </tr>
+                <tr>
+                    <td><strong>Flavors and Fragrances</strong></td>
+                    <td>Natural flavors for food industry</td>
+                    <td>खाद्य उद्योग के लिए प्राकृतिक स्वाद</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 7: Metagenomics -->
+        <div class="section">
+            <h3>7. Metagenomics and Its Applications (मेटाजीनोमिक्स और इसके अनुप्रयोग)</h3>
+            
+            <p><strong>What is Metagenomics?</strong> Metagenomics is like studying ALL the DNA from an entire environment (like soil, water, or your gut) without needing to grow each microbe separately! It's like reading all the books in a library at once!</p>
+            
+            <div class="hindi">
+                <strong>मेटाजीनोमिक्स क्या है?</strong> मेटाजीनोमिक्स एक पूरे वातावरण (जैसे मिट्टी, पानी, या आपकी आंत) से सभी DNA का अध्ययन करने जैसा है, बिना प्रत्येक सूक्ष्मजीव को अलग-अलग उगाने की आवश्यकता के! यह एक बार में पुस्तकालय की सभी किताबें पढ़ने जैसा है!
+            </div>
+
+            <div class="box">
+                <h5>Why Metagenomics? (मेटाजीनोमिक्स क्यों?):</h5>
+                <ul class="list">
+                    <li><strong>Most microbes can't be grown in lab:</strong> 99% of microbes are unculturable (अधिकांश सूक्ष्मजीव प्रयोगशाला में नहीं उगाए जा सकते: 99% सूक्ष्मजीव असंस्कृत हैं)</li>
+                    <li><strong>Study entire communities:</strong> See how microbes interact (पूरे समुदायों का अध्ययन: देखें कि सूक्ष्मजीव कैसे बातचीत करते हैं)</li>
+                    <li><strong>Discover new genes:</strong> Find useful enzymes and proteins (नए जीन खोजें: उपयोगी एंजाइम और प्रोटीन खोजें)</li>
+                    <li><strong>Understand ecosystems:</strong> Learn about environmental health (पारिस्थितिक तंत्र को समझें: पर्यावरणीय स्वास्थ्य के बारे में जानें)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>Metagenomics Workflow (मेटाजीनोमिक्स वर्कफ़्लो)</h4>
+┌─────────────────────────────────────┐
+│  1. Collect environmental sample    │
+│     (पर्यावरणीय नमूना एकत्र करें)      │
+│     • Soil, water, gut, etc.        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Extract all DNA                 │
+│     (सभी DNA निकालें)                 │
+│     • From all organisms            │
+│     • No need to culture            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Sequence all DNA                │
+│     (सभी DNA का अनुक्रमण करें)        │
+│     • Next-generation sequencing    │
+│     • Millions of sequences         │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Assemble sequences              │
+│     (अनुक्रमों को असेंबल करें)         │
+│     • Reconstruct genomes           │
+│     • Identify organisms            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Analyze and annotate            │
+│     (विश्लेषण और एनोटेट करें)          │
+│     • Find genes                    │
+│     • Predict functions             │
+│     • Discover new species          │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>Metagenomics Concept (मेटाजीनोमिक्स अवधारणा)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Environment -->
+                    <rect x="50" y="50" width="200" height="150" fill="#8b4513" stroke="#654321" stroke-width="2" rx="10"/>
+                    <text x="150" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Environment</text>
+                    <text x="150" y="100" text-anchor="middle" font-size="14" fill="white">(वातावरण)</text>
+                    <text x="150" y="120" text-anchor="middle" font-size="12" fill="white">Soil, Water,</text>
+                    <text x="150" y="140" text-anchor="middle" font-size="12" fill="white">Gut, etc.</text>
+                    
+                    <!-- Microbes -->
+                    <circle cx="100" cy="160" r="8" fill="#3498db"/>
+                    <circle cx="130" cy="170" r="8" fill="#27ae60"/>
+                    <circle cx="160" cy="155" r="8" fill="#e74c3c"/>
+                    <circle cx="180" cy="175" r="8" fill="#9b59b6"/>
+                    <circle cx="120" cy="185" r="8" fill="#f39c12"/>
+                    <text x="150" y="210" text-anchor="middle" font-size="11">Many microbes!</text>
+                    <text x="150" y="225" text-anchor="middle" font-size="10">(कई सूक्ष्मजीव!)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 270 125 L 330 125" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <text x="300" y="115" font-size="12" fill="#f5576c">Extract all DNA</text>
+                    <text x="300" y="140" font-size="10" fill="#f5576c">(सभी DNA निकालें)</text>
+                    
+                    <!-- DNA mix -->
+                    <rect x="350" y="50" width="200" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+                    <text x="450" y="80" text-anchor="middle" font-size="16" font-weight="bold">DNA Mixture</text>
+                    <text x="450" y="100" text-anchor="middle" font-size="14" font-weight="bold">(DNA मिश्रण)</text>
+                    
+                    <!-- DNA fragments -->
+                    <line x1="370" y1="120" x2="430" y2="120" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="440" y1="130" x2="500" y2="130" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="410" y1="140" x2="470" y2="140" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="380" y1="150" x2="440" y2="150" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="450" y1="160" x2="510" y2="160" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="420" y1="170" x2="480" y2="170" stroke="#1976d2" stroke-width="2"/>
+                    <line x1="390" y1="180" x2="450" y2="180" stroke="#1976d2" stroke-width="2"/>
+                    
+                    <text x="450" y="210" text-anchor="middle" font-size="11">All DNA together!</text>
+                    <text x="450" y="225" text-anchor="middle" font-size="10">(सभी DNA एक साथ!)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 450 220 L 450 260" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <text x="470" y="245" font-size="12" fill="#f5576c">Sequence</text>
+                    <text x="470" y="260" font-size="10" fill="#f5576c">(अनुक्रमण)</text>
+                    
+                    <!-- Analysis -->
+                    <rect x="200" y="280" width="400" height="150" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="10"/>
+                    <text x="400" y="310" text-anchor="middle" font-size="18" font-weight="bold">Analysis Results</text>
+                    <text x="400" y="330" text-anchor="middle" font-size="16" font-weight="bold">(विश्लेषण परिणाम)</text>
+                    
+                    <!-- Results boxes -->
+                    <rect x="220" y="350" width="110" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="275" y="375" text-anchor="middle" font-size="12" font-weight="bold">New Species</text>
+                    <text x="275" y="390" text-anchor="middle" font-size="11">(नई प्रजातियां)</text>
+                    
+                    <rect x="345" y="350" width="110" height="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+                    <text x="400" y="375" text-anchor="middle" font-size="12" font-weight="bold">New Genes</text>
+                    <text x="400" y="390" text-anchor="middle" font-size="11">(नए जीन)</text>
+                    
+                    <rect x="470" y="350" width="110" height="50" fill="#f3e5f5" stroke="#9b59b6" stroke-width="2" rx="5"/>
+                    <text x="525" y="375" text-anchor="middle" font-size="12" font-weight="bold">Useful Enzymes</text>
+                    <text x="525" y="390" text-anchor="middle" font-size="11">(उपयोगी एंजाइम)</text>
+                    
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>7.1 Applications of Metagenomics (मेटाजीनोमिक्स के अनुप्रयोग)</h4>
+
+            <div class="box">
+                <h5>Key Applications (मुख्य अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li><strong>Bioremediation:</strong> Find microbes that clean up pollution (बायोरेमेडिएशन: प्रदूषण साफ करने वाले सूक्ष्मजीव खोजें)</li>
+                    <li><strong>Drug Discovery:</strong> Discover new antibiotics and medicines (दवा खोज: नए एंटीबायोटिक्स और दवाएं खोजें)</li>
+                    <li><strong>Industrial Enzymes:</strong> Find enzymes for industrial use (औद्योगिक एंजाइम: औद्योगिक उपयोग के लिए एंजाइम खोजें)</li>
+                    <li><strong>Human Health:</strong> Study gut microbiome (मानव स्वास्थ्य: आंत माइक्रोबायोम का अध्ययन)</li>
+                    <li><strong>Agriculture:</strong> Understand soil microbes (कृषि: मिट्टी के सूक्ष्मजीवों को समझें)</li>
+                    <li><strong>Climate Change:</strong> Study carbon cycling microbes (जलवायु परिवर्तन: कार्बन चक्रण सूक्ष्मजीवों का अध्ययन)</li>
+                </ul>
+            </div>
+
+            <div class="comparison-box">
+                <h5>Traditional vs Metagenomics (पारंपरिक बनाम मेटाजीनोमिक्स):</h5>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Traditional</th>
+                        <th>Metagenomics</th>
+                        <th>हिंदी</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Method</strong></td>
+                        <td>Culture each microbe (प्रत्येक सूक्ष्मजीव को उगाएं)</td>
+                        <td>Study all DNA together (सभी DNA को एक साथ अध्ययन करें)</td>
+                        <td>विधि</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Coverage</strong></td>
+                        <td>Only 1% of microbes (केवल 1% सूक्ष्मजीव)</td>
+                        <td>All microbes (सभी सूक्ष्मजीव)</td>
+                        <td>कवरेज</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time</strong></td>
+                        <td>Weeks to months (सप्ताह से महीने)</td>
+                        <td>Days to weeks (दिन से सप्ताह)</td>
+                        <td>समय</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Discovery</strong></td>
+                        <td>Limited (सीमित)</td>
+                        <td>Many new species (कई नई प्रजातियां)</td>
+                        <td>खोज</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: #e8f5e9; border-left: 5px solid #27ae60;">
+            <h3>📚 Summary (सारांश)</h3>
+            
+            <div class="box">
+                <h5>Key Applications Covered (कवर की गई मुख्य अनुप्रयोग):</h5>
+                <ol class="list">
+                    <li><strong>Pharmaceuticals:</strong> Recombinant HGH, Insulin - फार्मास्यूटिकल्स: रिकॉम्बिनेंट HGH, इंसुलिन</li>
+                    <li><strong>Vaccines:</strong> Safer recombinant vaccines - वैक्सीन: सुरक्षित रिकॉम्बिनेंट वैक्सीन</li>
+                    <li><strong>Food & Agriculture:</strong> GM crops, better nutrition - खाद्य और कृषि: GM फसलें, बेहतर पोषण</li>
+                    <li><strong>Industrial Products:</strong> Enzymes, biofuels, biodegradable plastics - औद्योगिक उत्पाद: एंजाइम, जैव ईंधन, बायोडिग्रेडेबल प्लास्टिक</li>
+                    <li><strong>Metagenomics:</strong> Study unculturable microbes, discover new genes - मेटाजीनोमिक्स: असंस्कृत सूक्ष्मजीवों का अध्ययन, नए जीन खोजें</li>
+                </ol>
+            </div>
+
+            <div class="hindi" style="background: #fff3cd; border-left: 3px solid #ffc107;">
+                <strong>याद रखने योग्य बातें:</strong>
+                <ul style="margin-top: 10px;">
+                    <li>रिकॉम्बिनेंट प्रोटीन शुद्ध, सुरक्षित और प्रचुर मात्रा में हैं</li>
+                    <li>इंसुलिन और HGH अब बैक्टीरिया में बनाए जाते हैं</li>
+                    <li>रिकॉम्बिनेंट वैक्सीन पारंपरिक वैक्सीन से सुरक्षित हैं</li>
+                    <li>GM फसलें अधिक पौष्टिक और कीट प्रतिरोधी हैं</li>
+                    <li>मेटाजीनोमिक्स हमें असंस्कृत सूक्ष्मजीवों का अध्ययन करने की अनुमति देता है</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="background: #f8f9fa; padding: 20px; margin: 30px 0; border-radius: 10px; text-align: center;">
+            <a href="../index.html" style="background: #f5576c; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                🏠 Back to Home (होम पर वापस)
+            </a>
+            <a href="mcr613-unit1.html" style="background: #3498db; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                ← Unit I
+            </a>
+            <a href="mcr613-unit4.html" style="background: #9b59b6; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                ← Unit IV
+            </a>
+        </div>
+    </div>
+</body>
+</html>
