@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-613 Unit 4 - Whole Genome Analysis and Genomics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #f5576c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f5576c;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5576c;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #f5576c;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #f5576c;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .comparison-box {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="../index.html" class="home-btn">🏠 Home</a>
+        <div class="nav-links">
+            <a href="mcr613-unit1.html">Unit I</a>
+            <a href="mcr613-unit4.html" class="active">Unit IV</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Genetic Engineering</h1>
+            <h2>MCR-613 UNIT IV - Whole Genome Analysis and Genomics</h2>
+            <p style="color: #666; font-size: 16px; margin-top: 10px;">आसान अंग्रेजी और हिंदी में | Easy English and Hindi</p>
+            <p style="color: #666; font-size: 14px; margin-top: 5px;">Complete Notes with Diagrams & Flowcharts - पूर्ण नोट्स</p>
+        </div>
+
+        <!-- Section 1: DNA Libraries -->
+        <div class="section">
+            <h3>1. DNA Libraries (DNA लाइब्रेरी)</h3>
+            
+            <p><strong>What is a DNA Library?</strong> A DNA library is like a collection of books in a library, but instead of books, it contains DNA fragments! Each "book" (DNA fragment) represents a piece of the genome.</p>
+            
+            <div class="hindi">
+                <strong>DNA लाइब्रेरी क्या है?</strong> DNA लाइब्रेरी एक पुस्तकालय में किताबों के संग्रह जैसी है, लेकिन किताबों के बजाय, इसमें DNA खंड होते हैं! प्रत्येक "किताब" (DNA खंड) जीनोम के एक टुकड़े का प्रतिनिधित्व करती है।
+            </div>
+
+            <div class="box">
+                <h5>Why Do We Need DNA Libraries? (हमें DNA लाइब्रेरी की आवश्यकता क्यों है?):</h5>
+                <ul class="list">
+                    <li>Store all DNA fragments in one place (सभी DNA खंडों को एक जगह संग्रहीत करना)</li>
+                    <li>Easy to find and study specific genes (विशिष्ट जीनों को खोजना और अध्ययन करना आसान)</li>
+                    <li>Preserve DNA for future use (भविष्य के उपयोग के लिए DNA को संरक्षित करना)</li>
+                    <li>Clone and amplify specific sequences (विशिष्ट अनुक्रमों को क्लोन और प्रवर्धित करना)</li>
+                </ul>
+            </div>
+
+            <h4>1.1 Genomic Library (जीनोमिक लाइब्रेरी)</h4>
+            
+            <p><strong>What is a Genomic Library?</strong> A genomic library contains ALL DNA from an organism - both coding (genes) and non-coding regions. It's like having a complete copy of all the DNA!</p>
+            
+            <div class="hindi">
+                <strong>जीनोमिक लाइब्रेरी क्या है?</strong> जीनोमिक लाइब्रेरी में एक जीव का सभी DNA होता है - कोडिंग (जीन) और गैर-कोडिंग क्षेत्र दोनों। यह सभी DNA की एक पूर्ण प्रति होने जैसा है!
+            </div>
+
+            <div class="flowchart">
+<h4>Genomic Library Construction (जीनोमिक लाइब्रेरी निर्माण)</h4>
+┌─────────────────────────────────────┐
+│  1. Extract genomic DNA             │
+│     (जीनोमिक DNA निकालें)            │
+│     • From cells or tissues         │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Cut DNA with restriction        │
+│     enzymes                         │
+│     (प्रतिबंध एंजाइमों से DNA काटें)  │
+│     • Creates fragments             │
+│     • Size: 10-20 kb (for plasmids) │
+│     • Size: 100-200 kb (for BAC)    │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Insert fragments into vectors   │
+│     (खंडों को वेक्टर में डालें)      │
+│     • Plasmids (small fragments)    │
+│     • BAC (large fragments)         │
+│     • YAC (very large fragments)    │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Transform into bacteria         │
+│     (बैक्टीरिया में रूपांतरित करें)   │
+│     • Each bacterium gets one       │
+│       fragment                      │
+│     • Grow on plates                │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Store library                   │
+│     (लाइब्रेरी संग्रहीत करें)         │
+│     • Collection of all clones      │
+│     • Can screen for specific genes │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>Genomic Library Structure (जीनोमिक लाइब्रेरी संरचना)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Original genome -->
+                    <rect x="50" y="50" width="700" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="400" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Complete Genome (पूर्ण जीनोम)</text>
+                    
+                    <!-- Restriction sites -->
+                    <line x1="150" y1="50" x2="150" y2="90" stroke="red" stroke-width="2"/>
+                    <line x1="300" y1="50" x2="300" y2="90" stroke="red" stroke-width="2"/>
+                    <line x1="450" y1="50" x2="450" y2="90" stroke="red" stroke-width="2"/>
+                    <line x1="600" y1="50" x2="600" y2="90" stroke="red" stroke-width="2"/>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 110 L 400 150" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="420" y="135" font-size="12" fill="#f5576c">Cut with enzymes</text>
+                    <text x="420" y="150" font-size="10" fill="#f5576c">(एंजाइमों से काटें)</text>
+                    
+                    <!-- Fragments -->
+                    <rect x="50" y="170" width="100" height="30" fill="#e74c3c"/>
+                    <text x="100" y="190" text-anchor="middle" font-size="10" fill="white">Fragment 1</text>
+                    
+                    <rect x="160" y="170" width="140" height="30" fill="#27ae60"/>
+                    <text x="230" y="190" text-anchor="middle" font-size="10" fill="white">Fragment 2</text>
+                    
+                    <rect x="310" y="170" width="140" height="30" fill="#9b59b6"/>
+                    <text x="380" y="190" text-anchor="middle" font-size="10" fill="white">Fragment 3</text>
+                    
+                    <rect x="460" y="170" width="150" height="30" fill="#f39c12"/>
+                    <text x="535" y="190" text-anchor="middle" font-size="10" fill="white">Fragment 4</text>
+                    
+                    <rect x="620" y="170" width="130" height="30" fill="#1abc9c"/>
+                    <text x="685" y="190" text-anchor="middle" font-size="10" fill="white">Fragment 5</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 220 L 400 260" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow1)"/>
+                    <text x="420" y="245" font-size="12" fill="#f5576c">Insert into vectors</text>
+                    <text x="420" y="260" font-size="10" fill="#f5576c">(वेक्टर में डालें)</text>
+                    
+                    <!-- Vectors with fragments -->
+                    <rect x="50" y="280" width="100" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
+                    <rect x="55" y="285" width="90" height="20" fill="#e74c3c"/>
+                    <text x="100" y="300" text-anchor="middle" font-size="10">Vector 1</text>
+                    
+                    <rect x="160" y="280" width="140" height="60" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <rect x="165" y="285" width="130" height="20" fill="#27ae60"/>
+                    <text x="230" y="300" text-anchor="middle" font-size="10">Vector 2</text>
+                    
+                    <rect x="310" y="280" width="140" height="60" fill="#f3e5f5" stroke="#9b59b6" stroke-width="2" rx="5"/>
+                    <rect x="315" y="285" width="130" height="20" fill="#9b59b6"/>
+                    <text x="380" y="300" text-anchor="middle" font-size="10">Vector 3</text>
+                    
+                    <rect x="460" y="280" width="150" height="60" fill="#fff3e0" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <rect x="465" y="285" width="140" height="20" fill="#f39c12"/>
+                    <text x="535" y="300" text-anchor="middle" font-size="10">Vector 4</text>
+                    
+                    <rect x="620" y="280" width="130" height="60" fill="#e0f2f1" stroke="#1abc9c" stroke-width="2" rx="5"/>
+                    <rect x="625" y="285" width="120" height="20" fill="#1abc9c"/>
+                    <text x="685" y="300" text-anchor="middle" font-size="10">Vector 5</text>
+                    
+                    <!-- Library -->
+                    <text x="400" y="380" text-anchor="middle" font-size="16" font-weight="bold">Genomic Library!</text>
+                    <text x="400" y="400" text-anchor="middle" font-size="14">(जीनोमिक लाइब्रेरी!)</text>
+                    <text x="400" y="420" text-anchor="middle" font-size="12">All fragments stored in vectors</text>
+                    <text x="400" y="440" text-anchor="middle" font-size="10">(सभी खंड वेक्टर में संग्रहीत)</text>
+                    
+                    <defs>
+                        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Characteristics of Genomic Library (जीनोमिक लाइब्रेरी की विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Contains all DNA:</strong> Both coding and non-coding regions (सभी DNA: कोडिंग और गैर-कोडिंग क्षेत्र)</li>
+                    <li><strong>Includes introns:</strong> Non-coding parts of genes (इंट्रॉन शामिल: जीनों के गैर-कोडिंग भाग)</li>
+                    <li><strong>Includes regulatory sequences:</strong> Promoters, enhancers (नियामक अनुक्रम शामिल: प्रमोटर, एन्हांसर)</li>
+                    <li><strong>Large size:</strong> Needs many clones to cover entire genome (बड़ा आकार: पूरे जीनोम को कवर करने के लिए कई क्लोन चाहिए)</li>
+                </ul>
+            </div>
+
+            <h4>1.2 cDNA Library (cDNA लाइब्रेरी)</h4>
+            
+            <p><strong>What is a cDNA Library?</strong> cDNA stands for "complementary DNA". A cDNA library contains only the EXPRESSED genes (mRNA that was converted to DNA). It's like having only the "active" parts of the genome!</p>
+            
+            <div class="hindi">
+                <strong>cDNA लाइब्रेरी क्या है?</strong> cDNA का मतलब "complementary DNA" है। cDNA लाइब्रेरी में केवल EXPRESSED जीन होते हैं (mRNA जो DNA में बदल दिया गया था)। यह जीनोम के केवल "सक्रिय" भाग होने जैसा है!
+            </div>
+
+            <div class="flowchart">
+<h4>cDNA Library Construction (cDNA लाइब्रेरी निर्माण)</h4>
+┌─────────────────────────────────────┐
+│  1. Extract mRNA from cells         │
+│     (कोशिकाओं से mRNA निकालें)        │
+│     • Only expressed genes          │
+│     • Tissue-specific or all        │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Reverse Transcription           │
+│     (रिवर्स ट्रांसक्रिप्शन)            │
+│     • Use reverse transcriptase     │
+│     • Convert mRNA → cDNA           │
+│     • Creates single-stranded DNA   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Make double-stranded cDNA       │
+│     (दोहरे-स्ट्रैंड cDNA बनाएं)               │   
+│     • Use DNA polymerase            │
+│     • Creates dsDNA                 │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Add linkers/adapters            │
+│     (लिंकर/एडाप्टर जोड़ें)            │
+│     • For cloning into vectors      │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Insert into vectors             │
+│     (वेक्टर में डालें)                │
+│     • Usually plasmids or phages    │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  6. Transform and store library     │
+│     (रूपांतरित करें और लाइब्रेरी संग्रहीत)│
+│     • Collection of expressed genes │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="diagram">
+                <h4>cDNA Library vs Genomic Library (cDNA लाइब्रेरी बनाम जीनोमिक लाइब्रेरी)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Genomic DNA -->
+                    <rect x="50" y="50" width="300" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="200" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Genomic DNA</text>
+                    <text x="200" y="95" text-anchor="middle" font-size="10" fill="white">(जीनोमिक DNA)</text>
+                    
+                    <!-- Exons and introns -->
+                    <rect x="70" y="70" width="40" height="20" fill="#27ae60"/>
+                    <text x="90" y="85" text-anchor="middle" font-size="8" fill="white">Exon</text>
+                    <rect x="120" y="70" width="30" height="20" fill="#e74c3c"/>
+                    <text x="135" y="85" text-anchor="middle" font-size="8" fill="white">Intron</text>
+                    <rect x="160" y="70" width="40" height="20" fill="#27ae60"/>
+                    <text x="180" y="85" text-anchor="middle" font-size="8" fill="white">Exon</text>
+                    <rect x="210" y="70" width="30" height="20" fill="#e74c3c"/>
+                    <text x="225" y="85" text-anchor="middle" font-size="8" fill="white">Intron</text>
+                    <rect x="250" y="70" width="40" height="20" fill="#27ae60"/>
+                    <text x="270" y="85" text-anchor="middle" font-size="8" fill="white">Exon</text>
+                    
+                    <!-- Arrow to mRNA -->
+                    <path d="M 200 120 L 200 150" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="220" y="140" font-size="12" fill="#f5576c">Transcription</text>
+                    <text x="220" y="155" font-size="10" fill="#f5576c">(ट्रांसक्रिप्शन)</text>
+                    
+                    <!-- mRNA -->
+                    <rect x="50" y="170" width="300" height="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+                    <text x="200" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="white">mRNA (only exons)</text>
+                    <text x="200" y="205" text-anchor="middle" font-size="10" fill="white">(केवल एक्सॉन)</text>
+                    <rect x="70" y="180" width="40" height="20" fill="#27ae60"/>
+                    <rect x="160" y="180" width="40" height="20" fill="#27ae60"/>
+                    <rect x="250" y="180" width="40" height="20" fill="#27ae60"/>
+                    
+                    <!-- Arrow to cDNA -->
+                    <path d="M 200 220 L 200 250" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <text x="220" y="240" font-size="12" fill="#f5576c">Reverse Transcription</text>
+                    <text x="220" y="255" font-size="10" fill="#f5576c">(रिवर्स ट्रांसक्रिप्शन)</text>
+                    
+                    <!-- cDNA -->
+                    <rect x="50" y="270" width="300" height="40" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+                    <text x="200" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">cDNA (no introns!)</text>
+                    <text x="200" y="305" text-anchor="middle" font-size="10" fill="white">(कोई इंट्रॉन नहीं!)</text>
+                    <rect x="70" y="280" width="40" height="20" fill="#27ae60"/>
+                    <rect x="160" y="280" width="40" height="20" fill="#27ae60"/>
+                    <rect x="250" y="280" width="40" height="20" fill="#27ae60"/>
+                    
+                    <!-- Comparison -->
+                    <rect x="450" y="50" width="300" height="260" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="10"/>
+                    <text x="600" y="80" text-anchor="middle" font-size="16" font-weight="bold">Comparison</text>
+                    <text x="600" y="100" text-anchor="middle" font-size="14" font-weight="bold">(तुलना)</text>
+                    
+                    <text x="470" y="130" font-size="12" font-weight="bold">Genomic Library:</text>
+                    <text x="470" y="150" font-size="11">• All DNA (सभी DNA)</text>
+                    <text x="470" y="170" font-size="11">• Includes introns (इंट्रॉन शामिल)</text>
+                    <text x="470" y="190" font-size="11">• Large size (बड़ा आकार)</text>
+                    
+                    <text x="470" y="230" font-size="12" font-weight="bold">cDNA Library:</text>
+                    <text x="470" y="250" font-size="11">• Only expressed genes</text>
+                    <text x="470" y="270" font-size="11">  (केवल व्यक्त जीन)</text>
+                    <text x="470" y="290" font-size="11">• No introns (कोई इंट्रॉन नहीं)</text>
+                    <text x="470" y="310" font-size="11">• Smaller size (छोटा आकार)</text>
+                    
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Genomic Library</th>
+                    <th>cDNA Library</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Source</strong></td>
+                    <td>Genomic DNA</td>
+                    <td>mRNA (via reverse transcription)</td>
+                    <td>स्रोत</td>
+                </tr>
+                <tr>
+                    <td><strong>Contains</strong></td>
+                    <td>All DNA (coding + non-coding)</td>
+                    <td>Only expressed genes</td>
+                    <td>शामिल</td>
+                </tr>
+                <tr>
+                    <td><strong>Introns</strong></td>
+                    <td>Yes (हाँ)</td>
+                    <td>No (नहीं)</td>
+                    <td>इंट्रॉन</td>
+                </tr>
+                <tr>
+                    <td><strong>Size</strong></td>
+                    <td>Very large (बहुत बड़ा)</td>
+                    <td>Smaller (छोटा)</td>
+                    <td>आकार</td>
+                </tr>
+                <tr>
+                    <td><strong>Use</strong></td>
+                    <td>Study genome structure</td>
+                    <td>Study gene expression</td>
+                    <td>उपयोग</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Artificial Chromosomes -->
+        <div class="section">
+            <h3>2. Artificial Chromosomes (कृत्रिम गुणसूत्र)</h3>
+            
+            <p><strong>What are Artificial Chromosomes?</strong> These are special vectors that can carry VERY LARGE DNA fragments - much bigger than regular plasmids! They're like super-sized containers for DNA.</p>
+            
+            <div class="hindi">
+                <strong>कृत्रिम गुणसूत्र क्या हैं?</strong> ये विशेष वेक्टर हैं जो बहुत बड़े DNA खंड ले जा सकते हैं - नियमित प्लास्मिड से कहीं अधिक बड़े! वे DNA के लिए सुपर-आकार के कंटेनर जैसे हैं।
+            </div>
+
+            <h4>2.1 BAC - Bacterial Artificial Chromosome (BAC - जीवाणु कृत्रिम गुणसूत्र)</h4>
+            
+            <p><strong>What is BAC?</strong> BAC is a vector based on the F-plasmid of E. coli. It can carry DNA fragments up to 300,000 base pairs (300 kb)!</p>
+            
+            <div class="hindi">
+                <strong>BAC क्या है?</strong> BAC E. coli के F-प्लास्मिड पर आधारित एक वेक्टर है। यह 300,000 बेस जोड़े (300 kb) तक के DNA खंड ले जा सकता है!
+            </div>
+
+            <div class="box">
+                <h5>BAC Features (BAC विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Size capacity:</strong> Up to 300 kb (300 kb तक)</li>
+                    <li><strong>Based on:</strong> F-plasmid of E. coli (E. coli के F-प्लास्मिड पर आधारित)</li>
+                    <li><strong>Host:</strong> E. coli bacteria (E. coli जीवाणु)</li>
+                    <li><strong>Stability:</strong> Very stable, low copy number (बहुत स्थिर, कम प्रति संख्या)</li>
+                    <li><strong>Uses:</strong> Genome sequencing projects (जीनोम अनुक्रमण परियोजनाएं)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>BAC Structure (BAC संरचना)</h4>
+                <svg width="700" height="300" viewBox="0 0 700 300">
+                    <!-- BAC circle -->
+                    <circle cx="350" cy="150" r="120" fill="none" stroke="#3498db" stroke-width="4"/>
+                    <text x="350" y="140" text-anchor="middle" font-size="16" font-weight="bold">BAC</text>
+                    <text x="350" y="160" text-anchor="middle" font-size="14" font-weight="bold">(Bacterial Artificial Chromosome)</text>
+                    
+                    <!-- Components -->
+                    <text x="350" y="190" text-anchor="middle" font-size="12">• oriS (origin of replication)</text>
+                    <text x="350" y="210" text-anchor="middle" font-size="12">• repE (replication control)</text>
+                    <text x="350" y="230" text-anchor="middle" font-size="12">• parA, parB (partitioning)</text>
+                    <text x="350" y="250" text-anchor="middle" font-size="12">• Selectable markers</text>
+                    <text x="350" y="270" text-anchor="middle" font-size="12">• Insert DNA (up to 300 kb)</text>
+                    
+                    <!-- Size indicator -->
+                    <rect x="50" y="50" width="100" height="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                    <text x="100" y="70" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Up to 300 kb</text>
+                    <text x="100" y="85" text-anchor="middle" font-size="10" fill="white">(300 kb तक)</text>
+                </svg>
+            </div>
+
+            <h4>2.2 YAC - Yeast Artificial Chromosome (YAC - खमीर कृत्रिम गुणसूत्र)</h4>
+            
+            <p><strong>What is YAC?</strong> YAC is even bigger! It can carry DNA fragments up to 2,000,000 base pairs (2 Mb)! It's based on yeast chromosomes.</p>
+            
+            <div class="hindi">
+                <strong>YAC क्या है?</strong> YAC और भी बड़ा है! यह 2,000,000 बेस जोड़े (2 Mb) तक के DNA खंड ले जा सकता है! यह खमीर गुणसूत्रों पर आधारित है।
+            </div>
+
+            <div class="box">
+                <h5>YAC Features (YAC विशेषताएं):</h5>
+                <ul class="list">
+                    <li><strong>Size capacity:</strong> Up to 2 Mb (2 Mb तक)</li>
+                    <li><strong>Based on:</strong> Yeast chromosomes (खमीर गुणसूत्रों पर आधारित)</li>
+                    <li><strong>Host:</strong> Yeast (Saccharomyces cerevisiae) (खमीर)</li>
+                    <li><strong>Components:</strong> Centromere, telomeres, ARS (origin) (सेंट्रोमीयर, टेलोमेरे, ARS)</li>
+                    <li><strong>Uses:</strong> Very large genome projects (बहुत बड़ी जीनोम परियोजनाएं)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>YAC Structure (YAC संरचना)</h4>
+                <svg width="800" height="300" viewBox="0 0 800 300">
+                    <!-- YAC linear -->
+                    <rect x="100" y="100" width="600" height="60" fill="#9b59b6" stroke="#8e44ad" stroke-width="3"/>
+                    
+                    <!-- Telomere left -->
+                    <rect x="100" y="100" width="40" height="60" fill="#e74c3c"/>
+                    <text x="120" y="135" text-anchor="middle" font-size="10" fill="white" font-weight="bold">TEL</text>
+                    
+                    <!-- Centromere -->
+                    <rect x="350" y="100" width="50" height="60" fill="#f39c12"/>
+                    <text x="375" y="135" text-anchor="middle" font-size="10" fill="white" font-weight="bold">CEN</text>
+                    
+                    <!-- Telomere right -->
+                    <rect x="660" y="100" width="40" height="60" fill="#e74c3c"/>
+                    <text x="680" y="135" text-anchor="middle" font-size="10" fill="white" font-weight="bold">TEL</text>
+                    
+                    <!-- ARS -->
+                    <rect x="200" y="100" width="30" height="60" fill="#27ae60"/>
+                    <text x="215" y="135" text-anchor="middle" font-size="9" fill="white">ARS</text>
+                    
+                    <!-- Insert -->
+                    <rect x="250" y="110" width="100" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+                    <text x="300" y="135" text-anchor="middle" font-size="10" fill="white">Insert DNA</text>
+                    <text x="300" y="150" text-anchor="middle" font-size="8" fill="white">(up to 2 Mb)</text>
+                    
+                    <!-- Labels -->
+                    <text x="400" y="50" text-anchor="middle" font-size="16" font-weight="bold">YAC Structure</text>
+                    <text x="400" y="70" text-anchor="middle" font-size="14" font-weight="bold">(YAC संरचना)</text>
+                    
+                    <text x="120" y="190" text-anchor="middle" font-size="11">Telomere</text>
+                    <text x="120" y="205" text-anchor="middle" font-size="9">(टेलोमेरे)</text>
+                    
+                    <text x="375" y="190" text-anchor="middle" font-size="11">Centromere</text>
+                    <text x="375" y="205" text-anchor="middle" font-size="9">(सेंट्रोमीयर)</text>
+                    
+                    <text x="215" y="190" text-anchor="middle" font-size="11">ARS</text>
+                    <text x="215" y="205" text-anchor="middle" font-size="9">(Origin)</text>
+                    
+                    <!-- Size indicator -->
+                    <rect x="550" y="200" width="150" height="40" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="625" y="220" text-anchor="middle" font-size="14" font-weight="bold">Up to 2 Mb!</text>
+                    <text x="625" y="235" text-anchor="middle" font-size="12">(2 Mb तक!)</text>
+                </svg>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>BAC</th>
+                    <th>YAC</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Full Name</strong></td>
+                    <td>Bacterial Artificial Chromosome</td>
+                    <td>Yeast Artificial Chromosome</td>
+                    <td>पूरा नाम</td>
+                </tr>
+                <tr>
+                    <td><strong>Size Capacity</strong></td>
+                    <td>Up to 300 kb</td>
+                    <td>Up to 2 Mb</td>
+                    <td>आकार क्षमता</td>
+                </tr>
+                <tr>
+                    <td><strong>Host</strong></td>
+                    <td>E. coli</td>
+                    <td>Yeast</td>
+                    <td>मेजबान</td>
+                </tr>
+                <tr>
+                    <td><strong>Structure</strong></td>
+                    <td>Circular (गोलाकार)</td>
+                    <td>Linear (रैखिक)</td>
+                    <td>संरचना</td>
+                </tr>
+                <tr>
+                    <td><strong>Stability</strong></td>
+                    <td>Very stable (बहुत स्थिर)</td>
+                    <td>Less stable (कम स्थिर)</td>
+                    <td>स्थिरता</td>
+                </tr>
+                <tr>
+                    <td><strong>Use</strong></td>
+                    <td>Genome sequencing (जीनोम अनुक्रमण)</td>
+                    <td>Very large genomes (बहुत बड़े जीनोम)</td>
+                    <td>उपयोग</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 3: Genomics -->
+        <div class="section">
+            <h3>3. Genomics (जीनोमिक्स)</h3>
+            
+            <p><strong>What is Genomics?</strong> Genomics is the study of entire genomes - all the DNA in an organism! It's like reading and understanding a complete book of life.</p>
+            
+            <div class="hindi">
+                <strong>जीनोमिक्स क्या है?</strong> जीनोमिक्स पूरे जीनोम का अध्ययन है - एक जीव में सभी DNA! यह जीवन की एक पूर्ण पुस्तक को पढ़ने और समझने जैसा है।
+            </div>
+
+            <h4>3.1 Sequence Assembly (अनुक्रम असेंबली)</h4>
+            
+            <p><strong>What is Sequence Assembly?</strong> When we sequence a genome, we can't read it all at once. We break it into small pieces, sequence each piece, and then put them back together like a puzzle!</p>
+            
+            <div class="hindi">
+                <strong>अनुक्रम असेंबली क्या है?</strong> जब हम एक जीनोम का अनुक्रमण करते हैं, तो हम इसे एक बार में नहीं पढ़ सकते। हम इसे छोटे टुकड़ों में तोड़ते हैं, प्रत्येक टुकड़े का अनुक्रमण करते हैं, और फिर उन्हें पहेली की तरह वापस एक साथ रखते हैं!
+            </div>
+
+            <div class="flowchart">
+<h4>Sequence Assembly Process (अनुक्रम असेंबली प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Break genome into fragments     │
+│     (जीनोम को खंडों में तोड़ें)       │
+│     • Random fragmentation          │
+│     • Multiple overlapping pieces   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Sequence each fragment          │
+│     (प्रत्येक खंड का अनुक्रमण करें)    │
+│     • Use sequencing machines       │
+│     • Get sequence reads            │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Find overlapping regions        │
+│     (ओवरलैपिंग क्षेत्र खोजें)         │
+│     • Compare sequences             │
+│     • Identify overlaps             │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Assemble into contigs           │
+│     (कॉन्टिग में असेंबल करें)         │
+│     • Join overlapping fragments    │
+│     • Create longer sequences       │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Order and orient contigs        │
+│     (कॉन्टिग को क्रमबद्ध करें)        │
+│     • Use mapping data              │
+│     • Create scaffolds              │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  6. Fill gaps                       │
+│     (अंतराल भरें)                     │
+│     • Complete genome sequence      │
+└─────────────────────────────────────┘
+            </div>
+
+            <h4>3.2 Contigs (कॉन्टिग)</h4>
+            
+            <p><strong>What is a Contig?</strong> A contig (contiguous sequence) is a set of overlapping DNA sequences that have been assembled into a continuous sequence. Think of it as pieces of a puzzle that fit together!</p>
+            
+            <div class="hindi">
+                <strong>कॉन्टिग क्या है?</strong> एक कॉन्टिग (contiguous sequence) ओवरलैपिंग DNA अनुक्रमों का एक सेट है जिसे एक निरंतर अनुक्रम में असेंबल किया गया है। इसे एक पहेली के टुकड़ों के रूप में सोचें जो एक साथ फिट होते हैं!
+            </div>
+
+            <div class="diagram">
+                <h4>Contig Assembly (कॉन्टिग असेंबली)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Fragments -->
+                    <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">DNA Fragments (DNA खंड)</text>
+                    
+                    <rect x="50" y="60" width="100" height="30" fill="#e74c3c"/>
+                    <text x="100" y="80" text-anchor="middle" font-size="10" fill="white">Fragment 1</text>
+                    
+                    <rect x="160" y="60" width="100" height="30" fill="#27ae60"/>
+                    <text x="210" y="80" text-anchor="middle" font-size="10" fill="white">Fragment 2</text>
+                    
+                    <rect x="270" y="60" width="100" height="30" fill="#9b59b6"/>
+                    <text x="320" y="80" text-anchor="middle" font-size="10" fill="white">Fragment 3</text>
+                    
+                    <rect x="380" y="60" width="100" height="30" fill="#f39c12"/>
+                    <text x="430" y="80" text-anchor="middle" font-size="10" fill="white">Fragment 4</text>
+                    
+                    <rect x="490" y="60" width="100" height="30" fill="#1abc9c"/>
+                    <text x="540" y="80" text-anchor="middle" font-size="10" fill="white">Fragment 5</text>
+                    
+                    <!-- Overlaps highlighted -->
+                    <rect x="140" y="60" width="20" height="30" fill="yellow" opacity="0.7"/>
+                    <rect x="250" y="60" width="20" height="30" fill="yellow" opacity="0.7"/>
+                    <rect x="360" y="60" width="20" height="30" fill="yellow" opacity="0.7"/>
+                    <rect x="470" y="60" width="20" height="30" fill="yellow" opacity="0.7"/>
+                    
+                    <text x="400" y="120" text-anchor="middle" font-size="12">Overlapping Regions (ओवरलैपिंग क्षेत्र)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 400 140 L 400 180" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow3)"/>
+                    <text x="420" y="165" font-size="12" fill="#f5576c">Assemble</text>
+                    <text x="420" y="180" font-size="10" fill="#f5576c">(असेंबल करें)</text>
+                    
+                    <!-- Contig -->
+                    <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Contig (कॉन्टिग)</text>
+                    <rect x="50" y="240" width="540" height="50" fill="#3498db" stroke="#2980b9" stroke-width="3" rx="5"/>
+                    <text x="320" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Continuous Sequence!</text>
+                    <text x="320" y="285" text-anchor="middle" font-size="12" fill="white">(निरंतर अनुक्रम!)</text>
+                    
+                    <!-- Joined fragments -->
+                    <rect x="60" y="250" width="100" height="30" fill="#e74c3c" opacity="0.8"/>
+                    <rect x="150" y="250" width="100" height="30" fill="#27ae60" opacity="0.8"/>
+                    <rect x="240" y="250" width="100" height="30" fill="#9b59b6" opacity="0.8"/>
+                    <rect x="330" y="250" width="100" height="30" fill="#f39c12" opacity="0.8"/>
+                    <rect x="420" y="250" width="100" height="30" fill="#1abc9c" opacity="0.8"/>
+                    
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <h4>3.3 Genome Construction (जीनोम निर्माण)</h4>
+            
+            <p><strong>What is Genome Construction?</strong> After assembling contigs, we need to order them correctly and fill in any gaps to create the complete genome sequence.</p>
+            
+            <div class="hindi">
+                <strong>जीनोम निर्माण क्या है?</strong> कॉन्टिग को असेंबल करने के बाद, हमें उन्हें सही क्रम में व्यवस्थित करना होता है और पूर्ण जीनोम अनुक्रम बनाने के लिए किसी भी अंतराल को भरना होता है।
+            </div>
+
+            <div class="box">
+                <h5>Steps in Genome Construction (जीनोम निर्माण के चरण):</h5>
+                <ol class="list">
+                    <li><strong>Contig Assembly:</strong> Join overlapping fragments (ओवरलैपिंग खंडों को जोड़ें)</li>
+                    <li><strong>Scaffold Building:</strong> Order contigs using mapping data (मैपिंग डेटा का उपयोग करके कॉन्टिग को क्रमबद्ध करें)</li>
+                    <li><strong>Gap Filling:</strong> Fill gaps between contigs (कॉन्टिग के बीच अंतराल भरें)</li>
+                    <li><strong>Quality Check:</strong> Verify completeness and accuracy (पूर्णता और सटीकता सत्यापित करें)</li>
+                    <li><strong>Final Assembly:</strong> Complete genome sequence (पूर्ण जीनोम अनुक्रम)</li>
+                </ol>
+            </div>
+
+            <h4>3.4 Annotation (एनोटेशन)</h4>
+            
+            <p><strong>What is Annotation?</strong> Annotation is like adding labels and notes to a map! We identify genes, their functions, and other important features in the genome sequence.</p>
+            
+            <div class="hindi">
+                <strong>एनोटेशन क्या है?</strong> एनोटेशन एक नक्शे पर लेबल और नोट्स जोड़ने जैसा है! हम जीनोम अनुक्रम में जीन, उनके कार्यों और अन्य महत्वपूर्ण विशेषताओं की पहचान करते हैं।
+            </div>
+
+            <div class="flowchart">
+<h4>Genome Annotation Process (जीनोम एनोटेशन प्रक्रिया)</h4>
+┌─────────────────────────────────────┐
+│  1. Gene Prediction                 │
+│     (जीन भविष्यवाणी)                  │
+│     • Find coding sequences         │
+│     • Identify start/stop codons    │
+│     • Predict gene boundaries       │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Functional Annotation           │
+│     (कार्यात्मक एनोटेशन)               │
+│     • Compare with known genes      │
+│     • Predict protein function      │
+│     • Identify domains              │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Structural Annotation           │
+│     (संरचनात्मक एनोटेशन)               │
+│     • Identify promoters            │
+│     • Find regulatory elements      │
+│     • Locate repetitive sequences   │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Comparative Annotation          │
+│     (तुलनात्मक एनोटेशन)                │
+│     • Compare with other genomes    │
+│     • Identify conserved regions    │
+│     • Find unique features          │
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="box">
+                <h5>What Gets Annotated? (क्या एनोटेट किया जाता है?):</h5>
+                <ul class="list">
+                    <li><strong>Genes:</strong> Coding sequences (कोडिंग अनुक्रम)</li>
+                    <li><strong>Proteins:</strong> Predicted protein products (अनुमानित प्रोटीन उत्पाद)</li>
+                    <li><strong>Regulatory Elements:</strong> Promoters, enhancers (प्रमोटर, एन्हांसर)</li>
+                    <li><strong>Repetitive Sequences:</strong> Transposons, repeats (ट्रांसपोज़न, दोहराव)</li>
+                    <li><strong>Non-coding RNA:</strong> tRNA, rRNA, miRNA (tRNA, rRNA, miRNA)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4: Functional Genomics -->
+        <div class="section">
+            <h3>4. Functional Genomics (कार्यात्मक जीनोमिक्स)</h3>
+            
+            <p><strong>What is Functional Genomics?</strong> Functional genomics studies what genes DO - their functions, when they're expressed, and how they interact. It's like understanding what each part of a machine does!</p>
+            
+            <div class="hindi">
+                <strong>कार्यात्मक जीनोमिक्स क्या है?</strong> कार्यात्मक जीनोमिक्स अध्ययन करता है कि जीन क्या करते हैं - उनके कार्य, वे कब व्यक्त होते हैं, और वे कैसे बातचीत करते हैं। यह समझने जैसा है कि मशीन के प्रत्येक भाग क्या करते हैं!
+            </div>
+
+            <h4>4.1 Transcriptomics (ट्रांसक्रिप्टोमिक्स)</h4>
+            
+            <p><strong>What is Transcriptomics?</strong> Transcriptomics studies all the RNA molecules (transcriptome) in a cell. It tells us which genes are being expressed (turned on) at any given time!</p>
+            
+            <div class="hindi">
+                <strong>ट्रांसक्रिप्टोमिक्स क्या है?</strong> ट्रांसक्रिप्टोमिक्स एक कोशिका में सभी RNA अणुओं (ट्रांसक्रिप्टोम) का अध्ययन करता है। यह हमें बताता है कि कौन से जीन किसी भी समय व्यक्त हो रहे हैं (चालू हैं)!
+            </div>
+
+            <div class="box">
+                <h5>Transcriptomics Techniques (ट्रांसक्रिप्टोमिक्स तकनीकें):</h5>
+                <ul class="list">
+                    <li><strong>Microarrays:</strong> Measure thousands of genes at once (एक साथ हजारों जीन मापें)</li>
+                    <li><strong>RNA-Seq:</strong> Sequence all RNA molecules (सभी RNA अणुओं का अनुक्रमण)</li>
+                    <li><strong>qRT-PCR:</strong> Quantify specific RNA levels (विशिष्ट RNA स्तरों को मापें)</li>
+                    <li><strong>Northern Blotting:</strong> Detect specific RNA (विशिष्ट RNA का पता लगाएं)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Transcriptomics Workflow (ट्रांसक्रिप्टोमिक्स वर्कफ़्लो)</h4>
+                <svg width="800" height="400" viewBox="0 0 800 400">
+                    <!-- Cell -->
+                    <circle cx="150" cy="100" r="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+                    <text x="150" y="105" text-anchor="middle" font-size="12" font-weight="bold">Cell</text>
+                    <text x="150" y="120" text-anchor="middle" font-size="10">(कोशिका)</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 220 100 L 280 100" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="250" y="90" font-size="12" fill="#f5576c">Extract RNA</text>
+                    <text x="250" y="115" font-size="10" fill="#f5576c">(RNA निकालें)</text>
+                    
+                    <!-- RNA -->
+                    <rect x="300" y="50" width="150" height="100" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="10"/>
+                    <text x="375" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">RNA</text>
+                    <text x="375" y="100" text-anchor="middle" font-size="12" fill="white">mRNA, rRNA,</text>
+                    <text x="375" y="120" text-anchor="middle" font-size="12" fill="white">tRNA, miRNA</text>
+                    <text x="375" y="140" text-anchor="middle" font-size="10" fill="white">(सभी RNA प्रकार)</text>
+                    
+                    <!-- Arrow down -->
+                    <path d="M 375 160 L 375 200" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow4)"/>
+                    <text x="395" y="185" font-size="12" fill="#f5576c">Analyze</text>
+                    <text x="395" y="200" font-size="10" fill="#f5576c">(विश्लेषण करें)</text>
+                    
+                    <!-- Analysis methods -->
+                    <rect x="50" y="220" width="150" height="60" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="5"/>
+                    <text x="125" y="245" text-anchor="middle" font-size="12" font-weight="bold">RNA-Seq</text>
+                    <text x="125" y="265" text-anchor="middle" font-size="10">Sequence all</text>
+                    
+                    <rect x="220" y="220" width="150" height="60" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="5"/>
+                    <text x="295" y="245" text-anchor="middle" font-size="12" font-weight="bold">Microarray</text>
+                    <text x="295" y="265" text-anchor="middle" font-size="10">Measure levels</text>
+                    
+                    <rect x="390" y="220" width="150" height="60" fill="#f3e5f5" stroke="#9b59b6" stroke-width="2" rx="5"/>
+                    <text x="465" y="245" text-anchor="middle" font-size="12" font-weight="bold">qRT-PCR</text>
+                    <text x="465" y="265" text-anchor="middle" font-size="10">Quantify specific</text>
+                    
+                    <!-- Results -->
+                    <rect x="600" y="220" width="150" height="60" fill="#e0f2f1" stroke="#1abc9c" stroke-width="2" rx="5"/>
+                    <text x="675" y="245" text-anchor="middle" font-size="12" font-weight="bold">Results</text>
+                    <text x="675" y="265" text-anchor="middle" font-size="10">Gene expression</text>
+                    <text x="675" y="280" text-anchor="middle" font-size="9">(जीन अभिव्यक्ति)</text>
+                    
+                    <defs>
+                        <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>Applications of Transcriptomics (ट्रांसक्रिप्टोमिक्स के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>Study gene expression patterns (जीन अभिव्यक्ति पैटर्न का अध्ययन)</li>
+                    <li>Compare healthy vs diseased cells (स्वस्थ बनाम रोगग्रस्त कोशिकाओं की तुलना)</li>
+                    <li>Drug discovery (दवा खोज)</li>
+                    <li>Developmental biology (विकासात्मक जीव विज्ञान)</li>
+                    <li>Response to environmental changes (पर्यावरणीय परिवर्तनों के प्रति प्रतिक्रिया)</li>
+                </ul>
+            </div>
+
+            <h4>4.2 Proteomics (प्रोटियोमिक्स)</h4>
+            
+            <p><strong>What is Proteomics?</strong> Proteomics studies all the proteins (proteome) in a cell or organism. Since proteins do the actual work in cells, this tells us what's really happening!</p>
+            
+            <div class="hindi">
+                <strong>प्रोटियोमिक्स क्या है?</strong> प्रोटियोमिक्स एक कोशिका या जीव में सभी प्रोटीन (प्रोटियोम) का अध्ययन करता है। चूंकि प्रोटीन कोशिकाओं में वास्तविक कार्य करते हैं, यह हमें बताता है कि वास्तव में क्या हो रहा है!
+            </div>
+
+            <div class="box">
+                <h5>Proteomics Techniques (प्रोटियोमिक्स तकनीकें):</h5>
+                <ul class="list">
+                    <li><strong>2D Gel Electrophoresis:</strong> Separate proteins by size and charge (आकार और चार्ज के अनुसार प्रोटीन अलग करें)</li>
+                    <li><strong>Mass Spectrometry:</strong> Identify and quantify proteins (प्रोटीन की पहचान और मात्रा निर्धारण)</li>
+                    <li><strong>Protein Microarrays:</strong> Study many proteins at once (एक साथ कई प्रोटीन का अध्ययन)</li>
+                    <li><strong>Western Blotting:</strong> Detect specific proteins (विशिष्ट प्रोटीन का पता लगाएं)</li>
+                </ul>
+            </div>
+
+            <div class="flowchart">
+<h4>Proteomics Workflow (प्रोटियोमिक्स वर्कफ़्लो)</h4>
+┌─────────────────────────────────────┐
+│  1. Extract proteins                │
+│     (प्रोटीन निकालें)                  │
+│     • From cells or tissues         │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  2. Separate proteins               │
+│     (प्रोटीन अलग करें)                 │
+│     • 2D gel electrophoresis       │
+│     • Liquid chromatography         │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  3. Identify proteins               │
+│     (प्रोटीन की पहचान करें)             │
+│     • Mass spectrometry             │
+│     • Database matching             │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  4. Quantify proteins               │
+│     (प्रोटीन की मात्रा निर्धारित करें)   │
+│     • Measure abundance             │
+│     • Compare samples               │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────┐
+│  5. Functional analysis             │
+│     (कार्यात्मक विश्लेषण)              │
+│     • Protein interactions          │
+│     • Post-translational modifications│
+└─────────────────────────────────────┘
+            </div>
+
+            <div class="box">
+                <h5>Applications of Proteomics (प्रोटियोमिक्स के अनुप्रयोग):</h5>
+                <ul class="list">
+                    <li>Biomarker discovery (बायोमार्कर खोज)</li>
+                    <li>Drug target identification (दवा लक्ष्य पहचान)</li>
+                    <li>Disease diagnosis (रोग निदान)</li>
+                    <li>Understanding protein functions (प्रोटीन कार्यों को समझना)</li>
+                    <li>Protein-protein interactions (प्रोटीन-प्रोटीन अंतःक्रियाएं)</li>
+                </ul>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Transcriptomics</th>
+                    <th>Proteomics</th>
+                    <th>हिंदी</th>
+                </tr>
+                <tr>
+                    <td><strong>Studies</strong></td>
+                    <td>RNA (transcriptome)</td>
+                    <td>Proteins (proteome)</td>
+                    <td>अध्ययन</td>
+                </tr>
+                <tr>
+                    <td><strong>What it tells</strong></td>
+                    <td>Which genes are expressed</td>
+                    <td>Which proteins are present</td>
+                    <td>यह क्या बताता है</td>
+                </tr>
+                <tr>
+                    <td><strong>Key Techniques</strong></td>
+                    <td>RNA-Seq, Microarrays</td>
+                    <td>Mass Spectrometry, 2D-GE</td>
+                    <td>मुख्य तकनीकें</td>
+                </tr>
+                <tr>
+                    <td><strong>Complexity</strong></td>
+                    <td>Moderate (मध्यम)</td>
+                    <td>High (उच्च)</td>
+                    <td>जटिलता</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 5: Comparative Genomics -->
+        <div class="section">
+            <h3>5. Comparative Genomics (तुलनात्मक जीनोमिक्स)</h3>
+            
+            <p><strong>What is Comparative Genomics?</strong> Comparative genomics compares genomes from different species to understand evolution, find similarities, and discover what makes each species unique!</p>
+            
+            <div class="hindi">
+                <strong>तुलनात्मक जीनोमिक्स क्या है?</strong> तुलनात्मक जीनोमिक्स विकास को समझने, समानताएं खोजने और यह खोजने के लिए विभिन्न प्रजातियों के जीनोम की तुलना करता है कि प्रत्येक प्रजाति को क्या अद्वितीय बनाता है!
+            </div>
+
+            <div class="box">
+                <h5>Goals of Comparative Genomics (तुलनात्मक जीनोमिक्स के लक्ष्य):</h5>
+                <ul class="list">
+                    <li>Understand evolution (विकास को समझना)</li>
+                    <li>Find conserved genes (संरक्षित जीन खोजना)</li>
+                    <li>Identify species-specific genes (प्रजाति-विशिष्ट जीन की पहचान)</li>
+                    <li>Study gene function (जीन कार्य का अध्ययन)</li>
+                    <li>Improve medical research (चिकित्सा अनुसंधान में सुधार)</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>Comparative Genomics (तुलनात्मक जीनोमिक्स)</h4>
+                <svg width="800" height="500" viewBox="0 0 800 500">
+                    <!-- Species 1 -->
+                    <rect x="50" y="50" width="200" height="100" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+                    <text x="150" y="80" text-anchor="middle" font-size="14" font-weight="bold">Human</text>
+                    <text x="150" y="100" text-anchor="middle" font-size="12">(मानव)</text>
+                    <text x="150" y="120" text-anchor="middle" font-size="11">Genome: 3.2 Gb</text>
+                    <text x="150" y="140" text-anchor="middle" font-size="11">~20,000 genes</text>
+                    
+                    <!-- Species 2 -->
+                    <rect x="300" y="50" width="200" height="100" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="10"/>
+                    <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold">Mouse</text>
+                    <text x="400" y="100" text-anchor="middle" font-size="12">(चूहा)</text>
+                    <text x="400" y="120" text-anchor="middle" font-size="11">Genome: 2.8 Gb</text>
+                    <text x="400" y="140" text-anchor="middle" font-size="11">~23,000 genes</text>
+                    
+                    <!-- Species 3 -->
+                    <rect x="550" y="50" width="200" height="100" fill="#fff3cd" stroke="#f39c12" stroke-width="2" rx="10"/>
+                    <text x="650" y="80" text-anchor="middle" font-size="14" font-weight="bold">Fruit Fly</text>
+                    <text x="650" y="100" text-anchor="middle" font-size="12">(फल मक्खी)</text>
+                    <text x="650" y="120" text-anchor="middle" font-size="11">Genome: 180 Mb</text>
+                    <text x="650" y="140" text-anchor="middle" font-size="11">~14,000 genes</text>
+                    
+                    <!-- Comparison arrows -->
+                    <path d="M 250 100 L 290 100" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <path d="M 500 100 L 540 100" stroke="#f5576c" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <path d="M 150 160 L 150 200" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <path d="M 400 160 L 400 200" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow5)"/>
+                    <path d="M 650 160 L 650 200" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrow5)"/>
+                    
+                    <!-- Comparison results -->
+                    <rect x="50" y="220" width="700" height="200" fill="#f3e5f5" stroke="#9b59b6" stroke-width="2" rx="10"/>
+                    <text x="400" y="250" text-anchor="middle" font-size="18" font-weight="bold">Comparison Results</text>
+                    <text x="400" y="270" text-anchor="middle" font-size="16" font-weight="bold">(तुलना परिणाम)</text>
+                    
+                    <!-- Conserved genes -->
+                    <rect x="80" y="290" width="200" height="50" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+                    <text x="180" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Conserved Genes</text>
+                    <text x="180" y="330" text-anchor="middle" font-size="12" fill="white">(संरक्षित जीन)</text>
+                    <text x="180" y="345" text-anchor="middle" font-size="11" fill="white">~15,000 shared</text>
+                    
+                    <!-- Unique genes -->
+                    <rect x="300" y="290" width="200" height="50" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+                    <text x="400" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Unique Genes</text>
+                    <text x="400" y="330" text-anchor="middle" font-size="12" fill="white">(अद्वितीय जीन)</text>
+                    <text x="400" y="345" text-anchor="middle" font-size="11" fill="white">Species-specific</text>
+                    
+                    <!-- Evolutionary insights -->
+                    <rect x="520" y="290" width="200" height="50" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+                    <text x="620" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Evolution</text>
+                    <text x="620" y="330" text-anchor="middle" font-size="12" fill="white">(विकास)</text>
+                    <text x="620" y="345" text-anchor="middle" font-size="11" fill="white">Common ancestor</text>
+                    
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f5576c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="box">
+                <h5>What We Learn from Comparative Genomics (तुलनात्मक जीनोमिक्स से हम क्या सीखते हैं):</h5>
+                <ul class="list">
+                    <li><strong>Conserved Regions:</strong> Important functional sequences (महत्वपूर्ण कार्यात्मक अनुक्रम)</li>
+                    <li><strong>Evolutionary Relationships:</strong> How species are related (प्रजातियां कैसे संबंधित हैं)</li>
+                    <li><strong>Gene Duplication:</strong> How genes evolved (जीन कैसे विकसित हुए)</li>
+                    <li><strong>Disease Genes:</strong> Find genes causing diseases (रोग पैदा करने वाले जीन खोजें)</li>
+                    <li><strong>Model Organisms:</strong> Use simpler organisms to study complex ones (जटिल जीवों का अध्ययन करने के लिए सरल जीवों का उपयोग)</li>
+                </ul>
+            </div>
+
+            <div class="comparison-box">
+                <h5>Key Insights from Comparative Genomics (तुलनात्मक जीनोमिक्स से मुख्य अंतर्दृष्टि):</h5>
+                <ul class="list">
+                    <li>Humans and mice share ~85% of their genes (मनुष्य और चूहे अपने जीनों का ~85% साझा करते हैं)</li>
+                    <li>Many disease genes are conserved across species (कई रोग जीन प्रजातियों में संरक्षित हैं)</li>
+                    <li>Gene number doesn't correlate with complexity (जीन संख्या जटिलता से सहसंबद्ध नहीं है)</li>
+                    <li>Comparative genomics helps identify drug targets (तुलनात्मक जीनोमिक्स दवा लक्ष्यों की पहचान में मदद करता है)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section" style="background: #e8f5e9; border-left: 5px solid #27ae60;">
+            <h3>📚 Summary (सारांश)</h3>
+            
+            <div class="box">
+                <h5>Key Concepts Covered (कवर की गई मुख्य अवधारणाएं):</h5>
+                <ol class="list">
+                    <li><strong>DNA Libraries:</strong> Genomic (all DNA) and cDNA (expressed genes only) - DNA लाइब्रेरी: जीनोमिक और cDNA</li>
+                    <li><strong>Artificial Chromosomes:</strong> BAC (300 kb) and YAC (2 Mb) for large fragments - कृत्रिम गुणसूत्र: BAC और YAC</li>
+                    <li><strong>Genomics:</strong> Sequence assembly, contigs, genome construction, annotation - जीनोमिक्स: अनुक्रम असेंबली, कॉन्टिग, जीनोम निर्माण, एनोटेशन</li>
+                    <li><strong>Functional Genomics:</strong> Transcriptomics (RNA) and Proteomics (proteins) - कार्यात्मक जीनोमिक्स: ट्रांसक्रिप्टोमिक्स और प्रोटियोमिक्स</li>
+                    <li><strong>Comparative Genomics:</strong> Comparing genomes across species - तुलनात्मक जीनोमिक्स: प्रजातियों में जीनोम की तुलना</li>
+                </ol>
+            </div>
+
+            <div class="hindi" style="background: #fff3cd; border-left: 3px solid #ffc107;">
+                <strong>याद रखने योग्य बातें:</strong>
+                <ul style="margin-top: 10px;">
+                    <li>जीनोमिक लाइब्रेरी में सभी DNA होता है, cDNA लाइब्रेरी में केवल व्यक्त जीन होते हैं</li>
+                    <li>BAC और YAC बहुत बड़े DNA खंड ले जा सकते हैं</li>
+                    <li>कॉन्टिग ओवरलैपिंग DNA खंडों से बने निरंतर अनुक्रम हैं</li>
+                    <li>ट्रांसक्रिप्टोमिक्स RNA का अध्ययन करता है, प्रोटियोमिक्स प्रोटीन का</li>
+                    <li>तुलनात्मक जीनोमिक्स विकास और जीन कार्य को समझने में मदद करता है</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div style="background: #f8f9fa; padding: 20px; margin: 30px 0; border-radius: 10px; text-align: center;">
+            <a href="../index.html" style="background: #f5576c; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                🏠 Back to Home (होम पर वापस)
+            </a>
+            <a href="mcr613-unit1.html" style="background: #3498db; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 5px;">
+                ← Unit I
+            </a>
+        </div>
+    </div>
+</body>
+</html>
