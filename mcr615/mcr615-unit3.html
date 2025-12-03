@@ -73,7 +73,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             padding: 40px;
@@ -93,25 +93,120 @@
             margin-bottom: 10px;
         }
         
-        .coming-soon {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-            padding: 40px;
-            margin: 30px 0;
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
             border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .english {
+            color: #2c3e50;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
             text-align: center;
         }
         
-        .coming-soon h2 {
-            color: #856404;
-            font-size: 2em;
-            margin-bottom: 20px;
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
         }
         
-        .coming-soon p {
-            color: #856404;
-            font-size: 1.2em;
-            line-height: 1.8;
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
         }
         
         .unit-nav {
@@ -193,34 +288,963 @@
     
     <div class="container">
         <div class="header">
-            <h1>MCR-615 Applied and Environmental Microbiology</h1>
-            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT III - Waste Treatment</h2>
-            <p>Simple English + Hindi | Coming Soon</p>
+            <h1>MCR-615: Applied and Environmental Microbiology</h1>
+            <h2>Unit III: Waste Treatment</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Waste Types, Characterization, Treatment Methods, Solid & Liquid Waste Processing, and Utilization</p>
         </div>
 
-        <div class="unit-nav">
-            <a href="mcr615-unit2.html" class="prev">← Previous: Unit II</a>
-            <a href="../index.html" class="home">🏠 All Units</a>
-            <a href="mcr615-unit4.html" class="next">Next: Unit IV →</a>
+        <!-- Section 1: Waste Types -->
+        <div class="section">
+            <h3>1. Waste Types: Solid and Liquid Wastes</h3>
+            
+            <p class="english">Waste is any unwanted material that is discarded. Wastes can be solid or liquid, and they come from homes, industries, agriculture, and other sources. Proper waste treatment is essential to protect the environment and human health.</p>
+            <p class="hindi">अपशिष्ट कोई भी अवांछित सामग्री है जिसे फेंक दिया जाता है। अपशिष्ट ठोस या तरल हो सकते हैं, और वे घरों, उद्योगों, कृषि, और अन्य स्रोतों से आते हैं। पर्यावरण और मानव स्वास्थ्य की रक्षा के लिए उचित अपशिष्ट उपचार आवश्यक है।</p>
+            
+            <h4>1.1 Solid Wastes</h4>
+            <p class="english">Solid wastes are non-liquid materials that are discarded. They include household garbage, industrial waste, agricultural waste, and construction debris. Solid wastes can be organic (biodegradable) or inorganic (non-biodegradable).</p>
+            <p class="hindi">ठोस अपशिष्ट गैर-तरल सामग्री हैं जिन्हें फेंक दिया जाता है। इनमें घरेलू कचरा, औद्योगिक अपशिष्ट, कृषि अपशिष्ट, और निर्माण मलबा शामिल हैं। ठोस अपशिष्ट कार्बनिक (जैव-अपघटनीय) या अकार्बनिक (गैर-जैव-अपघटनीय) हो सकते हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Solid Waste Type</th>
+                    <th>Source</th>
+                    <th>Examples</th>
+                    <th>Characteristics</th>
+                </tr>
+                <tr>
+                    <td>Municipal Solid Waste (MSW)</td>
+                    <td>Homes, offices, shops</td>
+                    <td>Food scraps, paper, plastic, glass</td>
+                    <td>Mixed, organic and inorganic</td>
+                </tr>
+                <tr>
+                    <td>Industrial Waste</td>
+                    <td>Factories, manufacturing</td>
+                    <td>Metal scraps, chemicals, packaging</td>
+                    <td>Often hazardous, large quantities</td>
+                </tr>
+                <tr>
+                    <td>Agricultural Waste</td>
+                    <td>Farms, fields</td>
+                    <td>Crop residues, animal manure, straw</td>
+                    <td>Mostly organic, biodegradable</td>
+                </tr>
+                <tr>
+                    <td>Biomedical Waste</td>
+                    <td>Hospitals, clinics</td>
+                    <td>Used syringes, bandages, medicines</td>
+                    <td>Hazardous, infectious</td>
+                </tr>
+                <tr>
+                    <td>E-waste</td>
+                    <td>Electronics</td>
+                    <td>Computers, phones, batteries</td>
+                    <td>Toxic materials, valuable metals</td>
+                </tr>
+            </table>
+            
+            <h4>1.2 Liquid Wastes</h4>
+            <p class="english">Liquid wastes are wastewater from homes, industries, and other sources. They contain dissolved and suspended materials, including organic matter, nutrients, and pollutants. Liquid wastes must be treated before being released into the environment.</p>
+            <p class="hindi">तरल अपशिष्ट घरों, उद्योगों, और अन्य स्रोतों से अपशिष्ट जल हैं। इनमें घुलित और निलंबित सामग्री शामिल हैं, जिसमें कार्बनिक पदार्थ, पोषक तत्व, और प्रदूषक शामिल हैं। पर्यावरण में छोड़े जाने से पहले तरल अपशिष्ट का उपचार किया जाना चाहिए।</p>
+            
+            <div class="box">
+                <h5>Types of Liquid Wastes:</h5>
+                <ul class="list">
+                    <li><strong>Domestic Wastewater:</strong> From homes (sewage) - contains organic matter, nutrients, pathogens</li>
+                    <li><strong>Industrial Wastewater:</strong> From factories - may contain chemicals, heavy metals, toxins</li>
+                    <li><strong>Agricultural Runoff:</strong> From farms - contains fertilizers, pesticides, animal waste</li>
+                    <li><strong>Stormwater:</strong> Rainwater runoff - may contain pollutants from streets and surfaces</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="coming-soon">
-            <h2>📚 Content Coming Soon!</h2>
-            <p>
-                This unit will cover:<br>
-                • Waste types: Solid and liquid wastes<br>
-                • Waste characterization<br>
-                • Solid-liquid treatments: Physical, chemical, biological<br>
-                • Aerobic and anaerobic treatments<br>
-                • Primary, secondary, tertiary solid treatments<br>
-                • Saccharification, gasification, composting<br>
-                • Utilization of solid wastes: Food production (SCP, mushroom, yeasts)<br>
-                • Production of fuel (ethanol, methane)<br>
-                • Liquid waste treatment: Trickling, activated sludge, oxidation pond, oxidation ditch
-            </p>
-            <p style="margin-top: 20px; font-weight: bold;">
-                <span style="color: #e74c3c;">हिंदी अनुवाद के साथ विस्तृत नोट्स जल्द ही उपलब्ध होंगे!</span>
-            </p>
+        <!-- Section 2: Waste Characterization -->
+        <div class="section">
+            <h3>2. Solid and Liquid Waste Characterization</h3>
+            
+            <p class="english">Characterization means analyzing and describing waste properties. This helps us understand what's in the waste and how to treat it. We measure physical, chemical, and biological properties.</p>
+            <p class="hindi">विशेषीकरण का मतलब है अपशिष्ट गुणों का विश्लेषण और वर्णन करना। यह हमें समझने में मदद करता है कि अपशिष्ट में क्या है और इसे कैसे उपचारित करना है। हम भौतिक, रासायनिक, और जैविक गुणों को मापते हैं।</p>
+            
+            <h4>2.1 Solid Waste Characterization</h4>
+            
+            <div class="flowchart">
+<strong>Solid Waste Characterization Parameters:</strong>
+
+Solid Waste Sample
+    ↓
+    ├─→ Physical Properties
+    │       ├─→ Moisture Content (%)
+    │       ├─→ Density (kg/m³)
+    │       ├─→ Particle Size
+    │       └─→ Volatile Solids (%)
+    │
+    ├─→ Chemical Properties
+    │       ├─→ pH
+    │       ├─→ Organic Carbon (C%)
+    │       ├─→ Nitrogen (N%)
+    │       ├─→ Phosphorus (P%)
+    │       ├─→ C:N Ratio
+    │       └─→ Heavy Metals
+    │
+    └─→ Biological Properties
+            ├─→ Biodegradability
+            ├─→ Pathogen Content
+            └─→ Microbial Activity
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>What It Measures</th>
+                    <th>Why It's Important</th>
+                </tr>
+                <tr>
+                    <td>Moisture Content</td>
+                    <td>Water percentage in waste</td>
+                    <td>Affects decomposition rate, handling</td>
+                </tr>
+                <tr>
+                    <td>Volatile Solids</td>
+                    <td>Organic matter content</td>
+                    <td>Indicates biodegradability, energy potential</td>
+                </tr>
+                <tr>
+                    <td>C:N Ratio</td>
+                    <td>Carbon to nitrogen ratio</td>
+                    <td>Important for composting (ideal: 25-30:1)</td>
+                </tr>
+                <tr>
+                    <td>pH</td>
+                    <td>Acidity or alkalinity</td>
+                    <td>Affects microbial activity</td>
+                </tr>
+                <tr>
+                    <td>Heavy Metals</td>
+                    <td>Toxic metal content</td>
+                    <td>Determines if waste is hazardous</td>
+                </tr>
+            </table>
+            
+            <h4>2.2 Liquid Waste Characterization</h4>
+            
+            <div class="box">
+                <h5>Key Parameters for Liquid Waste:</h5>
+                <ul class="list">
+                    <li><strong>BOD (Biochemical Oxygen Demand):</strong> Amount of oxygen needed by microbes to break down organic matter (mg/L)</li>
+                    <li><strong>COD (Chemical Oxygen Demand):</strong> Total oxygen needed to oxidize all organic matter (mg/L)</li>
+                    <li><strong>TSS (Total Suspended Solids):</strong> Solid particles suspended in water (mg/L)</li>
+                    <li><strong>TDS (Total Dissolved Solids):</strong> Dissolved materials in water (mg/L)</li>
+                    <li><strong>pH:</strong> Acidity or alkalinity (6.5-8.5 is normal)</li>
+                    <li><strong>Nutrients:</strong> Nitrogen and phosphorus content</li>
+                    <li><strong>Pathogens:</strong> Disease-causing microbes (coliform count)</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Liquid Waste Characterization</text>
+                    
+                    <!-- Wastewater sample -->
+                    <rect x="50" y="80" width="120" height="80" fill="#3498db" opacity="0.7" rx="5"/>
+                    <text x="110" y="120" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Wastewater</text>
+                    <text x="110" y="140" text-anchor="middle" fill="white" font-size="10">Sample</text>
+                    
+                    <!-- Parameters -->
+                    <rect x="220" y="60" width="100" height="40" fill="#27ae60" opacity="0.7" rx="5"/>
+                    <text x="270" y="80" text-anchor="middle" fill="white" font-size="11" font-weight="bold">BOD</text>
+                    <text x="270" y="95" text-anchor="middle" fill="white" font-size="10">(mg/L)</text>
+                    
+                    <rect x="220" y="110" width="100" height="40" fill="#e74c3c" opacity="0.7" rx="5"/>
+                    <text x="270" y="130" text-anchor="middle" fill="white" font-size="11" font-weight="bold">COD</text>
+                    <text x="270" y="145" text-anchor="middle" fill="white" font-size="10">(mg/L)</text>
+                    
+                    <rect x="220" y="160" width="100" height="40" fill="#f39c12" opacity="0.7" rx="5"/>
+                    <text x="270" y="180" text-anchor="middle" fill="white" font-size="11" font-weight="bold">TSS</text>
+                    <text x="270" y="195" text-anchor="middle" fill="white" font-size="10">(mg/L)</text>
+                    
+                    <!-- Other parameters -->
+                    <rect x="370" y="60" width="100" height="30" fill="#9b59b6" opacity="0.7" rx="5"/>
+                    <text x="420" y="78" text-anchor="middle" fill="white" font-size="11">pH</text>
+                    
+                    <rect x="370" y="100" width="100" height="30" fill="#16a085" opacity="0.7" rx="5"/>
+                    <text x="420" y="118" text-anchor="middle" fill="white" font-size="11">Nutrients</text>
+                    
+                    <rect x="370" y="140" width="100" height="30" fill="#c0392b" opacity="0.7" rx="5"/>
+                    <text x="420" y="158" text-anchor="middle" fill="white" font-size="11">Pathogens</text>
+                    
+                    <rect x="370" y="180" width="100" height="30" fill="#8e44ad" opacity="0.7" rx="5"/>
+                    <text x="420" y="198" text-anchor="middle" fill="white" font-size="11">TDS</text>
+                    
+                    <!-- Arrows -->
+                    <path d="M 170 120 L 220 80" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 170 120 L 220 130" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 170 120 L 220 180" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 320 80 L 370 75" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 320 130 L 370 115" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 320 180 L 370 155" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    <path d="M 320 180 L 370 195" stroke="#2c3e50" stroke-width="2" fill="none" marker-end="url(#param-arrow)"/>
+                    
+                    <!-- Interpretation -->
+                    <text x="350" y="250" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Characterization → Treatment Design</text>
+                    
+                    <defs>
+                        <marker id="param-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 3: Treatment Methods -->
+        <div class="section">
+            <h3>3. Solid-Liquid Treatments: Physical, Chemical, and Biological</h3>
+            
+            <p class="english">Waste treatment uses different methods to remove pollutants and make waste safe. There are three main types: physical (mechanical separation), chemical (using chemicals), and biological (using microbes).</p>
+            <p class="hindi">अपशिष्ट उपचार प्रदूषकों को हटाने और अपशिष्ट को सुरक्षित बनाने के लिए विभिन्न तरीकों का उपयोग करता है। तीन मुख्य प्रकार हैं: भौतिक (यांत्रिक पृथक्करण), रासायनिक (रसायनों का उपयोग), और जैविक (सूक्ष्मजीवों का उपयोग)।</p>
+            
+            <h4>3.1 Physical Treatment</h4>
+            <p class="english">Physical treatment uses mechanical processes to separate and remove materials. No chemicals or biological processes are used. It's often the first step in treatment.</p>
+            <p class="hindi">भौतिक उपचार सामग्री को अलग करने और हटाने के लिए यांत्रिक प्रक्रियाओं का उपयोग करता है। कोई रसायन या जैविक प्रक्रियाएं उपयोग नहीं की जाती हैं। यह अक्सर उपचार का पहला कदम है।</p>
+            
+            <div class="box">
+                <h5>Physical Treatment Methods:</h5>
+                <ul class="list">
+                    <li><strong>Screening:</strong> Remove large objects using screens or sieves</li>
+                    <li><strong>Sedimentation:</strong> Let particles settle by gravity</li>
+                    <li><strong>Filtration:</strong> Pass through filters to remove particles</li>
+                    <li><strong>Flotation:</strong> Float light materials to surface and remove</li>
+                    <li><strong>Centrifugation:</strong> Use spinning to separate materials</li>
+                    <li><strong>Evaporation:</strong> Remove water by heating</li>
+                </ul>
+            </div>
+            
+            <h4>3.2 Chemical Treatment</h4>
+            <p class="english">Chemical treatment uses chemicals to remove pollutants or change waste properties. Chemicals react with pollutants to make them harmless or easier to remove.</p>
+            <p class="hindi">रासायनिक उपचार प्रदूषकों को हटाने या अपशिष्ट गुणों को बदलने के लिए रसायनों का उपयोग करता है। रसायन प्रदूषकों के साथ प्रतिक्रिया करते हैं ताकि उन्हें हानिरहित या हटाने में आसान बनाया जा सके।</p>
+            
+            <table>
+                <tr>
+                    <th>Chemical Process</th>
+                    <th>Chemicals Used</th>
+                    <th>Purpose</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Coagulation</td>
+                    <td>Alum, ferric chloride</td>
+                    <td>Clump small particles together</td>
+                    <td>Water treatment, wastewater</td>
+                </tr>
+                <tr>
+                    <td>Flocculation</td>
+                    <td>Polymers</td>
+                    <td>Form larger clumps (flocs)</td>
+                    <td>Water treatment</td>
+                </tr>
+                <tr>
+                    <td>Neutralization</td>
+                    <td>Acid or base</td>
+                    <td>Adjust pH to neutral</td>
+                    <td>Acidic/alkaline waste</td>
+                </tr>
+                <tr>
+                    <td>Oxidation</td>
+                    <td>Chlorine, ozone, H₂O₂</td>
+                    <td>Kill pathogens, break down organics</td>
+                    <td>Disinfection, advanced treatment</td>
+                </tr>
+                <tr>
+                    <td>Precipitation</td>
+                    <td>Lime, sulfide</td>
+                    <td>Remove heavy metals</td>
+                    <td>Industrial wastewater</td>
+                </tr>
+            </table>
+            
+            <h4>3.3 Biological Treatment</h4>
+            <p class="english">Biological treatment uses microorganisms (bacteria, fungi, algae) to break down organic matter in waste. Microbes eat organic pollutants and convert them into harmless products. This is the most common method for organic waste.</p>
+            <p class="hindi">जैविक उपचार अपशिष्ट में कार्बनिक पदार्थ को तोड़ने के लिए सूक्ष्मजीवों (बैक्टीरिया, कवक, शैवाल) का उपयोग करता है। सूक्ष्मजीव कार्बनिक प्रदूषकों को खाते हैं और उन्हें हानिरहित उत्पादों में परिवर्तित करते हैं। यह कार्बनिक अपशिष्ट के लिए सबसे आम तरीका है।</p>
+            
+            <div class="flowchart">
+<strong>Biological Treatment Process:</strong>
+
+Organic Waste
+    ↓
+Microorganisms Added
+    ↓
+    ├─→ Aerobic Treatment (With Oxygen)
+    │       ├─→ Bacteria + O₂
+    │       │       ↓
+    │       │   Organic Matter → CO₂ + H₂O + Energy
+    │       │
+    │       └─→ Fast, Complete Breakdown
+    │
+    └─→ Anaerobic Treatment (Without Oxygen)
+            ├─→ Bacteria (No O₂)
+            │       ↓
+            │   Organic Matter → CH₄ + CO₂ + Energy
+            │
+            └─→ Slower, Produces Biogas
+            </div>
+        </div>
+
+        <!-- Section 4: Aerobic and Anaerobic Treatments -->
+        <div class="section">
+            <h3>4. Aerobic and Anaerobic Treatments</h3>
+            
+            <h4>4.1 Aerobic Treatment</h4>
+            <p class="english">Aerobic treatment uses oxygen. Aerobic bacteria break down organic matter in the presence of oxygen. This process is fast and produces carbon dioxide, water, and energy. It's used for treating wastewater and composting.</p>
+            <p class="hindi">एरोबिक उपचार ऑक्सीजन का उपयोग करता है। एरोबिक बैक्टीरिया ऑक्सीजन की उपस्थिति में कार्बनिक पदार्थ को तोड़ते हैं। यह प्रक्रिया तेज है और कार्बन डाइऑक्साइड, पानी, और ऊर्जा पैदा करती है। इसका उपयोग अपशिष्ट जल उपचार और कम्पोस्टिंग के लिए किया जाता है।</p>
+            
+            <div class="box">
+                <h5>Advantages of Aerobic Treatment:</h5>
+                <ul class="list">
+                    <li>Fast decomposition (days to weeks)</li>
+                    <li>No bad odors (produces CO₂, not methane)</li>
+                    <li>Complete breakdown of organic matter</li>
+                    <li>Kills pathogens effectively</li>
+                    <li>Produces stable end products</li>
+                </ul>
+            </div>
+            
+            <h4>4.2 Anaerobic Treatment</h4>
+            <p class="english">Anaerobic treatment works without oxygen. Anaerobic bacteria break down organic matter in the absence of oxygen. This process is slower but produces biogas (methane and carbon dioxide) which can be used as fuel.</p>
+            <p class="hindi">अनैरोबिक उपचार बिना ऑक्सीजन के काम करता है। अनैरोबिक बैक्टीरिया ऑक्सीजन की अनुपस्थिति में कार्बनिक पदार्थ को तोड़ते हैं। यह प्रक्रिया धीमी है लेकिन बायोगैस (मीथेन और कार्बन डाइऑक्साइड) पैदा करती है जिसका उपयोग ईंधन के रूप में किया जा सकता है।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Aerobic vs Anaerobic Treatment</text>
+                    
+                    <!-- Aerobic -->
+                    <rect x="50" y="80" width="280" height="280" fill="#27ae60" opacity="0.2" rx="10" stroke="#27ae60" stroke-width="2"/>
+                    <text x="190" y="110" text-anchor="middle" fill="#27ae60" font-size="16" font-weight="bold">Aerobic Treatment</text>
+                    <text x="190" y="135" text-anchor="middle" fill="#2c3e50" font-size="12">(With Oxygen)</text>
+                    
+                    <!-- Organic matter -->
+                    <rect x="80" y="160" width="80" height="40" fill="#8e44ad" opacity="0.7" rx="5"/>
+                    <text x="120" y="185" text-anchor="middle" fill="white" font-size="11">Organic</text>
+                    <text x="120" y="200" text-anchor="middle" fill="white" font-size="11">Matter</text>
+                    
+                    <!-- Plus oxygen -->
+                    <text x="180" y="185" fill="#2c3e50" font-size="20" font-weight="bold">+</text>
+                    <circle cx="220" cy="180" r="15" fill="#3498db"/>
+                    <text x="220" y="186" text-anchor="middle" fill="white" font-size="12" font-weight="bold">O₂</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 250 180 L 290 180" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#process-arrow)"/>
+                    
+                    <!-- Products -->
+                    <circle cx="330" cy="160" r="20" fill="#95a5a6"/>
+                    <text x="330" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CO₂</text>
+                    
+                    <circle cx="330" cy="200" r="20" fill="#3498db"/>
+                    <text x="330" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">H₂O</text>
+                    
+                    <text x="190" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">Fast (Days to Weeks)</text>
+                    <text x="190" y="270" text-anchor="middle" fill="#2c3e50" font-size="11">No Odor</text>
+                    <text x="190" y="290" text-anchor="middle" fill="#2c3e50" font-size="11">Complete Breakdown</text>
+                    <text x="190" y="310" text-anchor="middle" fill="#2c3e50" font-size="11">Kills Pathogens</text>
+                    <text x="190" y="330" text-anchor="middle" fill="#2c3e50" font-size="11">Stable End Products</text>
+                    
+                    <!-- Anaerobic -->
+                    <rect x="370" y="80" width="280" height="280" fill="#e74c3c" opacity="0.2" rx="10" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="510" y="110" text-anchor="middle" fill="#e74c3c" font-size="16" font-weight="bold">Anaerobic Treatment</text>
+                    <text x="510" y="135" text-anchor="middle" fill="#2c3e50" font-size="12">(Without Oxygen)</text>
+                    
+                    <!-- Organic matter -->
+                    <rect x="400" y="160" width="80" height="40" fill="#8e44ad" opacity="0.7" rx="5"/>
+                    <text x="440" y="185" text-anchor="middle" fill="white" font-size="11">Organic</text>
+                    <text x="440" y="200" text-anchor="middle" fill="white" font-size="11">Matter</text>
+                    
+                    <!-- No oxygen -->
+                    <text x="500" y="185" fill="#2c3e50" font-size="20" font-weight="bold">→</text>
+                    <text x="540" y="185" fill="#e74c3c" font-size="12" font-weight="bold">No O₂</text>
+                    
+                    <!-- Arrow -->
+                    <path d="M 570 180 L 610 180" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#process-arrow)"/>
+                    
+                    <!-- Products -->
+                    <circle cx="650" cy="160" r="20" fill="#f39c12"/>
+                    <text x="650" y="168" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CH₄</text>
+                    
+                    <circle cx="650" cy="200" r="20" fill="#95a5a6"/>
+                    <text x="650" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">CO₂</text>
+                    
+                    <text x="510" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">Slow (Weeks to Months)</text>
+                    <text x="510" y="270" text-anchor="middle" fill="#2c3e50" font-size="11">May Have Odor</text>
+                    <text x="510" y="290" text-anchor="middle" fill="#2c3e50" font-size="11">Produces Biogas</text>
+                    <text x="510" y="310" text-anchor="middle" fill="#2c3e50" font-size="11">Energy Recovery</text>
+                    <text x="510" y="330" text-anchor="middle" fill="#2c3e50" font-size="11">Less Pathogen Kill</text>
+                    
+                    <defs>
+                        <marker id="process-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Aerobic</th>
+                    <th>Anaerobic</th>
+                </tr>
+                <tr>
+                    <td>Oxygen Requirement</td>
+                    <td>Yes (needs O₂)</td>
+                    <td>No (no O₂)</td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td>Fast (days to weeks)</td>
+                    <td>Slow (weeks to months)</td>
+                </tr>
+                <tr>
+                    <td>End Products</td>
+                    <td>CO₂, H₂O, stable compost</td>
+                    <td>CH₄, CO₂, biogas, digestate</td>
+                </tr>
+                <tr>
+                    <td>Odor</td>
+                    <td>No bad odor</td>
+                    <td>May have odor</td>
+                </tr>
+                <tr>
+                    <td>Energy</td>
+                    <td>Consumes energy (aeration)</td>
+                    <td>Produces energy (biogas)</td>
+                </tr>
+                <tr>
+                    <td>Pathogen Removal</td>
+                    <td>Good (high temperature)</td>
+                    <td>Moderate</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 5: Primary, Secondary, Tertiary Treatments -->
+        <div class="section">
+            <h3>5. Primary, Secondary, and Tertiary Treatments</h3>
+            
+            <p class="english">Wastewater treatment is done in stages: primary (physical), secondary (biological), and tertiary (advanced). Each stage removes different types of pollutants. Primary removes solids, secondary removes organic matter, and tertiary removes remaining pollutants.</p>
+            <p class="hindi">अपशिष्ट जल उपचार चरणों में किया जाता है: प्राथमिक (भौतिक), द्वितीयक (जैविक), और तृतीयक (उन्नत)। प्रत्येक चरण विभिन्न प्रकार के प्रदूषकों को हटाता है। प्राथमिक ठोस पदार्थ हटाता है, द्वितीयक कार्बनिक पदार्थ हटाता है, और तृतीयक शेष प्रदूषकों को हटाता है।</p>
+            
+            <div class="flowchart">
+<strong>Wastewater Treatment Stages:</strong>
+
+Raw Wastewater
+    ↓
+PRIMARY TREATMENT (Physical)
+    ├─→ Screening (Remove large objects)
+    ├─→ Grit Removal (Remove sand, gravel)
+    ├─→ Sedimentation (Remove suspended solids)
+    │       ↓
+    │   Primary Sludge (Removed)
+    │   ↓
+    │   Partially Treated Water
+    │
+    ↓
+SECONDARY TREATMENT (Biological)
+    ├─→ Aerobic Treatment
+    │       ├─→ Activated Sludge
+    │       ├─→ Trickling Filter
+    │       └─→ Oxidation Pond
+    │
+    └─→ Anaerobic Treatment
+            ├─→ Anaerobic Digestion
+            │       ↓
+            │   Secondary Sludge (Removed)
+            │   ↓
+            │   Treated Water (BOD reduced 80-90%)
+            │
+    ↓
+TERTIARY TREATMENT (Advanced)
+    ├─→ Filtration (Remove remaining particles)
+    ├─→ Disinfection (Kill pathogens)
+    │       ├─→ Chlorination
+    │       ├─→ UV Treatment
+    │       └─→ Ozonation
+    ├─→ Nutrient Removal (N, P)
+    └─→ Advanced Oxidation
+            ↓
+        Clean Water (Safe to discharge)
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Treatment Stage</th>
+                    <th>Methods</th>
+                    <th>What It Removes</th>
+                    <th>Efficiency</th>
+                </tr>
+                <tr>
+                    <td>Primary</td>
+                    <td>Screening, sedimentation, flotation</td>
+                    <td>Large solids, suspended particles</td>
+                    <td>30-40% BOD, 60% TSS</td>
+                </tr>
+                <tr>
+                    <td>Secondary</td>
+                    <td>Biological (aerobic/anaerobic)</td>
+                    <td>Organic matter, BOD, some nutrients</td>
+                    <td>80-90% BOD, 85% TSS</td>
+                </tr>
+                <tr>
+                    <td>Tertiary</td>
+                    <td>Filtration, disinfection, nutrient removal</td>
+                    <td>Remaining pollutants, pathogens, nutrients</td>
+                    <td>99%+ removal, safe for discharge</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 6: Solid Waste Treatments -->
+        <div class="section">
+            <h3>6. Solid Waste Treatments: Saccharification, Gasification, and Composting</h3>
+            
+            <h4>6.1 Saccharification</h4>
+            <p class="english">Saccharification means breaking down complex carbohydrates (like cellulose and starch) into simple sugars (saccharides). Enzymes or acids are used to break the bonds. This is important for producing biofuels and food from waste.</p>
+            <p class="hindi">सैकरिफिकेशन का मतलब है जटिल कार्बोहाइड्रेट (जैसे सेल्यूलोज और स्टार्च) को सरल शर्करा (सैकराइड्स) में तोड़ना। बंधनों को तोड़ने के लिए एंजाइम या अम्ल का उपयोग किया जाता है। यह अपशिष्ट से बायोफ्यूल और भोजन उत्पादन के लिए महत्वपूर्ण है।</p>
+            
+            <div class="box">
+                <h5>Saccharification Process:</h5>
+                <ul class="list">
+                    <li><strong>Enzymatic Saccharification:</strong> Uses enzymes (cellulase, amylase) to break down cellulose/starch into glucose</li>
+                    <li><strong>Acid Hydrolysis:</strong> Uses acids (sulfuric acid, hydrochloric acid) to break down carbohydrates</li>
+                    <li><strong>Applications:</strong> Bioethanol production, food production, SCP production</li>
+                </ul>
+            </div>
+            
+            <h4>6.2 Gasification</h4>
+            <p class="english">Gasification converts solid waste into gas (syngas) by heating it at high temperature with limited oxygen. The gas produced (mainly CO, H₂, CH₄) can be used as fuel or to produce electricity.</p>
+            <p class="hindi">गैसीकरण सीमित ऑक्सीजन के साथ उच्च तापमान पर गर्म करके ठोस अपशिष्ट को गैस (सिंगैस) में परिवर्तित करता है। उत्पादित गैस (मुख्य रूप से CO, H₂, CH₄) का उपयोग ईंधन के रूप में या बिजली उत्पादन के लिए किया जा सकता है।</p>
+            
+            <div class="flowchart">
+<strong>Gasification Process:</strong>
+
+Solid Waste (Biomass)
+    ↓
+Drying (Remove moisture)
+    ↓
+Pyrolysis (Heating without O₂)
+    ↓
+Gasification (Limited O₂, 700-1200°C)
+    ↓
+    ├─→ Syngas Production
+    │       ├─→ CO (Carbon Monoxide)
+    │       ├─→ H₂ (Hydrogen)
+    │       ├─→ CH₄ (Methane)
+    │       └─→ CO₂ (Carbon Dioxide)
+    │
+    └─→ Uses:
+            ├─→ Fuel for engines
+            ├─→ Electricity generation
+            └─→ Chemical production
+            </div>
+            
+            <h4>6.3 Composting</h4>
+            <p class="english">Composting is the natural process of decomposing organic waste into compost (rich soil fertilizer). Microorganisms break down organic matter in the presence of oxygen. The end product is nutrient-rich compost that improves soil quality.</p>
+            <p class="hindi">कम्पोस्टिंग कार्बनिक अपशिष्ट को कम्पोस्ट (समृद्ध मिट्टी उर्वरक) में अपघटित करने की प्राकृतिक प्रक्रिया है। सूक्ष्मजीव ऑक्सीजन की उपस्थिति में कार्बनिक पदार्थ को तोड़ते हैं। अंतिम उत्पाद पोषक तत्वों से भरपूर कम्पोस्ट है जो मिट्टी की गुणवत्ता में सुधार करता है।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Composting Process</text>
+                    
+                    <!-- Input -->
+                    <rect x="50" y="80" width="120" height="60" fill="#8e44ad" opacity="0.7" rx="5"/>
+                    <text x="110" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Organic Waste</text>
+                    <text x="110" y="130" text-anchor="middle" fill="white" font-size="10">(Food, Leaves, Manure)</text>
+                    
+                    <!-- Conditions -->
+                    <rect x="220" y="60" width="100" height="40" fill="#3498db" opacity="0.7" rx="5"/>
+                    <text x="270" y="80" text-anchor="middle" fill="white" font-size="11">Oxygen</text>
+                    
+                    <rect x="220" y="110" width="100" height="40" fill="#e74c3c" opacity="0.7" rx="5"/>
+                    <text x="270" y="130" text-anchor="middle" fill="white" font-size="11">Moisture</text>
+                    
+                    <rect x="220" y="160" width="100" height="40" fill="#f39c12" opacity="0.7" rx="5"/>
+                    <text x="270" y="180" text-anchor="middle" fill="white" font-size="11">Temperature</text>
+                    
+                    <!-- Microbes -->
+                    <circle cx="380" cy="110" r="20" fill="#27ae60"/>
+                    <text x="380" y="116" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Microbes</text>
+                    
+                    <!-- Process -->
+                    <path d="M 400 110 L 500 110" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#compost-arrow)"/>
+                    <text x="450" y="100" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Decomposition</text>
+                    
+                    <!-- Stages -->
+                    <text x="550" y="80" fill="#2c3e50" font-size="11" font-weight="bold">Stages:</text>
+                    <text x="550" y="100" fill="#2c3e50" font-size="10">1. Mesophilic (20-40°C)</text>
+                    <text x="550" y="120" fill="#2c3e50" font-size="10">2. Thermophilic (40-70°C)</text>
+                    <text x="550" y="140" fill="#2c3e50" font-size="10">3. Cooling</text>
+                    <text x="550" y="160" fill="#2c3e50" font-size="10">4. Maturation</text>
+                    
+                    <!-- Output -->
+                    <rect x="50" y="250" width="120" height="60" fill="#27ae60" opacity="0.7" rx="5"/>
+                    <text x="110" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Compost</text>
+                    <text x="110" y="300" text-anchor="middle" fill="white" font-size="10">(Rich Fertilizer)</text>
+                    
+                    <!-- Benefits -->
+                    <text x="250" y="280" fill="#2c3e50" font-size="11" font-weight="bold">Benefits:</text>
+                    <text x="250" y="300" fill="#2c3e50" font-size="10">• Improves soil structure</text>
+                    <text x="250" y="320" fill="#2c3e50" font-size="10">• Adds nutrients</text>
+                    <text x="250" y="340" fill="#2c3e50" font-size="10">• Reduces waste</text>
+                    
+                    <text x="450" y="280" fill="#2c3e50" font-size="11" font-weight="bold">Time:</text>
+                    <text x="450" y="300" fill="#2c3e50" font-size="10">2-6 months</text>
+                    <text x="450" y="320" fill="#2c3e50" font-size="10">(Depends on conditions)</text>
+                    
+                    <defs>
+                        <marker id="compost-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2c3e50"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="box">
+                <h5>Composting Requirements:</h5>
+                <ul class="list">
+                    <li><strong>C:N Ratio:</strong> 25-30:1 (ideal for composting)</li>
+                    <li><strong>Moisture:</strong> 50-60% (should feel like a wrung-out sponge)</li>
+                    <li><strong>Oxygen:</strong> Regular turning/aeration needed</li>
+                    <li><strong>Temperature:</strong> 40-70°C (thermophilic phase kills pathogens)</li>
+                    <li><strong>pH:</strong> 6.5-8.0 (neutral to slightly alkaline)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 7: Utilization of Solid Wastes -->
+        <div class="section">
+            <h3>7. Utilization of Solid Wastes: Food Production</h3>
+            
+            <h4>7.1 Single Cell Protein (SCP)</h4>
+            <p class="english">Single Cell Protein (SCP) is protein produced by microorganisms (bacteria, yeast, fungi, algae) grown on waste materials. These microbes are rich in protein and can be used as food or animal feed. Waste is converted into valuable protein.</p>
+            <p class="hindi">सिंगल सेल प्रोटीन (SCP) अपशिष्ट सामग्री पर उगाए गए सूक्ष्मजीवों (बैक्टीरिया, खमीर, कवक, शैवाल) द्वारा उत्पादित प्रोटीन है। ये सूक्ष्मजीव प्रोटीन से भरपूर होते हैं और भोजन या पशु चारे के रूप में उपयोग किए जा सकते हैं। अपशिष्ट को मूल्यवान प्रोटीन में परिवर्तित किया जाता है।</p>
+            
+            <div class="flowchart">
+<strong>SCP Production Process:</strong>
+
+Waste Material
+    ├─→ Agricultural Waste (Straw, Bagasse)
+    ├─→ Food Waste
+    ├─→ Industrial Waste (Molasses, Whey)
+    └─→ Cellulosic Waste
+            ↓
+Pretreatment (Saccharification)
+    ↓
+Microorganism Inoculation
+    ├─→ Bacteria (Methylophilus)
+    ├─→ Yeast (Candida, Saccharomyces)
+    ├─→ Fungi (Fusarium, Trichoderma)
+    └─→ Algae (Spirulina, Chlorella)
+            ↓
+Fermentation (Aerobic)
+    ├─→ Temperature: 25-35°C
+    ├─→ pH: 5-7
+    ├─→ Aeration: High
+    └─→ Time: 1-3 days
+            ↓
+Harvesting
+    ├─→ Centrifugation
+    ├─→ Filtration
+    └─→ Drying
+            ↓
+SCP Product
+    ├─→ High Protein (40-60%)
+    ├─→ Rich in Vitamins
+    └─→ Used as Food/Feed
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Microorganism</th>
+                    <th>Waste Substrate</th>
+                    <th>Protein Content</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Candida utilis</td>
+                    <td>Molasses, whey</td>
+                    <td>45-50%</td>
+                    <td>Animal feed, human food</td>
+                </tr>
+                <tr>
+                    <td>Fusarium venenatum</td>
+                    <td>Glucose, starch</td>
+                    <td>45%</td>
+                    <td>Meat substitute (Quorn)</td>
+                </tr>
+                <tr>
+                    <td>Spirulina</td>
+                    <td>Wastewater, CO₂</td>
+                    <td>60-70%</td>
+                    <td>Health food, supplements</td>
+                </tr>
+                <tr>
+                    <td>Methylophilus methylotrophus</td>
+                    <td>Methanol</td>
+                    <td>72%</td>
+                    <td>Animal feed</td>
+                </tr>
+            </table>
+            
+            <h4>7.2 Mushroom Production</h4>
+            <p class="english">Mushrooms can be grown on agricultural waste like straw, sawdust, and agricultural residues. Mushrooms break down waste and produce edible fungi. This converts waste into valuable food.</p>
+            <p class="hindi">मशरूम को पुआल, चूरा, और कृषि अवशेष जैसे कृषि अपशिष्ट पर उगाया जा सकता है। मशरूम अपशिष्ट को तोड़ते हैं और खाद्य कवक उत्पादित करते हैं। यह अपशिष्ट को मूल्यवान भोजन में परिवर्तित करता है।</p>
+            
+            <div class="box">
+                <h5>Mushroom Types and Substrates:</h5>
+                <ul class="list">
+                    <li><strong>Button Mushroom (Agaricus):</strong> Grown on composted straw and manure</li>
+                    <li><strong>Oyster Mushroom (Pleurotus):</strong> Grown on straw, sawdust, agricultural waste</li>
+                    <li><strong>Shiitake (Lentinula):</strong> Grown on hardwood sawdust or logs</li>
+                    <li><strong>Straw Mushroom (Volvariella):</strong> Grown on rice straw</li>
+                </ul>
+            </div>
+            
+            <h4>7.3 Yeast Production</h4>
+            <p class="english">Yeast can be produced from waste materials like molasses, whey, and agricultural residues. Yeast is rich in protein, vitamins, and minerals. It's used in food, feed, and fermentation industries.</p>
+            <p class="hindi">खमीर को गुड़, मट्ठा, और कृषि अवशेष जैसी अपशिष्ट सामग्री से उत्पादित किया जा सकता है। खमीर प्रोटीन, विटामिन, और खनिजों से भरपूर होता है। इसका उपयोग खाद्य, चारा, और किण्वन उद्योगों में किया जाता है।</p>
+        </div>
+
+        <!-- Section 8: Fuel Production -->
+        <div class="section">
+            <h3>8. Production of Fuel: Ethanol and Methane</h3>
+            
+            <h4>8.1 Ethanol Production</h4>
+            <p class="english">Ethanol (bioethanol) can be produced from waste materials through fermentation. Yeast or bacteria ferment sugars to produce ethanol and CO₂. Waste materials are first converted to sugars, then fermented.</p>
+            <p class="hindi">एथेनॉल (बायोएथेनॉल) किण्वन के माध्यम से अपशिष्ट सामग्री से उत्पादित किया जा सकता है। खमीर या बैक्टीरिया शर्करा को किण्वित करके एथेनॉल और CO₂ उत्पादित करते हैं। अपशिष्ट सामग्री को पहले शर्करा में परिवर्तित किया जाता है, फिर किण्वित किया जाता है।</p>
+            
+            <div class="flowchart">
+<strong>Ethanol Production from Waste:</strong>
+
+Waste Material
+    ├─→ Agricultural Waste (Corn, Sugarcane)
+    ├─→ Food Waste
+    ├─→ Cellulosic Waste (Straw, Wood)
+    └─→ Starch Waste
+            ↓
+Pretreatment
+    ├─→ Milling/Grinding
+    ├─→ Saccharification
+    │       ├─→ Enzymatic (Cellulase, Amylase)
+    │       └─→ Acid Hydrolysis
+    │               ↓
+    │           Simple Sugars (Glucose)
+            ↓
+Fermentation
+    ├─→ Yeast (Saccharomyces cerevisiae)
+    ├─→ Temperature: 30-35°C
+    ├─→ pH: 4-5
+    ├─→ Anaerobic Conditions
+    └─→ Time: 48-72 hours
+            ↓
+    Glucose → Ethanol + CO₂
+            ↓
+Distillation
+    ├─→ Separate ethanol from water
+    └─→ Dehydration (Remove remaining water)
+            ↓
+Ethanol (95-99.5%)
+    └─→ Used as Biofuel
+            </div>
+            
+            <h4>8.2 Methane Production (Biogas)</h4>
+            <p class="english">Methane is produced through anaerobic digestion of organic waste. Anaerobic bacteria break down organic matter and produce biogas (mainly methane and CO₂). Biogas can be used as fuel for cooking, heating, or electricity generation.</p>
+            <p class="hindi">मीथेन कार्बनिक अपशिष्ट के अनैरोबिक पाचन के माध्यम से उत्पादित होता है। अनैरोबिक बैक्टीरिया कार्बनिक पदार्थ को तोड़ते हैं और बायोगैस (मुख्य रूप से मीथेन और CO₂) उत्पादित करते हैं। बायोगैस का उपयोग खाना पकाने, गर्म करने, या बिजली उत्पादन के लिए ईंधन के रूप में किया जा सकता है।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Anaerobic Digestion for Methane Production</text>
+                    
+                    <!-- Input -->
+                    <rect x="50" y="80" width="120" height="60" fill="#8e44ad" opacity="0.7" rx="5"/>
+                    <text x="110" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Organic Waste</text>
+                    <text x="110" y="130" text-anchor="middle" fill="white" font-size="10">(Manure, Food, Crop)</text>
+                    
+                    <!-- Digester -->
+                    <rect x="250" y="60" width="200" height="300" fill="#34495e" opacity="0.8" rx="10" stroke="#2c3e50" stroke-width="3"/>
+                    <text x="350" y="90" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Anaerobic Digester</text>
+                    
+                    <!-- Stages -->
+                    <text x="270" y="130" fill="white" font-size="11" font-weight="bold">Stage 1: Hydrolysis</text>
+                    <text x="270" y="150" fill="white" font-size="10">Complex → Simple</text>
+                    
+                    <text x="270" y="190" fill="white" font-size="11" font-weight="bold">Stage 2: Acidogenesis</text>
+                    <text x="270" y="210" fill="white" font-size="10">Simple → Acids</text>
+                    
+                    <text x="270" y="250" fill="white" font-size="11" font-weight="bold">Stage 3: Acetogenesis</text>
+                    <text x="270" y="270" fill="white" font-size="10">Acids → Acetate</text>
+                    
+                    <text x="270" y="310" fill="white" font-size="11" font-weight="bold">Stage 4: Methanogenesis</text>
+                    <text x="270" y="330" fill="white" font-size="10">Acetate → CH₄ + CO₂</text>
+                    
+                    <!-- Biogas output -->
+                    <path d="M 450 180 L 550 180" stroke="#f39c12" stroke-width="4" fill="none" marker-end="url(#biogas-arrow)"/>
+                    <circle cx="580" cy="150" r="25" fill="#f39c12"/>
+                    <text x="580" y="155" text-anchor="middle" fill="white" font-size="11" font-weight="bold">CH₄</text>
+                    <text x="580" y="200" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Biogas</text>
+                    <text x="580" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">(60-70% CH₄)</text>
+                    
+                    <!-- Digestate -->
+                    <path d="M 350 360 L 350 400" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#digestate-arrow)"/>
+                    <rect x="300" y="410" width="100" height="40" fill="#27ae60" opacity="0.7" rx="5"/>
+                    <text x="350" y="430" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Digestate</text>
+                    <text x="350" y="445" text-anchor="middle" fill="white" font-size="10">(Fertilizer)</text>
+                    
+                    <!-- Uses -->
+                    <text x="100" y="400" fill="#2c3e50" font-size="12" font-weight="bold">Uses of Biogas:</text>
+                    <text x="100" y="425" fill="#2c3e50" font-size="11">• Cooking fuel</text>
+                    <text x="100" y="445" fill="#2c3e50" font-size="11">• Electricity generation</text>
+                    
+                    <defs>
+                        <marker id="biogas-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#f39c12"/>
+                        </marker>
+                        <marker id="digestate-arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 9: Liquid Waste Treatment Methods -->
+        <div class="section">
+            <h3>9. Liquid Waste Treatment: Trickling Filter, Activated Sludge, Oxidation Pond, and Oxidation Ditch</h3>
+            
+            <h4>9.1 Trickling Filter</h4>
+            <p class="english">A trickling filter is a bed of rocks or plastic media. Wastewater is sprayed over the top and trickles down. Microbes grow on the media and break down organic matter as water passes through. It's a simple, low-energy method.</p>
+            <p class="hindi">ट्रिकलिंग फिल्टर चट्टानों या प्लास्टिक मीडिया का एक बिस्तर है। अपशिष्ट जल को ऊपर से छिड़काव किया जाता है और नीचे टपकता है। सूक्ष्मजीव मीडिया पर बढ़ते हैं और पानी के गुजरने के दौरान कार्बनिक पदार्थ को तोड़ते हैं। यह एक सरल, कम ऊर्जा वाला तरीका है।</p>
+            
+            <div class="box">
+                <h5>Trickling Filter Components:</h5>
+                <ul class="list">
+                    <li><strong>Media:</strong> Rocks, plastic, or other materials (provides surface for microbes)</li>
+                    <li><strong>Distribution System:</strong> Sprays wastewater evenly over media</li>
+                    <li><strong>Underdrain System:</strong> Collects treated water at bottom</li>
+                    <li><strong>Ventilation:</strong> Provides oxygen for aerobic bacteria</li>
+                </ul>
+            </div>
+            
+            <h4>9.2 Activated Sludge</h4>
+            <p class="english">Activated sludge uses a mixture of wastewater and microorganisms (sludge) that is aerated (mixed with air). The microbes consume organic matter. The mixture is then settled, and clean water is separated. Some sludge is recycled back to maintain the microbial population.</p>
+            <p class="hindi">सक्रिय कीचड़ अपशिष्ट जल और सूक्ष्मजीवों (कीचड़) के मिश्रण का उपयोग करता है जिसे वातित किया जाता है (हवा के साथ मिलाया जाता है)। सूक्ष्मजीव कार्बनिक पदार्थ का उपभोग करते हैं। फिर मिश्रण को बसाया जाता है, और साफ पानी अलग किया जाता है। सूक्ष्मजीव आबादी को बनाए रखने के लिए कुछ कीचड़ को वापस रीसाइकल किया जाता है।</p>
+            
+            <div class="flowchart">
+<strong>Activated Sludge Process:</strong>
+
+Wastewater (Primary Treated)
+    ↓
+Aeration Tank
+    ├─→ Add Activated Sludge (Microbes)
+    ├─→ Aeration (Air/Oxygen)
+    ├─→ Mixing
+    └─→ Retention Time: 4-8 hours
+            ↓
+    Microbes Consume Organic Matter
+    (BOD Reduction: 85-95%)
+            ↓
+Settling Tank (Clarifier)
+    ├─→ Sludge Settles to Bottom
+    │       ↓
+    │   ┌─────────────┴─────────────┐
+    │   │                           │
+    │   Return Sludge          Waste Sludge
+    │   (Recycled)             (Removed)
+    │   │                           │
+    │   ↓                           ↓
+    │   Back to Aeration        Disposal/Treatment
+    │
+    └─→ Treated Water (Top)
+            ↓
+        Discharge or Further Treatment
+            </div>
+            
+            <h4>9.3 Oxidation Pond</h4>
+            <p class="english">An oxidation pond (also called stabilization pond or lagoon) is a large, shallow pond where wastewater is treated naturally. Algae produce oxygen through photosynthesis, and bacteria use this oxygen to break down organic matter. It's simple and low-cost but requires large land area.</p>
+            <p class="hindi">ऑक्सीकरण तालाब (जिसे स्थिरीकरण तालाब या लैगून भी कहा जाता है) एक बड़ा, उथला तालाब है जहां अपशिष्ट जल का प्राकृतिक रूप से उपचार किया जाता है। शैवाल प्रकाश संश्लेषण के माध्यम से ऑक्सीजन उत्पादित करते हैं, और बैक्टीरिया इस ऑक्सीजन का उपयोग कार्बनिक पदार्थ को तोड़ने के लिए करते हैं। यह सरल और कम लागत वाला है लेकिन बड़े भूमि क्षेत्र की आवश्यकता होती है।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Oxidation Pond</text>
+                    
+                    <!-- Pond -->
+                    <ellipse cx="350" cy="200" rx="300" ry="120" fill="#3498db" opacity="0.3" stroke="#2c3e50" stroke-width="3"/>
+                    
+                    <!-- Sun -->
+                    <circle cx="600" cy="80" r="30" fill="#f39c12"/>
+                    <text x="600" y="88" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Sun</text>
+                    
+                    <!-- Algae -->
+                    <circle cx="200" cy="150" r="15" fill="#27ae60" opacity="0.7"/>
+                    <circle cx="300" cy="180" r="12" fill="#27ae60" opacity="0.7"/>
+                    <circle cx="400" cy="160" r="14" fill="#27ae60" opacity="0.7"/>
+                    <circle cx="500" cy="190" r="13" fill="#27ae60" opacity="0.7"/>
+                    <text x="350" y="100" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">Algae (Produce O₂)</text>
+                    
+                    <!-- Bacteria -->
+                    <circle cx="250" cy="220" r="8" fill="#e74c3c" opacity="0.7"/>
+                    <circle cx="350" cy="230" r="7" fill="#e74c3c" opacity="0.7"/>
+                    <circle cx="450" cy="210" r="9" fill="#e74c3c" opacity="0.7"/>
+                    <text x="350" y="280" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Bacteria (Use O₂, Break Down Organics)</text>
+                    
+                    <!-- Process -->
+                    <text x="100" y="320" fill="#2c3e50" font-size="11" font-weight="bold">Process:</text>
+                    <text x="100" y="340" fill="#2c3e50" font-size="10">Sunlight → Algae → O₂ → Bacteria → Clean Water</text>
+                    
+                    <text x="450" y="320" fill="#2c3e50" font-size="11" font-weight="bold">Advantages:</text>
+                    <text x="450" y="340" fill="#2c3e50" font-size="10">Simple, Low Cost, Natural</text>
+                </svg>
+            </div>
+            
+            <h4>9.4 Oxidation Ditch</h4>
+            <p class="english">An oxidation ditch is a modified activated sludge system. It's a long, oval-shaped channel where wastewater flows in a circle. Rotating brushes or aerators provide oxygen and keep water moving. It combines aeration and settling in one unit.</p>
+            <p class="hindi">ऑक्सीकरण खाई एक संशोधित सक्रिय कीचड़ प्रणाली है। यह एक लंबा, अंडाकार आकार का चैनल है जहां अपशिष्ट जल एक चक्र में बहता है। घूमने वाले ब्रश या वातनकर्ता ऑक्सीजन प्रदान करते हैं और पानी को चलते रखते हैं। यह एक इकाई में वातन और बसने को जोड़ता है।</p>
+            
+            <table>
+                <tr>
+                    <th>Treatment Method</th>
+                    <th>Principle</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+                <tr>
+                    <td>Trickling Filter</td>
+                    <td>Microbes on fixed media</td>
+                    <td>Simple, low energy, no sludge recycling</td>
+                    <td>Large area, may have odors, less efficient</td>
+                </tr>
+                <tr>
+                    <td>Activated Sludge</td>
+                    <td>Suspended microbes in aerated tank</td>
+                    <td>Efficient, compact, good BOD removal</td>
+                    <td>High energy, needs skilled operation</td>
+                </tr>
+                <tr>
+                    <td>Oxidation Pond</td>
+                    <td>Natural treatment with algae and bacteria</td>
+                    <td>Very simple, low cost, natural</td>
+                    <td>Large land area, slow, weather dependent</td>
+                </tr>
+                <tr>
+                    <td>Oxidation Ditch</td>
+                    <td>Circular flow with aeration</td>
+                    <td>Efficient, simple operation, good mixing</td>
+                    <td>Moderate energy, requires maintenance</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h3>Summary</h3>
+            <p class="english">This unit covered waste types (solid and liquid), waste characterization methods, treatment approaches (physical, chemical, biological), aerobic and anaerobic treatments, primary/secondary/tertiary treatment stages, solid waste processing (saccharification, gasification, composting), utilization of wastes for food production (SCP, mushrooms, yeasts), fuel production (ethanol, methane), and liquid waste treatment methods (trickling filter, activated sludge, oxidation pond, oxidation ditch). Understanding these methods helps us manage waste effectively and convert it into useful products.</p>
+            <p class="hindi">इस इकाई में अपशिष्ट प्रकार (ठोस और तरल), अपशिष्ट विशेषीकरण विधियां, उपचार दृष्टिकोण (भौतिक, रासायनिक, जैविक), एरोबिक और अनैरोबिक उपचार, प्राथमिक/द्वितीयक/तृतीयक उपचार चरण, ठोस अपशिष्ट प्रसंस्करण (सैकरिफिकेशन, गैसीकरण, कम्पोस्टिंग), भोजन उत्पादन के लिए अपशिष्ट का उपयोग (SCP, मशरूम, खमीर), ईंधन उत्पादन (एथेनॉल, मीथेन), और तरल अपशिष्ट उपचार विधियां (ट्रिकलिंग फिल्टर, सक्रिय कीचड़, ऑक्सीकरण तालाब, ऑक्सीकरण खाई) को कवर किया गया। इन विधियों को समझने से हमें अपशिष्ट का प्रभावी ढंग से प्रबंधन करने और इसे उपयोगी उत्पादों में परिवर्तित करने में मदद मिलती है।</p>
         </div>
 
         <div class="unit-nav">
