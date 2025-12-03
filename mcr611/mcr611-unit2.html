@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCR-611 Unit 2 - Medical Microbiology Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 0;
+        }
+        
+        .nav-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active {
+            background: rgba(255,255,255,0.4);
+        }
+        
+        .home-btn {
+            background: white;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .english {
+            color: #2c3e50;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            text-align: center;
+        }
+        
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
+        }
+        
+        .unit-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .unit-nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .unit-nav .next {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .unit-nav .home {
+            background: #667eea;
+            color: white;
+        }
+        
+        .unit-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="mcr611-unit1.html">Unit I</a></li>
+            <li><a href="mcr611-unit2.html" class="active">Unit II</a></li>
+            <li><a href="mcr611-unit3.html">Unit III</a></li>
+            <li><a href="mcr611-unit5.html">Unit V</a></li>
+        </ul>
+        <a href="../index.html" class="home-btn">🏠 Home</a>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>MCR-611: Medical Microbiology</h1>
+            <h2>Unit II: Bacterial Pathogenesis & Immune System</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Establishment, Spreading, Tissue Damage, Antiphagocytic Factors, Bacterial Adhesion, Colonization, Invasion, and Immune System</p>
+        </div>
+
+        <!-- Section 1: Establishment, Spreading, and Tissue Damage -->
+        <div class="section">
+            <h3>1. Establishment, Spreading, and Tissue Damage</h3>
+            
+            <h4>1.1 Establishment of Infection</h4>
+            <p class="english">Establishment means bacteria successfully enter and start living in the host body. This is the first step of infection. Bacteria must overcome the body's natural defenses to establish themselves.</p>
+            <p class="hindi">स्थापना का मतलब है कि बैक्टीरिया सफलतापूर्वक मेजबान शरीर में प्रवेश करते हैं और वहां रहना शुरू करते हैं। यह संक्रमण का पहला कदम है। बैक्टीरिया को खुद को स्थापित करने के लिए शरीर की प्राकृतिक रक्षा को पार करना होता है।</p>
+            
+            <div class="box">
+                <h5>Key Steps in Establishment:</h5>
+                <ul class="list">
+                    <li><strong>Entry:</strong> Bacteria enter through skin, mouth, nose, or wounds</li>
+                    <li><strong>Attachment:</strong> Bacteria stick to host cells using adhesins</li>
+                    <li><strong>Multiplication:</strong> Bacteria start dividing and growing</li>
+                    <li><strong>Resistance:</strong> Bacteria fight against host defenses</li>
+                </ul>
+            </div>
+            
+            <h4>1.2 Spreading of Infection</h4>
+            <p class="english">Spreading means bacteria move from the initial infection site to other parts of the body. They can spread through blood, lymph, or by direct extension to nearby tissues.</p>
+            <p class="hindi">फैलाव का मतलब है कि बैक्टीरिया प्रारंभिक संक्रमण स्थल से शरीर के अन्य भागों में जाते हैं। वे रक्त, लसीका के माध्यम से या पास के ऊतकों में सीधे विस्तार से फैल सकते हैं।</p>
+            
+            <div class="flowchart">
+<strong>Bacterial Spreading Process:</strong>
+
+Entry Point (Skin/Mucosa)
+    ↓
+Local Multiplication
+    ↓
+Invasion of Tissues
+    ↓
+    ├─→ Bloodstream (Bacteremia)
+    │       ↓
+    │   Systemic Spread
+    │
+    ├─→ Lymphatic System
+    │       ↓
+    │   Lymph Node Infection
+    │
+    └─→ Direct Extension
+            ↓
+        Nearby Organs
+            ↓
+        Organ Failure
+            </div>
+            
+            <h4>1.3 Tissue Damage</h4>
+            <p class="english">Tissue damage happens when bacteria destroy or harm host cells and tissues. This can occur through toxins, enzymes, or direct cell invasion.</p>
+            <p class="hindi">ऊतक क्षति तब होती है जब बैक्टीरिया मेजबान कोशिकाओं और ऊतकों को नष्ट या नुकसान पहुंचाते हैं। यह विषाक्त पदार्थों, एंजाइमों, या सीधे कोशिका आक्रमण के माध्यम से हो सकता है।</p>
+            
+            <table>
+                <tr>
+                    <th>Mechanism</th>
+                    <th>How It Works</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Exotoxins</td>
+                    <td>Proteins released by bacteria that damage cells</td>
+                    <td>Tetanus toxin, Cholera toxin</td>
+                </tr>
+                <tr>
+                    <td>Endotoxins</td>
+                    <td>Part of bacterial cell wall released when bacteria die</td>
+                    <td>LPS from E. coli</td>
+                </tr>
+                <tr>
+                    <td>Enzymes</td>
+                    <td>Enzymes that break down host tissues</td>
+                    <td>Hyaluronidase, Collagenase</td>
+                </tr>
+                <tr>
+                    <td>Direct Invasion</td>
+                    <td>Bacteria enter and destroy cells directly</td>
+                    <td>Shigella, Listeria</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Antiphagocytic Factors -->
+        <div class="section">
+            <h3>2. Antiphagocytic Factors</h3>
+            
+            <p class="english">Antiphagocytic factors are substances or structures that help bacteria avoid being eaten by phagocytes (immune cells that eat bacteria). These factors protect bacteria from the immune system.</p>
+            <p class="hindi">एंटीफैगोसाइटिक कारक वे पदार्थ या संरचनाएं हैं जो बैक्टीरिया को फैगोसाइट्स (प्रतिरक्षा कोशिकाएं जो बैक्टीरिया खाती हैं) द्वारा खाए जाने से बचाने में मदद करती हैं। ये कारक बैक्टीरिया को प्रतिरक्षा प्रणाली से बचाते हैं।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Phagocyte -->
+                    <ellipse cx="200" cy="200" rx="80" ry="100" fill="#ff6b6b" opacity="0.7"/>
+                    <text x="200" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Phagocyte</text>
+                    <text x="200" y="220" text-anchor="middle" fill="white" font-size="12">(Immune Cell)</text>
+                    
+                    <!-- Bacteria with capsule -->
+                    <circle cx="500" cy="150" r="30" fill="#4ecdc4"/>
+                    <circle cx="500" cy="150" r="40" fill="none" stroke="#4ecdc4" stroke-width="3" stroke-dasharray="5,5" opacity="0.6"/>
+                    <text x="500" y="155" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Bacteria</text>
+                    <text x="500" y="210" text-anchor="middle" fill="#2c3e50" font-size="11">Capsule (Protection)</text>
+                    
+                    <!-- Bacteria without capsule -->
+                    <circle cx="500" cy="280" r="30" fill="#95a5a6"/>
+                    <text x="500" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Bacteria</text>
+                    <text x="500" y="330" text-anchor="middle" fill="#2c3e50" font-size="11">No Capsule</text>
+                    
+                    <!-- Arrow showing phagocytosis -->
+                    <path d="M 280 200 L 470 280" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+                    <text x="375" y="235" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Phagocytosed</text>
+                    
+                    <!-- Arrow showing protection -->
+                    <path d="M 280 200 L 470 150" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowhead2)"/>
+                    <text x="375" y="165" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">Protected</text>
+                    
+                    <!-- Arrow markers -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                        </marker>
+                        <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#27ae60"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="box">
+                <h5>Types of Antiphagocytic Factors:</h5>
+                <ul class="list">
+                    <li><strong>Capsule:</strong> Gel-like layer around bacteria (e.g., Streptococcus pneumoniae)</li>
+                    <li><strong>M Protein:</strong> Surface protein that prevents phagocytosis (e.g., Group A Streptococcus)</li>
+                    <li><strong>Protein A:</strong> Binds to antibodies incorrectly, confusing immune system (e.g., Staphylococcus aureus)</li>
+                    <li><strong>Leukocidins:</strong> Toxins that kill white blood cells</li>
+                    <li><strong>Biofilm:</strong> Community of bacteria protected by slime layer</li>
+                </ul>
+            </div>
+            
+            <p class="hindi"><strong>हिंदी में:</strong> कैप्सूल बैक्टीरिया के चारों ओर जेल जैसी परत होती है जो फैगोसाइट्स को बैक्टीरिया को पहचानने से रोकती है। M प्रोटीन सतह पर होता है और फैगोसाइटोसिस को रोकता है। ल्यूकोसिडिन विषाक्त पदार्थ हैं जो सफेद रक्त कोशिकाओं को मारते हैं।</p>
+        </div>
+
+        <!-- Section 3: Bacterial Adhesion, Colonization, and Invasion -->
+        <div class="section">
+            <h3>3. Mechanism of Bacterial Adhesion, Colonization, and Invasion</h3>
+            
+            <h4>3.1 Bacterial Adhesion</h4>
+            <p class="english">Adhesion means bacteria stick to host cells. This is the first step before infection. Bacteria use special molecules called adhesins to attach to receptors on host cells.</p>
+            <p class="hindi">आसंजन का मतलब है कि बैक्टीरिया मेजबान कोशिकाओं से चिपक जाते हैं। यह संक्रमण से पहले का पहला कदम है। बैक्टीरिया मेजबान कोशिकाओं पर रिसेप्टर्स से जुड़ने के लिए एडहेसिन नामक विशेष अणुओं का उपयोग करते हैं।</p>
+            
+            <div class="flowchart">
+<strong>Adhesion Process:</strong>
+
+Bacteria in Environment
+    ↓
+Contact with Host Surface
+    ↓
+Recognition of Host Receptors
+    ↓
+Adhesin-Receptor Binding
+    ↓
+    ├─→ Weak Binding (Reversible)
+    │       ↓
+    │   Detachment Possible
+    │
+    └─→ Strong Binding (Irreversible)
+            ↓
+        Firm Attachment
+            ↓
+        Colonization Begins
+            </div>
+            
+            <h4>3.2 Colonization</h4>
+            <p class="english">Colonization means bacteria establish a stable population at the infection site. They multiply and form a community. This happens after successful adhesion.</p>
+            <p class="hindi">उपनिवेशन का मतलब है कि बैक्टीरिया संक्रमण स्थल पर एक स्थिर आबादी स्थापित करते हैं। वे गुणा करते हैं और एक समुदाय बनाते हैं। यह सफल आसंजन के बाद होता है।</p>
+            
+            <h4>3.3 Invasion</h4>
+            <p class="english">Invasion means bacteria enter into host cells or tissues. They break through barriers and move deeper into the body. This is more serious than just staying on the surface.</p>
+            <p class="hindi">आक्रमण का मतलब है कि बैक्टीरिया मेजबान कोशिकाओं या ऊतकों में प्रवेश करते हैं। वे बाधाओं को तोड़ते हैं और शरीर में गहरे जाते हैं। यह सतह पर रहने से अधिक गंभीर है।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Host cell -->
+                    <rect x="50" y="100" width="300" height="300" fill="#e8f4f8" stroke="#3498db" stroke-width="3" rx="10"/>
+                    <text x="200" y="130" text-anchor="middle" fill="#2c3e50" font-size="16" font-weight="bold">Host Cell</text>
+                    
+                    <!-- Cell membrane -->
+                    <line x1="50" y1="200" x2="350" y2="200" stroke="#3498db" stroke-width="4"/>
+                    <text x="200" y="195" text-anchor="middle" fill="#2980b9" font-size="12">Cell Membrane</text>
+                    
+                    <!-- Receptor -->
+                    <rect x="180" y="200" width="40" height="30" fill="#9b59b6"/>
+                    <text x="200" y="220" text-anchor="middle" fill="white" font-size="10">Receptor</text>
+                    
+                    <!-- Bacteria outside -->
+                    <circle cx="200" cy="150" r="25" fill="#e74c3c"/>
+                    <text x="200" y="155" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Bacteria</text>
+                    
+                    <!-- Adhesin -->
+                    <line x1="200" y1="175" x2="200" y2="200" stroke="#27ae60" stroke-width="3"/>
+                    <text x="220" y="188" fill="#27ae60" font-size="11" font-weight="bold">Adhesin</text>
+                    
+                    <!-- Bacteria inside -->
+                    <circle cx="200" cy="300" r="25" fill="#e74c3c" opacity="0.7"/>
+                    <text x="200" y="305" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Bacteria</text>
+                    <text x="200" y="340" text-anchor="middle" fill="#2c3e50" font-size="12">Invaded</text>
+                    
+                    <!-- Invasion arrow -->
+                    <path d="M 200 225 L 200 275" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#invasion-arrow)"/>
+                    <text x="230" y="250" fill="#e74c3c" font-size="12" font-weight="bold">Invasion</text>
+                    
+                    <!-- Steps -->
+                    <text x="450" y="150" fill="#2c3e50" font-size="14" font-weight="bold">Steps:</text>
+                    <text x="450" y="180" fill="#2c3e50" font-size="12">1. Adhesion (Attachment)</text>
+                    <text x="450" y="210" fill="#2c3e50" font-size="12">2. Colonization (Growth)</text>
+                    <text x="450" y="240" fill="#2c3e50" font-size="12">3. Invasion (Entry)</text>
+                    <text x="450" y="270" fill="#2c3e50" font-size="12">4. Spread (Movement)</text>
+                    
+                    <defs>
+                        <marker id="invasion-arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section 4: Invasion of Different Tracts -->
+        <div class="section">
+            <h3>4. Invasion of Mucous Membranes: Respiratory, Enteric, and Urogenital Tracts</h3>
+            
+            <h4>4.1 Respiratory Tract</h4>
+            <p class="english">The respiratory tract includes nose, throat, and lungs. Bacteria enter through breathing. They attach to cells in the nose, throat, or lungs and cause infections like pneumonia, bronchitis, or sinusitis.</p>
+            <p class="hindi">श्वसन पथ में नाक, गला और फेफड़े शामिल हैं। बैक्टीरिया सांस लेने के माध्यम से प्रवेश करते हैं। वे नाक, गले या फेफड़ों में कोशिकाओं से जुड़ते हैं और निमोनिया, ब्रोंकाइटिस, या साइनसाइटिस जैसे संक्रमण पैदा करते हैं।</p>
+            
+            <div class="box">
+                <h5>Examples of Respiratory Tract Infections:</h5>
+                <ul class="list">
+                    <li><strong>Streptococcus pneumoniae:</strong> Causes pneumonia, attaches to lung cells</li>
+                    <li><strong>Mycobacterium tuberculosis:</strong> Causes TB, invades lung tissue</li>
+                    <li><strong>Bordetella pertussis:</strong> Causes whooping cough, attaches to respiratory cilia</li>
+                    <li><strong>Haemophilus influenzae:</strong> Causes respiratory infections, uses pili for attachment</li>
+                </ul>
+            </div>
+            
+            <div class="flowchart">
+<strong>Respiratory Tract Invasion:</strong>
+
+Airborne Bacteria
+    ↓
+Inhalation (Breathing In)
+    ↓
+Deposition in Respiratory Tract
+    ↓
+    ├─→ Upper Respiratory Tract
+    │       (Nose, Throat)
+    │       ↓
+    │   Attachment to Epithelial Cells
+    │       ↓
+    │   Local Infection (Sinusitis, Pharyngitis)
+    │
+    └─→ Lower Respiratory Tract
+            (Lungs, Bronchi)
+            ↓
+        Attachment to Alveolar Cells
+            ↓
+        Invasion of Lung Tissue
+            ↓
+        Pneumonia
+            </div>
+            
+            <h4>4.2 Enteric Tract (Digestive System)</h4>
+            <p class="english">The enteric tract includes mouth, stomach, and intestines. Bacteria enter through contaminated food or water. They attach to intestinal cells and cause diarrhea, food poisoning, or dysentery.</p>
+            <p class="hindi">आंत्र पथ में मुंह, पेट और आंतें शामिल हैं। बैक्टीरिया दूषित भोजन या पानी के माध्यम से प्रवेश करते हैं। वे आंतों की कोशिकाओं से जुड़ते हैं और दस्त, खाद्य विषाक्तता, या पेचिश पैदा करते हैं।</p>
+            
+            <div class="box">
+                <h5>Examples of Enteric Tract Infections:</h5>
+                <ul class="list">
+                    <li><strong>E. coli:</strong> Attaches to intestinal cells, causes diarrhea</li>
+                    <li><strong>Salmonella:</strong> Invades intestinal cells, causes food poisoning</li>
+                    <li><strong>Vibrio cholerae:</strong> Attaches to small intestine, causes cholera</li>
+                    <li><strong>Shigella:</strong> Invades colon cells, causes dysentery</li>
+                </ul>
+            </div>
+            
+            <div class="flowchart">
+<strong>Enteric Tract Invasion:</strong>
+
+Contaminated Food/Water
+    ↓
+Ingestion (Swallowing)
+    ↓
+Stomach (Acid Barrier)
+    ↓
+    ├─→ Killed by Stomach Acid
+    │
+    └─→ Survives Acid
+            ↓
+        Small Intestine
+            ↓
+        Attachment to Intestinal Cells
+            ↓
+        Colonization
+            ↓
+        ┌─────────────┴─────────────┐
+        │                           │
+    Toxin Production          Cell Invasion
+        │                           │
+        ↓                           ↓
+    Diarrhea                  Dysentery
+            </div>
+            
+            <h4>4.3 Urogenital Tract</h4>
+            <p class="english">The urogenital tract includes urinary system (kidneys, bladder, urethra) and reproductive system. Bacteria enter through urethra or during sexual contact. They attach to cells and cause UTIs, STDs, or reproductive infections.</p>
+            <p class="hindi">मूत्रजननांगी पथ में मूत्र प्रणाली (गुर्दे, मूत्राशय, मूत्रमार्ग) और प्रजनन प्रणाली शामिल हैं। बैक्टीरिया मूत्रमार्ग के माध्यम से या यौन संपर्क के दौरान प्रवेश करते हैं। वे कोशिकाओं से जुड़ते हैं और यूटीआई, एसटीडी, या प्रजनन संक्रमण पैदा करते हैं।</p>
+            
+            <div class="box">
+                <h5>Examples of Urogenital Tract Infections:</h5>
+                <ul class="list">
+                    <li><strong>E. coli:</strong> Most common cause of UTIs, attaches to bladder cells</li>
+                    <li><strong>Neisseria gonorrhoeae:</strong> Causes gonorrhea, attaches to urethral cells</li>
+                    <li><strong>Chlamydia trachomatis:</strong> Causes chlamydia, invades reproductive cells</li>
+                    <li><strong>Treponema pallidum:</strong> Causes syphilis, invades through skin/mucosa</li>
+                </ul>
+            </div>
+            
+            <div class="flowchart">
+<strong>Urogenital Tract Invasion:</strong>
+
+Entry Route
+    ├─→ Ascending (Urethra → Bladder → Kidneys)
+    │       ↓
+    │   Attachment to Uroepithelial Cells
+    │       ↓
+    │   Colonization
+    │       ↓
+    │   UTI (Urinary Tract Infection)
+    │
+    └─→ Sexual Contact
+            ↓
+        Attachment to Genital Mucosa
+            ↓
+        Invasion of Epithelial Cells
+            ↓
+        STD (Sexually Transmitted Disease)
+            </div>
+        </div>
+
+        <!-- Section 5: Aggresins, Enzymes, Organotropism, Variation, and Virulence -->
+        <div class="section">
+            <h3>5. Role of Aggresins, Depolymerizing Enzymes, Organotropism, Variation, and Virulence</h3>
+            
+            <h4>5.1 Aggresins</h4>
+            <p class="english">Aggresins are substances that help bacteria attack and damage host tissues. They help bacteria spread and cause disease. Examples include toxins and enzymes that break down tissues.</p>
+            <p class="hindi">एग्रेसिन वे पदार्थ हैं जो बैक्टीरिया को मेजबान ऊतकों पर हमला करने और नुकसान पहुंचाने में मदद करते हैं। वे बैक्टीरिया को फैलने और बीमारी पैदा करने में मदद करते हैं। उदाहरणों में विषाक्त पदार्थ और एंजाइम शामिल हैं जो ऊतकों को तोड़ते हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Type of Aggresin</th>
+                    <th>Function</th>
+                    <th>Example Bacteria</th>
+                </tr>
+                <tr>
+                    <td>Hemolysins</td>
+                    <td>Destroy red blood cells</td>
+                    <td>Staphylococcus, Streptococcus</td>
+                </tr>
+                <tr>
+                    <td>Leukocidins</td>
+                    <td>Kill white blood cells</td>
+                    <td>Staphylococcus aureus</td>
+                </tr>
+                <tr>
+                    <td>Coagulase</td>
+                    <td>Clot blood, protect bacteria</td>
+                    <td>Staphylococcus aureus</td>
+                </tr>
+                <tr>
+                    <td>Fibrinolysin</td>
+                    <td>Dissolve blood clots</td>
+                    <td>Streptococcus pyogenes</td>
+                </tr>
+            </table>
+            
+            <h4>5.2 Depolymerizing Enzymes</h4>
+            <p class="english">Depolymerizing enzymes break down large molecules in host tissues. They help bacteria spread by dissolving barriers. These enzymes break down proteins, carbohydrates, and other tissue components.</p>
+            <p class="hindi">डिपॉलिमराइजिंग एंजाइम मेजबान ऊतकों में बड़े अणुओं को तोड़ते हैं। वे बाधाओं को घोलकर बैक्टीरिया को फैलने में मदद करते हैं। ये एंजाइम प्रोटीन, कार्बोहाइड्रेट और अन्य ऊतक घटकों को तोड़ते हैं।</p>
+            
+            <div class="box">
+                <h5>Important Depolymerizing Enzymes:</h5>
+                <ul class="list">
+                    <li><strong>Hyaluronidase:</strong> Breaks down hyaluronic acid (connective tissue), helps bacteria spread</li>
+                    <li><strong>Collagenase:</strong> Breaks down collagen (skin, bone protein), allows deep invasion</li>
+                    <li><strong>Proteases:</strong> Break down proteins, damage tissues</li>
+                    <li><strong>DNase:</strong> Breaks down DNA, reduces viscosity of pus</li>
+                    <li><strong>Lipases:</strong> Break down fats, help in tissue invasion</li>
+                </ul>
+            </div>
+            
+            <div class="flowchart">
+<strong>Action of Depolymerizing Enzymes:</strong>
+
+Bacteria at Infection Site
+    ↓
+Secretion of Enzymes
+    ↓
+    ├─→ Hyaluronidase
+    │       ↓
+    │   Breakdown of Connective Tissue
+    │       ↓
+    │   Spread to Deeper Tissues
+    │
+    ├─→ Collagenase
+    │       ↓
+    │   Breakdown of Collagen
+    │       ↓
+    │   Tissue Destruction
+    │
+    └─→ Proteases
+            ↓
+        Breakdown of Proteins
+            ↓
+        Cell Damage
+            </div>
+            
+            <h4>5.3 Organotropism</h4>
+            <p class="english">Organotropism means bacteria prefer to infect specific organs or tissues. Different bacteria target different parts of the body. This happens because bacteria have specific receptors that match certain organs.</p>
+            <p class="hindi">ऑर्गनोट्रोपिज्म का मतलब है कि बैक्टीरिया विशिष्ट अंगों या ऊतकों को संक्रमित करना पसंद करते हैं। अलग-अलग बैक्टीरिया शरीर के अलग-अलग हिस्सों को लक्षित करते हैं। यह इसलिए होता है क्योंकि बैक्टीरिया में विशिष्ट रिसेप्टर्स होते हैं जो कुछ अंगों से मेल खाते हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Bacteria</th>
+                    <th>Preferred Organ/Tissue</th>
+                    <th>Disease</th>
+                </tr>
+                <tr>
+                    <td>Mycobacterium tuberculosis</td>
+                    <td>Lungs</td>
+                    <td>Tuberculosis</td>
+                </tr>
+                <tr>
+                    <td>Neisseria meningitidis</td>
+                    <td>Brain (Meninges)</td>
+                    <td>Meningitis</td>
+                </tr>
+                <tr>
+                    <td>Vibrio cholerae</td>
+                    <td>Small Intestine</td>
+                    <td>Cholera</td>
+                </tr>
+                <tr>
+                    <td>Treponema pallidum</td>
+                    <td>Skin, Nervous System</td>
+                    <td>Syphilis</td>
+                </tr>
+                <tr>
+                    <td>Salmonella typhi</td>
+                    <td>Intestines, Liver, Spleen</td>
+                    <td>Typhoid</td>
+                </tr>
+            </table>
+            
+            <h4>5.4 Variation</h4>
+            <p class="english">Variation means bacteria can change their characteristics. This helps them survive and avoid the immune system. Bacteria can change their surface proteins, making it hard for the immune system to recognize them.</p>
+            <p class="hindi">विविधता का मतलब है कि बैक्टीरिया अपनी विशेषताओं को बदल सकते हैं। यह उन्हें जीवित रहने और प्रतिरक्षा प्रणाली से बचने में मदद करता है। बैक्टीरिया अपने सतह प्रोटीन को बदल सकते हैं, जिससे प्रतिरक्षा प्रणाली के लिए उन्हें पहचानना मुश्किल हो जाता है।</p>
+            
+            <div class="box">
+                <h5>Types of Variation:</h5>
+                <ul class="list">
+                    <li><strong>Antigenic Variation:</strong> Change surface antigens to avoid immune recognition</li>
+                    <li><strong>Phase Variation:</strong> Turn genes on/off to change characteristics</li>
+                    <li><strong>Mutation:</strong> Random changes in DNA that create new traits</li>
+                    <li><strong>Gene Transfer:</strong> Get new genes from other bacteria</li>
+                </ul>
+            </div>
+            
+            <h4>5.5 Virulence</h4>
+            <p class="english">Virulence means how strong and dangerous a bacteria is. High virulence means bacteria cause severe disease easily. Low virulence means bacteria cause mild or no disease. Virulence depends on many factors like toxins, enzymes, and ability to spread.</p>
+            <p class="hindi">विषाणुता का मतलब है कि बैक्टीरिया कितना मजबूत और खतरनाक है। उच्च विषाणुता का मतलब है कि बैक्टीरिया आसानी से गंभीर बीमारी पैदा करते हैं। कम विषाणुता का मतलब है कि बैक्टीरिया हल्की या कोई बीमारी पैदा करते हैं। विषाणुता कई कारकों पर निर्भर करती है जैसे विषाक्त पदार्थ, एंजाइम, और फैलने की क्षमता।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Virulence factors -->
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Virulence Factors</text>
+                    
+                    <!-- Center: Bacteria -->
+                    <circle cx="350" cy="200" r="50" fill="#e74c3c"/>
+                    <text x="350" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Bacteria</text>
+                    
+                    <!-- Toxins -->
+                    <rect x="50" y="50" width="120" height="60" fill="#ff6b6b" rx="5"/>
+                    <text x="110" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Toxins</text>
+                    <line x1="170" y1="80" x2="300" y2="180" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Enzymes -->
+                    <rect x="530" y="50" width="120" height="60" fill="#4ecdc4" rx="5"/>
+                    <text x="590" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Enzymes</text>
+                    <line x1="530" y1="80" x2="400" y2="180" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Adhesins -->
+                    <rect x="50" y="290" width="120" height="60" fill="#95e1d3" rx="5"/>
+                    <text x="110" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Adhesins</text>
+                    <line x1="170" y1="320" x2="300" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Capsule -->
+                    <rect x="530" y="290" width="120" height="60" fill="#f38181" rx="5"/>
+                    <text x="590" y="320" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Capsule</text>
+                    <line x1="530" y1="320" x2="400" y2="220" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Result -->
+                    <text x="350" y="380" text-anchor="middle" fill="#e74c3c" font-size="16" font-weight="bold">High Virulence = Severe Disease</text>
+                </svg>
+            </div>
+            
+            <div class="flowchart">
+<strong>Virulence Determination:</strong>
+
+Bacterial Strain
+    ↓
+    ├─→ Has Virulence Factors?
+    │       ├─→ Yes → High Virulence
+    │       │       ↓
+    │       │   Severe Disease
+    │       │
+    │       └─→ No → Low Virulence
+    │               ↓
+    │           Mild/No Disease
+    │
+    └─→ Virulence Factors Include:
+            • Toxins
+            • Enzymes
+            • Adhesins
+            • Capsule
+            • Invasiveness
+            • Antiphagocytic Factors
+            </div>
+        </div>
+
+        <!-- Section 6: Immune System Organs and Cells -->
+        <div class="section">
+            <h3>6. Organs and Cells Involved in the Immune System and Immune Response</h3>
+            
+            <h4>6.1 Primary Lymphoid Organs</h4>
+            <p class="english">Primary lymphoid organs are where immune cells are born and learn their jobs. These include bone marrow and thymus. They are like schools for immune cells.</p>
+            <p class="hindi">प्राथमिक लसीकाभ अंग वे हैं जहां प्रतिरक्षा कोशिकाएं पैदा होती हैं और अपना काम सीखती हैं। इनमें अस्थि मज्जा और थाइमस शामिल हैं। वे प्रतिरक्षा कोशिकाओं के लिए स्कूल जैसे हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Organ</th>
+                    <th>Function</th>
+                    <th>Cells Produced</th>
+                </tr>
+                <tr>
+                    <td>Bone Marrow</td>
+                    <td>Produces all blood cells including immune cells</td>
+                    <td>B cells, T cells (precursors), Macrophages, Neutrophils</td>
+                </tr>
+                <tr>
+                    <td>Thymus</td>
+                    <td>Matures and educates T cells</td>
+                    <td>Mature T cells (Helper, Cytotoxic, Regulatory)</td>
+                </tr>
+            </table>
+            
+            <h4>6.2 Secondary Lymphoid Organs</h4>
+            <p class="english">Secondary lymphoid organs are where immune cells meet pathogens and fight infections. These include lymph nodes, spleen, and mucosa-associated lymphoid tissue (MALT).</p>
+            <p class="hindi">द्वितीयक लसीकाभ अंग वे हैं जहां प्रतिरक्षा कोशिकाएं रोगजनकों से मिलती हैं और संक्रमण से लड़ती हैं। इनमें लिम्फ नोड्स, प्लीहा, और श्लेष्मा-संबद्ध लसीकाभ ऊतक (MALT) शामिल हैं।</p>
+            
+            <div class="box">
+                <h5>Secondary Lymphoid Organs:</h5>
+                <ul class="list">
+                    <li><strong>Lymph Nodes:</strong> Filter lymph, trap pathogens, activate immune cells</li>
+                    <li><strong>Spleen:</strong> Filters blood, removes old cells, fights blood-borne infections</li>
+                    <li><strong>MALT (Mucosa-Associated Lymphoid Tissue):</strong> Protects mucosal surfaces (gut, respiratory tract)</li>
+                    <li><strong>Tonsils:</strong> Protect throat from infections</li>
+                    <li><strong>Appendix:</strong> Contains immune cells, may help gut immunity</li>
+                </ul>
+            </div>
+            
+            <h4>6.3 Immune Cells</h4>
+            <p class="english">Immune cells are the soldiers of the immune system. Different cells have different jobs. Some eat bacteria, some make antibodies, some kill infected cells, and some coordinate the response.</p>
+            <p class="hindi">प्रतिरक्षा कोशिकाएं प्रतिरक्षा प्रणाली के सैनिक हैं। अलग-अलग कोशिकाओं के अलग-अलग काम हैं। कुछ बैक्टीरिया खाती हैं, कुछ एंटीबॉडी बनाती हैं, कुछ संक्रमित कोशिकाओं को मारती हैं, और कुछ प्रतिक्रिया को समन्वयित करती हैं।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Title -->
+                    <text x="400" y="30" text-anchor="middle" fill="#2c3e50" font-size="20" font-weight="bold">Immune System Cells</text>
+                    
+                    <!-- Innate Immune Cells -->
+                    <text x="200" y="70" text-anchor="middle" fill="#e74c3c" font-size="16" font-weight="bold">Innate Immune Cells</text>
+                    
+                    <!-- Macrophage -->
+                    <ellipse cx="100" cy="150" rx="40" ry="50" fill="#ff6b6b"/>
+                    <text x="100" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Macrophage</text>
+                    <text x="100" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Eats Bacteria</text>
+                    
+                    <!-- Neutrophil -->
+                    <circle cx="200" cy="150" r="35" fill="#4ecdc4"/>
+                    <text x="200" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Neutrophil</text>
+                    <text x="200" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">First Responder</text>
+                    
+                    <!-- NK Cell -->
+                    <rect x="280" y="120" width="60" height="60" fill="#95e1d3" rx="5"/>
+                    <text x="310" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">NK Cell</text>
+                    <text x="310" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Kills Infected Cells</text>
+                    
+                    <!-- Dendritic Cell -->
+                    <polygon points="400,100 420,140 460,140 430,170 440,210 400,190 360,210 370,170 340,140 380,140" fill="#f38181"/>
+                    <text x="400" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Dendritic</text>
+                    <text x="400" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Presents Antigen</text>
+                    
+                    <!-- Adaptive Immune Cells -->
+                    <text x="600" y="70" text-anchor="middle" fill="#27ae60" font-size="16" font-weight="bold">Adaptive Immune Cells</text>
+                    
+                    <!-- B Cell -->
+                    <circle cx="550" cy="150" r="35" fill="#27ae60"/>
+                    <text x="550" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">B Cell</text>
+                    <text x="550" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Makes Antibodies</text>
+                    
+                    <!-- T Helper Cell -->
+                    <rect x="630" y="120" width="60" height="60" fill="#2ecc71" rx="5"/>
+                    <text x="660" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">T Helper</text>
+                    <text x="660" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Coordinates</text>
+                    
+                    <!-- Cytotoxic T Cell -->
+                    <rect x="720" y="120" width="60" height="60" fill="#16a085" rx="5"/>
+                    <text x="750" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">T Cytotoxic</text>
+                    <text x="750" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Kills Cells</text>
+                    
+                    <!-- Memory Cells -->
+                    <text x="400" y="300" text-anchor="middle" fill="#9b59b6" font-size="16" font-weight="bold">Memory Cells</text>
+                    <circle cx="350" cy="350" r="30" fill="#9b59b6" opacity="0.7"/>
+                    <text x="350" y="355" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Memory B</text>
+                    <circle cx="450" cy="350" r="30" fill="#8e44ad" opacity="0.7"/>
+                    <text x="450" y="355" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Memory T</text>
+                    <text x="400" y="410" text-anchor="middle" fill="#2c3e50" font-size="12">Remember Previous Infections</text>
+                    
+                    <!-- Process flow -->
+                    <text x="400" y="480" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Immune Response Process</text>
+                    <text x="400" y="510" text-anchor="middle" fill="#2c3e50" font-size="12">Pathogen → Recognition → Activation → Response → Memory</text>
+                </svg>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Cell Type</th>
+                    <th>Function</th>
+                    <th>Type of Immunity</th>
+                </tr>
+                <tr>
+                    <td>Macrophage</td>
+                    <td>Eats and destroys bacteria, presents antigens</td>
+                    <td>Innate</td>
+                </tr>
+                <tr>
+                    <td>Neutrophil</td>
+                    <td>First to arrive at infection site, eats bacteria</td>
+                    <td>Innate</td>
+                </tr>
+                <tr>
+                    <td>Natural Killer (NK) Cell</td>
+                    <td>Kills virus-infected cells and tumor cells</td>
+                    <td>Innate</td>
+                </tr>
+                <tr>
+                    <td>Dendritic Cell</td>
+                    <td>Presents antigens to T cells, activates adaptive immunity</td>
+                    <td>Innate/Adaptive Bridge</td>
+                </tr>
+                <tr>
+                    <td>B Cell</td>
+                    <td>Produces antibodies, humoral immunity</td>
+                    <td>Adaptive</td>
+                </tr>
+                <tr>
+                    <td>T Helper Cell</td>
+                    <td>Helps B cells and cytotoxic T cells, coordinates response</td>
+                    <td>Adaptive</td>
+                </tr>
+                <tr>
+                    <td>Cytotoxic T Cell</td>
+                    <td>Kills infected cells directly</td>
+                    <td>Adaptive</td>
+                </tr>
+                <tr>
+                    <td>Regulatory T Cell</td>
+                    <td>Controls immune response, prevents autoimmunity</td>
+                    <td>Adaptive</td>
+                </tr>
+                <tr>
+                    <td>Memory Cells</td>
+                    <td>Remember previous infections for faster response</td>
+                    <td>Adaptive</td>
+                </tr>
+            </table>
+            
+            <h4>6.4 Immune Response Overview</h4>
+            <p class="english">The immune response is how the body fights infections. It has two parts: innate (immediate, non-specific) and adaptive (slower, specific, with memory). Both work together to protect the body.</p>
+            <p class="hindi">प्रतिरक्षा प्रतिक्रिया वह तरीका है जिससे शरीर संक्रमण से लड़ता है। इसके दो भाग हैं: जन्मजात (तत्काल, गैर-विशिष्ट) और अनुकूली (धीमा, विशिष्ट, स्मृति के साथ)। दोनों शरीर की रक्षा के लिए एक साथ काम करते हैं।</p>
+            
+            <div class="flowchart">
+<strong>Immune Response Flow:</strong>
+
+Pathogen Entry
+    ↓
+Innate Immune Response (Immediate)
+    ├─→ Physical Barriers (Skin, Mucosa)
+    ├─→ Chemical Barriers (Acid, Enzymes)
+    ├─→ Cellular Response
+    │       ├─→ Macrophages
+    │       ├─→ Neutrophils
+    │       └─→ NK Cells
+    └─→ Inflammatory Response
+            ↓
+    Pathogen Still Present?
+            ├─→ No → Infection Cleared
+            │
+            └─→ Yes → Adaptive Immune Response (Days)
+                    ├─→ Antigen Presentation
+                    ├─→ T Cell Activation
+                    │       ├─→ Helper T Cells
+                    │       └─→ Cytotoxic T Cells
+                    └─→ B Cell Activation
+                            ├─→ Antibody Production
+                            └─→ Memory Cell Formation
+                                    ↓
+                            Faster Response Next Time
+            </div>
+            
+            <div class="box">
+                <h5>Key Points:</h5>
+                <ul class="list">
+                    <li><strong>Innate Immunity:</strong> Fast, non-specific, no memory. First line of defense.</li>
+                    <li><strong>Adaptive Immunity:</strong> Slow, specific, has memory. Second line of defense.</li>
+                    <li><strong>Both work together:</strong> Innate response activates and guides adaptive response.</li>
+                    <li><strong>Memory:</strong> Adaptive immunity remembers pathogens for faster response next time.</li>
+                </ul>
+            </div>
+            
+            <p class="hindi"><strong>हिंदी में:</strong> जन्मजात प्रतिरक्षा तेज, गैर-विशिष्ट, कोई स्मृति नहीं है। यह रक्षा की पहली पंक्ति है। अनुकूली प्रतिरक्षा धीमी, विशिष्ट, स्मृति के साथ है। यह रक्षा की दूसरी पंक्ति है। दोनों एक साथ काम करते हैं: जन्मजात प्रतिक्रिया अनुकूली प्रतिक्रिया को सक्रिय और मार्गदर्शन करती है।</p>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h3>Summary</h3>
+            <p class="english">This unit covered how bacteria establish infections, spread in the body, cause tissue damage, and avoid immune defenses. We learned about bacterial adhesion, colonization, and invasion of different body tracts. We also studied virulence factors like aggresins and enzymes, and how the immune system responds with various organs and cells.</p>
+            <p class="hindi">इस इकाई में हमने सीखा कि बैक्टीरिया कैसे संक्रमण स्थापित करते हैं, शरीर में फैलते हैं, ऊतक क्षति पैदा करते हैं, और प्रतिरक्षा रक्षा से बचते हैं। हमने विभिन्न शरीर पथों में बैक्टीरिया के आसंजन, उपनिवेशन और आक्रमण के बारे में सीखा। हमने एग्रेसिन और एंजाइम जैसे विषाणुता कारकों, और प्रतिरक्षा प्रणाली कैसे विभिन्न अंगों और कोशिकाओं के साथ प्रतिक्रिया करती है, का भी अध्ययन किया।</p>
+        </div>
+
+        <div class="unit-nav">
+            <a href="mcr611-unit1.html" class="prev">← Previous: Unit I</a>
+            <a href="../index.html" class="home">🏠 Home</a>
+            <a href="mcr611-unit3.html" class="next">Next: Unit III →</a>
+        </div>
+    </div>
+</body>
+</html>
+
