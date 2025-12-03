@@ -73,7 +73,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             padding: 40px;
@@ -93,25 +93,99 @@
             margin-bottom: 10px;
         }
         
-        .coming-soon {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-            padding: 40px;
-            margin: 30px 0;
+        .header h2 {
+            color: #e74c3c;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
             border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .section h4 {
+            color: #34495e;
+            font-size: 20px;
+            margin: 20px 0 15px 0;
+        }
+        
+        .section p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        .english {
+            color: #2c3e50;
+        }
+        
+        .hindi {
+            color: #8e44ad;
+            font-weight: 500;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0e6ff;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
             text-align: center;
         }
         
-        .coming-soon h2 {
-            color: #856404;
-            font-size: 2em;
-            margin-bottom: 20px;
+        .diagram svg {
+            max-width: 100%;
+            height: auto;
         }
         
-        .coming-soon p {
-            color: #856404;
-            font-size: 1.2em;
-            line-height: 1.8;
+        .flowchart {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .box {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .box h5 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        .list li {
+            margin: 10px 0;
         }
         
         .unit-nav {
@@ -138,6 +212,11 @@
             color: white;
         }
         
+        .unit-nav .prev {
+            background: #e74c3c;
+            color: white;
+        }
+        
         .unit-nav .home {
             background: #667eea;
             color: white;
@@ -148,77 +227,1158 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
             }
             
-            .nav-bar {
-                flex-direction: column;
-                gap: 10px;
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .section {
+                padding: 20px;
             }
             
             .nav-links {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .unit-nav {
                 flex-direction: column;
-            }
-            
-            .unit-nav a {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="nav-bar">
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="mcr615-unit1.html" class="active">Unit I</a></li>
+            <li><a href="mcr615-unit2.html">Unit II</a></li>
+            <li><a href="mcr615-unit3.html">Unit III</a></li>
+            <li><a href="mcr615-unit4.html">Unit IV</a></li>
+            <li><a href="mcr615-unit5.html">Unit V</a></li>
+        </ul>
         <a href="../index.html" class="home-btn">🏠 Home</a>
-        <div class="nav-links">
-            <a href="mcr615-unit1.html" class="active">Unit I</a>
-            <a href="mcr615-unit2.html">Unit II</a>
-            <a href="mcr615-unit3.html">Unit III</a>
-            <a href="mcr615-unit4.html">Unit IV</a>
-            <a href="mcr615-unit5.html">Unit V</a>
-        </div>
-    </div>
+    </nav>
     
     <div class="container">
         <div class="header">
-            <h1>MCR-615 Applied and Environmental Microbiology</h1>
-            <h2 style="color: #e74c3c; margin: 10px 0;">UNIT I - Microorganisms in Natural Environments</h2>
-            <p>Simple English + Hindi | Coming Soon</p>
+            <h1>MCR-615: Applied and Environmental Microbiology</h1>
+            <h2>Unit I: Microorganisms in Natural Environments</h2>
+            <p style="color: #7f8c8d; margin-top: 10px;">Microbes in Different Environments, Extreme Adaptations, Dispersal, Microbial Assessment Methods, and Air Quality</p>
+        </div>
+
+        <!-- Section 1: Microorganisms in Different Environments -->
+        <div class="section">
+            <h3>1. Microorganisms in Natural Environments</h3>
+            
+            <p class="english">Microorganisms are found everywhere on Earth - in soil, water, air, and living organisms. They are the most abundant life forms and play important roles in all ecosystems. Different environments have different types of microbes adapted to those conditions.</p>
+            <p class="hindi">सूक्ष्मजीव पृथ्वी पर हर जगह पाए जाते हैं - मिट्टी, पानी, हवा, और जीवित जीवों में। वे सबसे प्रचुर जीवन रूप हैं और सभी पारिस्थितिक तंत्रों में महत्वपूर्ण भूमिका निभाते हैं। अलग-अलग वातावरण में उन स्थितियों के अनुकूल अलग-अलग प्रकार के सूक्ष्मजीव होते हैं।</p>
+            
+            <h4>1.1 Terrestrial Environment (Soil)</h4>
+            <p class="english">Soil is one of the richest environments for microorganisms. It contains billions of bacteria, fungi, viruses, and other microbes per gram. Soil microbes help in nutrient cycling, decomposition, and plant growth.</p>
+            <p class="hindi">मिट्टी सूक्ष्मजीवों के लिए सबसे समृद्ध वातावरणों में से एक है। इसमें प्रति ग्राम अरबों बैक्टीरिया, कवक, वायरस और अन्य सूक्ष्मजीव होते हैं। मिट्टी के सूक्ष्मजीव पोषक तत्व चक्रण, अपघटन, और पौधों की वृद्धि में मदद करते हैं।</p>
+            
+            <div class="box">
+                <h5>Types of Microbes in Soil:</h5>
+                <ul class="list">
+                    <li><strong>Bacteria:</strong> Most abundant (10⁸-10⁹ per gram), help in nitrogen fixation, decomposition</li>
+                    <li><strong>Fungi:</strong> Decompose organic matter, form mycorrhizal associations with plants</li>
+                    <li><strong>Actinomycetes:</strong> Produce antibiotics, decompose complex organic compounds</li>
+                    <li><strong>Algae:</strong> Photosynthetic microbes, add organic matter to soil</li>
+                    <li><strong>Protozoa:</strong> Feed on bacteria, help in nutrient cycling</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Soil layers -->
+                    <rect x="50" y="50" width="600" height="300" fill="#8B4513" opacity="0.3"/>
+                    <rect x="50" y="50" width="600" height="100" fill="#D2691E" opacity="0.5"/>
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Soil Environment</text>
+                    
+                    <!-- Surface layer -->
+                    <text x="100" y="80" fill="white" font-size="12" font-weight="bold">Surface Layer</text>
+                    <text x="100" y="100" fill="white" font-size="10">(Organic Matter)</text>
+                    
+                    <!-- Bacteria -->
+                    <circle cx="200" cy="120" r="8" fill="#4ecdc4"/>
+                    <text x="200" y="145" text-anchor="middle" fill="#2c3e50" font-size="10">Bacteria</text>
+                    
+                    <!-- Fungi -->
+                    <path d="M 300 100 L 310 120 L 320 100 L 330 120 L 340 100" stroke="#9b59b6" stroke-width="2" fill="none"/>
+                    <text x="320" y="145" text-anchor="middle" fill="#2c3e50" font-size="10">Fungi</text>
+                    
+                    <!-- Actinomycetes -->
+                    <line x1="400" y1="110" x2="420" y2="130" stroke="#e74c3c" stroke-width="3"/>
+                    <line x1="410" y1="110" x2="430" y2="130" stroke="#e74c3c" stroke-width="3"/>
+                    <text x="420" y="145" text-anchor="middle" fill="#2c3e50" font-size="10">Actinomycetes</text>
+                    
+                    <!-- Middle layer -->
+                    <text x="100" y="200" fill="white" font-size="12" font-weight="bold">Middle Layer</text>
+                    <text x="100" y="220" fill="white" font-size="10">(Mineral Soil)</text>
+                    
+                    <!-- Protozoa -->
+                    <ellipse cx="250" cy="230" rx="12" ry="8" fill="#f39c12"/>
+                    <text x="250" y="255" text-anchor="middle" fill="#2c3e50" font-size="10">Protozoa</text>
+                    
+                    <!-- Algae -->
+                    <circle cx="350" cy="230" r="10" fill="#27ae60"/>
+                    <text x="350" y="255" text-anchor="middle" fill="#2c3e50" font-size="10">Algae</text>
+                    
+                    <!-- Deep layer -->
+                    <text x="100" y="300" fill="white" font-size="12" font-weight="bold">Deep Layer</text>
+                    <text x="100" y="320" fill="white" font-size="10">(Less Organic Matter)</text>
+                    
+                    <!-- Fewer microbes -->
+                    <circle cx="300" cy="310" r="6" fill="#95a5a6"/>
+                    <text x="300" y="335" text-anchor="middle" fill="#2c3e50" font-size="10">Fewer Microbes</text>
+                    
+                    <!-- Legend -->
+                    <rect x="500" y="100" width="150" height="200" fill="white" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                    <text x="575" y="125" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Microbial Density</text>
+                    <text x="520" y="155" fill="#2c3e50" font-size="11">Surface: 10⁸-10⁹/g</text>
+                    <text x="520" y="180" fill="#2c3e50" font-size="11">Middle: 10⁶-10⁷/g</text>
+                    <text x="520" y="205" fill="#2c3e50" font-size="11">Deep: 10⁴-10⁵/g</text>
+                </svg>
+            </div>
+            
+            <h4>1.2 Aquatic Environment (Water)</h4>
+            <p class="english">Water environments include oceans, seas, rivers, lakes, and ponds. Different water bodies have different types of microbes. Freshwater and saltwater have different microbial communities due to salt concentration.</p>
+            <p class="hindi">जल वातावरण में महासागर, समुद्र, नदियाँ, झीलें और तालाब शामिल हैं। अलग-अलग जल निकायों में अलग-अलग प्रकार के सूक्ष्मजीव होते हैं। नमक की सांद्रता के कारण मीठे पानी और खारे पानी में अलग-अलग सूक्ष्मजीव समुदाय होते हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Water Type</th>
+                    <th>Microbial Types</th>
+                    <th>Examples</th>
+                    <th>Concentration</th>
+                </tr>
+                <tr>
+                    <td>Freshwater (Rivers, Lakes)</td>
+                    <td>Bacteria, Algae, Protozoa, Fungi</td>
+                    <td>E. coli, Cyanobacteria, Diatoms</td>
+                    <td>10⁴-10⁶ per ml</td>
+                </tr>
+                <tr>
+                    <td>Marine (Oceans, Seas)</td>
+                    <td>Halophilic bacteria, Marine algae, Archaea</td>
+                    <td>Vibrio, Prochlorococcus, Halobacterium</td>
+                    <td>10⁵-10⁷ per ml</td>
+                </tr>
+                <tr>
+                    <td>Groundwater</td>
+                    <td>Fewer microbes, mostly bacteria</td>
+                    <td>Nitrosomonas, Nitrobacter</td>
+                    <td>10²-10⁴ per ml</td>
+                </tr>
+                <tr>
+                    <td>Hot Springs</td>
+                    <td>Thermophilic bacteria and archaea</td>
+                    <td>Thermus aquaticus, Sulfolobus</td>
+                    <td>10⁶-10⁸ per ml</td>
+                </tr>
+            </table>
+            
+            <div class="flowchart">
+<strong>Aquatic Microbial Distribution:</strong>
+
+Water Body
+    ↓
+    ├─→ Surface Water
+    │       ├─→ Light Available
+    │       │       ↓
+    │       │   Photosynthetic Microbes
+    │       │   (Algae, Cyanobacteria)
+    │       │
+    │       └─→ High Oxygen
+    │               ↓
+    │           Aerobic Bacteria
+    │
+    ├─→ Middle Layer (Thermocline)
+    │       ↓
+    │   Mixed Community
+    │   (Aerobic + Anaerobic)
+    │
+    └─→ Deep Water / Sediment
+            ├─→ No Light
+            ├─→ Low Oxygen
+            │       ↓
+            │   Anaerobic Bacteria
+            │   (Methanogens, Sulfate Reducers)
+            │
+            └─→ High Pressure
+                    ↓
+                Barophilic Bacteria
+            </div>
+            
+            <h4>1.3 Air Environment (Atmosphere)</h4>
+            <p class="english">Air contains fewer microbes than soil or water because it doesn't provide nutrients or moisture. Most airborne microbes are spores, pollen, or bacteria attached to dust particles. They are temporary residents, not permanent.</p>
+            <p class="hindi">हवा में मिट्टी या पानी की तुलना में कम सूक्ष्मजीव होते हैं क्योंकि यह पोषक तत्व या नमी प्रदान नहीं करती है। अधिकांश हवा में मौजूद सूक्ष्मजीव बीजाणु, पराग, या धूल कणों से जुड़े बैक्टीरिया हैं। वे अस्थायी निवासी हैं, स्थायी नहीं।</p>
+            
+            <div class="box">
+                <h5>Types of Airborne Microbes:</h5>
+                <ul class="list">
+                    <li><strong>Bacterial Spores:</strong> Bacillus, Clostridium (survive harsh conditions)</li>
+                    <li><strong>Fungal Spores:</strong> Aspergillus, Penicillium, Alternaria (cause allergies)</li>
+                    <li><strong>Bacteria on Dust:</strong> Staphylococcus, Streptococcus (attached to particles)</li>
+                    <li><strong>Viruses:</strong> Influenza, Common cold viruses (in droplets)</li>
+                    <li><strong>Pollen:</strong> Plant reproductive cells (not microbes but counted)</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Air layers -->
+                    <rect x="50" y="50" width="600" height="250" fill="#87CEEB" opacity="0.3"/>
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Atmospheric Layers and Microbes</text>
+                    
+                    <!-- Ground level -->
+                    <line x1="50" y1="300" x2="650" y2="300" stroke="#8B4513" stroke-width="3"/>
+                    <text x="100" y="295" fill="#2c3e50" font-size="12" font-weight="bold">Ground Level</text>
+                    
+                    <!-- Lower atmosphere (0-1000m) -->
+                    <text x="100" y="250" fill="#2c3e50" font-size="11" font-weight="bold">Lower Atmosphere (0-1000m)</text>
+                    <text x="100" y="270" fill="#2c3e50" font-size="10">High microbial load</text>
+                    
+                    <!-- Dust particles with bacteria -->
+                    <circle cx="250" cy="220" r="15" fill="#95a5a6" opacity="0.7"/>
+                    <circle cx="250" cy="220" r="3" fill="#e74c3c"/>
+                    <text x="250" y="200" text-anchor="middle" fill="#2c3e50" font-size="9">Dust + Bacteria</text>
+                    
+                    <!-- Fungal spores -->
+                    <circle cx="350" cy="200" r="8" fill="#9b59b6"/>
+                    <text x="350" y="185" text-anchor="middle" fill="#2c3e50" font-size="9">Fungal Spores</text>
+                    
+                    <!-- Middle atmosphere (1000-5000m) -->
+                    <text x="100" y="150" fill="#2c3e50" font-size="11" font-weight="bold">Middle Atmosphere (1000-5000m)</text>
+                    <text x="100" y="170" fill="#2c3e50" font-size="10">Fewer microbes</text>
+                    
+                    <!-- Few spores -->
+                    <circle cx="300" cy="130" r="5" fill="#95a5a6" opacity="0.5"/>
+                    <text x="300" y="115" text-anchor="middle" fill="#2c3e50" font-size="9">Few Spores</text>
+                    
+                    <!-- Upper atmosphere (5000m+) -->
+                    <text x="100" y="100" fill="#2c3e50" font-size="11" font-weight="bold">Upper Atmosphere (5000m+)</text>
+                    <text x="100" y="120" fill="#2c3e50" font-size="10">Very few or no microbes</text>
+                    
+                    <!-- Wind arrows -->
+                    <path d="M 500 200 L 550 200" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#wind-arrow)"/>
+                    <path d="M 500 150 L 550 150" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#wind-arrow)"/>
+                    <text x="575" y="175" fill="#2c3e50" font-size="10">Wind Dispersal</text>
+                    
+                    <defs>
+                        <marker id="wind-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#34495e"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <h4>1.4 Biological Environment (Living Organisms)</h4>
+            <p class="english">Microbes live in and on living organisms. They can be beneficial (symbiotic), harmful (pathogenic), or neutral (commensal). The human body alone contains trillions of microbes, especially in the gut, skin, and mouth.</p>
+            <p class="hindi">सूक्ष्मजीव जीवित जीवों में और उन पर रहते हैं। वे लाभकारी (सहजीवी), हानिकारक (रोगजनक), या तटस्थ (सहभोजी) हो सकते हैं। केवल मानव शरीर में ही खरबों सूक्ष्मजीव होते हैं, विशेष रूप से आंत, त्वचा और मुंह में।</p>
+            
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Microbial Types</th>
+                    <th>Function</th>
+                    <th>Examples</th>
+                </tr>
+                <tr>
+                    <td>Human Gut</td>
+                    <td>Bacteria, Archaea, Fungi</td>
+                    <td>Digestion, vitamin production, immunity</td>
+                    <td>Bacteroides, Lactobacillus, Bifidobacterium</td>
+                </tr>
+                <tr>
+                    <td>Human Skin</td>
+                    <td>Bacteria, Fungi</td>
+                    <td>Protection, pH maintenance</td>
+                    <td>Staphylococcus, Propionibacterium, Malassezia</td>
+                </tr>
+                <tr>
+                    <td>Plant Roots</td>
+                    <td>Bacteria, Fungi</td>
+                    <td>Nitrogen fixation, nutrient uptake</td>
+                    <td>Rhizobium, Mycorrhizal fungi</td>
+                </tr>
+                <tr>
+                    <td>Rumen (Cattle)</td>
+                    <td>Bacteria, Protozoa, Fungi</td>
+                    <td>Cellulose digestion</td>
+                    <td>Ruminococcus, Methanobrevibacter</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Extreme Environments -->
+        <div class="section">
+            <h3>2. Microbes in Extreme Environments and Their Adaptations</h3>
+            
+            <p class="english">Extremophiles are microbes that live in extreme conditions where most life cannot survive. They have special adaptations that allow them to thrive in these harsh environments. Scientists study them to understand life's limits and find useful enzymes.</p>
+            <p class="hindi">एक्सट्रीमोफाइल्स वे सूक्ष्मजीव हैं जो चरम स्थितियों में रहते हैं जहां अधिकांश जीवन जीवित नहीं रह सकता। उनके पास विशेष अनुकूलन होते हैं जो उन्हें इन कठोर वातावरणों में पनपने की अनुमति देते हैं। वैज्ञानिक जीवन की सीमाओं को समझने और उपयोगी एंजाइम खोजने के लिए उनका अध्ययन करते हैं।</p>
+            
+            <h4>2.1 Thermophiles (Heat-Loving)</h4>
+            <p class="english">Thermophiles grow best at high temperatures (50-80°C). Hyperthermophiles can grow above 80°C, even near 100°C. They are found in hot springs, geysers, and deep-sea hydrothermal vents.</p>
+            <p class="hindi">थर्मोफाइल्स उच्च तापमान (50-80°C) पर सबसे अच्छी तरह बढ़ते हैं। हाइपरथर्मोफाइल्स 80°C से ऊपर, यहां तक कि 100°C के पास भी बढ़ सकते हैं। वे गर्म झरनों, गीजर, और गहरे समुद्र के हाइड्रोथर्मल वेंट्स में पाए जाते हैं।</p>
+            
+            <div class="box">
+                <h5>Adaptations of Thermophiles:</h5>
+                <ul class="list">
+                    <li><strong>Heat-stable enzymes:</strong> Proteins don't denature at high temperatures</li>
+                    <li><strong>Special membrane lipids:</strong> Saturated fatty acids keep membranes stable</li>
+                    <li><strong>DNA protection:</strong> Reverse gyrase enzyme prevents DNA from melting</li>
+                    <li><strong>Chaperone proteins:</strong> Help other proteins fold correctly at high temperatures</li>
+                </ul>
+            </div>
+            
+            <h4>2.2 Psychrophiles (Cold-Loving)</h4>
+            <p class="english">Psychrophiles grow best at low temperatures (below 15°C, some even below 0°C). They are found in polar regions, deep oceans, and glaciers. They have antifreeze proteins and flexible enzymes.</p>
+            <p class="hindi">साइक्रोफाइल्स कम तापमान (15°C से नीचे, कुछ 0°C से भी नीचे) पर सबसे अच्छी तरह बढ़ते हैं। वे ध्रुवीय क्षेत्रों, गहरे महासागरों, और ग्लेशियरों में पाए जाते हैं। उनके पास एंटीफ्रीज प्रोटीन और लचीले एंजाइम होते हैं।</p>
+            
+            <h4>2.3 Halophiles (Salt-Loving)</h4>
+            <p class="english">Halophiles require high salt concentrations (2-5 M NaCl) to grow. They are found in salt lakes, salt pans, and salted foods. They maintain osmotic balance using compatible solutes.</p>
+            <p class="hindi">हेलोफाइल्स को बढ़ने के लिए उच्च नमक सांद्रता (2-5 M NaCl) की आवश्यकता होती है। वे नमक झीलों, नमक के पैन, और नमकीन खाद्य पदार्थों में पाए जाते हैं। वे संगत विलेय का उपयोग करके परासरण संतुलन बनाए रखते हैं।</p>
+            
+            <h4>2.4 Acidophiles and Alkaliphiles</h4>
+            <p class="english">Acidophiles grow best at low pH (below 3), while alkaliphiles grow best at high pH (above 9). They are found in acid mine drainage, soda lakes, and alkaline soils.</p>
+            <p class="hindi">एसिडोफाइल्स कम pH (3 से नीचे) पर सबसे अच्छी तरह बढ़ते हैं, जबकि अल्कलाइफाइल्स उच्च pH (9 से ऊपर) पर सबसे अच्छी तरह बढ़ते हैं। वे अम्लीय खान निकासी, सोडा झीलों, और क्षारीय मिट्टी में पाए जाते हैं।</p>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <text x="400" y="30" text-anchor="middle" fill="#2c3e50" font-size="20" font-weight="bold">Extreme Environments and Adaptations</text>
+                    
+                    <!-- Thermophiles -->
+                    <rect x="50" y="80" width="150" height="180" fill="#ff6b6b" opacity="0.7" rx="10"/>
+                    <text x="125" y="110" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Thermophiles</text>
+                    <text x="125" y="135" text-anchor="middle" fill="white" font-size="11">50-80°C</text>
+                    <text x="125" y="155" text-anchor="middle" fill="white" font-size="10">Hot Springs</text>
+                    <text x="125" y="175" text-anchor="middle" fill="white" font-size="10">Hydrothermal Vents</text>
+                    <text x="125" y="200" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="125" y="220" text-anchor="middle" fill="white" font-size="9">• Heat-stable enzymes</text>
+                    <text x="125" y="240" text-anchor="middle" fill="white" font-size="9">• Special membranes</text>
+                    
+                    <!-- Psychrophiles -->
+                    <rect x="230" y="80" width="150" height="180" fill="#4ecdc4" opacity="0.7" rx="10"/>
+                    <text x="305" y="110" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Psychrophiles</text>
+                    <text x="305" y="135" text-anchor="middle" fill="white" font-size="11">Below 15°C</text>
+                    <text x="305" y="155" text-anchor="middle" fill="white" font-size="10">Polar Regions</text>
+                    <text x="305" y="175" text-anchor="middle" fill="white" font-size="10">Deep Oceans</text>
+                    <text x="305" y="200" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="305" y="220" text-anchor="middle" fill="white" font-size="9">• Antifreeze proteins</text>
+                    <text x="305" y="240" text-anchor="middle" fill="white" font-size="9">• Flexible enzymes</text>
+                    
+                    <!-- Halophiles -->
+                    <rect x="410" y="80" width="150" height="180" fill="#ffe66d" opacity="0.7" rx="10"/>
+                    <text x="485" y="110" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Halophiles</text>
+                    <text x="485" y="135" text-anchor="middle" fill="#2c3e50" font-size="11">2-5 M NaCl</text>
+                    <text x="485" y="155" text-anchor="middle" fill="#2c3e50" font-size="10">Salt Lakes</text>
+                    <text x="485" y="175" text-anchor="middle" fill="#2c3e50" font-size="10">Salt Pans</text>
+                    <text x="485" y="200" text-anchor="middle" fill="#2c3e50" font-size="9">Adaptations:</text>
+                    <text x="485" y="220" text-anchor="middle" fill="#2c3e50" font-size="9">• Compatible solutes</text>
+                    <text x="485" y="240" text-anchor="middle" fill="#2c3e50" font-size="9">• Salt-in strategy</text>
+                    
+                    <!-- Acidophiles -->
+                    <rect x="590" y="80" width="150" height="85" fill="#ff4757" opacity="0.7" rx="10"/>
+                    <text x="665" y="110" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Acidophiles</text>
+                    <text x="665" y="135" text-anchor="middle" fill="white" font-size="11">pH &lt; 3</text>
+                    <text x="665" y="155" text-anchor="middle" fill="white" font-size="10">Acid Mine Drainage</text>
+                    
+                    <!-- Alkaliphiles -->
+                    <rect x="590" y="175" width="150" height="85" fill="#5f27cd" opacity="0.7" rx="10"/>
+                    <text x="665" y="205" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Alkaliphiles</text>
+                    <text x="665" y="230" text-anchor="middle" fill="white" font-size="11">pH &gt; 9</text>
+                    <text x="665" y="250" text-anchor="middle" fill="white" font-size="10">Soda Lakes</text>
+                    
+                    <!-- Barophiles -->
+                    <rect x="50" y="300" width="150" height="150" fill="#2c3e50" opacity="0.7" rx="10"/>
+                    <text x="125" y="330" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Barophiles</text>
+                    <text x="125" y="355" text-anchor="middle" fill="white" font-size="11">High Pressure</text>
+                    <text x="125" y="375" text-anchor="middle" fill="white" font-size="10">Deep Sea</text>
+                    <text x="125" y="395" text-anchor="middle" fill="white" font-size="10">Ocean Trenches</text>
+                    <text x="125" y="420" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="125" y="440" text-anchor="middle" fill="white" font-size="9">• Pressure-resistant</text>
+                    
+                    <!-- Xerophiles -->
+                    <rect x="230" y="300" width="150" height="150" fill="#ffa502" opacity="0.7" rx="10"/>
+                    <text x="305" y="330" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Xerophiles</text>
+                    <text x="305" y="355" text-anchor="middle" fill="white" font-size="11">Low Water</text>
+                    <text x="305" y="375" text-anchor="middle" fill="white" font-size="10">Deserts</text>
+                    <text x="305" y="395" text-anchor="middle" fill="white" font-size="10">Dry Foods</text>
+                    <text x="305" y="420" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="305" y="440" text-anchor="middle" fill="white" font-size="9">• Spore formation</text>
+                    
+                    <!-- Radiation resistant -->
+                    <rect x="410" y="300" width="150" height="150" fill="#00d2d3" opacity="0.7" rx="10"/>
+                    <text x="485" y="330" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Radioresistant</text>
+                    <text x="485" y="355" text-anchor="middle" fill="white" font-size="11">High Radiation</text>
+                    <text x="485" y="375" text-anchor="middle" fill="white" font-size="10">Nuclear Sites</text>
+                    <text x="485" y="395" text-anchor="middle" fill="white" font-size="10">Space</text>
+                    <text x="485" y="420" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="485" y="440" text-anchor="middle" fill="white" font-size="9">• DNA repair</text>
+                    
+                    <!-- Anaerobes -->
+                    <rect x="590" y="300" width="150" height="150" fill="#6c5ce7" opacity="0.7" rx="10"/>
+                    <text x="665" y="330" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Anaerobes</text>
+                    <text x="665" y="355" text-anchor="middle" fill="white" font-size="11">No Oxygen</text>
+                    <text x="665" y="375" text-anchor="middle" fill="white" font-size="10">Sediments</text>
+                    <text x="665" y="395" text-anchor="middle" fill="white" font-size="10">Gut</text>
+                    <text x="665" y="420" text-anchor="middle" fill="white" font-size="9">Adaptations:</text>
+                    <text x="665" y="440" text-anchor="middle" fill="white" font-size="9">• Fermentation</text>
+                </svg>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Extremophile Type</th>
+                    <th>Condition</th>
+                    <th>Examples</th>
+                    <th>Key Adaptation</th>
+                </tr>
+                <tr>
+                    <td>Thermophile</td>
+                    <td>High temperature (50-80°C)</td>
+                    <td>Thermus aquaticus, Pyrococcus</td>
+                    <td>Heat-stable proteins</td>
+                </tr>
+                <tr>
+                    <td>Psychrophile</td>
+                    <td>Low temperature (&lt;15°C)</td>
+                    <td>Psychrobacter, Polaromonas</td>
+                    <td>Antifreeze proteins</td>
+                </tr>
+                <tr>
+                    <td>Halophile</td>
+                    <td>High salt (2-5 M NaCl)</td>
+                    <td>Halobacterium, Dunaliella</td>
+                    <td>Compatible solutes</td>
+                </tr>
+                <tr>
+                    <td>Acidophile</td>
+                    <td>Low pH (&lt;3)</td>
+                    <td>Acidithiobacillus, Picrophilus</td>
+                    <td>Proton pumps</td>
+                </tr>
+                <tr>
+                    <td>Alkaliphile</td>
+                    <td>High pH (&gt;9)</td>
+                    <td>Bacillus alcalophilus, Natronobacterium</td>
+                    <td>Na+/H+ antiporters</td>
+                </tr>
+                <tr>
+                    <td>Barophile</td>
+                    <td>High pressure</td>
+                    <td>Shewanella, Moritella</td>
+                    <td>Pressure-resistant membranes</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 3: Dispersal of Microorganisms -->
+        <div class="section">
+            <h3>3. Dispersal of Microorganisms</h3>
+            
+            <p class="english">Dispersal means how microbes spread from one place to another. Microbes can't move on their own over long distances, so they use various methods to travel. Understanding dispersal helps us understand how diseases spread and how ecosystems work.</p>
+            <p class="hindi">फैलाव का मतलब है कि सूक्ष्मजीव एक जगह से दूसरी जगह कैसे फैलते हैं। सूक्ष्मजीव लंबी दूरी पर अपने दम पर नहीं चल सकते, इसलिए वे यात्रा करने के लिए विभिन्न तरीकों का उपयोग करते हैं। फैलाव को समझने से हमें यह समझने में मदद मिलती है कि बीमारियां कैसे फैलती हैं और पारिस्थितिक तंत्र कैसे काम करते हैं।</p>
+            
+            <h4>3.1 Methods of Dispersal</h4>
+            
+            <div class="flowchart">
+<strong>Microbial Dispersal Methods:</strong>
+
+Microorganism Dispersal
+    ↓
+    ├─→ Air Dispersal (Aerial)
+    │       ├─→ Wind
+    │       │       ↓
+    │       │   Spores, Pollen, Dust
+    │       │
+    │       ├─→ Air Currents
+    │       │       ↓
+    │       │   Long-distance Travel
+    │       │
+    │       └─→ Droplets (Sneezing, Coughing)
+    │               ↓
+    │           Pathogens Spread
+    │
+    ├─→ Water Dispersal (Aquatic)
+    │       ├─→ Rivers, Streams
+    │       │       ↓
+    │       │   Downstream Movement
+    │       │
+    │       ├─→ Ocean Currents
+    │       │       ↓
+    │       │   Marine Microbes
+    │       │
+    │       └─→ Groundwater Flow
+    │               ↓
+    │           Subsurface Movement
+    │
+    ├─→ Animal Dispersal (Biotic)
+    │       ├─→ On Body Surface
+    │       │       ↓
+    │       │   Fur, Feathers, Skin
+    │       │
+    │       ├─→ In Digestive Tract
+    │       │       ↓
+    │       │   Seeds, Spores in Feces
+    │       │
+    │       └─→ Vectors (Insects, Birds)
+    │               ↓
+    │           Disease Transmission
+    │
+    └─→ Human Activities (Anthropogenic)
+            ├─→ Travel
+            │       ↓
+            │   Global Spread
+            │
+            ├─→ Trade
+            │       ↓
+            │   Contaminated Goods
+            │
+            └─→ Agriculture
+                    ↓
+                Soil, Seeds, Water
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Dispersal Method</th>
+                    <th>Mechanism</th>
+                    <th>Examples</th>
+                    <th>Distance</th>
+                </tr>
+                <tr>
+                    <td>Wind</td>
+                    <td>Air currents carry spores and particles</td>
+                    <td>Fungal spores, pollen, bacteria on dust</td>
+                    <td>Hundreds of kilometers</td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td>Flow of water carries microbes</td>
+                    <td>Bacteria in rivers, marine plankton</td>
+                    <td>Variable (km to thousands of km)</td>
+                </tr>
+                <tr>
+                    <td>Animals</td>
+                    <td>Attached to body or in digestive tract</td>
+                    <td>Seeds, spores, pathogens</td>
+                    <td>Variable (local to migratory)</td>
+                </tr>
+                <tr>
+                    <td>Insects</td>
+                    <td>Vectors carry pathogens</td>
+                    <td>Mosquitoes (malaria), ticks (Lyme disease)</td>
+                    <td>Limited (few km)</td>
+                </tr>
+                <tr>
+                    <td>Human Activities</td>
+                    <td>Travel, trade, agriculture</td>
+                    <td>Invasive species, diseases</td>
+                    <td>Global</td>
+                </tr>
+            </table>
+            
+            <div class="box">
+                <h5>Factors Affecting Dispersal:</h5>
+                <ul class="list">
+                    <li><strong>Size:</strong> Smaller microbes disperse farther (spores vs. large cells)</li>
+                    <li><strong>Resistance:</strong> Spores and cysts survive harsh conditions during travel</li>
+                    <li><strong>Vectors:</strong> Animals and insects help microbes travel</li>
+                    <li><strong>Environmental Conditions:</strong> Wind speed, water flow, temperature affect dispersal</li>
+                    <li><strong>Human Activities:</strong> Travel and trade accelerate global dispersal</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4: Methods for Determination of Microbial Numbers, Biomass, and Activities -->
+        <div class="section">
+            <h3>4. Methods for Determination of Microbial Numbers, Biomass, and Activities</h3>
+            
+            <p class="english">Scientists need to count microbes and measure their activity to understand ecosystems. Different methods are used depending on what we want to measure. Some methods count live cells, some count all cells, and some measure what microbes are doing.</p>
+            <p class="hindi">वैज्ञानिकों को पारिस्थितिक तंत्र को समझने के लिए सूक्ष्मजीवों को गिनने और उनकी गतिविधि को मापने की आवश्यकता है। हम क्या मापना चाहते हैं, इसके आधार पर विभिन्न तरीकों का उपयोग किया जाता है। कुछ तरीके जीवित कोशिकाओं को गिनते हैं, कुछ सभी कोशिकाओं को गिनते हैं, और कुछ मापते हैं कि सूक्ष्मजीव क्या कर रहे हैं।</p>
+            
+            <h4>4.1 Counting Microbial Numbers</h4>
+            
+            <div class="flowchart">
+<strong>Methods for Counting Microbes:</strong>
+
+Microbial Counting Methods
+    ↓
+    ├─→ Direct Counting
+    │       ├─→ Microscopic Count
+    │       │       ├─→ Hemocytometer
+    │       │       │       ↓
+    │       │       │   Count in Grid
+    │       │       │
+    │       │       └─→ Fluorescence Microscopy
+    │       │               ↓
+    │       │           DAPI, Acridine Orange
+    │       │
+    │       └─→ Flow Cytometry
+    │               ↓
+    │           Automated Cell Counting
+    │
+    ├─→ Viable Counting (Live Cells)
+    │       ├─→ Plate Count (CFU)
+    │       │       ├─→ Spread Plate
+    │       │       ├─→ Pour Plate
+    │       │       └─→ Membrane Filtration
+    │       │               ↓
+    │       │           Colony Forming Units
+    │       │
+    │       └─→ Most Probable Number (MPN)
+    │               ↓
+    │           Statistical Estimation
+    │
+    └─→ Indirect Counting
+            ├─→ Turbidity (OD Measurement)
+            │       ↓
+            │   Light Scattering
+            │
+            ├─→ DNA/RNA Quantification
+            │       ↓
+            │   qPCR, Real-time PCR
+            │
+            └─→ ATP Measurement
+                    ↓
+                Bioluminescence
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>What It Counts</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+                <tr>
+                    <td>Plate Count (CFU)</td>
+                    <td>Viable (living) cells</td>
+                    <td>Simple, counts only live cells</td>
+                    <td>Slow (24-48 hours), only culturable cells</td>
+                </tr>
+                <tr>
+                    <td>Microscopic Count</td>
+                    <td>All cells (live + dead)</td>
+                    <td>Fast, counts all cells</td>
+                    <td>Can't distinguish live/dead, requires skill</td>
+                </tr>
+                <tr>
+                    <td>Flow Cytometry</td>
+                    <td>All cells or specific types</td>
+                    <td>Fast, automated, can sort cells</td>
+                    <td>Expensive equipment needed</td>
+                </tr>
+                <tr>
+                    <td>MPN</td>
+                    <td>Viable cells (statistical)</td>
+                    <td>Good for liquid samples</td>
+                    <td>Less accurate, time-consuming</td>
+                </tr>
+                <tr>
+                    <td>Turbidity (OD)</td>
+                    <td>Total cell mass</td>
+                    <td>Very fast, easy</td>
+                    <td>Not actual count, affected by cell size</td>
+                </tr>
+                <tr>
+                    <td>qPCR</td>
+                    <td>Specific DNA/RNA</td>
+                    <td>Very sensitive, specific</td>
+                    <td>Expensive, requires DNA extraction</td>
+                </tr>
+            </table>
+            
+            <h4>4.2 Measuring Microbial Biomass</h4>
+            <p class="english">Biomass means the total weight or mass of all microbes in a sample. It tells us how much microbial material is present, not just how many cells.</p>
+            <p class="hindi">बायोमास का मतलब है किसी नमूने में सभी सूक्ष्मजीवों का कुल वजन या द्रव्यमान। यह हमें बताता है कि कितना सूक्ष्मजीवी पदार्थ मौजूद है, न कि केवल कितनी कोशिकाएं हैं।</p>
+            
+            <div class="box">
+                <h5>Biomass Measurement Methods:</h5>
+                <ul class="list">
+                    <li><strong>Dry Weight:</strong> Dry the sample and weigh it (simple but includes non-microbial material)</li>
+                    <li><strong>ATP Measurement:</strong> Measure ATP (energy molecule) - indicates living biomass</li>
+                    <li><strong>Protein Content:</strong> Measure total protein (most cells are protein)</li>
+                    <li><strong>Lipid Content:</strong> Measure specific lipids (phospholipids indicate cell membranes)</li>
+                    <li><strong>DNA/RNA Content:</strong> Measure DNA or RNA (indicates cell number and activity)</li>
+                </ul>
+            </div>
+            
+            <h4>4.3 Measuring Microbial Activities</h4>
+            <p class="english">Activity measurement tells us what microbes are doing - are they growing, respiring, or producing enzymes? This is important to understand ecosystem function.</p>
+            <p class="hindi">गतिविधि माप हमें बताता है कि सूक्ष्मजीव क्या कर रहे हैं - क्या वे बढ़ रहे हैं, सांस ले रहे हैं, या एंजाइम बना रहे हैं? पारिस्थितिक तंत्र के कार्य को समझने के लिए यह महत्वपूर्ण है।</p>
+            
+            <div class="flowchart">
+<strong>Microbial Activity Measurement Methods:</strong>
+
+Microbial Activity
+    ↓
+    ├─→ Respiration Rate
+    │       ├─→ O₂ Consumption
+    │       │       ↓
+    │       │   Oxygen Electrode
+    │       │
+    │       └─→ CO₂ Production
+    │               ↓
+    │           Infrared Gas Analyzer
+    │
+    ├─→ Enzyme Activity
+    │       ├─→ Dehydrogenase Activity
+    │       │       ↓
+    │       │   TTC Reduction Test
+    │       │
+    │       ├─→ Phosphatase Activity
+    │       │       ↓
+    │       │   p-Nitrophenol Release
+    │       │
+    │       └─→ Urease Activity
+    │               ↓
+    │           Ammonia Production
+    │
+    ├─→ Substrate Utilization
+    │       ├─→ Biolog Plates
+    │       │       ↓
+    │       │   Color Change
+    │       │
+    │       └─→ Radioactive Tracers
+    │               ↓
+    │           ¹⁴C, ³H Labeling
+    │
+    └─→ Metabolic Products
+            ├─→ Organic Acids
+            ├─→ Gases (CH₄, H₂)
+            └─→ Enzymes
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Activity Type</th>
+                    <th>Method</th>
+                    <th>What It Measures</th>
+                </tr>
+                <tr>
+                    <td>Respiration</td>
+                    <td>O₂ consumption, CO₂ production</td>
+                    <td>Metabolic activity, energy production</td>
+                </tr>
+                <tr>
+                    <td>Enzyme Activity</td>
+                    <td>Colorimetric assays, substrate breakdown</td>
+                    <td>Biochemical processes</td>
+                </tr>
+                <tr>
+                    <td>Growth Rate</td>
+                    <td>Cell division, biomass increase</td>
+                    <td>Population increase</td>
+                </tr>
+                <tr>
+                    <td>Substrate Utilization</td>
+                    <td>Biolog plates, radioactive tracers</td>
+                    <td>What microbes can use as food</td>
+                </tr>
+                <tr>
+                    <td>Nitrogen Fixation</td>
+                    <td>Acetylene reduction, ¹⁵N labeling</td>
+                    <td>Conversion of N₂ to NH₃</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 5: Assessment of Air Quality -->
+        <div class="section">
+            <h3>5. Assessment of Air Quality</h3>
+            
+            <p class="english">Air quality assessment measures how clean or polluted the air is. We check for harmful particles, gases, and microbes. This is important for public health and environmental protection.</p>
+            <p class="hindi">वायु गुणवत्ता मूल्यांकन मापता है कि हवा कितनी साफ या प्रदूषित है। हम हानिकारक कणों, गैसों, और सूक्ष्मजीवों की जांच करते हैं। यह सार्वजनिक स्वास्थ्य और पर्यावरण संरक्षण के लिए महत्वपूर्ण है।</p>
+            
+            <h4>5.1 Solid Impingement Method</h4>
+            <p class="english">Solid impingement uses solid surfaces to trap airborne particles. Air is forced against a solid surface, and particles stick to it. This is simple and commonly used.</p>
+            <p class="hindi">ठोस प्रभाव विधि हवा में मौजूद कणों को फंसाने के लिए ठोस सतहों का उपयोग करती है। हवा को एक ठोस सतह के खिलाफ मजबूर किया जाता है, और कण उससे चिपक जाते हैं। यह सरल और आमतौर पर उपयोग की जाने वाली है।</p>
+            
+            <div class="box">
+                <h5>Solid Impingement Methods:</h5>
+                <ul class="list">
+                    <li><strong>Gravity Settling:</strong> Particles fall onto agar plates by gravity (simple but slow)</li>
+                    <li><strong>Impact Samplers:</strong> Air hits solid surface at high speed (Andersen sampler, slit sampler)</li>
+                    <li><strong>Centrifugal Samplers:</strong> Use centrifugal force to separate particles</li>
+                    <li><strong>Cyclone Samplers:</strong> Air spins in a cyclone, particles collect on walls</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Solid Impingement Method</text>
+                    
+                    <!-- Air flow -->
+                    <path d="M 50 200 L 200 200" stroke="#3498db" stroke-width="4" fill="none" marker-end="url(#air-arrow)"/>
+                    <text x="125" y="190" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">Air Flow</text>
+                    
+                    <!-- Particles in air -->
+                    <circle cx="100" cy="200" r="3" fill="#e74c3c"/>
+                    <circle cx="130" cy="195" r="2" fill="#e74c3c"/>
+                    <circle cx="160" cy="205" r="2.5" fill="#e74c3c"/>
+                    <text x="100" y="220" text-anchor="middle" fill="#2c3e50" font-size="10">Particles</text>
+                    
+                    <!-- Impaction surface -->
+                    <rect x="200" y="150" width="100" height="100" fill="#95a5a6" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                    <text x="250" y="200" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Solid Surface</text>
+                    <text x="250" y="270" text-anchor="middle" fill="#2c3e50" font-size="11">(Agar Plate/Filter)</text>
+                    
+                    <!-- Impacted particles -->
+                    <circle cx="220" cy="170" r="4" fill="#e74c3c"/>
+                    <circle cx="240" cy="180" r="3" fill="#e74c3c"/>
+                    <circle cx="260" cy="175" r="3.5" fill="#e74c3c"/>
+                    <circle cx="280" cy="185" r="2.5" fill="#e74c3c"/>
+                    <text x="250" y="140" text-anchor="middle" fill="#27ae60" font-size="12" font-weight="bold">Trapped Particles</text>
+                    
+                    <!-- Process -->
+                    <text x="400" y="100" fill="#2c3e50" font-size="14" font-weight="bold">Process:</text>
+                    <text x="400" y="130" fill="#2c3e50" font-size="12">1. Air drawn in</text>
+                    <text x="400" y="155" fill="#2c3e50" font-size="12">2. Forced against surface</text>
+                    <text x="400" y="180" fill="#2c3e50" font-size="12">3. Particles stick</text>
+                    <text x="400" y="205" fill="#2c3e50" font-size="12">4. Count colonies</text>
+                    
+                    <defs>
+                        <marker id="air-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#3498db"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <h4>5.2 Liquid Impingement Method</h4>
+            <p class="english">Liquid impingement uses liquid to trap airborne particles. Air bubbles through a liquid, and particles get trapped in the liquid. This is good for collecting microbes without killing them.</p>
+            <p class="hindi">तरल प्रभाव विधि हवा में मौजूद कणों को फंसाने के लिए तरल का उपयोग करती है। हवा एक तरल के माध्यम से बुलबुले बनाती है, और कण तरल में फंस जाते हैं। यह उन्हें मारे बिना सूक्ष्मजीवों को इकट्ठा करने के लिए अच्छा है।</p>
+            
+            <div class="flowchart">
+<strong>Liquid Impingement Process:</strong>
+
+Air Sample
+    ↓
+Air Pump
+    ↓
+Liquid Medium (Saline/Buffer)
+    ↓
+    ├─→ Bubbling Through Liquid
+    │       ↓
+    │   Particles Trapped in Liquid
+    │       ↓
+    │   Collection
+    │       ↓
+    │   ┌─────────────┴─────────────┐
+    │   │                           │
+    │   Plate on Agar        Direct Count
+    │   (Viable Count)       (Total Count)
+    │   │                           │
+    │   ↓                           ↓
+    │   CFU/ml                  Cells/ml
+    │
+    └─→ Advantages:
+            • Preserves viability
+            • Can concentrate sample
+            • Good for viruses
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Method</th>
+                    <th>Principle</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+                <tr>
+                    <td>Solid Impingement</td>
+                    <td>Particles hit solid surface</td>
+                    <td>Simple, direct counting</td>
+                    <td>May damage cells, requires agar</td>
+                </tr>
+                <tr>
+                    <td>Liquid Impingement</td>
+                    <td>Particles trapped in liquid</td>
+                    <td>Preserves viability, can concentrate</td>
+                    <td>More complex, requires processing</td>
+                </tr>
+                <tr>
+                    <td>Filtration</td>
+                    <td>Air filtered through membrane</td>
+                    <td>Can collect large volumes</td>
+                    <td>May dry out, cells may die</td>
+                </tr>
+                <tr>
+                    <td>Electrostatic Precipitation</td>
+                    <td>Charged particles attracted to electrode</td>
+                    <td>Efficient, gentle</td>
+                    <td>Expensive equipment</td>
+                </tr>
+            </table>
+            
+            <div class="box">
+                <h5>Air Quality Parameters:</h5>
+                <ul class="list">
+                    <li><strong>Total Microbial Count:</strong> All microbes in air (CFU/m³)</li>
+                    <li><strong>Fungal Spore Count:</strong> Number of fungal spores</li>
+                    <li><strong>Bacterial Count:</strong> Number of bacteria</li>
+                    <li><strong>Pathogen Detection:</strong> Specific harmful microbes</li>
+                    <li><strong>Particle Size Distribution:</strong> Size of airborne particles</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 6: Airborne Transmission of Microbes -->
+        <div class="section">
+            <h3>6. Airborne Transmission of Microbes: Viruses, Bacteria, and Fungi</h3>
+            
+            <p class="english">Airborne transmission means microbes spread through the air. They can travel in droplets, aerosols, or on dust particles. This is how many diseases spread, especially respiratory diseases.</p>
+            <p class="hindi">हवा के माध्यम से संचरण का मतलब है कि सूक्ष्मजीव हवा के माध्यम से फैलते हैं। वे बूंदों, एरोसोल, या धूल कणों पर यात्रा कर सकते हैं। यह कई बीमारियों के फैलने का तरीका है, विशेष रूप से श्वसन रोग।</p>
+            
+            <h4>6.1 Viral Airborne Transmission</h4>
+            <p class="english">Viruses are very small and can stay in the air for a long time. They spread through droplets when people cough, sneeze, or talk. Some viruses can survive in air for hours.</p>
+            <p class="hindi">वायरस बहुत छोटे होते हैं और हवा में लंबे समय तक रह सकते हैं। वे बूंदों के माध्यम से फैलते हैं जब लोग खांसते, छींकते, या बात करते हैं। कुछ वायरस हवा में घंटों तक जीवित रह सकते हैं।</p>
+            
+            <div class="box">
+                <h5>Examples of Airborne Viruses:</h5>
+                <ul class="list">
+                    <li><strong>Influenza Virus:</strong> Causes flu, spreads through droplets and aerosols</li>
+                    <li><strong>SARS-CoV-2:</strong> Causes COVID-19, spreads through respiratory droplets</li>
+                    <li><strong>Measles Virus:</strong> Highly contagious, can stay in air for 2 hours</li>
+                    <li><strong>Chickenpox Virus:</strong> Varicella-zoster, spreads through air</li>
+                    <li><strong>Common Cold Viruses:</strong> Rhinovirus, coronavirus, spread through droplets</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Viral Airborne Transmission</text>
+                    
+                    <!-- Infected person -->
+                    <circle cx="150" cy="200" r="40" fill="#e74c3c" opacity="0.7"/>
+                    <text x="150" y="200" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Infected</text>
+                    <text x="150" y="260" text-anchor="middle" fill="#2c3e50" font-size="11">Person</text>
+                    
+                    <!-- Droplets -->
+                    <circle cx="250" cy="180" r="8" fill="#3498db" opacity="0.6"/>
+                    <circle cx="280" cy="160" r="6" fill="#3498db" opacity="0.6"/>
+                    <circle cx="310" cy="140" r="7" fill="#3498db" opacity="0.6"/>
+                    <circle cx="340" cy="120" r="5" fill="#3498db" opacity="0.6"/>
+                    
+                    <!-- Viruses in droplets -->
+                    <circle cx="250" cy="180" r="2" fill="#e74c3c"/>
+                    <circle cx="280" cy="160" r="1.5" fill="#e74c3c"/>
+                    <circle cx="310" cy="140" r="2" fill="#e74c3c"/>
+                    <circle cx="340" cy="120" r="1.5" fill="#e74c3c"/>
+                    
+                    <text x="300" y="100" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">Droplets with Viruses</text>
+                    
+                    <!-- Aerosol cloud -->
+                    <ellipse cx="450" cy="150" rx="60" ry="40" fill="#95a5a6" opacity="0.3" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="450" y="145" text-anchor="middle" fill="#2c3e50" font-size="10">Aerosol</text>
+                    <text x="450" y="160" text-anchor="middle" fill="#2c3e50" font-size="10">Cloud</text>
+                    
+                    <!-- Healthy person -->
+                    <circle cx="550" cy="200" r="40" fill="#27ae60" opacity="0.7"/>
+                    <text x="550" y="200" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Healthy</text>
+                    <text x="550" y="260" text-anchor="middle" fill="#2c3e50" font-size="11">Person</text>
+                    
+                    <!-- Transmission arrow -->
+                    <path d="M 190 200 L 510 200" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#transmission-arrow)"/>
+                    <text x="350" y="190" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold">Airborne Transmission</text>
+                    
+                    <!-- Factors -->
+                    <text x="100" y="320" fill="#2c3e50" font-size="12" font-weight="bold">Factors:</text>
+                    <text x="100" y="345" fill="#2c3e50" font-size="11">• Droplet size</text>
+                    <text x="100" y="365" fill="#2c3e50" font-size="11">• Air currents</text>
+                    <text x="100" y="385" fill="#2c3e50" font-size="11">• Humidity</text>
+                    
+                    <text x="400" y="320" fill="#2c3e50" font-size="12" font-weight="bold">Prevention:</text>
+                    <text x="400" y="345" fill="#2c3e50" font-size="11">• Masks</text>
+                    <text x="400" y="365" fill="#2c3e50" font-size="11">• Ventilation</text>
+                    <text x="400" y="385" fill="#2c3e50" font-size="11">• Social distancing</text>
+                    
+                    <defs>
+                        <marker id="transmission-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e74c3c"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            
+            <h4>6.2 Bacterial Airborne Transmission</h4>
+            <p class="english">Bacteria can spread through air in different ways. Some form spores that survive in air, some are in droplets, and some attach to dust particles. Bacterial diseases spread through air include TB, pneumonia, and whooping cough.</p>
+            <p class="hindi">बैक्टीरिया हवा के माध्यम से विभिन्न तरीकों से फैल सकते हैं। कुछ बीजाणु बनाते हैं जो हवा में जीवित रहते हैं, कुछ बूंदों में होते हैं, और कुछ धूल कणों से जुड़ते हैं। हवा के माध्यम से फैलने वाली बैक्टीरियल बीमारियों में टीबी, निमोनिया, और काली खांसी शामिल हैं।</p>
+            
+            <table>
+                <tr>
+                    <th>Bacterium</th>
+                    <th>Disease</th>
+                    <th>Transmission Method</th>
+                    <th>Survival in Air</th>
+                </tr>
+                <tr>
+                    <td>Mycobacterium tuberculosis</td>
+                    <td>Tuberculosis (TB)</td>
+                    <td>Droplet nuclei (small droplets)</td>
+                    <td>Hours to days</td>
+                </tr>
+                <tr>
+                    <td>Streptococcus pneumoniae</td>
+                    <td>Pneumonia</td>
+                    <td>Respiratory droplets</td>
+                    <td>Minutes to hours</td>
+                </tr>
+                <tr>
+                    <td>Bordetella pertussis</td>
+                    <td>Whooping cough</td>
+                    <td>Respiratory droplets</td>
+                    <td>Hours</td>
+                </tr>
+                <tr>
+                    <td>Bacillus anthracis</td>
+                    <td>Anthrax</td>
+                    <td>Spores in dust</td>
+                    <td>Years (as spores)</td>
+                </tr>
+                <tr>
+                    <td>Legionella pneumophila</td>
+                    <td>Legionnaires' disease</td>
+                    <td>Aerosols from water</td>
+                    <td>Hours</td>
+                </tr>
+            </table>
+            
+            <h4>6.3 Fungal Airborne Transmission</h4>
+            <p class="english">Fungi spread mainly through spores. Fungal spores are very light and can travel long distances in air. They cause allergies and infections, especially in people with weak immune systems.</p>
+            <p class="hindi">कवक मुख्य रूप से बीजाणुओं के माध्यम से फैलते हैं। कवक बीजाणु बहुत हल्के होते हैं और हवा में लंबी दूरी तक यात्रा कर सकते हैं। वे एलर्जी और संक्रमण पैदा करते हैं, विशेष रूप से कमजोर प्रतिरक्षा प्रणाली वाले लोगों में।</p>
+            
+            <div class="flowchart">
+<strong>Fungal Spore Dispersal:</strong>
+
+Fungal Sporulation
+    ↓
+Spore Release
+    ↓
+    ├─→ Active Release
+    │       ├─→ Explosive (Ballistospores)
+    │       └─→ Puffing (Puffballs)
+    │
+    └─→ Passive Release
+            ├─→ Wind
+            ├─→ Rain Splash
+            └─→ Animal Movement
+                    ↓
+            Airborne Spores
+                    ↓
+            ┌───────────────┴───────────────┐
+            │                               │
+        Inhalation                    Deposition
+            │                               │
+            ↓                               ↓
+        Infection                    New Growth
+        (Lungs, Sinus)               (Substrate)
+            </div>
+            
+            <div class="box">
+                <h5>Examples of Airborne Fungi:</h5>
+                <ul class="list">
+                    <li><strong>Aspergillus:</strong> Causes aspergillosis, allergies, common in air</li>
+                    <li><strong>Histoplasma capsulatum:</strong> Causes histoplasmosis, found in bird/bat droppings</li>
+                    <li><strong>Coccidioides immitis:</strong> Causes valley fever, spores in soil dust</li>
+                    <li><strong>Cryptococcus neoformans:</strong> Causes cryptococcosis, found in pigeon droppings</li>
+                    <li><strong>Penicillium:</strong> Common mold, causes allergies, spoils food</li>
+                    <li><strong>Alternaria:</strong> Common outdoor mold, causes allergies</li>
+                </ul>
+            </div>
+            
+            <div class="diagram">
+                <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+                    <text x="350" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Fungal Spore Dispersal</text>
+                    
+                    <!-- Fungus -->
+                    <ellipse cx="100" cy="250" rx="30" ry="20" fill="#8e44ad" opacity="0.7"/>
+                    <text x="100" y="255" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Fungus</text>
+                    
+                    <!-- Spores -->
+                    <circle cx="150" cy="200" r="4" fill="#9b59b6"/>
+                    <circle cx="180" cy="170" r="3" fill="#9b59b6"/>
+                    <circle cx="210" cy="140" r="4" fill="#9b59b6"/>
+                    <circle cx="240" cy="110" r="3" fill="#9b59b6"/>
+                    <circle cx="270" cy="90" r="4" fill="#9b59b6"/>
+                    
+                    <text x="210" y="80" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">Spores in Air</text>
+                    
+                    <!-- Wind -->
+                    <path d="M 300 100 L 350 100 L 340 90 M 350 100 L 340 110" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <path d="M 300 120 L 350 120 L 340 110 M 350 120 L 340 130" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <text x="400" y="115" fill="#2c3e50" font-size="11">Wind</text>
+                    
+                    <!-- Long distance -->
+                    <path d="M 400 100 L 600 100" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+                    <text x="500" y="90" text-anchor="middle" fill="#e74c3c" font-size="11" font-weight="bold">Long Distance Travel</text>
+                    
+                    <!-- Deposition -->
+                    <circle cx="600" cy="200" r="25" fill="#27ae60" opacity="0.7"/>
+                    <text x="600" y="205" text-anchor="middle" fill="white" font-size="10" font-weight="bold">New</text>
+                    <text x="600" y="220" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Location</text>
+                    
+                    <!-- Spore landing -->
+                    <circle cx="600" cy="180" r="3" fill="#9b59b6"/>
+                    <circle cx="610" cy="185" r="2.5" fill="#9b59b6"/>
+                    <circle cx="590" cy="190" r="3" fill="#9b59b6"/>
+                    
+                    <text x="600" y="250" text-anchor="middle" fill="#2c3e50" font-size="11">Spore Deposition</text>
+                    
+                    <!-- Factors -->
+                    <text x="50" y="300" fill="#2c3e50" font-size="11" font-weight="bold">Factors:</text>
+                    <text x="50" y="320" fill="#2c3e50" font-size="10">• Spore size (smaller = farther)</text>
+                    <text x="50" y="340" fill="#2c3e50" font-size="10">• Wind speed</text>
+                    <text x="300" y="300" fill="#2c3e50" font-size="11" font-weight="bold">Health Impact:</text>
+                    <text x="300" y="320" fill="#2c3e50" font-size="10">• Allergies</text>
+                    <text x="300" y="340" fill="#2c3e50" font-size="10">• Infections (immunocompromised)</text>
+                </svg>
+            </div>
+            
+            <div class="box">
+                <h5>Prevention of Airborne Transmission:</h5>
+                <ul class="list">
+                    <li><strong>Ventilation:</strong> Good air flow reduces microbe concentration</li>
+                    <li><strong>Filtration:</strong> HEPA filters remove particles and microbes</li>
+                    <li><strong>UV Sterilization:</strong> UV light kills airborne microbes</li>
+                    <li><strong>Masks:</strong> Prevent spread of droplets and aerosols</li>
+                    <li><strong>Social Distancing:</strong> Reduces chance of inhaling droplets</li>
+                    <li><strong>Humidity Control:</strong> Proper humidity reduces survival of some microbes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h3>Summary</h3>
+            <p class="english">This unit covered microorganisms in natural environments (terrestrial, aquatic, air, and biological), extremophiles and their adaptations, microbial dispersal methods, techniques for counting and measuring microbes, air quality assessment methods, and airborne transmission of viruses, bacteria, and fungi. Understanding these concepts helps us protect public health and manage ecosystems.</p>
+            <p class="hindi">इस इकाई में प्राकृतिक वातावरण (स्थलीय, जलीय, वायु, और जैविक) में सूक्ष्मजीव, एक्सट्रीमोफाइल्स और उनके अनुकूलन, सूक्ष्मजीव फैलाव विधियां, सूक्ष्मजीवों को गिनने और मापने की तकनीकें, वायु गुणवत्ता मूल्यांकन विधियां, और वायरस, बैक्टीरिया, और कवक के हवा के माध्यम से संचरण को कवर किया गया। इन अवधारणाओं को समझने से हमें सार्वजनिक स्वास्थ्य की रक्षा करने और पारिस्थितिक तंत्रों का प्रबंधन करने में मदद मिलती है।</p>
         </div>
 
         <div class="unit-nav">
             <a href="../index.html" class="home">🏠 All Units</a>
             <a href="mcr615-unit2.html" class="next">Next: Unit II →</a>
         </div>
-
-        <div class="coming-soon">
-            <h2>📚 Content Coming Soon!</h2>
-            <p>
-                This unit will cover:<br>
-                • Microorganisms in terrestrial, aquatic, air and biological environments<br>
-                • Microbes in extreme environments and their adaptations<br>
-                • Dispersal of microorganisms<br>
-                • Methods for determination of microbial numbers, biomass and activities<br>
-                • Assessment of air quality<br>
-                • Air borne transmission of microbes (Viruses, bacteria and fungi)
-            </p>
-            <p style="margin-top: 20px; font-weight: bold;">
-                <span style="color: #e74c3c;">हिंदी अनुवाद के साथ विस्तृत नोट्स जल्द ही उपलब्ध होंगे!</span>
-            </p>
-        </div>
-
-        <div class="unit-nav">
-            <a href="../index.html" class="home">🏠 All Units</a>
-            <a href="mcr615-unit2.html" class="next">Next: Unit II →</a>
-        </div>
-    </div>
-</body>
-</html>
-
